@@ -53,6 +53,41 @@ python cli/main.py export fruit fruit_pricing.csv
 python cli/main.py export exporter exporters_europe.csv --region Europe
 ```
 
+### MCP Server (Claude Desktop Integration)
+
+```bash
+# Start MCP server
+python start_mcp_server.py
+```
+
+**Claude Desktop Configuration:**
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "peru-exports": {
+      "command": "python3",
+      "args": [
+        "/absolute/path/to/Export-Data/start_mcp_server.py"
+      ]
+    }
+  }
+}
+```
+
+**Available MCP Tools:**
+- `get_fruit_pricing_summary` - Quartile pricing for all fruits
+- `get_exporter_pricing_summary` - Quartile pricing for all exporters (with fruit count)
+- `get_format_pricing_summary` - Quartile pricing for all formats
+- `drill_fruit_by_exporter` - Pricing breakdown for a fruit by exporter
+- `drill_exporter_by_fruit` - Pricing breakdown for an exporter by fruit
+- `drill_fruit_by_format` - Pricing breakdown for a fruit by format
+- `search_exporters` - Search for exporters (with name normalization)
+- `get_available_values` - Get all fruits, exporters, formats
+- `get_system_info` - System architecture and capabilities
+
 ---
 
 ## Project Structure
@@ -72,6 +107,12 @@ Export-Data/
 │
 ├── cli/                            # Command-line interface
 │   └── main.py                     # Unified CLI for all analytics
+│
+├── mcp_tools/                      # MCP Server (Model Context Protocol)
+│   ├── server.py                   # MCP server using coherent architecture
+│   └── cache.py                    # Response caching (10-1000x speedup)
+│
+├── start_mcp_server.py             # MCP server startup script
 │
 ├── data/
 │   └── exports.db                  # SQLite database (18MB, 14,279 records)
