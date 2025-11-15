@@ -1,0 +1,849 @@
+;Fruit;Company;Clean Format;Sum of Volume;Average of Price
+;mango;;;;
+Mango;;AGROINDUSTRIA FRUTOS DE ORO S.A.C.;;;
+;;;Unknown;10 090 MT;1 836 USD/MT
+;;;(blank);1 191 MT;2 370 USD/MT
+;;;Chunks;208 MT;1 779 USD/MT
+;;;Cubes;44 MT;1 831 USD/MT
+;;;Broken Pieces;2 MT;1 672 USD/MT
+;;;;;
+;;AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA;;;
+;;;Chunks;8 998 MT;2 141 USD/MT
+;;;Cubes;1 587 MT;2 011 USD/MT
+;;;Unknown;366 MT;2 854 USD/MT
+;;;(blank);38 MT;1 800 USD/MT
+;;;Broken Pieces;23 MT;1 300 USD/MT
+;;;;;
+;;VIRU S.A.;;;
+;;;Chunks;5 716 MT;2 001 USD/MT
+;;;Unknown;4 138 MT;1 932 USD/MT
+;;;Cubes;538 MT;2 027 USD/MT
+;;;Halves;191 MT;2 181 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;5 484 MT;2 011 USD/MT
+;;;Chunks;2 925 MT;2 072 USD/MT
+;;;Cubes;34 MT;2 046 USD/MT
+;;;Halves;18 MT;2 479 USD/MT
+;;;;;
+;;FRUTÍCOLA OLMUÉ PERÚ S.A.C.;;;
+;;;Chunks;7 340 MT;2 393 USD/MT
+;;;Cubes;380 MT;1 863 USD/MT
+;;;(blank);328 MT;2 859 USD/MT
+;;;Broken Pieces;271 MT;1 879 USD/MT
+;;;;;
+Mango;;SUNSHINE EXPORT S.A.C;;;
+;;;Unknown;7 488 MT;2 162 USD/MT
+;;;Chunks;40 MT;1 757 USD/MT
+;;;;;
+;;QUICORNAC S.A.C.;;;
+;;;Pulp;4 679 MT;1 277 USD/MT
+;;;(blank);1 845 MT;1 089 USD/MT
+;;;Unknown;31 MT;1 281 USD/MT
+;;;;;
+;;DOMINUS S.A.C;;;
+;;;Unknown;5 800 MT;1 234 USD/MT
+;;;Chunks;567 MT;1 987 USD/MT
+;;;Halves;9 MT;1 350 USD/MT
+;;;;;
+;;AGROINDUSTRIAS AIB S.A;;;
+;;;Unknown;4 940 MT;2 064 USD/MT
+;;;Chunks;1 164 MT;2 033 USD/MT
+;;;Cubes;143 MT;2 264 USD/MT
+;;;Pulp;72 MT; 887 USD/MT
+;;;(blank);54 MT;2 065 USD/MT
+;;;;;
+;;FRUTOS TROPICALES PERU EXPORT SOCIEDAD A;;;
+;;;Unknown;5 393 MT;1 944 USD/MT
+;;;Chunks;217 MT;1 979 USD/MT
+;;;(blank);46 MT;3 162 USD/MT
+;;;Cubes;23 MT;3 159 USD/MT
+;;;;;
+;;CAMPOSOL S.A.;;;
+;;;Unknown;4 774 MT;1 913 USD/MT
+;;;;;
+;;"""IMPORTADORA";;;
+;;;Unknown;3 843 MT;#DIV/0!
+;;;;;
+Mango;;DEL ANDE ALIMENTOS S.A.C.;;;
+;;;Chunks;3 138 MT;1 769 USD/MT
+;;;Cubes;146 MT;2 393 USD/MT
+;;;Pulp;2 MT;1 760 USD/MT
+;;;Unknown;0 MT;1 000 USD/MT
+;;;;;
+;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Chunks;1 706 MT;2 414 USD/MT
+;;;Unknown;1 544 MT;2 317 USD/MT
+;;;Cubes;0 MT;1 747 USD/MT
+;;;(blank);0 MT;2 000 USD/MT
+;;;;;
+;;MEBOL GF S.A.C.;;;
+;;;Chunks;1 713 MT;2 553 USD/MT
+;;;Unknown;1 506 MT;2 600 USD/MT
+;;;Pulp;2 MT;2 530 USD/MT
+;;;;;
+;;PROCESADORA PERU SOCIEDAD ANONIMA CERRADA;;;
+;;;Chunks;1 782 MT;1 893 USD/MT
+;;;Unknown;1 264 MT;2 177 USD/MT
+;;;Slices;71 MT;3 406 USD/MT
+;;;Halves;57 MT;1 800 USD/MT
+;;;;;
+;;ARA FOODS INDUSTRY S.A.C.;;;
+;;;Chunks;1 714 MT;2 090 USD/MT
+;;;Unknown;685 MT;2 021 USD/MT
+;;;;;
+;;AGROMAR INDUSTRIAL S.A.;;;
+;;;Chunks;2 042 MT;1 699 USD/MT
+;;;Unknown;14 MT;2 000 USD/MT
+;;;Cubes;0 MT; 111 USD/MT
+;;;;;
+Mango;;MEBOL SAC;;;
+;;;Chunks;1 255 MT;2 443 USD/MT
+;;;Unknown;652 MT;1 466 USD/MT
+;;;Cubes;4 MT;1 800 USD/MT
+;;;Halves;0 MT; 850 USD/MT
+;;;;;
+;;FRUTOS TONGORRAPE SOCIEDAD ANONIMA;;;
+;;;Chunks;858 MT;1 682 USD/MT
+;;;(blank);345 MT;1 737 USD/MT
+;;;Halves;183 MT;1 612 USD/MT
+;;;Cubes;117 MT;2 122 USD/MT
+;;;Unknown;0 MT; 177 USD/MT
+;;;;;
+;;PULPAS Y PROCESADOS DEL AGRO SOCIEDAD ANONIMA-PULPAGRO;;;
+;;;Chunks;981 MT;1 496 USD/MT
+;;;(blank);300 MT;1 653 USD/MT
+;;;Halves;5 MT;1 025 USD/MT
+;;;Cubes;0 MT; 420 USD/MT
+;;;Unknown;0 MT; 183 USD/MT
+;;;Pulp;0 MT; 120 USD/MT
+;;;;;
+;;PROCESADORA LARAN SAC;;;
+;;;Chunks;1 121 MT;1 803 USD/MT
+;;;Unknown;76 MT;1 227 USD/MT
+;;;;;
+Mango;;SANTA SOFIA DEL SUR S.A.C.;;;
+;;;Unknown;804 MT;1 558 USD/MT
+;;;Chunks;144 MT;1 563 USD/MT
+;;;;;
+;;CFRUITS PERU E.I.R.L.;;;
+;;;Unknown;774 MT;1 681 USD/MT
+;;;;;
+;;DANPER TRUJILLO S.A.C.;;;
+;;;Unknown;765 MT;2 012 USD/MT
+;;;;;
+;;WESTFALIA FRUIT PERÚ S.A.C.;;;
+;;;Unknown;636 MT;1 353 USD/MT
+;;;(blank);96 MT;1 500 USD/MT
+;;;;;
+;;V & F SAC;;;
+;;;Chunks;335 MT;1 942 USD/MT
+;;;Unknown;335 MT;2 347 USD/MT
+;;;;;
+;;AGROFRUTOS TRADING S.A.;;;
+;;;Chunks;649 MT;1 808 USD/MT
+;;;(blank);0 MT;1 036 USD/MT
+;;;;;
+;;AGRO FROST S.A.C.;;;
+;;;Chunks;624 MT;1 859 USD/MT
+;;;Cubes;22 MT;3 450 USD/MT
+;;;;;
+;;AMARA FOODS S.A.C.;;;
+;;;Pulp;611 MT;1 255 USD/MT
+;;;Unknown;22 MT;2 300 USD/MT
+;;;Cubes;6 MT;1 735 USD/MT
+;;;;;
+Mango;;PRODUCTORA ANDINA DE CONGELADOS S.R.L.;;;
+;;;Chunks;295 MT;1 819 USD/MT
+;;;(blank);46 MT;1 920 USD/MT
+;;;Unknown;22 MT;1 250 USD/MT
+;;;Pulp;20 MT;1 617 USD/MT
+;;;Halves;19 MT;1 000 USD/MT
+;;;;;
+;;EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D;;;
+;;;Chunks;148 MT;2 115 USD/MT
+;;;Cubes;107 MT;2 237 USD/MT
+;;;Unknown;101 MT;2 184 USD/MT
+;;;(blank);28 MT;1 994 USD/MT
+;;;Pulp;9 MT;1 460 USD/MT
+;;;;;
+;;PERUVIAN FOOD GROUPS SOCIEDAD ANONIMA CERRADA.;;;
+;;;Chunks;231 MT;1 789 USD/MT
+;;;;;
+;;NATURANDINA DEL PERU S.A.C.;;;
+;;;Chunks;129 MT;2 695 USD/MT
+;;;Unknown;82 MT;2 290 USD/MT
+;;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Chunks;81 MT;2 207 USD/MT
+;;;Pulp;47 MT;1 783 USD/MT
+;;;Unknown;42 MT;1 648 USD/MT
+;;;(blank);11 MT;1 483 USD/MT
+;;;;;
+;;ELITE FOOD PERU S.A.C.;;;
+;;;Chunks;166 MT;1 878 USD/MT
+;;;Pulp;6 MT;2 221 USD/MT
+Mango;;;;;
+;;FUSION FOODS S.A.C.;;;
+;;;Chunks;144 MT;1 945 USD/MT
+;;;Pulp;24 MT;3 517 USD/MT
+;;;;;
+;;B & R FOODS S.A.C.;;;
+;;;Chunks;143 MT;1 675 USD/MT
+;;;Unknown;7 MT;1 200 USD/MT
+;;;(blank);1 MT;1 200 USD/MT
+;;;;;
+;;PROFRUIT INDUSTRY S.A.C.;;;
+;;;Chunks;144 MT;1 645 USD/MT
+;;;;;
+;;FRUTICAL S.A.C.;;;
+;;;Unknown;101 MT;1 822 USD/MT
+;;;;;
+;;PROVISSO FOODS S.A.C.;;;
+;;;Unknown;96 MT;1 455 USD/MT
+;;;;;
+;;GANDULES INC SAC;;;
+;;;Unknown;72 MT;1 773 USD/MT
+;;;(blank);0 MT;1 024 USD/MT
+;;;;;
+;;HONEST FOODS S.A.C.;;;
+;;;Unknown;66 MT;2 494 USD/MT
+;;;;;
+;;P & M FRUITS S.A.C.;;;
+;;;Chunks;33 MT;1 682 USD/MT
+;;;Pulp;17 MT;1 586 USD/MT
+;;;;;
+;;PACHAMAMA FARMS S.A.C.;;;
+;;;(blank);24 MT;2 900 USD/MT
+;;;Unknown;24 MT;1 175 USD/MT
+;;;;;
+Mango;;SOCIEDAD MERCANTIL (EXPORTACION) SA;;;
+;;;Unknown;46 MT;2 994 USD/MT
+;;;;;
+;;COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - COTRINA EXPORTS E.I.R.L.;;;
+;;;Cubes;29 MT;1 710 USD/MT
+;;;Chunks;14 MT;1 710 USD/MT
+;;;;;
+;;GRUPO TAVARI S.A.C.;;;
+;;;Chunks;22 MT;1 746 USD/MT
+;;;Unknown;12 MT;2 093 USD/MT
+;;;;;
+;;EXOTICA DIAMOND PERU SOCIEDAD COMERCIAL;;;
+;;;Unknown;31 MT;5 603 USD/MT
+;;;;;
+;;DARO Y ANSER S.A.C.;;;
+;;;Chunks;18 MT;1 713 USD/MT
+;;;Pulp;6 MT;2 500 USD/MT
+;;;;;
+;;NORPERU COMPANY CV E.I.R.L.;;;
+;;;Chunks;24 MT;1 651 USD/MT
+;;;;;
+;;KAMPO PERU S.A.C.;;;
+;;;Cubes;24 MT;3 300 USD/MT
+;;;;;
+;;INDUFRUT S.A.C.;;;
+;;;Unknown;23 MT;2 950 USD/MT
+;;;;;
+;;PROYEMSUR S.A.C.;;;
+;;;Cubes;22 MT;3 560 USD/MT
+;;;Unknown;0 MT;1 000 USD/MT
+;;;;;
+;;;;;
+Avocado;avocado;;;;
+;;SUNSHINE EXPORT S.A.C;;;
+;;;Unknown;9 919 MT;3 119 USD/MT
+;;;Chunks;27 MT;3 738 USD/MT
+;;;Pulp;20 MT;2 975 USD/MT
+;;;Cubes;0 MT; 750 USD/MT
+;;;;;
+;;AGROINDUSTRIAS AIB S.A;;;
+;;;Pulp;3 652 MT;2 819 USD/MT
+;;;Unknown;3 026 MT;2 919 USD/MT
+;;;Chunks;1 150 MT;2 961 USD/MT
+;;;Halves;470 MT;3 595 USD/MT
+;;;Slices;93 MT;3 378 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;4 056 MT;3 225 USD/MT
+;;;Cubes;1 334 MT;3 666 USD/MT
+;;;Slices;210 MT;2 993 USD/MT
+;;;Halves;97 MT;2 761 USD/MT
+;;;Chunks;57 MT;2 436 USD/MT
+;;;;;
+;;VIRU S.A.;;;
+;;;Unknown;2 337 MT;2 820 USD/MT
+;;;Cubes;1 710 MT;3 265 USD/MT
+;;;Chunks;659 MT;2 481 USD/MT
+;;;Halves;363 MT;2 854 USD/MT
+;;;Slices;90 MT;2 970 USD/MT
+;;;;;
+;;AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA;;;
+;;;Cubes;2 290 MT;2 965 USD/MT
+;;;Slices;1 057 MT;3 008 USD/MT
+;;;Unknown;370 MT;3 479 USD/MT
+;;;Pulp;308 MT;2 421 USD/MT
+;;;Chunks;199 MT;2 564 USD/MT
+;;;;;
+Avocado;;AGROINDUSTRIA FRUTOS DE ORO S.A.C.;;;
+;;;Unknown;1 993 MT;2 093 USD/MT
+;;;(blank);645 MT;2 733 USD/MT
+;;;Cubes;350 MT;2 485 USD/MT
+;;;Slices;59 MT;2 492 USD/MT
+;;;Halves;22 MT;2 396 USD/MT
+;;;;;
+;;AGROEMPAQUES S.A.;;;
+;;;Chunks;1 651 MT;2 898 USD/MT
+;;;Pulp;770 MT;2 776 USD/MT
+;;;Unknown;365 MT;3 064 USD/MT
+;;;(blank);24 MT;2 750 USD/MT
+;;;;;
+;;AMARA FOODS S.A.C.;;;
+;;;Pulp;2 335 MT;2 641 USD/MT
+;;;Cubes;32 MT;2 394 USD/MT
+;;;Unknown;22 MT;2 745 USD/MT
+;;;Slices;6 MT;1 364 USD/MT
+;;;;;
+;;DOMINUS S.A.C;;;
+;;;Unknown;2 223 MT;2 743 USD/MT
+;;;;;
+;;CAMPOSOL S.A.;;;
+;;;Unknown;1 950 MT;3 292 USD/MT
+;;;;;
+;;WESTFALIA FRUIT PERÚ S.A.C.;;;
+;;;Unknown;982 MT;3 806 USD/MT
+;;;(blank);266 MT;2 909 USD/MT
+;;;Cubes;258 MT;2 939 USD/MT
+;;;Pulp;197 MT;3 108 USD/MT
+;;;;;
+;;ARA FOODS INDUSTRY S.A.C.;;;
+;;;Unknown;844 MT;2 966 USD/MT
+;;;Chunks;329 MT;2 545 USD/MT
+;;;Cubes;36 MT;2 950 USD/MT
+;;;Halves;35 MT;2 374 USD/MT
+;;;Slices;21 MT;3 637 USD/MT
+;;;;;
+Avocado;;GRUPO TAVARI S.A.C.;;;
+;;;Unknown;638 MT;2 824 USD/MT
+;;;Chunks;385 MT;2 750 USD/MT
+;;;Cubes;97 MT;2 654 USD/MT
+;;;Pulp;68 MT;2 312 USD/MT
+;;;Halves;45 MT;3 143 USD/MT
+;;;;;
+;;DANPER TRUJILLO S.A.C.;;;
+;;;Unknown;1 222 MT;3 042 USD/MT
+;;;;;
+;;DEL ANDE ALIMENTOS S.A.C.;;;
+;;;Pulp;445 MT;2 445 USD/MT
+;;;Chunks;193 MT;2 883 USD/MT
+;;;Slices;91 MT;3 578 USD/MT
+;;;Halves;80 MT;2 855 USD/MT
+;;;Cubes;78 MT;2 597 USD/MT
+;;;;;
+;;AGRO FROST S.A.C.;;;
+;;;Pulp;290 MT;1 987 USD/MT
+;;;Cubes;129 MT;2 871 USD/MT
+;;;Chunks;123 MT;2 418 USD/MT
+;;;Halves;120 MT;2 528 USD/MT
+;;;Slices;36 MT;2 716 USD/MT
+;;;;;
+;;HONEST FOODS S.A.C.;;;
+;;;Chunks;250 MT;2 194 USD/MT
+;;;Pulp;156 MT;2 742 USD/MT
+;;;Unknown;110 MT;2 987 USD/MT
+;;;;;
+;;MEBOL GF S.A.C.;;;
+;;;Chunks;237 MT;3 546 USD/MT
+;;;Unknown;220 MT;2 882 USD/MT
+;;;Pulp;23 MT;3 139 USD/MT
+;;;Cubes;10 MT;2 942 USD/MT
+;;;;;
+Avocado;;FRUTOS TONGORRAPE SOCIEDAD ANONIMA;;;
+;;;(blank);236 MT;3 090 USD/MT
+;;;Halves;96 MT;1 513 USD/MT
+;;;Cubes;55 MT;3 038 USD/MT
+;;;Pulp;47 MT;2 655 USD/MT
+;;;Chunks;33 MT;1 952 USD/MT
+;;;;;
+;;PROCESADORA PERU SOCIEDAD ANONIMA CERRADA;;;
+;;;Unknown;103 MT;3 112 USD/MT
+;;;Cubes;91 MT;2 055 USD/MT
+;;;Slices;47 MT;3 034 USD/MT
+;;;(blank);46 MT;2 861 USD/MT
+;;;Chunks;24 MT;2 868 USD/MT
+;;;;;
+;;EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D;;;
+;;;Pulp;154 MT;2 352 USD/MT
+;;;Unknown;56 MT;2 835 USD/MT
+;;;Halves;52 MT;3 503 USD/MT
+;;;Cubes;8 MT;2 121 USD/MT
+;;;Slices;5 MT;3 519 USD/MT
+;;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Pulp;145 MT;3 267 USD/MT
+;;;Chunks;81 MT;2 860 USD/MT
+;;;;;
+Avocado;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Halves;121 MT;2 650 USD/MT
+;;;(blank);39 MT;2 500 USD/MT
+;;;Unknown;0 MT;1 000 USD/MT
+;;;;;
+;;FRUTICAL S.A.C.;;;
+;;;Unknown;60 MT;2 899 USD/MT
+;;;Pulp;24 MT;3 370 USD/MT
+;;;Chunks;22 MT;2 557 USD/MT
+;;;(blank);22 MT;2 670 USD/MT
+;;;Slices;17 MT;3 305 USD/MT
+;;;;;
+;;MEBOL SAC;;;
+;;;Unknown;78 MT;2 669 USD/MT
+;;;Chunks;32 MT;3 507 USD/MT
+;;;Pulp;23 MT;3 425 USD/MT
+;;;;;
+;;FRUTÍCOLA OLMUÉ PERÚ S.A.C.;;;
+;;;Chunks;48 MT;2 994 USD/MT
+;;;Cubes;36 MT;3 765 USD/MT
+;;;;;
+;;AGROINDUSTRIAL ESTANISLAO DEL CHIMU S.A.C.;;;
+;;;Unknown;81 MT;3 051 USD/MT
+;;;;;
+Avocado;;FRUTOS TROPICALES PERU EXPORT SOCIEDAD A;;;
+;;;Unknown;80 MT;3 227 USD/MT
+;;;Pulp;0 MT;1 000 USD/MT
+;;;Chunks;0 MT; 835 USD/MT
+;;;Halves;0 MT; 835 USD/MT
+;;;;;
+;;PULPAS Y PROCESADOS DEL AGRO SOCIEDAD ANONIMA-PULPAGRO;;;
+;;;Chunks;45 MT;1 490 USD/MT
+;;;(blank);8 MT;2 955 USD/MT
+;;;Pulp;0 MT; 552 USD/MT
+;;;;;
+;;NORPERU COMPANY CV E.I.R.L.;;;
+;;;Chunks;26 MT;2 937 USD/MT
+;;;Pulp;24 MT;2 725 USD/MT
+;;;;;
+;;CFRUITS PERU E.I.R.L.;;;
+;;;Unknown;44 MT;3 554 USD/MT
+;;;;;
+;;AGRICOLA CERRO PRIETO S.A.;;;
+;;;Unknown;43 MT;2 991 USD/MT
+;;;;;
+;;COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - COTRINA EXPORTS E.I.R.L.;;;
+;;;Pulp;24 MT;3 928 USD/MT
+;;;;;
+;;;;;
+;blueberry;;;;
+Bluebery;;CAMPOSOL S.A.;;;
+;;;Unknown;11 218 MT;2 395 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;1 268 MT;2 423 USD/MT
+;;;Chunks;1 001 MT;2 746 USD/MT
+;;;Whole;253 MT;1 864 USD/MT
+;;;;;
+;;AGROVISION PERU S.A.C.;;;
+;;;Unknown;2 109 MT;1 389 USD/MT
+;;;;;
+;;FRUTICAL S.A.C.;;;
+;;;Unknown;1 627 MT;2 206 USD/MT
+;;;(blank);96 MT;2 227 USD/MT
+;;;;;
+;;AGROINDUSTRIAS AIB S.A;;;
+;;;(blank);1 084 MT;2 229 USD/MT
+;;;Unknown;287 MT;2 125 USD/MT
+;;;Chunks;263 MT;2 178 USD/MT
+;;;;;
+;;COMPLEJO AGROINDUSTRIAL BETA S.A.;;;
+;;;Unknown;1 498 MT;2 063 USD/MT
+;;;Chunks;46 MT;1 953 USD/MT
+;;;;;
+;;SUNSHINE EXPORT S.A.C;;;
+;;;Unknown;1 357 MT;2 685 USD/MT
+;;;;;
+;;DOMINUS S.A.C;;;
+;;;Unknown;1 096 MT;2 217 USD/MT
+Bluebery;;;;;
+;;FRUTOS TROPICALES PERU EXPORT SOCIEDAD A;;;
+;;;Unknown;1 041 MT;2 492 USD/MT
+;;;;;
+;;DANPER TRUJILLO S.A.C.;;;
+;;;Unknown;577 MT;2 342 USD/MT
+;;;;;
+;;MEBOL GF S.A.C.;;;
+;;;Chunks;304 MT;2 534 USD/MT
+;;;Unknown;238 MT;1 988 USD/MT
+;;;;;
+;;MEBOL SAC;;;
+;;;Chunks;386 MT;2 407 USD/MT
+;;;Unknown;140 MT;1 883 USD/MT
+;;;Whole;8 MT; 420 USD/MT
+;;;;;
+;;SOCIEDAD MERCANTIL (EXPORTACION) SA;;;
+;;;Unknown;432 MT;1 630 USD/MT
+;;;Whole;88 MT;1 826 USD/MT
+;;;;;
+;;VIRU S.A.;;;
+;;;Unknown;189 MT;3 209 USD/MT
+;;;Chunks;178 MT;2 707 USD/MT
+;;;Whole;24 MT;2 850 USD/MT
+;;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Whole;336 MT;2 470 USD/MT
+;;;(blank);16 MT;2 450 USD/MT
+;;;Pulp;2 MT;2 517 USD/MT
+;;;Unknown;0 MT;1 000 USD/MT
+;;;;;
+Bluebery;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Unknown;348 MT;2 787 USD/MT
+;;;Cubes;0 MT; 200 USD/MT
+;;;;;
+;;AGRICOLA CERRO PRIETO S.A.;;;
+;;;Unknown;299 MT;3 561 USD/MT
+;;;;;
+;;FRUTÍCOLA OLMUÉ PERÚ S.A.C.;;;
+;;;(blank);191 MT;2 430 USD/MT
+;;;Unknown;67 MT;2 310 USD/MT
+;;;;;
+;;EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D;;;
+;;;Whole;144 MT;2 472 USD/MT
+;;;Unknown;96 MT;2 355 USD/MT
+;;;;;
+;;DEL ANDE ALIMENTOS S.A.C.;;;
+;;;Unknown;188 MT;2 047 USD/MT
+;;;Whole;11 MT;1 479 USD/MT
+;;;;;
+;;AGROEMPAQUES S.A.;;;
+;;;Unknown;168 MT;3 039 USD/MT
+;;;;;
+;;AGRO FROST S.A.C.;;;
+;;;Unknown;72 MT;2 075 USD/MT
+;;;Whole;54 MT;2 218 USD/MT
+;;;;;
+;;P & M FRUITS S.A.C.;;;
+;;;Unknown;72 MT;2 243 USD/MT
+;;;;;
+;;GAMN EXPORT & IMPORT SERV GNRAL S.A.C.;;;
+;;;Unknown;24 MT;2 345 USD/MT
+;;;;;
+;;FUSION FOODS S.A.C.;;;
+;;;(blank);24 MT;1 262 USD/MT
+;;;;;
+;;SERVICIOS PROCESADORA PERU S.A.C.;;;
+;;;Unknown;24 MT;1 531 USD/MT
+;;;;;
+;;;;;
+;passion_fruit;;;;
+Passion Fruit;;MEBOL SAC;;;
+;;;Chunks;370 MT;3 911 USD/MT
+;;;Unknown;215 MT;2 678 USD/MT
+;;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Pulp;254 MT;2 713 USD/MT
+;;;Halves;27 MT;2 917 USD/MT
+;;;Unknown;2 MT;3 150 USD/MT
+;;;;;
+;;EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D;;;
+;;;Pulp;249 MT;3 298 USD/MT
+;;;Cubes;0 MT; 250 USD/MT
+;;;;;
+;;ELITE FOOD PERU S.A.C.;;;
+;;;Pulp;205 MT;3 122 USD/MT
+;;;Unknown;10 MT;1 990 USD/MT
+;;;;;
+;;AMARA FOODS S.A.C.;;;
+;;;Pulp;152 MT;2 502 USD/MT
+;;;Cubes;4 MT;3 500 USD/MT
+;;;;;
+;;IMPORTADORA Y EXPORTADORA DOÑA ISABEL E.;;;
+;;;Pulp;144 MT;3 850 USD/MT
+;;;;;
+;;NORPERU COMPANY CV E.I.R.L.;;;
+;;;Pulp;130 MT;2 781 USD/MT
+;;;;;
+Passion Fruit;;FUSION FOODS S.A.C.;;;
+;;;Pulp;123 MT;3 995 USD/MT
+;;;;;
+;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Pulp;54 MT;2 975 USD/MT
+;;;Cubes;35 MT;2 960 USD/MT
+;;;;;
+;;MIRANDA - LANGA AGRO EXPORT S.A.C - MIRANDA - LANGA S.A.C;;;
+;;;Pulp;77 MT;3 381 USD/MT
+;;;;;
+;;BELMONT FOODS PERU S.A.C.;;;
+;;;Pulp;69 MT;2 731 USD/MT
+;;;;;
+;;AGRO FROST S.A.C.;;;
+;;;Pulp;41 MT;2 613 USD/MT
+;;;Unknown;24 MT;3 345 USD/MT
+;;;;;
+;;P & M FRUITS S.A.C.;;;
+;;;Pulp;64 MT;2 852 USD/MT
+;;;;;
+;;MEBOL GF S.A.C.;;;
+;;;Unknown;35 MT;2 060 USD/MT
+;;;Chunks;18 MT;3 070 USD/MT
+;;;Pulp;11 MT;3 355 USD/MT
+;;;;;
+;;DARO Y ANSER S.A.C.;;;
+;;;Pulp;56 MT;2 395 USD/MT
+;;;;;
+Passion Fruit;;AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA;;;
+;;;Unknown;30 MT;3 273 USD/MT
+;;;Cubes;25 MT;3 554 USD/MT
+;;;;;
+;;PERU INDUSTRY G.N S.A.C.;;;
+;;;Pulp;54 MT;2 942 USD/MT
+;;;;;
+;;LATAM TRADE S.A.C.;;;
+;;;Pulp;48 MT;3 155 USD/MT
+;;;;;
+;;COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - COTRINA EXPORTS E.I.R.L.;;;
+;;;Pulp;47 MT;3 647 USD/MT
+;;;;;
+;;FLYMEXPORT PERU E.I.R.L.;;;
+;;;Pulp;39 MT;3 528 USD/MT
+;;;;;
+;;IMPORTACIONES BLAWS E.I.R.L.;;;
+;;;Pulp;32 MT;3 023 USD/MT
+;;;;;
+;;EXPORT Y IMPORT E INVERSIONES WILLAM ESAG EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA;;;
+;;;Pulp;29 MT;2 031 USD/MT
+;;;;;
+;;KARLINI INTERNATIONAL FOODS S.A.C.;;;
+;;;Pulp;25 MT;3 364 USD/MT
+;;;;;
+;;LAMAS IMPORT EXPORT S.A.C.;;;
+;;;Unknown;21 MT;1 899 USD/MT
+;;;Pulp;2 MT;1 657 USD/MT
+;;;Whole;1 MT;1 313 USD/MT
+;;;;;
+;;QUICORNAC S.A.C.;;;
+;;;Pulp;24 MT;2 875 USD/MT
+;;;;;
+;;;;;
+;grape;;;;
+Grapes;;DOMINUS S.A.C;;;
+;;;Unknown;1 228 MT;1 516 USD/MT
+;;;;;
+;;VIRU S.A.;;;
+;;;Unknown;359 MT;1 536 USD/MT
+;;;Whole;144 MT;2 153 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;355 MT;1 190 USD/MT
+;;;Whole;48 MT; 900 USD/MT
+;;;;;
+;;MEBOL GF S.A.C.;;;
+;;;Chunks;192 MT;1 479 USD/MT
+;;;Unknown;24 MT; 749 USD/MT
+;;;Whole;0 MT; 373 USD/MT
+;;;;;
+;;MEBOL SAC;;;
+;;;Unknown;32 MT;1 016 USD/MT
+;;;;;
+;;;;;
+;pineapple;;;;
+Pineappes;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Unknown;429 MT;2 900 USD/MT
+;;;Chunks;106 MT;2 608 USD/MT
+;;;Cubes;0 MT; 350 USD/MT
+;;;(blank);0 MT;2 000 USD/MT
+;;;Pulp;0 MT;2 000 USD/MT
+;;;;;
+;;PROCESADORA PERU SOCIEDAD ANONIMA CERRADA;;;
+;;;Unknown;297 MT;2 878 USD/MT
+;;;(blank);120 MT;3 168 USD/MT
+;;;Chunks;49 MT;3 316 USD/MT
+;;;;;
+;;AGRO FROST S.A.C.;;;
+;;;Chunks;248 MT;2 877 USD/MT
+;;;Unknown;18 MT;1 640 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;186 MT;1 749 USD/MT
+;;;Chunks;46 MT;2 258 USD/MT
+;;;Pulp;3 MT; 779 USD/MT
+;;;Slices;0 MT; 150 USD/MT
+;;;;;
+;;PROCESADORA LARAN SAC;;;
+;;;Chunks;132 MT;1 912 USD/MT
+;;;Unknown;95 MT;2 568 USD/MT
+;;;;;
+;;EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D;;;
+;;;Cubes;86 MT;2 593 USD/MT
+;;;Chunks;58 MT;2 334 USD/MT
+;;;Unknown;0 MT;2 300 USD/MT
+;;;;;
+;;SELVA INDUSTRIAL S.A.;;;
+;;;Chunks;109 MT;9 953 USD/MT
+;;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Pulp;57 MT;2 333 USD/MT
+;;;Chunks;40 MT;2 734 USD/MT
+;;;(blank);8 MT;2 650 USD/MT
+Pineappes;;;;;
+;;ELITE FOOD PERU S.A.C.;;;
+;;;Chunks;55 MT;2 857 USD/MT
+;;;Pulp;0 MT;1 600 USD/MT
+;;;;;
+;;VIRU S.A.;;;
+;;;Chunks;36 MT;1 354 USD/MT
+;;;Unknown;18 MT;2 009 USD/MT
+;;;Pulp;0 MT; 883 USD/MT
+;;;;;
+;;NATURANDINA DEL PERU S.A.C.;;;
+;;;Chunks;39 MT;2 813 USD/MT
+;;;;;
+;;PACIFIC IQF SAC;;;
+;;;Chunks;25 MT;1 232 USD/MT
+;;;;;
+;;ALIMENTOS HIMALAYA PERU E.I.R.L.;;;
+;;;Chunks;20 MT;2 933 USD/MT
+;;;;;
+;;;;;
+;mix;;;;
+;;SUNSHINE EXPORT S.A.C;;;
+;;;Unknown;877 MT;3 159 USD/MT
+;;;;;
+;;MEBOL SAC;;;
+;;;Chunks;131 MT;2 737 USD/MT
+;;;Unknown;56 MT;2 112 USD/MT
+;;;;;
+;;FRUTÍCOLA OLMUÉ PERÚ S.A.C.;;;
+;;;(blank);120 MT;2 674 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;22 MT;1 776 USD/MT
+;;;Chunks;22 MT;2 900 USD/MT
+;;;;;
+;;;;;
+Strawberrry;strawberry;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;288 MT;2 126 USD/MT
+;;;Chunks;203 MT;2 763 USD/MT
+;;;Slices;0 MT;3 605 USD/MT
+;;;Pulp;0 MT; 875 USD/MT
+;;;Whole;0 MT;5 333 USD/MT
+;;;Halves;0 MT;5 333 USD/MT
+;;;;;
+;;VIRU S.A.;;;
+;;;Unknown;88 MT;2 229 USD/MT
+;;;Chunks;73 MT;2 866 USD/MT
+;;;Pulp;0 MT; 818 USD/MT
+;;;Slices;0 MT; 350 USD/MT
+;;;;;
+;;FRUTOS TROPICALES PERU EXPORT SOCIEDAD A;;;
+;;;Unknown;120 MT;1 690 USD/MT
+;;;Whole;36 MT;1 825 USD/MT
+;;;;;
+;;MEBOL GF S.A.C.;;;
+;;;Chunks;24 MT;1 905 USD/MT
+;;;Unknown;0 MT;1 000 USD/MT
+;;;;;
+;;;;;
+;pomegranate;;;;
+Pomegranate;;AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA;;;
+;;;Cubes;326 MT;3 536 USD/MT
+;;;Unknown;24 MT;2 900 USD/MT
+;;;;;
+;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Cubes;220 MT;3 918 USD/MT
+;;;Unknown;16 MT;4 048 USD/MT
+;;;;;
+;;SANTA SOFIA DEL SUR S.A.C.;;;
+;;;Cubes;69 MT;3 350 USD/MT
+;;;Unknown;24 MT;3 740 USD/MT
+;;;;;
+;;FRUTOS TROPICALES PERU EXPORT SOCIEDAD A;;;
+;;;Unknown;88 MT;3 375 USD/MT
+;;;Cubes;0 MT; 250 USD/MT
+;;;;;
+;;SUNSHINE EXPORT S.A.C;;;
+;;;Unknown;32 MT;2 500 USD/MT
+;;;Chunks;3 MT;4 150 USD/MT
+;;;;;
+;;CORPORACION AGROLATINA S.A.C.;;;
+;;;Cubes;25 MT;9 000 USD/MT
+;;;;;
+;;;;;
+;lucuma;;;;
+Lucuma;;AMARA FOODS S.A.C.;;;
+;;;Pulp;123 MT;3 469 USD/MT
+;;;;;
+;;ELITE FOOD PERU S.A.C.;;;
+;;;Pulp;104 MT;3 829 USD/MT
+;;;;;
+;;FUSION FOODS S.A.C.;;;
+;;;Pulp;66 MT;4 045 USD/MT
+;;;;;
+;;BELMONT FOODS PERU S.A.C.;;;
+;;;Pulp;52 MT;3 655 USD/MT
+;;;;;
+;;IMPORTADORA Y EXPORTADORA DOÑA ISABEL E.;;;
+;;;Pulp;47 MT;4 773 USD/MT
+;;;;;
+;;EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D;;;
+;;;Pulp;43 MT;3 762 USD/MT
+;;;Cubes;1 MT;3 917 USD/MT
+;;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Pulp;24 MT;4 194 USD/MT
+;;;;;
+;;;;;
+;papaya;;;;
+Papaya;;ANDEAN SUPERFOOD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA;;;
+;;;Cubes;245 MT;3 520 USD/MT
+;;;Halves;125 MT;3 000 USD/MT
+;;;Pulp;0 MT;1 000 USD/MT
+;;;;;
+;;AGRICOLA LOS MEDANOS S.A.;;;
+;;;Unknown;24 MT;2 817 USD/MT
+;;;Chunks;2 MT;2 799 USD/MT
+;;;;;
+;;;;;
+;cherimoya;;;;
+;;UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA;;;
+;;;Pulp;222 MT;3 319 USD/MT
+;;;Cubes;1 MT;3 800 USD/MT
+;;;;;
+;;COMERCIALIZADORA DEL PERU A SU MESA S.A.C.;;;
+;;;Pulp;36 MT;3 620 USD/MT
+;;;;;
+;;FUSION FOODS S.A.C.;;;
+;;;Pulp;26 MT;4 224 USD/MT
+;;;;;
+;;;;;
+;banana;;;;
+Banana;;AGROMAR INDUSTRIAL S.A.;;;
+;;;Unknown;132 MT;1 217 USD/MT
+;;;;;
+;;VIRÚ GROUP PERÚ S.A.;;;
+;;;Unknown;42 MT; 874 USD/MT
+;;;Slices;0 MT;1 564 USD/MT
+;;;;;
+;;DOMINUS S.A.C;;;
+;;;Unknown;21 MT; 774 USD/MT
+;;;;;
+;;;;;
+;orange;;;;
+Orange;;AGROINDUSTRIAS PEQUI S.A.C.;;;
+;;;Pulp;50 MT;2 592 USD/MT
+;;;;;
+;;;;;
+;camu_camu;;;;
+Camu Camu;;EMPRESA AGROINDUSTRIAL DEL PERU S.A.;;;
+;;;Pulp;23 MT;3 439 USD/MT
+;;;;;
+;;AMARUMAYU S.A.C.;;;
+;;;(blank);13 MT;5 146 USD/MT
+;;;Pulp;7 MT;4 681 USD/MT
+;;;;;
+;;;;;
+;golden_berry;;;;
+;;FRUTOS TONGORRAPE SOCIEDAD ANONIMA;;;
+;;;(blank);22 MT;2 658 USD/MT
+;;;;;
+;;;;;
+;acai;;;;
+;;CAYNARACHI S.A.;;;
+;;;Unknown;22 MT;3 245 USD/MT

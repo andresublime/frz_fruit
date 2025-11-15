@@ -1,0 +1,7 @@
+Veritrade Export Data File
+Original filename: Veritrade_JUAN_CABREJOS_REPCOANDINO_COM_PE_E_20251106063034.xlsx
+Date downloaded: 2025-11-06
+
+This file contains Peruvian export customs data used to analyze actual export activity of:
+1. Mariposa Andina (Union de Negocios Corporativos SAC)
+2. Chavin de Huantar (Agricola y Ganadera Chavin de Huantar SA)

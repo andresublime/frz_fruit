@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "peru-exports": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/Users/andresublime/Documents/Claude files/Peru-Frozen-Fruit-Analysis/Export-Data",
+        "run",
+        "mcp_server.py"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1499 @@
+{
+  "iqf_specialist": [
+    {
+      "name": "PACIFIC IQF SAC",
+      "tax_id": 20607913791,
+      "total_mt": 25.24,
+      "record_count": 1,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (1)"
+      ]
+    }
+  ],
+  "aseptic_specialist": [
+    {
+      "name": "ASEPTIC PERUVIAN FRUIT S.A.",
+      "tax_id": 20600459946,
+      "total_mt": 0.01,
+      "record_count": 1,
+      "top_markets": [
+        "COREA DEL SUR (1)"
+      ]
+    }
+  ],
+  "iqf_producer": [
+    {
+      "name": "SUNSHINE EXPORT S.A.C",
+      "tax_id": 20329725431,
+      "total_mt": 19762.68,
+      "record_count": 1180,
+      "top_markets": [
+        "JAP\u00d3N (321)",
+        "PA\u00cdSES BAJOS (259)",
+        "B\u00c9LGICA (172)"
+      ]
+    },
+    {
+      "name": "VIRU S.A.",
+      "tax_id": 20610799869,
+      "total_mt": 16937.78,
+      "record_count": 1249,
+      "top_markets": [
+        "ESTADOS UNIDOS (514)",
+        "ESPA\u00d1A (217)",
+        "PA\u00cdSES BAJOS (123)"
+      ]
+    },
+    {
+      "name": "AGROINDUSTRIAS AIB S.A",
+      "tax_id": 20104420282,
+      "total_mt": 16558.48,
+      "record_count": 869,
+      "top_markets": [
+        "CHILE (149)",
+        "B\u00c9LGICA (141)",
+        "AUSTRALIA (112)"
+      ]
+    },
+    {
+      "name": "AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA",
+      "tax_id": 20402805294,
+      "total_mt": 15850.02,
+      "record_count": 826,
+      "top_markets": [
+        "ESTADOS UNIDOS (209)",
+        "COREA DEL SUR (144)",
+        "CANAD\u00c1 (106)"
+      ]
+    },
+    {
+      "name": "AGROINDUSTRIA FRUTOS DE ORO S.A.C.",
+      "tax_id": 20606844159,
+      "total_mt": 14649.21,
+      "record_count": 772,
+      "top_markets": [
+        "ESTADOS UNIDOS (266)",
+        "B\u00c9LGICA (111)",
+        "CANAD\u00c1 (92)"
+      ]
+    },
+    {
+      "name": "FRUT\u00cdCOLA OLMU\u00c9 PER\u00da S.A.C.",
+      "tax_id": 20610343377,
+      "total_mt": 8804.58,
+      "record_count": 447,
+      "top_markets": [
+        "ESTADOS UNIDOS (154)",
+        "CANAD\u00c1 (92)",
+        "B\u00c9LGICA (61)"
+      ]
+    },
+    {
+      "name": "FRUTOS TROPICALES PERU EXPORT SOCIEDAD A",
+      "tax_id": 20607892955,
+      "total_mt": 7065.09,
+      "record_count": 331,
+      "top_markets": [
+        "GUATEMALA (82)",
+        "ESTADOS UNIDOS (82)",
+        "ALEMANIA (61)"
+      ]
+    },
+    {
+      "name": "AGRICOLA LOS MEDANOS S.A.",
+      "tax_id": 20389426891,
+      "total_mt": 4658.67,
+      "record_count": 306,
+      "top_markets": [
+        "ESTADOS UNIDOS (212)",
+        "CANAD\u00c1 (56)",
+        "CHILE (29)"
+      ]
+    },
+    {
+      "name": "DEL ANDE ALIMENTOS S.A.C.",
+      "tax_id": 20504107494,
+      "total_mt": 4381.8,
+      "record_count": 230,
+      "top_markets": [
+        "ESTADOS UNIDOS (58)",
+        "COREA DEL SUR (49)",
+        "CANAD\u00c1 (44)"
+      ]
+    },
+    {
+      "name": "PROCESADORA PERU SOCIEDAD ANONIMA CERRADA",
+      "tax_id": 20117751954,
+      "total_mt": 3957.16,
+      "record_count": 192,
+      "top_markets": [
+        "ESTADOS UNIDOS (151)",
+        "CANAD\u00c1 (11)",
+        "ALEMANIA (6)"
+      ]
+    },
+    {
+      "name": "WESTFALIA FRUIT PER\u00da S.A.C.",
+      "tax_id": 20600876491,
+      "total_mt": 2434.85,
+      "record_count": 127,
+      "top_markets": [
+        "REINO UNIDO (70)",
+        "B\u00c9LGICA (17)",
+        "PA\u00cdSES BAJOS (16)"
+      ]
+    },
+    {
+      "name": "AGROMAR INDUSTRIAL S.A.",
+      "tax_id": 20110378956,
+      "total_mt": 2205.12,
+      "record_count": 102,
+      "top_markets": [
+        "ESTADOS UNIDOS (51)",
+        "PA\u00cdSES BAJOS (24)",
+        "CANAD\u00c1 (10)"
+      ]
+    },
+    {
+      "name": "FRUTOS TONGORRAPE SOCIEDAD ANONIMA",
+      "tax_id": 20480325088,
+      "total_mt": 2017.66,
+      "record_count": 158,
+      "top_markets": [
+        "COREA DEL SUR (39)",
+        "ESTADOS UNIDOS (29)",
+        "PA\u00cdSES BAJOS (27)"
+      ]
+    },
+    {
+      "name": "FRUTICAL S.A.C.",
+      "tax_id": 20601338522,
+      "total_mt": 1968.93,
+      "record_count": 86,
+      "top_markets": [
+        "B\u00c9LGICA (24)",
+        "POLONIA (24)",
+        "ALEMANIA (18)"
+      ]
+    },
+    {
+      "name": "AGRO FROST S.A.C.",
+      "tax_id": 20604125821,
+      "total_mt": 1804.9,
+      "record_count": 114,
+      "top_markets": [
+        "ESTADOS UNIDOS (30)",
+        "ESPA\u00d1A (18)",
+        "COREA DEL SUR (12)"
+      ]
+    },
+    {
+      "name": "PROCESADORA LARAN SAC",
+      "tax_id": 20451899881,
+      "total_mt": 1486.77,
+      "record_count": 77,
+      "top_markets": [
+        "ESTADOS UNIDOS (26)",
+        "CANAD\u00c1 (16)",
+        "FRANCIA (11)"
+      ]
+    },
+    {
+      "name": "EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D",
+      "tax_id": 20519791413,
+      "total_mt": 1420.18,
+      "record_count": 368,
+      "top_markets": [
+        "ARGENTINA (103)",
+        "URUGUAY (90)",
+        "CHILE (62)"
+      ]
+    },
+    {
+      "name": "UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA",
+      "tax_id": 20511375666,
+      "total_mt": 1401.61,
+      "record_count": 210,
+      "top_markets": [
+        "CHILE (181)",
+        "ESTADOS UNIDOS (25)",
+        "ITALIA (2)"
+      ]
+    },
+    {
+      "name": "PULPAS Y PROCESADOS DEL AGRO SOCIEDAD ANONIMA-PULPAGRO",
+      "tax_id": 20601228514,
+      "total_mt": 1342.84,
+      "record_count": 108,
+      "top_markets": [
+        "POLONIA (60)",
+        "COREA DEL SUR (11)",
+        "CANAD\u00c1 (11)"
+      ]
+    },
+    {
+      "name": "GRUPO TAVARI S.A.C.",
+      "tax_id": 20611474106,
+      "total_mt": 1308.32,
+      "record_count": 94,
+      "top_markets": [
+        "B\u00c9LGICA (27)",
+        "FRANCIA (22)",
+        "ESPA\u00d1A (20)"
+      ]
+    },
+    {
+      "name": "SANTA SOFIA DEL SUR S.A.C.",
+      "tax_id": 20510865627,
+      "total_mt": 1041.1,
+      "record_count": 44,
+      "top_markets": [
+        "ALEMANIA (19)",
+        "B\u00c9LGICA (12)",
+        "PA\u00cdSES BAJOS (5)"
+      ]
+    },
+    {
+      "name": "V & F SAC",
+      "tax_id": 20480319860,
+      "total_mt": 669.58,
+      "record_count": 32,
+      "top_markets": [
+        "ESTADOS UNIDOS (32)"
+      ]
+    },
+    {
+      "name": "AGROFRUTOS TRADING S.A.",
+      "tax_id": 20525353959,
+      "total_mt": 649.07,
+      "record_count": 38,
+      "top_markets": [
+        "ESTADOS UNIDOS (28)",
+        "B\u00c9LGICA (5)",
+        "PUERTO RICO (3)"
+      ]
+    },
+    {
+      "name": "FUSION FOODS S.A.C.",
+      "tax_id": 20565443993,
+      "total_mt": 444.45,
+      "record_count": 131,
+      "top_markets": [
+        "ESTADOS UNIDOS (61)",
+        "ESPA\u00d1A (47)",
+        "ESTONIA (9)"
+      ]
+    },
+    {
+      "name": "PRODUCTORA ANDINA DE CONGELADOS S.R.L.",
+      "tax_id": 20484251861,
+      "total_mt": 401.5,
+      "record_count": 25,
+      "top_markets": [
+        "ALEMANIA (10)",
+        "AUSTRALIA (9)",
+        "ARGENTINA (4)"
+      ]
+    },
+    {
+      "name": "PERUVIAN FOOD GROUPS SOCIEDAD ANONIMA CERRADA.",
+      "tax_id": 20610542906,
+      "total_mt": 239.0,
+      "record_count": 12,
+      "top_markets": [
+        "ESTADOS UNIDOS (6)",
+        "B\u00c9LGICA (2)",
+        "PA\u00cdSES BAJOS (2)"
+      ]
+    },
+    {
+      "name": "B & R FOODS S.A.C.",
+      "tax_id": 20517455157,
+      "total_mt": 151.14,
+      "record_count": 11,
+      "top_markets": [
+        "ESTADOS UNIDOS (11)"
+      ]
+    },
+    {
+      "name": "SELVA INDUSTRIAL S.A.",
+      "tax_id": 20504524176,
+      "total_mt": 109.22,
+      "record_count": 8,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (4)",
+        "ESTADOS UNIDOS (3)",
+        "ALEMANIA (1)"
+      ]
+    },
+    {
+      "name": "GANDULES INC SAC",
+      "tax_id": 20504004415,
+      "total_mt": 72.02,
+      "record_count": 6,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (6)"
+      ]
+    },
+    {
+      "name": "PACHAMAMA FARMS S.A.C.",
+      "tax_id": 20566558590,
+      "total_mt": 48.06,
+      "record_count": 6,
+      "top_markets": [
+        "CANAD\u00c1 (5)",
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "SOLIMAR INDUSTRIA E.I.R.L.",
+      "tax_id": 20526450851,
+      "total_mt": 31.16,
+      "record_count": 8,
+      "top_markets": [
+        "CHILE (6)",
+        "PA\u00cdSES BAJOS (2)"
+      ]
+    },
+    {
+      "name": "AGRO INDUSTRIA SAN ANTONIO S R LTDA",
+      "tax_id": 20220905269,
+      "total_mt": 24.0,
+      "record_count": 2,
+      "top_markets": [
+        "CHILE (2)"
+      ]
+    },
+    {
+      "name": "ANDEAN PARTNER FOOD S.A.C.",
+      "tax_id": 20605226249,
+      "total_mt": 4.01,
+      "record_count": 4,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (3)",
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "CORPORACION SUMMIT S.A.C",
+      "tax_id": 20610809872,
+      "total_mt": 0.01,
+      "record_count": 1,
+      "top_markets": [
+        "TAIW\u00c1N, PROVINCIA DE CHINA (1)"
+      ]
+    }
+  ],
+  "aseptic_producer": [
+    {
+      "name": "QUICORNAC S.A.C.",
+      "tax_id": 20477793674,
+      "total_mt": 6601.33,
+      "record_count": 202,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (73)",
+        "ESTADOS UNIDOS (61)",
+        "CHILE (35)"
+      ]
+    }
+  ],
+  "mixed": [],
+  "general": [
+    {
+      "name": "VIR\u00da GROUP PER\u00da S.A.",
+      "tax_id": 20373860736,
+      "total_mt": 18082.13,
+      "record_count": 1391,
+      "top_markets": [
+        "ESTADOS UNIDOS (577)",
+        "ESPA\u00d1A (223)",
+        "PA\u00cdSES BAJOS (153)"
+      ]
+    },
+    {
+      "name": "CAMPOSOL S.A.",
+      "tax_id": 20340584237,
+      "total_mt": 17967.19,
+      "record_count": 831,
+      "top_markets": [
+        "REINO UNIDO (189)",
+        "ESTADOS UNIDOS (131)",
+        "CANAD\u00c1 (110)"
+      ]
+    },
+    {
+      "name": "DOMINUS S.A.C",
+      "tax_id": 20481065799,
+      "total_mt": 10988.81,
+      "record_count": 594,
+      "top_markets": [
+        "ESTADOS UNIDOS (210)",
+        "B\u00c9LGICA (95)",
+        "CANAD\u00c1 (70)"
+      ]
+    },
+    {
+      "name": "MEBOL GF S.A.C.",
+      "tax_id": 20601199557,
+      "total_mt": 4659.45,
+      "record_count": 354,
+      "top_markets": [
+        "ESTADOS UNIDOS (146)",
+        "CANAD\u00c1 (42)",
+        "COREA DEL SUR (39)"
+      ]
+    },
+    {
+      "name": "ARA FOODS INDUSTRY S.A.C.",
+      "tax_id": 20610089136,
+      "total_mt": 3830.26,
+      "record_count": 216,
+      "top_markets": [
+        "ESTADOS UNIDOS (56)",
+        "COREA DEL SUR (54)",
+        "B\u00c9LGICA (42)"
+      ]
+    },
+    {
+      "name": "MEBOL SAC",
+      "tax_id": 20293583626,
+      "total_mt": 3455.68,
+      "record_count": 344,
+      "top_markets": [
+        "ESTADOS UNIDOS (111)",
+        "PANAM\u00c1 (73)",
+        "JAP\u00d3N (34)"
+      ]
+    },
+    {
+      "name": "AMARA FOODS S.A.C.",
+      "tax_id": 20604580294,
+      "total_mt": 3388.29,
+      "record_count": 314,
+      "top_markets": [
+        "B\u00c9LGICA (100)",
+        "ESPA\u00d1A (91)",
+        "CHILE (45)"
+      ]
+    },
+    {
+      "name": "AGROEMPAQUES S.A.",
+      "tax_id": 20507453687,
+      "total_mt": 2980.65,
+      "record_count": 156,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (132)",
+        "REINO UNIDO (15)",
+        "FRANCIA (4)"
+      ]
+    },
+    {
+      "name": "DANPER TRUJILLO S.A.C.",
+      "tax_id": 20170040938,
+      "total_mt": 2564.83,
+      "record_count": 186,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (45)",
+        "FRANCIA (38)",
+        "JAP\u00d3N (28)"
+      ]
+    },
+    {
+      "name": "AGROVISION PERU S.A.C.",
+      "tax_id": 20554556192,
+      "total_mt": 2108.91,
+      "record_count": 99,
+      "top_markets": [
+        "COREA DEL SUR (23)",
+        "B\u00c9LGICA (22)",
+        "CHILE (11)"
+      ]
+    },
+    {
+      "name": "COMPLEJO AGROINDUSTRIAL BETA S.A.",
+      "tax_id": 20297939131,
+      "total_mt": 1543.87,
+      "record_count": 75,
+      "top_markets": [
+        "POLONIA (23)",
+        "REINO UNIDO (18)",
+        "CANAD\u00c1 (9)"
+      ]
+    },
+    {
+      "name": "CFRUITS PERU E.I.R.L.",
+      "tax_id": 20611944862,
+      "total_mt": 817.79,
+      "record_count": 33,
+      "top_markets": [
+        "ESTADOS UNIDOS (33)"
+      ]
+    },
+    {
+      "name": "HONEST FOODS S.A.C.",
+      "tax_id": 20609097362,
+      "total_mt": 593.19,
+      "record_count": 34,
+      "top_markets": [
+        "FRANCIA (15)",
+        "B\u00c9LGICA (12)",
+        "COREA DEL SUR (3)"
+      ]
+    },
+    {
+      "name": "ELITE FOOD PERU S.A.C.",
+      "tax_id": 20545428521,
+      "total_mt": 586.84,
+      "record_count": 124,
+      "top_markets": [
+        "CHILE (112)",
+        "ESTADOS UNIDOS (12)"
+      ]
+    },
+    {
+      "name": "SOCIEDAD MERCANTIL (EXPORTACION) SA",
+      "tax_id": 20138293069,
+      "total_mt": 566.31,
+      "record_count": 26,
+      "top_markets": [
+        "POLONIA (11)",
+        "ALEMANIA (8)",
+        "B\u00c9LGICA (2)"
+      ]
+    },
+    {
+      "name": "ANDEAN SUPERFOOD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA",
+      "tax_id": 20601477018,
+      "total_mt": 371.9,
+      "record_count": 44,
+      "top_markets": [
+        "CHILE (44)"
+      ]
+    },
+    {
+      "name": "AGRICOLA CERRO PRIETO S.A.",
+      "tax_id": 20461642706,
+      "total_mt": 341.42,
+      "record_count": 17,
+      "top_markets": [
+        "ESTADOS UNIDOS (13)",
+        "CHILE (2)",
+        "FRANCIA (2)"
+      ]
+    },
+    {
+      "name": "NATURANDINA DEL PERU S.A.C.",
+      "tax_id": 20501597873,
+      "total_mt": 249.87,
+      "record_count": 17,
+      "top_markets": [
+        "JAP\u00d3N (16)",
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "P & M FRUITS S.A.C.",
+      "tax_id": 20609932776,
+      "total_mt": 226.41,
+      "record_count": 51,
+      "top_markets": [
+        "CHILE (46)",
+        "POLONIA (4)",
+        "ISRAEL (1)"
+      ]
+    },
+    {
+      "name": "NORPERU COMPANY CV E.I.R.L.",
+      "tax_id": 20613244663,
+      "total_mt": 208.3,
+      "record_count": 28,
+      "top_markets": [
+        "CHILE (26)",
+        "ARGENTINA (2)"
+      ]
+    },
+    {
+      "name": "IMPORTADORA Y EXPORTADORA DO\u00d1A ISABEL E.",
+      "tax_id": 20186370571,
+      "total_mt": 192.37,
+      "record_count": 83,
+      "top_markets": [
+        "ESTADOS UNIDOS (76)",
+        "EMIRATOS \u00c1RABES UNIDOS (3)",
+        "AUSTRALIA (3)"
+      ]
+    },
+    {
+      "name": "PROFRUIT INDUSTRY S.A.C.",
+      "tax_id": 20613039598,
+      "total_mt": 163.97,
+      "record_count": 7,
+      "top_markets": [
+        "ALEMANIA (6)",
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - COTRINA EXPORTS E.I.R.L.",
+      "tax_id": 20600560701,
+      "total_mt": 162.26,
+      "record_count": 32,
+      "top_markets": [
+        "CHILE (32)"
+      ]
+    },
+    {
+      "name": "BELMONT FOODS PERU S.A.C.",
+      "tax_id": 20503640032,
+      "total_mt": 133.98,
+      "record_count": 33,
+      "top_markets": [
+        "ESTADOS UNIDOS (33)"
+      ]
+    },
+    {
+      "name": "PROVISSO FOODS S.A.C.",
+      "tax_id": 20612897680,
+      "total_mt": 96.45,
+      "record_count": 4,
+      "top_markets": [
+        "CHILE (4)"
+      ]
+    },
+    {
+      "name": "DARO Y ANSER S.A.C.",
+      "tax_id": 20601246199,
+      "total_mt": 92.34,
+      "record_count": 23,
+      "top_markets": [
+        "CHILE (18)",
+        "ALBANIA (5)"
+      ]
+    },
+    {
+      "name": "MIRANDA - LANGA AGRO EXPORT S.A.C - MIRANDA - LANGA S.A.C",
+      "tax_id": 20523273265,
+      "total_mt": 90.12,
+      "record_count": 69,
+      "top_markets": [
+        "ESTADOS UNIDOS (65)",
+        "ESPA\u00d1A (2)",
+        "ITALIA (2)"
+      ]
+    },
+    {
+      "name": "AGROINDUSTRIAL ESTANISLAO DEL CHIMU S.A.C.",
+      "tax_id": 20481555702,
+      "total_mt": 81.02,
+      "record_count": 4,
+      "top_markets": [
+        "ESPA\u00d1A (4)"
+      ]
+    },
+    {
+      "name": "PERU INDUSTRY G.N S.A.C.",
+      "tax_id": 20605578528,
+      "total_mt": 73.87,
+      "record_count": 22,
+      "top_markets": [
+        "CHILE (22)"
+      ]
+    },
+    {
+      "name": "COMERCIALIZADORA DEL PERU A SU MESA S.A.C.",
+      "tax_id": 20606880716,
+      "total_mt": 72.75,
+      "record_count": 13,
+      "top_markets": [
+        "CHILE (11)",
+        "ESTADOS UNIDOS (2)"
+      ]
+    },
+    {
+      "name": "AGROINDUSTRIAS PEQUI S.A.C.",
+      "tax_id": 20542072556,
+      "total_mt": 71.0,
+      "record_count": 8,
+      "top_markets": [
+        "HONG KONG (8)"
+      ]
+    },
+    {
+      "name": "LAMAS IMPORT EXPORT S.A.C.",
+      "tax_id": 20392854445,
+      "total_mt": 59.06,
+      "record_count": 76,
+      "top_markets": [
+        "ESPA\u00d1A (76)"
+      ]
+    },
+    {
+      "name": "FLYMEXPORT PERU E.I.R.L.",
+      "tax_id": 20606611634,
+      "total_mt": 57.4,
+      "record_count": 3,
+      "top_markets": [
+        "B\u00c9LGICA (2)",
+        "AUSTRALIA (1)"
+      ]
+    },
+    {
+      "name": "LATAM TRADE S.A.C.",
+      "tax_id": 20608831089,
+      "total_mt": 48.0,
+      "record_count": 2,
+      "top_markets": [
+        "GUADALUPE (2)"
+      ]
+    },
+    {
+      "name": "CORPORACION GERONIMO S.A.C.",
+      "tax_id": 20603128541,
+      "total_mt": 43.77,
+      "record_count": 20,
+      "top_markets": [
+        "CHILE (20)"
+      ]
+    },
+    {
+      "name": "THE GREEN FARMER S.A.C.",
+      "tax_id": 20476152594,
+      "total_mt": 35.7,
+      "record_count": 48,
+      "top_markets": [
+        "JAP\u00d3N (27)",
+        "ESTADOS UNIDOS (13)",
+        "ESPA\u00d1A (6)"
+      ]
+    },
+    {
+      "name": "KARLINI INTERNATIONAL FOODS S.A.C.",
+      "tax_id": 20608615521,
+      "total_mt": 33.26,
+      "record_count": 34,
+      "top_markets": [
+        "ESTADOS UNIDOS (34)"
+      ]
+    },
+    {
+      "name": "IMPORTACIONES BLAWS E.I.R.L.",
+      "tax_id": 20613818686,
+      "total_mt": 31.59,
+      "record_count": 2,
+      "top_markets": [
+        "CHILE (2)"
+      ]
+    },
+    {
+      "name": "EXOTICA DIAMOND PERU SOCIEDAD COMERCIAL",
+      "tax_id": 20525729240,
+      "total_mt": 31.2,
+      "record_count": 11,
+      "top_markets": [
+        "CANAD\u00c1 (8)",
+        "ESTADOS UNIDOS (2)",
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "EXPORT Y IMPORT E INVERSIONES WILLAM ESAG EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "tax_id": 20533248358,
+      "total_mt": 29.17,
+      "record_count": 2,
+      "top_markets": [
+        "CHILE (2)"
+      ]
+    },
+    {
+      "name": "CORPORACION AGROLATINA S.A.C.",
+      "tax_id": 20176770474,
+      "total_mt": 25.2,
+      "record_count": 8,
+      "top_markets": [
+        "ESTADOS UNIDOS (8)"
+      ]
+    },
+    {
+      "name": "GAMN EXPORT & IMPORT SERV GNRAL S.A.C.",
+      "tax_id": 20604828024,
+      "total_mt": 24.0,
+      "record_count": 1,
+      "top_markets": [
+        "ALEMANIA (1)"
+      ]
+    },
+    {
+      "name": "SERVICIOS PROCESADORA PERU S.A.C.",
+      "tax_id": 20480636164,
+      "total_mt": 23.99,
+      "record_count": 1,
+      "top_markets": [
+        "ALEMANIA (1)"
+      ]
+    },
+    {
+      "name": "KAMPO PERU S.A.C.",
+      "tax_id": 20611017244,
+      "total_mt": 23.73,
+      "record_count": 1,
+      "top_markets": [
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "ALIMENTOS HIMALAYA PERU E.I.R.L.",
+      "tax_id": 20611220244,
+      "total_mt": 23.05,
+      "record_count": 10,
+      "top_markets": [
+        "CHILE (8)",
+        "ITALIA (2)"
+      ]
+    },
+    {
+      "name": "INDUFRUT S.A.C.",
+      "tax_id": 20513998385,
+      "total_mt": 23.0,
+      "record_count": 1,
+      "top_markets": [
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "EMPRESA AGROINDUSTRIAL DEL PERU S.A.",
+      "tax_id": 20259730971,
+      "total_mt": 22.96,
+      "record_count": 3,
+      "top_markets": [
+        "JAP\u00d3N (3)"
+      ]
+    },
+    {
+      "name": "IMPORTADORA, EXPORTADORA Y COMERCIALIZADORA PATAGONFOODS PERU S.A.C.",
+      "tax_id": 20603656297,
+      "total_mt": 22.51,
+      "record_count": 1,
+      "top_markets": [
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "PROYEMSUR S.A.C.",
+      "tax_id": 20533162631,
+      "total_mt": 22.0,
+      "record_count": 2,
+      "top_markets": [
+        "COREA DEL SUR (2)"
+      ]
+    },
+    {
+      "name": "CAYNARACHI S.A.",
+      "tax_id": 20542232006,
+      "total_mt": 21.8,
+      "record_count": 4,
+      "top_markets": [
+        "ESTADOS UNIDOS (3)",
+        "CHILE (1)"
+      ]
+    },
+    {
+      "name": "AMARUMAYU S.A.C.",
+      "tax_id": 20604452377,
+      "total_mt": 20.04,
+      "record_count": 2,
+      "top_markets": [
+        "GUATEMALA (2)"
+      ]
+    },
+    {
+      "name": "AGRO ALIMENTOS ANDINOS S.A.C.",
+      "tax_id": 20516313821,
+      "total_mt": 20.0,
+      "record_count": 4,
+      "top_markets": [
+        "CHILE (4)"
+      ]
+    },
+    {
+      "name": "CAMPOSOL ORGANICO S.A.C.",
+      "tax_id": 20606397845,
+      "total_mt": 19.05,
+      "record_count": 1,
+      "top_markets": [
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "BIO FRUTOS S.A.C.",
+      "tax_id": 20555013435,
+      "total_mt": 17.96,
+      "record_count": 2,
+      "top_markets": [
+        "CHILE (2)"
+      ]
+    },
+    {
+      "name": "AMAZON GINGER S.A.C. - AMAZON GINGER S.A",
+      "tax_id": 20605719717,
+      "total_mt": 17.0,
+      "record_count": 1,
+      "top_markets": [
+        "COREA DEL SUR (1)"
+      ]
+    },
+    {
+      "name": "EXPORTADORA LINOS PERU SOCIEDAD ANONIMA CERRADA",
+      "tax_id": 20605152873,
+      "total_mt": 16.99,
+      "record_count": 5,
+      "top_markets": [
+        "CHILE (5)"
+      ]
+    },
+    {
+      "name": "DESPENSA AMERICANA S.A.C.",
+      "tax_id": 20606487500,
+      "total_mt": 16.32,
+      "record_count": 3,
+      "top_markets": [
+        "ESTADOS UNIDOS (2)",
+        "AUSTRALIA (1)"
+      ]
+    },
+    {
+      "name": "TRU MARKET BLOCKCHAIN S.A.C.",
+      "tax_id": 20608082281,
+      "total_mt": 16.09,
+      "record_count": 4,
+      "top_markets": [
+        "CHILE (4)"
+      ]
+    },
+    {
+      "name": "ZOWI PERU SOCIEDAD ANONIMA CERRADA",
+      "tax_id": 20602546226,
+      "total_mt": 15.95,
+      "record_count": 6,
+      "top_markets": [
+        "ESPA\u00d1A (6)"
+      ]
+    },
+    {
+      "name": "TANA FRUITS EXPORT E.I.R.L.",
+      "tax_id": 20612649945,
+      "total_mt": 14.0,
+      "record_count": 5,
+      "top_markets": [
+        "ESPA\u00d1A (5)"
+      ]
+    },
+    {
+      "name": "PROYECTOS & EXPORTACIONES CASMA S.A.C.",
+      "tax_id": 20605279601,
+      "total_mt": 12.0,
+      "record_count": 4,
+      "top_markets": [
+        "REINO UNIDO (4)"
+      ]
+    },
+    {
+      "name": "P & B FRESH PRODUCTS SOCIEDAD ANONIMA CERRADA",
+      "tax_id": 20610147179,
+      "total_mt": 11.97,
+      "record_count": 5,
+      "top_markets": [
+        "CANAD\u00c1 (5)"
+      ]
+    },
+    {
+      "name": "AGROHIDRO E.I.R.L.",
+      "tax_id": 20503572878,
+      "total_mt": 10.88,
+      "record_count": 8,
+      "top_markets": [
+        "ESTADOS UNIDOS (8)"
+      ]
+    },
+    {
+      "name": "GLOBAL AGRO PERU S.A.C.",
+      "tax_id": 20562740814,
+      "total_mt": 8.43,
+      "record_count": 1,
+      "top_markets": [
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "INDUSTRIAS SISA S.A.C.",
+      "tax_id": 20450130908,
+      "total_mt": 7.81,
+      "record_count": 11,
+      "top_markets": [
+        "ESPA\u00d1A (6)",
+        "ESTADOS UNIDOS (5)"
+      ]
+    },
+    {
+      "name": "RIVERA'S PERUVIAN FOOD S.A.C.",
+      "tax_id": 20606297361,
+      "total_mt": 7.54,
+      "record_count": 3,
+      "top_markets": [
+        "ESTADOS UNIDOS (3)"
+      ]
+    },
+    {
+      "name": "GBZ FOODS S.A.C.",
+      "tax_id": 20602249337,
+      "total_mt": 7.5,
+      "record_count": 1,
+      "top_markets": [
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "MIKUY TRADERS S.A.C.",
+      "tax_id": 20608284223,
+      "total_mt": 7.44,
+      "record_count": 9,
+      "top_markets": [
+        "ESPA\u00d1A (9)"
+      ]
+    },
+    {
+      "name": "INNOVACION FENIX S.A.C.",
+      "tax_id": 20609749700,
+      "total_mt": 5.63,
+      "record_count": 4,
+      "top_markets": [
+        "ESTADOS UNIDOS (4)"
+      ]
+    },
+    {
+      "name": "NITHO'S COMPANY S.A.C.",
+      "tax_id": 20609226812,
+      "total_mt": 4.81,
+      "record_count": 42,
+      "top_markets": [
+        "ITALIA (42)"
+      ]
+    },
+    {
+      "name": "BLOSSOM TRAINER PERU S.A.C.",
+      "tax_id": 20611593407,
+      "total_mt": 4.25,
+      "record_count": 27,
+      "top_markets": [
+        "ITALIA (27)"
+      ]
+    },
+    {
+      "name": "INVERSIONES LIBER S.A.",
+      "tax_id": 20375020905,
+      "total_mt": 4.15,
+      "record_count": 2,
+      "top_markets": [
+        "CHILE (2)"
+      ]
+    },
+    {
+      "name": "FROZEN PRODUCTS CORPORATION SOCIEDAD ANO",
+      "tax_id": 20504729908,
+      "total_mt": 4.13,
+      "record_count": 5,
+      "top_markets": [
+        "GUADALUPE (4)",
+        "MARTINICA (1)"
+      ]
+    },
+    {
+      "name": "COMERCIAL INTERNACIONAL REYES & RIVERA S.A.C.",
+      "tax_id": 20604994714,
+      "total_mt": 3.57,
+      "record_count": 4,
+      "top_markets": [
+        "CHILE (4)"
+      ]
+    },
+    {
+      "name": "INCA INDUSTRIAS AGRICOLAS S.A.C.",
+      "tax_id": 20605185071,
+      "total_mt": 2.81,
+      "record_count": 5,
+      "top_markets": [
+        "ESPA\u00d1A (5)"
+      ]
+    },
+    {
+      "name": "BODEGA GRAN CRUZ SAC",
+      "tax_id": 20518776836,
+      "total_mt": 2.17,
+      "record_count": 1,
+      "top_markets": [
+        "CANAD\u00c1 (1)"
+      ]
+    },
+    {
+      "name": "MI PATRIA FOOD S.A.C.",
+      "tax_id": 20609685876,
+      "total_mt": 1.86,
+      "record_count": 1,
+      "top_markets": [
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "BRITT BRANDS PERU S.A.C.",
+      "tax_id": 20601645964,
+      "total_mt": 1.42,
+      "record_count": 10,
+      "top_markets": [
+        "COSTA RICA (10)"
+      ]
+    },
+    {
+      "name": "MAPA LOGISTICA INTERNACIONAL SAC",
+      "tax_id": 20510807694,
+      "total_mt": 1.41,
+      "record_count": 42,
+      "top_markets": [
+        "ITALIA (42)"
+      ]
+    },
+    {
+      "name": "INKA TASTY S.A.C.",
+      "tax_id": 20604284555,
+      "total_mt": 1.22,
+      "record_count": 18,
+      "top_markets": [
+        "ITALIA (18)"
+      ]
+    },
+    {
+      "name": "NOVAL COMPANY S.A.C.",
+      "tax_id": 20603351755,
+      "total_mt": 1.01,
+      "record_count": 5,
+      "top_markets": [
+        "ESPA\u00d1A (3)",
+        "ALEMANIA (1)",
+        "SUIZA (1)"
+      ]
+    },
+    {
+      "name": "EXPORTACIONES AGROAMAZONICAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA",
+      "tax_id": 20613461672,
+      "total_mt": 1.0,
+      "record_count": 3,
+      "top_markets": [
+        "ESTADOS UNIDOS (3)"
+      ]
+    },
+    {
+      "name": "ORGANIC PERUVIAN FOODS S.A.C",
+      "tax_id": 20562975706,
+      "total_mt": 0.82,
+      "record_count": 1,
+      "top_markets": [
+        "ESPA\u00d1A (1)"
+      ]
+    },
+    {
+      "name": "MONDO IMPRENDITORE S.A.C.",
+      "tax_id": 20554700901,
+      "total_mt": 0.72,
+      "record_count": 35,
+      "top_markets": [
+        "FRANCIA (11)",
+        "ALEMANIA (6)",
+        "COREA DEL SUR (4)"
+      ]
+    },
+    {
+      "name": "NUTRIFAM TRADING & MORE PERU E.I.R.L.",
+      "tax_id": 20602884555,
+      "total_mt": 0.71,
+      "record_count": 22,
+      "top_markets": [
+        "ARUBA (19)",
+        "M\u00c9XICO (3)"
+      ]
+    },
+    {
+      "name": "MULTISERVICIOS ROMERO'S & MORENO'S S.A.C.",
+      "tax_id": 20600553675,
+      "total_mt": 0.59,
+      "record_count": 23,
+      "top_markets": [
+        "SUIZA (17)",
+        "ITALIA (4)",
+        "ESPA\u00d1A (2)"
+      ]
+    },
+    {
+      "name": "OLLADEBARROFOODSOCIEDADCOMERCIALDERESPON",
+      "tax_id": 20607342424,
+      "total_mt": 0.57,
+      "record_count": 13,
+      "top_markets": [
+        "ITALIA (9)",
+        "ALEMANIA (4)"
+      ]
+    },
+    {
+      "name": "NEGOCIOS E INVERSIONES MACOVIJ E.I.R.L. - NIMACOVIJ E.I.R.L.",
+      "tax_id": 20477645306,
+      "total_mt": 0.41,
+      "record_count": 2,
+      "top_markets": [
+        "ESPA\u00d1A (1)",
+        "FRANCIA (1)"
+      ]
+    },
+    {
+      "name": "EMPRESA AGRARIA CAFETALERA CHANCHAMAYO H",
+      "tax_id": 20486021773,
+      "total_mt": 0.26,
+      "record_count": 1,
+      "top_markets": [
+        "FRANCIA (1)"
+      ]
+    },
+    {
+      "name": "MERRILL CORPORACION S.A.C.",
+      "tax_id": 20609361302,
+      "total_mt": 0.24,
+      "record_count": 5,
+      "top_markets": [
+        "REP\u00daBLICA CHECA (5)"
+      ]
+    },
+    {
+      "name": "PERUVIAN AMAZON HERBS E.I.R.L.",
+      "tax_id": 20546581765,
+      "total_mt": 0.2,
+      "record_count": 1,
+      "top_markets": [
+        "REP\u00daBLICA CHECA (1)"
+      ]
+    },
+    {
+      "name": "G & J LOGISTICS SERVICES S.A.C.",
+      "tax_id": 20609454238,
+      "total_mt": 0.17,
+      "record_count": 8,
+      "top_markets": [
+        "ARUBA (8)"
+      ]
+    },
+    {
+      "name": "BCG PUBLICIDAD & AGRONEGOCIOS S.A.C.",
+      "tax_id": 20555863731,
+      "total_mt": 0.15,
+      "record_count": 4,
+      "top_markets": [
+        "ESTADOS UNIDOS (4)"
+      ]
+    },
+    {
+      "name": "ESPINOZA ASOCIADOS S.A.",
+      "tax_id": 20118096691,
+      "total_mt": 0.13,
+      "record_count": 1,
+      "top_markets": [
+        "CHILE (1)"
+      ]
+    },
+    {
+      "name": "CORPORACION ESPIN E.I.R.L.",
+      "tax_id": 20612356280,
+      "total_mt": 0.1,
+      "record_count": 3,
+      "top_markets": [
+        "ITALIA (3)"
+      ]
+    },
+    {
+      "name": "FRUTAMA S.A.C.",
+      "tax_id": 20528304860,
+      "total_mt": 0.1,
+      "record_count": 1,
+      "top_markets": [
+        "REINO UNIDO (1)"
+      ]
+    },
+    {
+      "name": "AGROINDUSTRIAS JAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA-AGROINDUSTRIA JAS E.I.R.L.",
+      "tax_id": 20543733769,
+      "total_mt": 0.09,
+      "record_count": 5,
+      "top_markets": [
+        "ESTADOS UNIDOS (5)"
+      ]
+    },
+    {
+      "name": "JANDA IMPORT EXPORT E.I.R.L.",
+      "tax_id": 20613700901,
+      "total_mt": 0.07,
+      "record_count": 7,
+      "top_markets": [
+        "ARUBA (6)",
+        "CURAZAO (1)"
+      ]
+    },
+    {
+      "name": "FALEB CORP E.I.R.L.",
+      "tax_id": 20610829831,
+      "total_mt": 0.05,
+      "record_count": 5,
+      "top_markets": [
+        "SUIZA (5)"
+      ]
+    },
+    {
+      "name": "GUINEXPORTACIONES S.A.C.",
+      "tax_id": 20612788040,
+      "total_mt": 0.05,
+      "record_count": 4,
+      "top_markets": [
+        "CHILE (4)"
+      ]
+    },
+    {
+      "name": "MONARCA EXPORTS S.A.C.",
+      "tax_id": 20613739026,
+      "total_mt": 0.05,
+      "record_count": 4,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (4)"
+      ]
+    },
+    {
+      "name": "SILVA & ZAPATA IMPORTACION S.A.C.",
+      "tax_id": 20608533606,
+      "total_mt": 0.05,
+      "record_count": 4,
+      "top_markets": [
+        "SUIZA (4)"
+      ]
+    },
+    {
+      "name": "MCMC PERU S.A,C,",
+      "tax_id": 20601345235,
+      "total_mt": 0.04,
+      "record_count": 3,
+      "top_markets": [
+        "SUIZA (2)",
+        "ESTADOS UNIDOS (1)"
+      ]
+    },
+    {
+      "name": "QORI FOODS S.A.C.",
+      "tax_id": 20566127181,
+      "total_mt": 0.04,
+      "record_count": 1,
+      "top_markets": [
+        "SUIZA (1)"
+      ]
+    },
+    {
+      "name": "I Q F DEL PERU SA",
+      "tax_id": 20100032709,
+      "total_mt": 0.03,
+      "record_count": 3,
+      "top_markets": [
+        "JAP\u00d3N (3)"
+      ]
+    },
+    {
+      "name": "INCA INVEST PERU S.A.C.",
+      "tax_id": 20610376488,
+      "total_mt": 0.03,
+      "record_count": 1,
+      "top_markets": [
+        "ESPA\u00d1A (1)"
+      ]
+    },
+    {
+      "name": "AGROINDUSTRIAS CRIAL S.A.C.",
+      "tax_id": 20610609075,
+      "total_mt": 0.02,
+      "record_count": 8,
+      "top_markets": [
+        "REINO UNIDO (8)"
+      ]
+    },
+    {
+      "name": "AGROMANIA SAC",
+      "tax_id": 20515926543,
+      "total_mt": 0.02,
+      "record_count": 1,
+      "top_markets": [
+        "ITALIA (1)"
+      ]
+    },
+    {
+      "name": "ANDES TRADERS S.A.C.",
+      "tax_id": 20613568922,
+      "total_mt": 0.02,
+      "record_count": 4,
+      "top_markets": [
+        "ESPA\u00d1A (4)"
+      ]
+    },
+    {
+      "name": "SELVA Y FLORESTA SOCIEDAD ANONIMA CERRADA - SELFLO S.A.C.",
+      "tax_id": 20547710615,
+      "total_mt": 0.02,
+      "record_count": 1,
+      "top_markets": [
+        "SUIZA (1)"
+      ]
+    },
+    {
+      "name": "AGRO INDUSTRIA EL VADO EIRL",
+      "tax_id": 20109717216,
+      "total_mt": 0.01,
+      "record_count": 1,
+      "top_markets": [
+        "CHILE (1)"
+      ]
+    },
+    {
+      "name": "BC SOLUTIONS S.A.C.",
+      "tax_id": 20519090971,
+      "total_mt": 0.01,
+      "record_count": 2,
+      "top_markets": [
+        "PUERTO RICO (2)"
+      ]
+    },
+    {
+      "name": "EXPORT & IMPORT ELRODI E.I.R.L.",
+      "tax_id": 20613170201,
+      "total_mt": 0.01,
+      "record_count": 2,
+      "top_markets": [
+        "SUIZA (2)"
+      ]
+    },
+    {
+      "name": "SULLKATA FARMS S.A.C.",
+      "tax_id": 20613227289,
+      "total_mt": 0.01,
+      "record_count": 1,
+      "top_markets": [
+        "CANAD\u00c1 (1)"
+      ]
+    },
+    {
+      "name": "AGC IMPORTACIONES S.A.C.",
+      "tax_id": 20609140829,
+      "total_mt": 0.0,
+      "record_count": 3,
+      "top_markets": [
+        "PA\u00cdSES BAJOS (3)"
+      ]
+    }
+  ]
+}
