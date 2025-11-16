@@ -26,7 +26,7 @@ from typing import Optional, Literal, Dict, List
 from core.database import execute_query
 
 
-DimensionType = Literal['fruit', 'exporter', 'format']
+DimensionType = Literal['fruit', 'exporter', 'importer', 'format']
 
 
 def calculate_pricing_summary(
@@ -38,13 +38,13 @@ def calculate_pricing_summary(
     Calculate quartile pricing summary for a dimension.
 
     Args:
-        dimension: Dimension to aggregate by ('fruit', 'exporter', or 'format')
+        dimension: Dimension to aggregate by ('fruit', 'exporter', 'importer', or 'format')
         region: Optional region filter ('Europe', 'RoW', or None for worldwide)
         use_clean_view: Use v_clean_exports view (YTD, filtered data)
 
     Returns:
         DataFrame with columns:
-        - [dimension]: Fruit/Exporter/Format name
+        - [dimension]: Fruit/Exporter/Importer/Format name
         - Low$: Q1 price (25th percentile, USD/MT FOB)
         - Mid$: Median price (50th percentile)
         - Hi$: Q3 price (75th percentile)
@@ -55,6 +55,7 @@ def calculate_pricing_summary(
     dimension_col_map = {
         'fruit': 'fruit_name',
         'exporter': 'canonical_exporter',
+        'importer': 'canonical_importer',
         'format': 'format_type',
     }
 
@@ -144,11 +145,14 @@ def calculate_pricing_drill_down(
         # Viru prices by fruit
         calculate_pricing_drill_down('exporter', 'Viru', by='fruit')
 
+        # Salud Foodgroup Europe prices by fruit
+        calculate_pricing_drill_down('importer', 'Salud Foodgroup Europe', by='fruit')
+
         # Chunks format by exporter
         calculate_pricing_drill_down('format', 'chunks', by='exporter')
 
     Args:
-        filter_dimension: Dimension to filter on ('fruit', 'exporter', 'format')
+        filter_dimension: Dimension to filter on ('fruit', 'exporter', 'importer', 'format')
         filter_value: Value to filter for
         by: Dimension to aggregate by
         region: Optional region filter
@@ -161,6 +165,7 @@ def calculate_pricing_drill_down(
     dimension_col_map = {
         'fruit': 'fruit_name',
         'exporter': 'canonical_exporter',
+        'importer': 'canonical_importer',
         'format': 'format_type',
     }
 
@@ -293,5 +298,17 @@ if __name__ == '__main__':
     print("=" * 80)
     df_viru_fruit = calculate_pricing_drill_down('exporter', 'Viru', by='fruit')
     print(df_viru_fruit.to_string(index=False))
+
+    # Test 6: Importer-level summary
+    print("\n6. Importer-Level Pricing Summary (YTD, Worldwide)")
+    print("=" * 80)
+    df_importer = calculate_pricing_summary(dimension='importer')
+    print(df_importer.head(10).to_string(index=False))
+
+    # Test 7: Drill-down - Salud Foodgroup Europe by fruit
+    print("\n7. Drill-Down: Salud Foodgroup Europe Pricing by Fruit")
+    print("=" * 80)
+    df_salud_fruit = calculate_pricing_drill_down('importer', 'Salud Foodgroup Europe', by='fruit')
+    print(df_salud_fruit.to_string(index=False))
 
     print("\n✓ All tests completed successfully!")

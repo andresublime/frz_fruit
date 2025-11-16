@@ -611,6 +611,67 @@ def get_format_pricing_summary(
 
 
 @mcp.tool()
+def get_importer_pricing_summary(
+    region: Optional[str] = None,
+    limit: int = 20
+) -> Dict[str, Any]:
+    """
+    Get quartile pricing summary for all importers.
+
+    Returns Q1/Median/Q3 prices and YTD volume for each importing company.
+    Importer names are normalized using canonical mapping.
+
+    Args:
+        region: Filter by region ('Europe' or 'RoW'). Default: worldwide.
+        limit: Maximum number of importers to return. Default: 20.
+
+    Returns:
+        Dictionary with:
+        - importers: List of importer pricing summaries
+        - total_importers: Total number of unique importers
+        - top_importer: Largest importer by volume
+
+    Example Usage:
+        # Get top 20 importers worldwide
+        get_importer_pricing_summary(limit=20)
+
+        # European importers only
+        get_importer_pricing_summary(region='Europe', limit=15)
+
+        # Rest of World importers
+        get_importer_pricing_summary(region='RoW', limit=10)
+
+    Output Interpretation:
+        - YTD MT: Total import volume → market demand indicator
+        - Q1/Median/Q3: Pricing segments (budget/mid/premium buyers)
+        - High volume + low Q1: Large commodity buyer
+        - High volume + high Q3: Premium market focus
+
+    Common Workflows:
+        1. Market Entry: Identify key buyers → drill_importer_by_fruit for product focus
+        2. Customer Discovery: Find importers → drill_importer_by_fruit to assess fit
+        3. Regional Analysis: Compare Europe vs RoW importer landscape
+
+    Related Tools:
+        - drill_importer_by_fruit: See what fruits specific importers buy
+        - drill_fruit_by_exporter: Supply side view for comparison
+        - drill_importer_by_format: See format preferences by importer
+    """
+    df = calculate_pricing_summary(dimension='importer', region=region)
+
+    importers = df.head(limit).to_dict('records')
+    top = importers[0] if importers else None
+
+    return {
+        "importers": importers,
+        "total_importers": len(df),
+        "top_importer": top,
+        "data_period": "YTD Oct 2024 - Oct 2025",
+        "normalization_note": "Importer names normalized using canonical mapping"
+    }
+
+
+@mcp.tool()
 def drill_fruit_by_exporter(
     fruit_name: str,
     region: Optional[str] = None,
@@ -770,6 +831,91 @@ def drill_exporter_by_fruit(
 
 
 @mcp.tool()
+def drill_importer_by_fruit(
+    importer_name: str,
+    region: Optional[str] = None
+) -> Dict[str, Any]:
+    """
+    Get pricing breakdown for a specific importer by fruit.
+
+    Shows which fruits this importer buys and their pricing.
+    Importer name will be normalized automatically using canonical mapping.
+
+    Args:
+        importer_name: Name of the importer (e.g., 'Salud Foodgroup Europe')
+        region: Filter by region ('Europe' or 'RoW'). Default: worldwide.
+
+    Returns:
+        Dictionary with:
+        - importer: Importer name (normalized)
+        - fruits: List of fruits with pricing
+        - total_fruits: Number of fruit types
+        - purchase_profile: Analysis of buying patterns
+
+    Example Usage:
+        # Analyze importer's fruit purchases
+        drill_importer_by_fruit(importer_name='Salud Foodgroup Europe')
+
+        # Check importer's European purchases only
+        drill_importer_by_fruit(importer_name='Ardo', region='Europe')
+
+        # Rest of World purchases for specific importer
+        drill_importer_by_fruit(importer_name='Dole', region='RoW')
+
+    Output Interpretation:
+        - Purchase Profile:
+          * High diversity (5+ fruits): Broad product range buyer
+          * Medium (3-4 fruits): Focused buyer
+          * Low (1-2 fruits): Specialist buyer
+        - Top Fruit Share %: Concentration indicator
+        - Total Volume: Overall purchasing capacity
+        - Q1/Median/Q3: Price sensitivity (premium vs value buyer)
+
+    Common Workflows:
+        1. Customer Analysis: Start here → drill_fruit_by_exporter for supply matching
+        2. Market Intelligence: Identify buyers → compare to get_importer_pricing_summary
+        3. Product Fit: Check fruit mix → drill_importer_by_format for format needs
+
+    Related Tools:
+        - get_importer_pricing_summary: See all importers and rankings
+        - drill_exporter_by_fruit: Mirror view from supply side
+        - drill_importer_by_format: See format preferences for this importer
+    """
+    df = calculate_pricing_drill_down(
+        filter_dimension='importer',
+        filter_value=importer_name,
+        by='fruit',
+        region=region
+    )
+
+    if len(df) == 0:
+        return {
+            "error": f"No data found for importer '{importer_name}'",
+            "suggestion": "Check spelling or try using get_importer_pricing_summary to see available importers"
+        }
+
+    fruits_list = df.to_dict('records')
+    total_volume = df['YTD MT'].sum()
+
+    # Purchase profile analysis
+    purchase_profile = {
+        "fruit_count": len(df),
+        "total_volume_mt": int(total_volume),
+        "top_fruit": fruits_list[0]['Fruit'] if fruits_list else None,
+        "top_fruit_share_pct": round((fruits_list[0]['YTD MT'] / total_volume * 100), 1) if fruits_list and total_volume > 0 else 0,
+        "diversification": "High" if len(df) >= 5 else "Medium" if len(df) >= 3 else "Low"
+    }
+
+    return {
+        "importer": importer_name,
+        "fruits": fruits_list,
+        "total_fruits": len(df),
+        "purchase_profile": purchase_profile,
+        "data_period": "YTD Oct 2024 - Oct 2025"
+    }
+
+
+@mcp.tool()
 def drill_fruit_by_format(
     fruit_name: str,
     region: Optional[str] = None
@@ -832,6 +978,73 @@ def drill_fruit_by_format(
 
     return {
         "fruit": fruit_name,
+        "formats": df.to_dict('records'),
+        "total_formats": len(df),
+        "data_period": "YTD Oct 2024 - Oct 2025"
+    }
+
+
+@mcp.tool()
+def drill_importer_by_format(
+    importer_name: str,
+    region: Optional[str] = None
+) -> Dict[str, Any]:
+    """
+    Get pricing breakdown for a specific importer by format.
+
+    Shows which product formats this importer buys and their pricing.
+
+    Args:
+        importer_name: Name of the importer (e.g., 'Salud Foodgroup Europe')
+        region: Filter by region ('Europe' or 'RoW'). Default: worldwide.
+
+    Returns:
+        Dictionary with:
+        - importer: Importer name
+        - formats: List of formats with pricing
+        - total_formats: Number of format types purchased
+
+    Example Usage:
+        # See what formats importer purchases
+        drill_importer_by_format(importer_name='Salud Foodgroup Europe')
+
+        # Check European format purchases
+        drill_importer_by_format(importer_name='Ardo', region='Europe')
+
+        # Rest of World format preferences
+        drill_importer_by_format(importer_name='Dole', region='RoW')
+
+    Output Interpretation:
+        - Format diversity: Number of different formats purchased
+        - Format preferences: Q3 prices indicate premium format focus
+        - Volume distribution: Which formats drive volume
+        - Use to identify: Value-added vs commodity buyer profile
+
+    Common Workflows:
+        1. Product Development: Match formats to buyer needs
+        2. Format Strategy: Identify buyer format preferences
+        3. Supply Matching: Cross-reference with drill_fruit_by_format
+
+    Related Tools:
+        - drill_importer_by_fruit: See fruit mix for this importer
+        - get_format_pricing_summary: Compare to overall format pricing
+        - drill_fruit_by_format: See which fruits come in these formats
+    """
+    df = calculate_pricing_drill_down(
+        filter_dimension='importer',
+        filter_value=importer_name,
+        by='format',
+        region=region
+    )
+
+    if len(df) == 0:
+        return {
+            "error": f"No data found for importer '{importer_name}'",
+            "suggestion": "Check spelling or try using get_importer_pricing_summary to see available importers"
+        }
+
+    return {
+        "importer": importer_name,
         "formats": df.to_dict('records'),
         "total_formats": len(df),
         "data_period": "YTD Oct 2024 - Oct 2025"
@@ -1170,6 +1383,100 @@ def get_system_info() -> Dict[str, Any]:
             "Database-driven (single source of truth)"
         ]
     }
+
+
+@mcp.tool()
+def export_pricing_to_csv(
+    dimension: str,
+    output_path: str,
+    region: Optional[str] = None
+) -> Dict[str, Any]:
+    """
+    Export pricing summary to CSV file.
+
+    Saves complete pricing data for specified dimension to CSV.
+    Matches CLI's 'export' command functionality.
+
+    Args:
+        dimension: Dimension to export ('fruit', 'exporter', 'importer', or 'format')
+        output_path: Path where CSV file should be saved
+        region: Optional region filter ('Europe' or 'RoW'). Default: worldwide.
+
+    Returns:
+        Dictionary with:
+        - status: Success/failure message
+        - file_path: Path to saved CSV file
+        - rows_exported: Number of rows written
+        - dimension: Dimension that was exported
+        - region: Region filter applied (if any)
+
+    Example Usage:
+        # Export all fruits to CSV
+        export_pricing_to_csv(dimension='fruit', output_path='fruits.csv')
+
+        # Export European exporters
+        export_pricing_to_csv(dimension='exporter', output_path='eu_exporters.csv', region='Europe')
+
+        # Export importers for Rest of World
+        export_pricing_to_csv(dimension='importer', output_path='row_importers.csv', region='RoW')
+
+        # Export all format pricing
+        export_pricing_to_csv(dimension='format', output_path='formats.csv')
+
+    Output Format:
+        - CSV file with columns matching summary data
+        - For fruit/exporter/importer/format: Name, Q1, Median, Q3, YTD MT
+        - For exporter: Additional 'Fruit Count' column
+        - Headers included
+        - Sorted by YTD volume (descending)
+
+    Common Workflows:
+        1. Data Export: Get summary → export to CSV for external analysis
+        2. Reporting: Export specific region data for stakeholders
+        3. Archive: Save snapshots of pricing data over time
+
+    Related Tools:
+        - get_fruit_pricing_summary: Preview data before exporting
+        - get_exporter_pricing_summary: Check exporter data first
+        - get_importer_pricing_summary: Preview importer data
+        - get_format_pricing_summary: Check format data before export
+
+    Best Practices:
+        - Use absolute paths or paths relative to working directory
+        - Preview data with summary tools before exporting
+        - Include region in filename for clarity (e.g., 'fruits_europe.csv')
+        - Valid dimensions: fruit, exporter, importer, format
+    """
+    valid_dimensions = ['fruit', 'exporter', 'importer', 'format']
+    if dimension not in valid_dimensions:
+        return {
+            "error": f"Invalid dimension '{dimension}'",
+            "valid_dimensions": valid_dimensions
+        }
+
+    try:
+        # Get pricing summary for the dimension
+        df = calculate_pricing_summary(dimension=dimension, region=region)
+
+        # Save to CSV
+        df.to_csv(output_path, index=False)
+
+        return {
+            "status": "Success",
+            "file_path": output_path,
+            "rows_exported": len(df),
+            "dimension": dimension,
+            "region": region if region else "Worldwide",
+            "data_period": "YTD Oct 2024 - Oct 2025",
+            "message": f"Exported {len(df)} {dimension} records to {output_path}"
+        }
+
+    except Exception as e:
+        return {
+            "status": "Error",
+            "error": str(e),
+            "suggestion": "Check that the output path is valid and writable"
+        }
 
 
 # ============================================================================

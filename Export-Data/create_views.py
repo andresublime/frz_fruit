@@ -40,7 +40,7 @@ def main():
 
     # Show sample
     df = execute_query("""
-        SELECT canonical_exporter, fruit_name, format_type, net_weight_mt, usd_per_mt_fob
+        SELECT canonical_exporter, canonical_importer, fruit_name, format_type, net_weight_mt, usd_per_mt_fob
         FROM v_clean_exports
         LIMIT 5
     """)

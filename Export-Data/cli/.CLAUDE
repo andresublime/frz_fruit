@@ -1,0 +1,61 @@
+# CLI - Peru Frozen Fruit Export Analysis
+
+This directory contains the unified command-line interface for pricing analytics and reporting.
+
+## Usage
+
+The CLI provides three main commands:
+
+### 1. Summary - Aggregate pricing by dimension
+```bash
+python cli/main.py summary {fruit|exporter|importer|format} [--region Europe|RoW] [--output file.csv] [--limit N]
+```
+
+Examples:
+- `python cli/main.py summary fruit`
+- `python cli/main.py summary exporter --region Europe`
+- `python cli/main.py summary importer --output importers.csv`
+
+### 2. Drill - Analyze specific entity pricing
+```bash
+python cli/main.py drill <value> --by {fruit|exporter|importer|format} [--filter-dimension DIMENSION] [--region Europe|RoW] [--output file.csv]
+```
+
+Examples:
+- `python cli/main.py drill mango --by exporter`
+- `python cli/main.py drill Viru --by fruit --filter-dimension exporter`
+- `python cli/main.py drill "Salud Foodgroup Europe" --filter-dimension importer --by fruit`
+
+### 3. Export - Save full dataset to CSV
+```bash
+python cli/main.py export {fruit|exporter|importer|format} <output_file> [--region Europe|RoW]
+```
+
+## Data Dimensions
+
+- **fruit**: Mango, Pineapple, Avocado, etc.
+- **exporter**: Peruvian export companies
+- **importer**: International importing companies (with canonical mapping)
+- **format**: Product format (IQF, Chunk, Puree, etc.)
+
+## Regional Filters
+
+- **Europe**: European market data only
+- **RoW**: Rest of World (non-European markets)
+- No filter: Worldwide data
+
+## Architecture
+
+- **main.py**: CLI entry point with argparse-based command routing
+- Integrates with **analysis/pricing.py** for all analytics functions
+- Uses coherent data quality filters (min 100kg volume, excludes extreme outliers)
+- Data period: YTD October 2024 - October 2025
+
+## Running the CLI
+
+Always run from the project root:
+```bash
+python cli/main.py <command> [arguments]
+```
+
+The CLI automatically handles path resolution to access the database and analysis modules.

@@ -6,8 +6,10 @@ Unified interface for all pricing analytics and reporting.
 Usage:
     python cli/main.py summary fruit
     python cli/main.py summary exporter
+    python cli/main.py summary importer
     python cli/main.py drill mango --by exporter
     python cli/main.py drill Viru --by fruit
+    python cli/main.py drill "Salud Foodgroup Europe" --filter-dimension importer --by fruit
 """
 
 import sys
@@ -36,8 +38,8 @@ def cmd_summary(args):
     """Generate pricing summary by dimension."""
     dimension = args.dimension
 
-    if dimension not in ['fruit', 'exporter', 'format']:
-        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, or format")
+    if dimension not in ['fruit', 'exporter', 'importer', 'format']:
+        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, importer, or format")
         return 1
 
     print(f"\nCalculating {dimension} pricing summary...")
@@ -67,8 +69,8 @@ def cmd_drill(args):
     filter_value = args.filter_value
     by = args.by
 
-    if by not in ['fruit', 'exporter', 'format']:
-        print(f"Error: Invalid --by dimension '{by}'. Must be: fruit, exporter, or format")
+    if by not in ['fruit', 'exporter', 'importer', 'format']:
+        print(f"Error: Invalid --by dimension '{by}'. Must be: fruit, exporter, importer, or format")
         return 1
 
     # Determine filter dimension
@@ -105,8 +107,8 @@ def cmd_export(args):
     """Export full pricing summary to CSV."""
     dimension = args.dimension
 
-    if dimension not in ['fruit', 'exporter', 'format']:
-        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, or format")
+    if dimension not in ['fruit', 'exporter', 'importer', 'format']:
+        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, importer, or format")
         return 1
 
     print(f"\nGenerating {dimension} pricing summary...")
@@ -128,7 +130,7 @@ def main():
 
     # Summary command
     summary_parser = subparsers.add_parser('summary', help='Generate pricing summary')
-    summary_parser.add_argument('dimension', choices=['fruit', 'exporter', 'format'],
+    summary_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer', 'format'],
                                 help='Dimension to summarize')
     summary_parser.add_argument('--region', choices=['Europe', 'RoW'],
                                 help='Region filter (default: worldwide)')
@@ -138,11 +140,11 @@ def main():
 
     # Drill command
     drill_parser = subparsers.add_parser('drill', help='Drill down pricing')
-    drill_parser.add_argument('filter_value', help='Value to filter (e.g., mango, Viru)')
-    drill_parser.add_argument('--by', required=True, choices=['fruit', 'exporter', 'format'],
+    drill_parser.add_argument('filter_value', help='Value to filter (e.g., mango, Viru, "Salud Foodgroup Europe")')
+    drill_parser.add_argument('--by', required=True, choices=['fruit', 'exporter', 'importer', 'format'],
                              help='Dimension to drill down by')
     drill_parser.add_argument('--filter-dimension', dest='filter_dimension',
-                             choices=['fruit', 'exporter', 'format'], default='fruit',
+                             choices=['fruit', 'exporter', 'importer', 'format'], default='fruit',
                              help='Filter dimension (default: fruit)')
     drill_parser.add_argument('--region', choices=['Europe', 'RoW'],
                              help='Region filter (default: worldwide)')
@@ -152,7 +154,7 @@ def main():
 
     # Export command
     export_parser = subparsers.add_parser('export', help='Export pricing to CSV')
-    export_parser.add_argument('dimension', choices=['fruit', 'exporter', 'format'],
+    export_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer', 'format'],
                               help='Dimension to export')
     export_parser.add_argument('output', help='Output CSV file path')
     export_parser.add_argument('--region', choices=['Europe', 'RoW'],
