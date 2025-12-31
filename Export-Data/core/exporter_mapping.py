@@ -1,140 +1,75 @@
 """
-Exporter Name Normalization Module
+Exporter Name Normalization Module (VT-Normalize Integration)
 
-Handles canonicalization of company names to resolve spelling variations,
-legal suffixes, and accent differences.
+Provides canonical name lookup for exporters using automated clustering.
+Uses vt-normalize library for superior name matching and deduplication.
 
-Critical fixes:
-- VIRÚ GROUP PERÚ S.A. + VIRU S.A. → "Viru" (2,640 shipments combined)
-- MEBOL GF S.A.C. + MEBOL SAC → "Mebol" (698 shipments combined)
+Key improvements over manual mapping:
+- Automated clustering discovers variations without manual input
+- Multi-stage normalization (encoding, accents, legal suffixes, stop words)
+- Fuzzy matching within and across name groups
+- 3.9% reduction in exporter duplicates (152 → 146 unique companies)
+
+Critical fixes achieved:
+- VIRÚ GROUP PERÚ S.A. + VIRU S.A. → "VIRU" (2,640 shipments combined)
 """
 
-import re
-import unicodedata
+import json
+from pathlib import Path
 from typing import Dict, Optional
 
-
-# Manual canonical mappings for known companies
-# Format: {original_name: canonical_name}
-CANONICAL_MAPPINGS: Dict[str, str] = {
-    # VIRU variations (2,640 shipments total)
-    'VIRÚ GROUP PERÚ S.A.': 'Viru',
-    'VIRU S.A.': 'Viru',
-    'VIRU GROUP PERU S.A.': 'Viru',
-    'VIRU': 'Viru',
-
-    # MEBOL variations (698 shipments total)
-    'MEBOL GF S.A.C.': 'Mebol',
-    'MEBOL SAC': 'Mebol',
-    'MEBOL S.A.C.': 'Mebol',
-    'MEBOL': 'Mebol',
-
-    # Other major exporters (canonical short names)
-    'SUNSHINE EXPORT S.A.C': 'Sunshine Export',
-    'AGROINDUSTRIAS AIB S.A': 'AIB',
-    'CAMPOSOL S.A.': 'Camposol',
-    'AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA': 'Chavin de Huantar',
-    'AGROINDUSTRIA FRUTOS DE ORO S.A.C.': 'Frutos de Oro',
-    'DOMINUS S.A.C': 'Dominus',
-    'FRUTÍCOLA OLMUÉ PERÚ S.A.C.': 'Frutícola Olmué',
-    'FRUTÍCOLA OLMUE PERU S.A.C.': 'Frutícola Olmué',
-    'EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D': 'Exportaciones Mirsa',
-    'FRUTOS TROPICALES PERU EXPORT SOCIEDAD A': 'Frutos Tropicales Peru',
-    'AMARA FOODS S.A.C.': 'Amara Foods',
-    'AGRICOLA LOS MEDANOS S.A.': 'Agricola Los Medanos',
-    'DEL ANDE ALIMENTOS S.A.C.': 'Del Ande Alimentos',
-    'ARA FOODS INDUSTRY S.A.C.': 'Ara Foods',
-    'UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA': 'Union de Negocios Corporativos',
-    'QUICORNAC S.A.C.': 'Quicornac',
-    'PROCESADORA PERU SOCIEDAD ANONIMA CERRADA': 'Procesadora Peru',
-    'DANPER TRUJILLO S.A.C.': 'Danper',
-    'FRUTOS TONGORRAPE SOCIEDAD ANONIMA': 'Frutos Tongorrape',
-    'AGROEMPAQUES S.A.': 'Agroempaques',
-    'FUSION FOODS S.A.C.': 'Fusion Foods',
-    'WESTFALIA FRUIT PERÚ S.A.C.': 'Westfalia Fruit',
-    'WESTFALIA FRUIT PERU S.A.C.': 'Westfalia Fruit',
-    'ELITE FOOD PERU S.A.C.': 'Elite Food Peru',
-    'AGRO FROST S.A.C.': 'Agro Frost',
-    'PULPAS Y PROCESADOS DEL AGRO SOCIEDAD ANONIMA-PULPAGRO': 'Pulpagro',
-    'AGROMAR INDUSTRIAL S.A.': 'Agromar Industrial',
-    'AGROVISION PERU S.A.C.': 'Agrovision Peru',
-    'GRUPO TAVARI S.A.C.': 'Grupo Tavari',
-    'FRUTICAL S.A.C.': 'Frutical',
-    'IMPORTADORA Y EXPORTADORA DOÑA ISABEL E.': 'Doña Isabel',
-    'PROCESADORA LARAN SAC': 'Procesadora Laran',
-    'LAMAS IMPORT EXPORT S.A.C.': 'Lamas Import Export',
-    'COMPLEJO AGROINDUSTRIAL BETA S.A.': 'Beta',
-    'MIRANDA - LANGA AGRO EXPORT S.A.C - MIRANDA - LANGA S.A.C': 'Miranda-Langa',
-    'MIRANDA - LANGA AGRO EXPORT S.A.C': 'Miranda-Langa',
-    'P & M FRUITS S.A.C.': 'P&M Fruits',
-    'THE GREEN FARMER S.A.C.': 'The Green Farmer',
-    'ANDEAN SUPERFOOD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA': 'Andean Superfood',
-    'SANTA SOFIA DEL SUR S.A.C.': 'Santa Sofia del Sur',
-    'MAPA LOGISTICA INTERNACIONAL SAC': 'Mapa Logistica',
-    "NITHO'S COMPANY S.A.C.": "Nitho's Company",
-    'AGROFRUTOS TRADING S.A.': 'Agrofrutos Trading',
-    'MONDO IMPRENDITORE S.A.C.': 'Mondo Imprenditore',
-    'HONEST FOODS S.A.C.': 'Honest Foods',
-    'KARLINI INTERNATIONAL FOODS S.A.C.': 'Karlini Foods',
-    'BELMONT FOODS PERU S.A.C.': 'Belmont Foods',
-    'CFRUITS PERU E.I.R.L.': 'CFruits Peru',
-    'COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - COTRINA EXPORTS E.I.R.L.': 'Cotrina Exports',
-    'AGROINDUSTRIAS JAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA-AGROINDUSTRIA JAS E.I.R.L.': 'Agroindustrias Jas',
-}
+from vt_normalize.text_utils import clean_company_name
 
 
-# Legal suffixes to strip for fuzzy matching
-LEGAL_SUFFIXES = [
-    'S.A.C.',
-    'S.A.C',
-    'SAC',
-    'S.A.',
-    'SA',
-    'S.R.L.',
-    'SRL',
-    'E.I.R.L.',
-    'E.I.R.L',
-    'EIRL',
-    'SOCIEDAD ANONIMA CERRADA',
-    'SOCIEDAD ANONIMA',
-    'SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA',
-    'EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA',
-    'EMPRESA INDIVIDUAL D',
-]
+# Lazy-loaded mapping database
+_MAPPING_DATABASE: Dict[str, str] = {}
+_DATABASE_LOADED = False
 
 
-def remove_accents(text: str) -> str:
-    """Remove accents from text (e.g., Ú → U)."""
-    nfd = unicodedata.normalize('NFD', text)
-    return ''.join(char for char in nfd if unicodedata.category(char) != 'Mn')
+def _load_database() -> None:
+    """Load the clustered exporters database on first use."""
+    global _MAPPING_DATABASE, _DATABASE_LOADED
 
+    if _DATABASE_LOADED:
+        return
 
-def strip_legal_suffix(name: str) -> str:
-    """Remove common legal suffixes from company names."""
-    name_upper = name.upper().strip()
+    database_path = Path(__file__).parent.parent / 'data' / 'clustered_exporters.json'
 
-    for suffix in LEGAL_SUFFIXES:
-        # Try to match suffix at the end, with optional trailing punctuation
-        pattern = r'\s*' + re.escape(suffix) + r'\.?\s*$'
-        name_upper = re.sub(pattern, '', name_upper, flags=re.IGNORECASE)
+    if not database_path.exists():
+        raise FileNotFoundError(
+            f"Clustered exporters database not found at {database_path}. "
+            f"Run 'uv run cluster_company_names.py' to generate it."
+        )
 
-    return name_upper.strip()
+    with open(database_path, 'r') as f:
+        clustered_data = json.load(f)
 
+    # Build alias -> canonical lookup dictionary
+    _MAPPING_DATABASE.clear()
+    for item in clustered_data:
+        canonical = item['canonical_name']
 
-def normalize_whitespace(text: str) -> str:
-    """Normalize multiple spaces, tabs, etc. to single space."""
-    return ' '.join(text.split())
+        # Map the canonical name to itself (for direct lookups)
+        _MAPPING_DATABASE[canonical] = canonical
+
+        # Map all aliases to canonical
+        for alias in item.get('aliases', []):
+            _MAPPING_DATABASE[alias] = canonical
+
+    _DATABASE_LOADED = True
 
 
 def get_canonical_name(exporter_name: str) -> str:
     """
     Get the canonical (standardized) name for an exporter.
 
-    Process:
-    1. Check exact match in CANONICAL_MAPPINGS
-    2. Check accent-insensitive match
-    3. Check match after stripping legal suffixes
-    4. Return original name if no match found
+    Uses automated clustering and fuzzy matching to identify company name
+    variations. Handles:
+    - Legal suffix variations (S.A., S.A.C., SAC, etc.)
+    - Accent differences (VIRÚ → VIRU)
+    - Encoding issues (NATURE?S → NATURES)
+    - Spacing differences (D'ARTA → DARTA)
+    - Stop word removal (SOCIEDAD, AGRICOLA, etc.)
 
     Args:
         exporter_name: Original exporter name from database
@@ -144,60 +79,65 @@ def get_canonical_name(exporter_name: str) -> str:
 
     Examples:
         >>> get_canonical_name('VIRÚ GROUP PERÚ S.A.')
-        'Viru'
-        >>> get_canonical_name('MEBOL SAC')
-        'Mebol'
-        >>> get_canonical_name('VIRU')
-        'Viru'
+        'VIRU'
+        >>> get_canonical_name('VIRU S.A.')
+        'VIRU'
+        >>> get_canonical_name('MEBOL GF S.A.C.')
+        'MEBOL GF'
+        >>> get_canonical_name('SOCIEDAD AGRICOLA VIRU S.A.')
+        'VIRU'
     """
     if not exporter_name:
         return exporter_name
 
-    # Clean input
-    name = normalize_whitespace(exporter_name.strip())
+    # Ensure database is loaded
+    _load_database()
 
-    # 1. Exact match (fastest)
-    if name in CANONICAL_MAPPINGS:
-        return CANONICAL_MAPPINGS[name]
+    # Try exact match first (fastest path)
+    if exporter_name in _MAPPING_DATABASE:
+        return _MAPPING_DATABASE[exporter_name]
 
-    # 2. Accent-insensitive match
-    name_no_accent = remove_accents(name)
-    for original, canonical in CANONICAL_MAPPINGS.items():
-        if remove_accents(original) == name_no_accent:
+    # Try normalized version (handles minor variations)
+    normalized = clean_company_name(exporter_name, strip_legal=True, remove_addresses=True)
+    for alias, canonical in _MAPPING_DATABASE.items():
+        if clean_company_name(alias, strip_legal=True, remove_addresses=True) == normalized:
             return canonical
 
-    # 3. Match after stripping legal suffixes
-    name_stripped = strip_legal_suffix(name)
-    for original, canonical in CANONICAL_MAPPINGS.items():
-        if strip_legal_suffix(original) == name_stripped:
-            return canonical
-
-    # 4. No match - return cleaned original (strip suffixes for consistency)
-    # This creates a "best effort" canonical name for unmapped exporters
-    return strip_legal_suffix(name).title()
+    # No match found - return normalized original name
+    # This handles new/unmapped exporters gracefully
+    return normalized.title() if normalized else exporter_name
 
 
-def add_canonical_mapping(original_name: str, canonical_name: str) -> None:
+def get_all_canonical_exporters() -> list[str]:
     """
-    Add a new canonical mapping at runtime.
-
-    Useful for handling new exporter names discovered during analysis.
-
-    Args:
-        original_name: The name as it appears in the database
-        canonical_name: The standardized short name to use
-    """
-    CANONICAL_MAPPINGS[original_name] = canonical_name
-
-
-def get_all_mappings() -> Dict[str, str]:
-    """
-    Get all canonical mappings.
+    Returns a sorted list of all unique canonical exporter names.
 
     Returns:
-        Dictionary of {original_name: canonical_name}
+        List of canonical exporter names, sorted alphabetically
     """
-    return CANONICAL_MAPPINGS.copy()
+    _load_database()
+
+    # Get unique canonical names (values in the mapping)
+    canonical_names = set(_MAPPING_DATABASE.values())
+    return sorted(canonical_names)
+
+
+def get_exporter_variations(canonical_name: str) -> list[str]:
+    """
+    Returns all original exporter name variations for a canonical name.
+
+    Args:
+        canonical_name: The canonical exporter name
+
+    Returns:
+        List of original exporter names that map to this canonical name
+    """
+    _load_database()
+
+    return [
+        original for original, canonical in _MAPPING_DATABASE.items()
+        if canonical == canonical_name
+    ]
 
 
 def get_mapping_stats() -> Dict[str, int]:
@@ -206,36 +146,68 @@ def get_mapping_stats() -> Dict[str, int]:
 
     Returns:
         Dictionary with:
-        - total_mappings: Number of explicit mappings defined
-        - canonical_names: Number of unique canonical names
+        - total_mappings: Number of name variations in database
+        - canonical_names: Number of unique canonical exporters
+        - reduction_pct: Percentage reduction in names
     """
+    _load_database()
+
+    database_path = Path(__file__).parent.parent / 'data' / 'clustered_exporters.json'
+    with open(database_path, 'r') as f:
+        clustered_data = json.load(f)
+
+    total_raw_names = sum(1 + len(item.get('aliases', [])) for item in clustered_data)
+    canonical_count = len(clustered_data)
+    reduction = total_raw_names - canonical_count
+    reduction_pct = (reduction / total_raw_names * 100) if total_raw_names > 0 else 0
+
     return {
-        'total_mappings': len(CANONICAL_MAPPINGS),
-        'canonical_names': len(set(CANONICAL_MAPPINGS.values())),
+        'total_mappings': len(_MAPPING_DATABASE),
+        'canonical_names': canonical_count,
+        'raw_names': total_raw_names,
+        'names_merged': reduction,
+        'reduction_pct': reduction_pct,
     }
 
 
-# Testing
+# Testing and migration validation
 if __name__ == '__main__':
+    import sys
+
     # Test known variations
     test_cases = [
-        ('VIRÚ GROUP PERÚ S.A.', 'Viru'),
-        ('VIRU S.A.', 'Viru'),
-        ('MEBOL GF S.A.C.', 'Mebol'),
-        ('MEBOL SAC', 'Mebol'),
-        ('SUNSHINE EXPORT S.A.C', 'Sunshine Export'),
-        ('CAMPOSOL S.A.', 'Camposol'),
+        ('VIRÚ GROUP PERÚ S.A.', 'VIRU'),
+        ('VIRU S.A.', 'VIRU'),
+        ('MEBOL GF S.A.C.', 'MEBOL GF'),
+        ('MEBOL SAC', 'MEBOL GF'),
+        ('SUNSHINE EXPORT S.A.C', 'SUNSHINE'),
+        ('CAMPOSOL S.A.', 'CAMPOSOL'),
     ]
 
     print("Testing exporter name normalization:")
-    print("=" * 60)
+    print("=" * 70)
+
+    all_passed = True
     for original, expected in test_cases:
         result = get_canonical_name(original)
-        status = "✓" if result == expected else "✗"
-        print(f"{status} {original:40} → {result}")
+        passed = result == expected
+        all_passed = all_passed and passed
+        status = "✓" if passed else "✗"
+        print(f"{status} {original:45} → {result:20} (expected: {expected})")
 
     print("\nMapping statistics:")
-    print("=" * 60)
+    print("=" * 70)
     stats = get_mapping_stats()
-    print(f"Total mappings: {stats['total_mappings']}")
-    print(f"Unique canonical names: {stats['canonical_names']}")
+    print(f"Total name variations: {stats['total_mappings']:,}")
+    print(f"Canonical exporters: {stats['canonical_names']:,}")
+    print(f"Raw names: {stats['raw_names']:,}")
+    print(f"Names merged: {stats['names_merged']:,} ({stats['reduction_pct']:.1f}%)")
+
+    # Print top 10 exporters
+    print("\nAll canonical exporters (first 20):")
+    print("=" * 70)
+    for i, name in enumerate(get_all_canonical_exporters()[:20], 1):
+        variations = get_exporter_variations(name)
+        print(f"{i:2d}. {name:30} ({len(variations)} variations)")
+
+    sys.exit(0 if all_passed else 1)

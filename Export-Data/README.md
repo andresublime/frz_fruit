@@ -13,6 +13,15 @@ This project provides comprehensive analysis of Peru frozen fruit export data wi
 ✓ **Command-Line Interface** - Easy access to all analytics
 ✓ **Database-Driven** - Single source of truth (no redundant CSVs)
 
+### Latest Enhancement: VT-Normalize Integration
+
+🚀 **Automated Company Name Clustering** - Revolutionary name normalization using vt-normalize library
+- **Exporters:** 152 → 146 canonical names (3.9% reduction)
+- **Importers:** 1,423 → 579 canonical names (**59.3% reduction!**)
+- **Automated discovery** of name variations (no manual mapping needed)
+- **Examples:** NATURES TOUCH (32 variations), SALUD FOODGROUP (5 variations)
+- **See:** [VT_NORMALIZE_INTEGRATION.md](VT_NORMALIZE_INTEGRATION.md) for full details
+
 ---
 
 ## Quick Start
