@@ -170,9 +170,9 @@ def clean_company_name(name: str, strip_legal: bool = True, remove_addresses: bo
 
 def get_canonical_brand_name(name: str) -> str:
     """
-    Extract the canonical brand name by removing stop words (countries, legal terms, etc.)
+    Extract the canonical brand name by removing TRAILING stop words (countries, legal terms, etc.)
     but keeping brand identity words like FRUIT, FOOD, FROZEN, etc.
-    Also keeps Spanish/Portuguese conjunctions Y, O, E when between significant words.
+    Leading stop words are preserved as they're part of the brand (e.g., "PERUVIAN IMPORT").
 
     This is used for the final canonical name display, not for clustering.
 
@@ -183,6 +183,8 @@ def get_canonical_brand_name(name: str) -> str:
     'ALIMENTOS Y FRUTOS S.A.' -> 'ALIMENTOS Y FRUTOS'
     'IMPORTADORA Y COMERCIALIZADORA SABOR PERUANO' -> 'SABOR PERUANO'
     'DARTA FROZEN FOODS BELGIUM' -> 'DARTA FROZEN FOODS'
+    'PERUVIAN IMPORT CO INC' -> 'PERUVIAN IMPORT'  # Keeps leading PERUVIAN
+    'SUNSHINE EXPORT PERU' -> 'SUNSHINE' # Removes trailing PERU
     """
     cleaned = clean_company_name(name, strip_legal=True)
     words = cleaned.split()
@@ -190,20 +192,28 @@ def get_canonical_brand_name(name: str) -> str:
     # Create stop words set excluding conjunctions (Y, O, E are part of brand names)
     stop_words_no_conjunctions = STOP_WORDS - {'Y', 'O', 'E'}
 
-    # Filter out stop words (except conjunctions) and single letters (except conjunctions)
-    significant_words = [
-        w for w in words
-        if (len(w) > 1 and w not in stop_words_no_conjunctions) or w in {'Y', 'O', 'E'}
-    ]
+    # Remove trailing stop words (working backwards from the end)
+    # Keep leading stop words as they're part of the brand identity
+    while words and words[-1] in stop_words_no_conjunctions:
+        words.pop()
+
+    # Remove trailing single-letter words (except conjunctions)
+    while words and len(words[-1]) == 1 and words[-1] not in {'Y', 'O', 'E'}:
+        words.pop()
+
+    # Remove leading generic descriptors (IMPORTADORA, EXPORTADORA, COMERCIAL, etc.)
+    # These are always generic, never part of brand
+    leading_generics = {'IMPORTADORA', 'EXPORTADORA', 'COMERCIAL', 'COMERCIALIZADORA', 'SOCIEDAD', 'EMPRESA', 'AGRICOLA', 'AGRO', 'GRUPO', 'GROUP'}
+    while words and words[0] in leading_generics:
+        words.pop(0)
 
     # Remove leading/trailing conjunctions (Y, O, E should only be between words)
-    # "IMPORTADORA Y SABOR" -> "Y SABOR" -> "SABOR"
-    while significant_words and significant_words[0] in {'Y', 'O', 'E'}:
-        significant_words.pop(0)
-    while significant_words and significant_words[-1] in {'Y', 'O', 'E'}:
-        significant_words.pop()
+    while words and words[0] in {'Y', 'O', 'E'}:
+        words.pop(0)
+    while words and words[-1] in {'Y', 'O', 'E'}:
+        words.pop()
 
-    return ' '.join(significant_words) if significant_words else (words[0] if words else "")
+    return ' '.join(words) if words else ""
 
 
 def normalize_spacing_for_comparison(name: str) -> str:
@@ -219,27 +229,37 @@ def normalize_spacing_for_comparison(name: str) -> str:
 def get_core_name(name: str) -> str:
     """
     Extracts the 'distinctive' part of the name (the core brand identifier).
-    Skips generic stop words like 'SOCIEDAD', 'GROUP', countries, etc.
-    Apostrophes are removed to join words (D'ARTA -> DARTA).
+    Removes leading generic descriptors and trailing stop words.
+    Preserves leading country/brand identifiers (e.g., PERUVIAN).
     Returns first 1-2 significant words to focus on the core brand name.
 
     Example:
     'SOCIEDAD AGRICOLA VIRU S.A.' -> 'VIRU'
-    'AGRANA FRUIT MEXICO S.A. DE C.V.' -> 'AGRANA'
+    'AGRANA FRUIT MEXICO S.A. DE C.V.' -> 'AGRANA FRUIT'
     'ARDO GOURIN S.A.S.' -> 'ARDO'
-    'WESTFALIA FRUIT UK LTD' -> 'WESTFALIA'
+    'WESTFALIA FRUIT UK LTD' -> 'WESTFALIA FRUIT'
     "D'ARTA" -> 'DARTA'
+    'PERUVIAN IMPORT CO INC' -> 'PERUVIAN IMPORT'
+    'SUNSHINE EXPORT PERU' -> 'SUNSHINE EXPORT'
     """
     cleaned = clean_company_name(name, strip_legal=True)
     words = cleaned.split()
 
-    # Collect significant words (not stop words, length > 1 to exclude single letters)
-    significant_words = [w for w in words if len(w) > 1 and w not in STOP_WORDS]
+    # Remove leading generic descriptors (always generic)
+    leading_generics = {'IMPORTADORA', 'EXPORTADORA', 'COMERCIAL', 'COMERCIALIZADORA', 'SOCIEDAD', 'EMPRESA', 'AGRICOLA', 'AGRO', 'GRUPO', 'GROUP'}
+    while words and words[0] in leading_generics:
+        words.pop(0)
 
-    # Return first 1-2 significant words (the core brand name)
-    # Most companies have 1-2 word brand names (e.g., AGRANA, WESTFALIA, ARDO)
+    # Remove trailing stop words
+    while words and words[-1] in STOP_WORDS:
+        words.pop()
+
+    # Return first 1-2 significant words (length > 1)
+    # This gives enough context for brand identity while keeping similar brands grouped
+    significant_words = [w for w in words if len(w) > 1]
+
     if significant_words:
         return ' '.join(significant_words[:2])
 
-    # Fallback: if all words are stop words or short, return the first word
+    # Fallback: return first word if available
     return words[0] if words else ""

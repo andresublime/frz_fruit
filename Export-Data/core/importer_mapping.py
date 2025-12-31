@@ -97,17 +97,17 @@ def get_canonical_importer(importer_name: str) -> str:
 
     # Try exact match first (fastest path)
     if importer_name in _MAPPING_DATABASE:
-        return _MAPPING_DATABASE[importer_name]
+        return _MAPPING_DATABASE[importer_name].upper()
 
     # Try normalized version (handles minor variations)
     normalized = clean_company_name(importer_name, strip_legal=True, remove_addresses=True)
     for alias, canonical in _MAPPING_DATABASE.items():
         if clean_company_name(alias, strip_legal=True, remove_addresses=True) == normalized:
-            return canonical
+            return canonical.upper()
 
-    # No match found - return normalized original name
+    # No match found - return normalized original name in UPPERCASE
     # This handles new/unmapped importers gracefully
-    return normalized.title() if normalized else importer_name
+    return normalized.upper() if normalized else importer_name.upper()
 
 
 def get_all_canonical_importers() -> list[str]:

@@ -1,734 +1,1060 @@
 [
   {
     "canonical_name": "AGC IMPORTACIONES",
-    "aliases": [],
+    "aliases": [
+      "AGC IMPORTACIONES S.A.C."
+    ],
     "count": 3
   },
   {
     "canonical_name": "AGRARIA CAFETALERA CHANCHAMAYO",
-    "aliases": [],
+    "aliases": [
+      "EMPRESA AGRARIA CAFETALERA CHANCHAMAYO H"
+    ],
     "count": 1
   },
   {
     "canonical_name": "AGROEMPAQUES",
-    "aliases": [],
+    "aliases": [
+      "AGROEMPAQUES S.A."
+    ],
     "count": 156
   },
   {
     "canonical_name": "AGROFRUTOS TRADING",
-    "aliases": [],
+    "aliases": [
+      "AGROFRUTOS TRADING S.A."
+    ],
     "count": 38
   },
   {
     "canonical_name": "AGROHIDRO E IR",
-    "aliases": [],
+    "aliases": [
+      "AGROHIDRO E.I.R.L."
+    ],
     "count": 8
   },
   {
-    "canonical_name": "AGROINDUSTRIA FRUTOS ORO",
-    "aliases": [],
+    "canonical_name": "AGROINDUSTRIA FRUTOS DE ORO",
+    "aliases": [
+      "AGROINDUSTRIA FRUTOS DE ORO S.A.C."
+    ],
     "count": 772
   },
   {
+    "canonical_name": "AGROINDUSTRIAL DEL",
+    "aliases": [
+      "EMPRESA AGROINDUSTRIAL DEL PERU S.A."
+    ],
+    "count": 3
+  },
+  {
+    "canonical_name": "AGROINDUSTRIAL ESTANISLAO DEL CHIMU",
+    "aliases": [
+      "AGROINDUSTRIAL ESTANISLAO DEL CHIMU S.A.C."
+    ],
+    "count": 4
+  },
+  {
     "canonical_name": "AGROINDUSTRIAS AIB",
-    "aliases": [],
+    "aliases": [
+      "AGROINDUSTRIAS AIB S.A"
+    ],
     "count": 869
   },
   {
     "canonical_name": "AGROINDUSTRIAS CRIAL",
-    "aliases": [],
+    "aliases": [
+      "AGROINDUSTRIAS CRIAL S.A.C."
+    ],
     "count": 8
   },
   {
-    "canonical_name": "AGROINDUSTRIAS JAS INDIVIDUAL RESPONSABILIDAD AGROINDUSTRIA JAS E IR",
-    "aliases": [],
+    "canonical_name": "AGROINDUSTRIAS JAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD AGROINDUSTRIA JAS E IR",
+    "aliases": [
+      "AGROINDUSTRIAS JAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA-AGROINDUSTRIA JAS E.I.R.L."
+    ],
     "count": 5
   },
   {
     "canonical_name": "AGROINDUSTRIAS PEQUI",
-    "aliases": [],
-    "count": 8
-  },
-  {
-    "canonical_name": "AGROLATINA",
-    "aliases": [],
+    "aliases": [
+      "AGROINDUSTRIAS PEQUI S.A.C."
+    ],
     "count": 8
   },
   {
     "canonical_name": "AGROMANIA",
-    "aliases": [],
+    "aliases": [
+      "AGROMANIA SAC"
+    ],
     "count": 1
   },
   {
     "canonical_name": "AGROMAR INDUSTRIAL",
-    "aliases": [],
+    "aliases": [
+      "AGROMAR INDUSTRIAL S.A."
+    ],
     "count": 102
   },
   {
-    "canonical_name": "AGROVISION",
-    "aliases": [],
+    "canonical_name": "AGROVISION PERU",
+    "aliases": [
+      "AGROVISION PERU S.A.C."
+    ],
     "count": 99
   },
   {
     "canonical_name": "ALIMENTOS ANDINOS",
-    "aliases": [],
+    "aliases": [
+      "AGRO ALIMENTOS ANDINOS S.A.C."
+    ],
     "count": 4
   },
   {
-    "canonical_name": "ALIMENTOS HIMALAYA E IR",
-    "aliases": [],
+    "canonical_name": "ALIMENTOS HIMALAYA PERU E IR",
+    "aliases": [
+      "ALIMENTOS HIMALAYA PERU E.I.R.L."
+    ],
     "count": 10
   },
   {
     "canonical_name": "AMARA FOODS",
-    "aliases": [],
+    "aliases": [
+      "AMARA FOODS S.A.C."
+    ],
     "count": 314
   },
   {
     "canonical_name": "AMARUMAYU",
-    "aliases": [],
+    "aliases": [
+      "AMARUMAYU S.A.C."
+    ],
     "count": 2
   },
   {
     "canonical_name": "AMAZON GINGER CAMAZON GINGER",
-    "aliases": [],
-    "count": 1
-  },
-  {
-    "canonical_name": "AMAZON HERBS E IR",
-    "aliases": [],
+    "aliases": [
+      "AMAZON GINGER S.A.C. - AMAZON GINGER S.A"
+    ],
     "count": 1
   },
   {
     "canonical_name": "ANDEAN PARTNER FOOD",
-    "aliases": [],
+    "aliases": [
+      "ANDEAN PARTNER FOOD S.A.C."
+    ],
     "count": 4
   },
   {
-    "canonical_name": "ANDEAN SUPERFOOD RESPONSABILIDAD",
-    "aliases": [],
+    "canonical_name": "ANDEAN SUPERFOOD SOCIEDAD COMERCIAL DE RESPONSABILIDAD",
+    "aliases": [
+      "ANDEAN SUPERFOOD SOCIEDAD COMERCIAL DE RESPONSABILIDAD LIMITADA"
+    ],
     "count": 44
   },
   {
     "canonical_name": "ANDES TRADERS",
-    "aliases": [],
+    "aliases": [
+      "ANDES TRADERS S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "ARA FOODS INDUSTRY",
-    "aliases": [],
+    "aliases": [
+      "ARA FOODS INDUSTRY S.A.C."
+    ],
     "count": 216
   },
   {
-    "canonical_name": "ASEPTIC FRUIT",
-    "aliases": [],
+    "canonical_name": "ASEPTIC PERUVIAN FRUIT",
+    "aliases": [
+      "ASEPTIC PERUVIAN FRUIT S.A."
+    ],
     "count": 1
   },
   {
     "canonical_name": "BC SOLUTIONS",
-    "aliases": [],
+    "aliases": [
+      "BC SOLUTIONS S.A.C."
+    ],
     "count": 2
   },
   {
     "canonical_name": "BCG PUBLICIDAD AGRONEGOCIOS",
-    "aliases": [],
+    "aliases": [
+      "BCG PUBLICIDAD & AGRONEGOCIOS S.A.C."
+    ],
     "count": 4
   },
   {
-    "canonical_name": "BELMONT FOODS",
-    "aliases": [],
+    "canonical_name": "BELMONT FOODS PERU",
+    "aliases": [
+      "BELMONT FOODS PERU S.A.C."
+    ],
     "count": 33
   },
   {
     "canonical_name": "BIO FRUTOS",
-    "aliases": [],
+    "aliases": [
+      "BIO FRUTOS S.A.C."
+    ],
     "count": 2
   },
   {
-    "canonical_name": "BLOSSOM TRAINER",
-    "aliases": [],
+    "canonical_name": "BLOSSOM TRAINER PERU",
+    "aliases": [
+      "BLOSSOM TRAINER PERU S.A.C."
+    ],
     "count": 27
   },
   {
     "canonical_name": "BODEGA GRAN CRUZ",
-    "aliases": [],
+    "aliases": [
+      "BODEGA GRAN CRUZ SAC"
+    ],
     "count": 1
   },
   {
     "canonical_name": "BR FOODS",
-    "aliases": [],
+    "aliases": [
+      "B & R FOODS S.A.C."
+    ],
     "count": 11
   },
   {
-    "canonical_name": "BRITT BRANDS",
-    "aliases": [],
+    "canonical_name": "BRITT BRANDS PERU",
+    "aliases": [
+      "BRITT BRANDS PERU S.A.C."
+    ],
     "count": 10
   },
   {
     "canonical_name": "CAMPOSOL",
-    "aliases": [],
-    "count": 832
+    "aliases": [
+      "CAMPOSOL S.A."
+    ],
+    "count": 831
+  },
+  {
+    "canonical_name": "CAMPOSOL ORGANICO",
+    "aliases": [
+      "CAMPOSOL ORGANICO S.A.C."
+    ],
+    "count": 1
   },
   {
     "canonical_name": "CAYNARACHI",
-    "aliases": [],
+    "aliases": [
+      "CAYNARACHI S.A."
+    ],
     "count": 4
   },
   {
     "canonical_name": "CERRO PRIETO",
-    "aliases": [],
+    "aliases": [
+      "AGRICOLA CERRO PRIETO S.A."
+    ],
     "count": 17
   },
   {
-    "canonical_name": "CFRUITS E IR",
-    "aliases": [],
+    "canonical_name": "CFRUITS PERU E IR",
+    "aliases": [
+      "CFRUITS PERU E.I.R.L."
+    ],
     "count": 33
   },
   {
-    "canonical_name": "COMPLEJO BETA",
-    "aliases": [],
+    "canonical_name": "COMERCIALIZADORA PATAGONFOODS PERU",
+    "aliases": [
+      "IMPORTADORA, EXPORTADORA Y COMERCIALIZADORA PATAGONFOODS PERU S.A.C."
+    ],
+    "count": 1
+  },
+  {
+    "canonical_name": "COMPLEJO AGROINDUSTRIAL BETA",
+    "aliases": [
+      "COMPLEJO AGROINDUSTRIAL BETA S.A."
+    ],
     "count": 75
   },
   {
-    "canonical_name": "COTRINA EXPORTS INDIVIDUAL RESPONSABILIDAD COTRINA EXPORTS E IR",
-    "aliases": [],
+    "canonical_name": "CORPORACION AGROLATINA",
+    "aliases": [
+      "CORPORACION AGROLATINA S.A.C."
+    ],
+    "count": 8
+  },
+  {
+    "canonical_name": "CORPORACION ESPIN E IR",
+    "aliases": [
+      "CORPORACION ESPIN E.I.R.L."
+    ],
+    "count": 3
+  },
+  {
+    "canonical_name": "CORPORACION GERONIMO",
+    "aliases": [
+      "CORPORACION GERONIMO S.A.C."
+    ],
+    "count": 20
+  },
+  {
+    "canonical_name": "CORPORACION SUMMIT",
+    "aliases": [
+      "CORPORACION SUMMIT S.A.C"
+    ],
+    "count": 1
+  },
+  {
+    "canonical_name": "COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD COTRINA EXPORTS E IR",
+    "aliases": [
+      "COTRINA EXPORTS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA - COTRINA EXPORTS E.I.R.L."
+    ],
     "count": 32
   },
   {
     "canonical_name": "DANPER TRUJILLO",
-    "aliases": [],
+    "aliases": [
+      "DANPER TRUJILLO S.A.C."
+    ],
     "count": 186
   },
   {
     "canonical_name": "DARO Y ANSER",
-    "aliases": [],
+    "aliases": [
+      "DARO Y ANSER S.A.C."
+    ],
     "count": 23
   },
   {
     "canonical_name": "DEL ANDE ALIMENTOS",
-    "aliases": [],
-    "count": 233
+    "aliases": [
+      "DEL ANDE ALIMENTOS S.A.C."
+    ],
+    "count": 230
   },
   {
-    "canonical_name": "DEL ASU MESA",
-    "aliases": [],
+    "canonical_name": "DEL PERU ASU MESA",
+    "aliases": [
+      "COMERCIALIZADORA DEL PERU A SU MESA S.A.C."
+    ],
     "count": 13
   },
   {
     "canonical_name": "DESPENSA AMERICANA",
-    "aliases": [],
+    "aliases": [
+      "DESPENSA AMERICANA S.A.C."
+    ],
     "count": 3
   },
   {
     "canonical_name": "DOMINUS",
-    "aliases": [],
+    "aliases": [
+      "DOMINUS S.A.C"
+    ],
     "count": 594
   },
   {
-    "canonical_name": "DONA ISABEL",
-    "aliases": [],
-    "count": 83
-  },
-  {
-    "canonical_name": "ELITE FOOD",
-    "aliases": [],
+    "canonical_name": "ELITE FOOD PERU",
+    "aliases": [
+      "ELITE FOOD PERU S.A.C."
+    ],
     "count": 124
   },
   {
-    "canonical_name": "ELRODI E IR",
-    "aliases": [],
-    "count": 2
-  },
-  {
-    "canonical_name": "ESPIN E IR",
-    "aliases": [],
-    "count": 3
-  },
-  {
     "canonical_name": "ESPINOZA ASOCIADOS",
-    "aliases": [],
+    "aliases": [
+      "ESPINOZA ASOCIADOS S.A."
+    ],
     "count": 1
   },
   {
-    "canonical_name": "ESTANISLAO DEL CHIMU",
-    "aliases": [],
-    "count": 4
-  },
-  {
     "canonical_name": "EXOTICA DIAMOND",
-    "aliases": [],
+    "aliases": [
+      "EXOTICA DIAMOND PERU SOCIEDAD COMERCIAL"
+    ],
     "count": 11
   },
   {
-    "canonical_name": "EXPORTACIONES AGROAMAZONICAS INDIVIDUAL RESPONSABILIDAD",
-    "aliases": [],
+    "canonical_name": "EXPORT IMPORT ELRODI E IR",
+    "aliases": [
+      "EXPORT & IMPORT ELRODI E.I.R.L."
+    ],
+    "count": 2
+  },
+  {
+    "canonical_name": "EXPORT Y IMPORT E INVERSIONES WILLAM ESAG EMPRESA INDIVIDUAL DE RESPONSABILIDAD",
+    "aliases": [
+      "EXPORT Y IMPORT E INVERSIONES WILLAM ESAG EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA"
+    ],
+    "count": 2
+  },
+  {
+    "canonical_name": "EXPORTACIONES AGROAMAZONICAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD",
+    "aliases": [
+      "EXPORTACIONES AGROAMAZONICAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD LIMITADA"
+    ],
     "count": 3
   },
   {
-    "canonical_name": "EXPORTACIONES MIRSA INDIVIDUAL",
-    "aliases": [],
+    "canonical_name": "EXPORTACIONES MIRSA EMPRESA INDIVIDUAL",
+    "aliases": [
+      "EXPORTACIONES MIRSA EMPRESA INDIVIDUAL D"
+    ],
     "count": 368
   },
   {
+    "canonical_name": "EXPORTADORA DONA ISABEL",
+    "aliases": [
+      "IMPORTADORA Y EXPORTADORA DO\u00d1A ISABEL E."
+    ],
+    "count": 83
+  },
+  {
     "canonical_name": "FALEB E IR",
-    "aliases": [],
+    "aliases": [
+      "FALEB CORP E.I.R.L."
+    ],
     "count": 5
   },
   {
-    "canonical_name": "FLYMEXPORT E IR",
-    "aliases": [],
+    "canonical_name": "FLYMEXPORT PERU E IR",
+    "aliases": [
+      "FLYMEXPORT PERU E.I.R.L."
+    ],
     "count": 3
   },
   {
-    "canonical_name": "FOOD GROUPS",
-    "aliases": [],
-    "count": 12
-  },
-  {
     "canonical_name": "FROST",
-    "aliases": [],
+    "aliases": [
+      "AGRO FROST S.A.C."
+    ],
     "count": 114
   },
   {
-    "canonical_name": "FROZEN PRODUCTS ANO",
-    "aliases": [],
+    "canonical_name": "FROZEN PRODUCTS SOCIEDAD ANO",
+    "aliases": [
+      "FROZEN PRODUCTS CORPORATION SOCIEDAD ANO"
+    ],
     "count": 5
   },
   {
     "canonical_name": "FRUTAMA",
-    "aliases": [],
+    "aliases": [
+      "FRUTAMA S.A.C."
+    ],
     "count": 1
   },
   {
     "canonical_name": "FRUTICAL",
-    "aliases": [],
+    "aliases": [
+      "FRUTICAL S.A.C."
+    ],
     "count": 86
   },
   {
-    "canonical_name": "FRUTICOLA OLMUE",
-    "aliases": [],
+    "canonical_name": "FRUTICOLA OLMUE PERU",
+    "aliases": [
+      "FRUT\u00cdCOLA OLMU\u00c9 PER\u00da S.A.C."
+    ],
     "count": 447
   },
   {
     "canonical_name": "FRUTOS TONGORRAPE",
-    "aliases": [],
+    "aliases": [
+      "FRUTOS TONGORRAPE SOCIEDAD ANONIMA"
+    ],
     "count": 158
   },
   {
     "canonical_name": "FRUTOS TROPICALES",
-    "aliases": [],
+    "aliases": [
+      "FRUTOS TROPICALES PERU EXPORT SOCIEDAD A"
+    ],
     "count": 331
   },
   {
     "canonical_name": "FUSION FOODS",
-    "aliases": [],
+    "aliases": [
+      "FUSION FOODS S.A.C."
+    ],
     "count": 131
   },
   {
-    "canonical_name": "GAMN SERV GNRAL",
-    "aliases": [],
+    "canonical_name": "GAMN EXPORT IMPORT SERV GNRAL",
+    "aliases": [
+      "GAMN EXPORT & IMPORT SERV GNRAL S.A.C."
+    ],
     "count": 1
   },
   {
-    "canonical_name": "GANADERA CHAVIN HUANTAR",
-    "aliases": [],
+    "canonical_name": "GANADERA CHAVIN DE HUANTAR",
+    "aliases": [
+      "AGRICOLA Y GANADERA CHAVIN DE HUANTAR SA"
+    ],
     "count": 826
   },
   {
     "canonical_name": "GANDULES",
-    "aliases": [],
+    "aliases": [
+      "GANDULES INC SAC"
+    ],
     "count": 6
   },
   {
     "canonical_name": "GBZ FOODS",
-    "aliases": [],
+    "aliases": [
+      "GBZ FOODS S.A.C."
+    ],
     "count": 1
-  },
-  {
-    "canonical_name": "GERONIMO",
-    "aliases": [],
-    "count": 20
   },
   {
     "canonical_name": "GJ LOGISTICS SERVICES",
-    "aliases": [],
+    "aliases": [
+      "G & J LOGISTICS SERVICES S.A.C."
+    ],
     "count": 8
   },
   {
-    "canonical_name": "GLOBAL",
-    "aliases": [],
+    "canonical_name": "GLOBAL AGRO PERU",
+    "aliases": [
+      "GLOBAL AGRO PERU S.A.C."
+    ],
     "count": 1
   },
   {
-    "canonical_name": "GREEN FARMER",
-    "aliases": [],
-    "count": 48
-  },
-  {
     "canonical_name": "GUINEXPORTACIONES",
-    "aliases": [],
+    "aliases": [
+      "GUINEXPORTACIONES S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "HONEST FOODS",
-    "aliases": [],
+    "aliases": [
+      "HONEST FOODS S.A.C."
+    ],
     "count": 34
   },
   {
     "canonical_name": "IMPORTACIONES BLAWS E IR",
-    "aliases": [],
+    "aliases": [
+      "IMPORTACIONES BLAWS E.I.R.L."
+    ],
     "count": 2
   },
   {
     "canonical_name": "INCA INDUSTRIAS AGRICOLAS",
-    "aliases": [],
+    "aliases": [
+      "INCA INDUSTRIAS AGRICOLAS S.A.C."
+    ],
     "count": 5
   },
   {
-    "canonical_name": "INCA INVEST",
-    "aliases": [],
+    "canonical_name": "INCA INVEST PERU",
+    "aliases": [
+      "INCA INVEST PERU S.A.C."
+    ],
     "count": 1
   },
   {
     "canonical_name": "INDUFRUT",
-    "aliases": [],
+    "aliases": [
+      "INDUFRUT S.A.C."
+    ],
     "count": 1
   },
   {
     "canonical_name": "INDUSTRIA EL VADO",
-    "aliases": [],
+    "aliases": [
+      "AGRO INDUSTRIA EL VADO EIRL"
+    ],
     "count": 1
   },
   {
     "canonical_name": "INDUSTRIA SAN ANTONIO SR",
-    "aliases": [],
+    "aliases": [
+      "AGRO INDUSTRIA SAN ANTONIO S R LTDA"
+    ],
     "count": 2
   },
   {
     "canonical_name": "INDUSTRIAS SISA",
-    "aliases": [],
+    "aliases": [
+      "INDUSTRIAS SISA S.A.C."
+    ],
     "count": 11
   },
   {
-    "canonical_name": "INDUSTRY GN",
-    "aliases": [],
-    "count": 22
-  },
-  {
     "canonical_name": "INKA TASTY",
-    "aliases": [],
+    "aliases": [
+      "INKA TASTY S.A.C."
+    ],
     "count": 18
   },
   {
     "canonical_name": "INNOVACION FENIX",
-    "aliases": [],
+    "aliases": [
+      "INNOVACION FENIX S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "INTERNACIONAL REYES RIVERA",
-    "aliases": [],
+    "aliases": [
+      "COMERCIAL INTERNACIONAL REYES & RIVERA S.A.C."
+    ],
     "count": 4
   },
   {
+    "canonical_name": "INVERSIONES LIBER",
+    "aliases": [
+      "INVERSIONES LIBER S.A."
+    ],
+    "count": 2
+  },
+  {
     "canonical_name": "IQ FDEL",
-    "aliases": [],
+    "aliases": [
+      "I Q F DEL PERU SA"
+    ],
     "count": 3
   },
   {
-    "canonical_name": "JANDA E IR",
-    "aliases": [],
+    "canonical_name": "JANDA IMPORT EXPORT E IR",
+    "aliases": [
+      "JANDA IMPORT EXPORT E.I.R.L."
+    ],
     "count": 7
   },
   {
-    "canonical_name": "KAMPO",
-    "aliases": [],
+    "canonical_name": "KAMPO PERU",
+    "aliases": [
+      "KAMPO PERU S.A.C."
+    ],
     "count": 1
   },
   {
-    "canonical_name": "KARLINI FOODS",
-    "aliases": [],
+    "canonical_name": "KARLINI INTERNATIONAL FOODS",
+    "aliases": [
+      "KARLINI INTERNATIONAL FOODS S.A.C."
+    ],
     "count": 34
   },
   {
-    "canonical_name": "LAMAS",
-    "aliases": [],
+    "canonical_name": "LAMAS IMPORT EXPORT",
+    "aliases": [
+      "LAMAS IMPORT EXPORT S.A.C."
+    ],
     "count": 76
   },
   {
     "canonical_name": "LATAM TRADE",
-    "aliases": [],
-    "count": 2
-  },
-  {
-    "canonical_name": "LIBER",
-    "aliases": [],
+    "aliases": [
+      "LATAM TRADE S.A.C."
+    ],
     "count": 2
   },
   {
     "canonical_name": "LINOS",
-    "aliases": [],
+    "aliases": [
+      "EXPORTADORA LINOS PERU SOCIEDAD ANONIMA CERRADA"
+    ],
     "count": 5
   },
   {
     "canonical_name": "LOS MEDANOS",
-    "aliases": [],
+    "aliases": [
+      "AGRICOLA LOS MEDANOS S.A."
+    ],
     "count": 306
   },
   {
-    "canonical_name": "MACOVIJ E IR LNIMACOVIJ E IR",
-    "aliases": [],
-    "count": 2
-  },
-  {
     "canonical_name": "MAPA LOGISTICA INTERNACIONAL",
-    "aliases": [],
+    "aliases": [
+      "MAPA LOGISTICA INTERNACIONAL SAC"
+    ],
     "count": 42
   },
   {
-    "canonical_name": "MCMC",
-    "aliases": [],
+    "canonical_name": "MCMC PERU",
+    "aliases": [
+      "MCMC PERU S.A,C,"
+    ],
     "count": 3
   },
   {
+    "canonical_name": "MEBOL",
+    "aliases": [
+      "MEBOL SAC"
+    ],
+    "count": 344
+  },
+  {
     "canonical_name": "MEBOL GF",
-    "aliases": [],
-    "count": 698
+    "aliases": [
+      "MEBOL GF S.A.C."
+    ],
+    "count": 354
   },
   {
     "canonical_name": "MERCANTIL EXPORTACION",
-    "aliases": [],
+    "aliases": [
+      "SOCIEDAD MERCANTIL (EXPORTACION) SA"
+    ],
     "count": 26
   },
   {
-    "canonical_name": "MERRILL",
-    "aliases": [],
+    "canonical_name": "MERRILL CORPORACION",
+    "aliases": [
+      "MERRILL CORPORACION S.A.C."
+    ],
     "count": 5
   },
   {
     "canonical_name": "MI PATRIA FOOD",
-    "aliases": [],
+    "aliases": [
+      "MI PATRIA FOOD S.A.C."
+    ],
     "count": 1
   },
   {
     "canonical_name": "MIKUY TRADERS",
-    "aliases": [],
+    "aliases": [
+      "MIKUY TRADERS S.A.C."
+    ],
     "count": 9
   },
   {
-    "canonical_name": "MIRANDA LANGA CMIRANDA LANGA",
-    "aliases": [],
+    "canonical_name": "MIRANDA LANGA AGRO EXPORT CMIRANDA LANGA",
+    "aliases": [
+      "MIRANDA - LANGA AGRO EXPORT S.A.C - MIRANDA - LANGA S.A.C"
+    ],
     "count": 69
   },
   {
     "canonical_name": "MONARCA EXPORTS",
-    "aliases": [],
+    "aliases": [
+      "MONARCA EXPORTS S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "MONDO IMPRENDITORE",
-    "aliases": [],
+    "aliases": [
+      "MONDO IMPRENDITORE S.A.C."
+    ],
     "count": 35
   },
   {
     "canonical_name": "MULTISERVICIOS ROMEROS MORENOS",
-    "aliases": [],
+    "aliases": [
+      "MULTISERVICIOS ROMERO'S & MORENO'S S.A.C."
+    ],
     "count": 23
   },
   {
-    "canonical_name": "NATURANDINA DEL",
-    "aliases": [],
+    "canonical_name": "NATURANDINA DEL PERU",
+    "aliases": [
+      "NATURANDINA DEL PERU S.A.C."
+    ],
     "count": 17
   },
   {
-    "canonical_name": "NITHOS",
-    "aliases": [],
+    "canonical_name": "NEGOCIOS E INVERSIONES MACOVIJ E IR LNIMACOVIJ E IR",
+    "aliases": [
+      "NEGOCIOS E INVERSIONES MACOVIJ E.I.R.L. - NIMACOVIJ E.I.R.L."
+    ],
+    "count": 2
+  },
+  {
+    "canonical_name": "NITHOS COMPANY",
+    "aliases": [
+      "NITHO'S COMPANY S.A.C."
+    ],
     "count": 42
   },
   {
-    "canonical_name": "NORPERU E IR",
-    "aliases": [],
+    "canonical_name": "NORPERU COMPANY CV E IR",
+    "aliases": [
+      "NORPERU COMPANY CV E.I.R.L."
+    ],
     "count": 28
   },
   {
-    "canonical_name": "NOVAL",
-    "aliases": [],
+    "canonical_name": "NOVAL COMPANY",
+    "aliases": [
+      "NOVAL COMPANY S.A.C."
+    ],
     "count": 5
   },
   {
-    "canonical_name": "NUTRIFAM TRADING MORE E IR",
-    "aliases": [],
+    "canonical_name": "NUTRIFAM TRADING MORE PERU E IR",
+    "aliases": [
+      "NUTRIFAM TRADING & MORE PERU E.I.R.L."
+    ],
     "count": 22
   },
   {
     "canonical_name": "OLLADEBARROFOODSOCIEDADCOMERCIALDERESPON",
-    "aliases": [],
+    "aliases": [
+      "OLLADEBARROFOODSOCIEDADCOMERCIALDERESPON"
+    ],
     "count": 13
   },
   {
-    "canonical_name": "ORGANIC FOODS",
-    "aliases": [],
+    "canonical_name": "ORGANIC PERUVIAN FOODS",
+    "aliases": [
+      "ORGANIC PERUVIAN FOODS S.A.C"
+    ],
     "count": 1
   },
   {
     "canonical_name": "PACHAMAMA FARMS",
-    "aliases": [],
+    "aliases": [
+      "PACHAMAMA FARMS S.A.C."
+    ],
     "count": 6
   },
   {
     "canonical_name": "PACIFIC IQF",
-    "aliases": [],
-    "count": 1
-  },
-  {
-    "canonical_name": "PATAGONFOODS",
-    "aliases": [],
+    "aliases": [
+      "PACIFIC IQF SAC"
+    ],
     "count": 1
   },
   {
     "canonical_name": "PB FRESH PRODUCTS",
-    "aliases": [],
+    "aliases": [
+      "P & B FRESH PRODUCTS SOCIEDAD ANONIMA CERRADA"
+    ],
     "count": 5
   },
   {
+    "canonical_name": "PERU INDUSTRY GN",
+    "aliases": [
+      "PERU INDUSTRY G.N S.A.C."
+    ],
+    "count": 22
+  },
+  {
+    "canonical_name": "PERUVIAN AMAZON HERBS E IR",
+    "aliases": [
+      "PERUVIAN AMAZON HERBS E.I.R.L."
+    ],
+    "count": 1
+  },
+  {
+    "canonical_name": "PERUVIAN FOOD GROUPS",
+    "aliases": [
+      "PERUVIAN FOOD GROUPS SOCIEDAD ANONIMA CERRADA."
+    ],
+    "count": 12
+  },
+  {
     "canonical_name": "PM FRUITS",
-    "aliases": [],
+    "aliases": [
+      "P & M FRUITS S.A.C."
+    ],
     "count": 51
   },
   {
     "canonical_name": "PROCESADORA",
-    "aliases": [],
-    "count": 270
+    "aliases": [
+      "PROCESADORA PERU SOCIEDAD ANONIMA CERRADA"
+    ],
+    "count": 192
   },
   {
-    "canonical_name": "PRODUCTORA ANDINA CONGELADOS SR",
-    "aliases": [],
+    "canonical_name": "PROCESADORA LARAN",
+    "aliases": [
+      "PROCESADORA LARAN SAC"
+    ],
+    "count": 77
+  },
+  {
+    "canonical_name": "PRODUCTORA ANDINA DE CONGELADOS SR",
+    "aliases": [
+      "PRODUCTORA ANDINA DE CONGELADOS S.R.L."
+    ],
     "count": 25
   },
   {
     "canonical_name": "PROFRUIT INDUSTRY",
-    "aliases": [],
+    "aliases": [
+      "PROFRUIT INDUSTRY S.A.C."
+    ],
     "count": 7
   },
   {
     "canonical_name": "PROVISSO FOODS",
-    "aliases": [],
+    "aliases": [
+      "PROVISSO FOODS S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "PROYECTOS EXPORTACIONES CASMA",
-    "aliases": [],
+    "aliases": [
+      "PROYECTOS & EXPORTACIONES CASMA S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "PROYEMSUR",
-    "aliases": [],
+    "aliases": [
+      "PROYEMSUR S.A.C."
+    ],
     "count": 2
   },
   {
-    "canonical_name": "PULPAS Y PROCESADOS DEL PULPAGRO",
-    "aliases": [],
+    "canonical_name": "PULPAS Y PROCESADOS DEL AGRO PULPAGRO",
+    "aliases": [
+      "PULPAS Y PROCESADOS DEL AGRO SOCIEDAD ANONIMA-PULPAGRO"
+    ],
     "count": 108
   },
   {
     "canonical_name": "QORI FOODS",
-    "aliases": [],
+    "aliases": [
+      "QORI FOODS S.A.C."
+    ],
     "count": 1
   },
   {
     "canonical_name": "QUICORNAC",
-    "aliases": [],
+    "aliases": [
+      "QUICORNAC S.A.C."
+    ],
     "count": 202
   },
   {
-    "canonical_name": "RIVERAS FOOD",
-    "aliases": [],
+    "canonical_name": "RIVERAS PERUVIAN FOOD",
+    "aliases": [
+      "RIVERA'S PERUVIAN FOOD S.A.C."
+    ],
     "count": 3
   },
   {
     "canonical_name": "SANTA SOFIA DEL SUR",
-    "aliases": [],
+    "aliases": [
+      "SANTA SOFIA DEL SUR S.A.C."
+    ],
     "count": 44
   },
   {
     "canonical_name": "SELVA INDUSTRIAL",
-    "aliases": [],
+    "aliases": [
+      "SELVA INDUSTRIAL S.A."
+    ],
     "count": 8
   },
   {
     "canonical_name": "SELVA Y FLORESTA SELFLO",
-    "aliases": [],
+    "aliases": [
+      "SELVA Y FLORESTA SOCIEDAD ANONIMA CERRADA - SELFLO S.A.C."
+    ],
+    "count": 1
+  },
+  {
+    "canonical_name": "SERVICIOS PROCESADORA PERU",
+    "aliases": [
+      "SERVICIOS PROCESADORA PERU S.A.C."
+    ],
     "count": 1
   },
   {
     "canonical_name": "SILVA ZAPATA IMPORTACION",
-    "aliases": [],
+    "aliases": [
+      "SILVA & ZAPATA IMPORTACION S.A.C."
+    ],
     "count": 4
   },
   {
     "canonical_name": "SOLIMAR INDUSTRIA E IR",
-    "aliases": [],
+    "aliases": [
+      "SOLIMAR INDUSTRIA E.I.R.L."
+    ],
     "count": 8
   },
   {
     "canonical_name": "SULLKATA FARMS",
-    "aliases": [],
+    "aliases": [
+      "SULLKATA FARMS S.A.C."
+    ],
     "count": 1
   },
   {
-    "canonical_name": "SUMMIT",
-    "aliases": [],
-    "count": 1
-  },
-  {
-    "canonical_name": "SUNSHINE",
-    "aliases": [],
+    "canonical_name": "SUNSHINE EXPORT",
+    "aliases": [
+      "SUNSHINE EXPORT S.A.C"
+    ],
     "count": 1180
   },
   {
-    "canonical_name": "TANA FRUITS E IR",
-    "aliases": [],
+    "canonical_name": "TANA FRUITS EXPORT E IR",
+    "aliases": [
+      "TANA FRUITS EXPORT E.I.R.L."
+    ],
     "count": 5
   },
   {
     "canonical_name": "TAVARI",
-    "aliases": [],
+    "aliases": [
+      "GRUPO TAVARI S.A.C."
+    ],
     "count": 94
   },
   {
+    "canonical_name": "THE GREEN FARMER",
+    "aliases": [
+      "THE GREEN FARMER S.A.C."
+    ],
+    "count": 48
+  },
+  {
     "canonical_name": "TRU MARKET BLOCKCHAIN",
-    "aliases": [],
+    "aliases": [
+      "TRU MARKET BLOCKCHAIN S.A.C."
+    ],
     "count": 4
   },
   {
-    "canonical_name": "UNION CORPORATIVOS",
-    "aliases": [],
+    "canonical_name": "UNION DE NEGOCIOS CORPORATIVOS",
+    "aliases": [
+      "UNION DE NEGOCIOS CORPORATIVOS SOCIEDAD ANONIMA CERRADA"
+    ],
     "count": 210
   },
   {
     "canonical_name": "VF",
-    "aliases": [],
+    "aliases": [
+      "V & F SAC"
+    ],
     "count": 32
   },
   {
     "canonical_name": "VIRU",
     "aliases": [
+      "VIR\u00da GROUP PER\u00da S.A.",
       "VIRU S.A."
     ],
     "count": 2640
   },
   {
-    "canonical_name": "WESTFALIA FRUIT",
-    "aliases": [],
+    "canonical_name": "WESTFALIA FRUIT PERU",
+    "aliases": [
+      "WESTFALIA FRUIT PER\u00da S.A.C."
+    ],
     "count": 127
   },
   {
-    "canonical_name": "WILLAM ESAG INDIVIDUAL RESPONSABILIDAD",
-    "aliases": [],
-    "count": 2
-  },
-  {
     "canonical_name": "ZOWI",
-    "aliases": [],
+    "aliases": [
+      "ZOWI PERU SOCIEDAD ANONIMA CERRADA"
+    ],
     "count": 6
   }
 ]

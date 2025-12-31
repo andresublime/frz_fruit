@@ -54,7 +54,7 @@ STOP_WORDS = {
     'AGRICOLA', 'AGRO', 'AGROINDUSTRIAL',
     'EXPORTADORA', 'EXPORT',
     'CONSORCIO',
-    'IMPORTADORA', 'IMPORT',
+    'IMPORTADORA',  # Keep "IMPORT" - it can be part of brand names like "Central-Import"
     'COMERCIAL', 'COMERCIALIZADORA',
     'COMPANIA', 'CIA', 'CIA.',
     'EMPRESA',

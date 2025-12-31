@@ -95,17 +95,17 @@ def get_canonical_name(exporter_name: str) -> str:
 
     # Try exact match first (fastest path)
     if exporter_name in _MAPPING_DATABASE:
-        return _MAPPING_DATABASE[exporter_name]
+        return _MAPPING_DATABASE[exporter_name].upper()
 
     # Try normalized version (handles minor variations)
     normalized = clean_company_name(exporter_name, strip_legal=True, remove_addresses=True)
     for alias, canonical in _MAPPING_DATABASE.items():
         if clean_company_name(alias, strip_legal=True, remove_addresses=True) == normalized:
-            return canonical
+            return canonical.upper()
 
-    # No match found - return normalized original name
+    # No match found - return normalized original name in UPPERCASE
     # This handles new/unmapped exporters gracefully
-    return normalized.title() if normalized else exporter_name
+    return normalized.upper() if normalized else exporter_name.upper()
 
 
 def get_all_canonical_exporters() -> list[str]:

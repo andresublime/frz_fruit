@@ -73,9 +73,10 @@ def cluster_company_names(
             name = names_in_group[0]
             canonical = get_canonical_brand_name(name)
 
+            # Store the original name as an alias (for later merging)
             clustered_companies.append(CompanyName(
                 canonical_name=canonical,
-                aliases=[],
+                aliases=[name],
                 count=name_counts.get(name, 0)
             ))
             continue
@@ -132,9 +133,12 @@ def cluster_company_names(
             # Select the best canonical name (most frequent, most complete)
             best_canonical = select_canonical_name(all_variations)
 
+            # Include the canonical (cluster root) in the aliases list
+            all_aliases = [canonical] + aliases
+
             clustered_companies.append(CompanyName(
                 canonical_name=best_canonical,
-                aliases=aliases,
+                aliases=all_aliases,
                 count=total_count
             ))
 
@@ -172,10 +176,17 @@ def cluster_company_names(
                 normalize_spacing_for_comparison(other.canonical_name)
             )
 
+            # Length ratio check to prevent merging subsets (e.g., "IMPORT" vs "CENTRAL IMPORT")
+            # Require names to be within 70% of each other's length
+            len1 = len(company.canonical_name)
+            len2 = len(other.canonical_name)
+            length_ratio = min(len1, len2) / max(len1, len2) if max(len1, len2) > 0 else 1.0
+
             # High threshold for cross-group merging (be conservative but catch obvious variants)
             # 90% catches cases like "HG FOOD" vs "HG FOODS", "DIRAFROST FFI" vs "DIRAFROST FF IN"
             # 95% spacing-normalized catches "FOOD FELLAS" vs "FOODFELLAS"
-            if sim >= FUZZY_THRESHOLD_CROSS_GROUP or norm_sim >= FUZZY_THRESHOLD_SPACING:
+            # Length ratio >= 0.7 prevents subset merges like "IMPORT" vs "CENTRAL IMPORT"
+            if (sim >= FUZZY_THRESHOLD_CROSS_GROUP or norm_sim >= FUZZY_THRESHOLD_SPACING) and length_ratio >= 0.7:
                 merged_group.append(other)
                 processed_indices.add(j)
 
@@ -189,18 +200,17 @@ def cluster_company_names(
             total_count = 0
 
             for item in merged_group:
-                # Add the canonical name as a variation (using original from aliases if available)
+                # Add canonical name itself as a variation for comparison
+                all_variations.append((item.canonical_name, item.count))
+
+                # Add all aliases
                 if item.aliases:
                     all_aliases.extend(item.aliases)
-                    # Use the most frequent original name
-                    all_variations.append((item.aliases[0], name_counts.get(item.aliases[0], 0)))
+
                 total_count += item.count
 
-            # Select best canonical name from all variations
-            if all_variations:
-                best_canonical = select_canonical_name(all_variations)
-            else:
-                best_canonical = merged_group[0].canonical_name
+            # Select best canonical name from all variations (including canonical names themselves)
+            best_canonical = select_canonical_name(all_variations)
 
             final_merged.append(CompanyName(
                 canonical_name=best_canonical,

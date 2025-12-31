@@ -151,10 +151,15 @@ def main():
         clustered_exporters, exporter_counts, len(exporter_names), 'exporter'
     )
 
-    # Save exporters
+    # Save exporters - UPPERCASE canonical names
     exporter_output = data_dir / 'clustered_exporters.json'
+    exporter_data = []
+    for item in clustered_exporters:
+        data = item.model_dump()
+        data['canonical_name'] = data['canonical_name'].upper()
+        exporter_data.append(data)
     with open(exporter_output, 'w') as f:
-        json.dump([item.model_dump() for item in clustered_exporters], f, indent=2)
+        json.dump(exporter_data, f, indent=2)
 
     print(f"\n{Colors.BRIGHT_GREEN}✓{Colors.RESET} Saved to: {Colors.BRIGHT_WHITE}{exporter_output}{Colors.RESET}")
 
@@ -174,10 +179,15 @@ def main():
         clustered_importers, importer_counts, len(importer_names), 'importer'
     )
 
-    # Save importers
+    # Save importers - UPPERCASE canonical names
     importer_output = data_dir / 'clustered_importers.json'
+    importer_data = []
+    for item in clustered_importers:
+        data = item.model_dump()
+        data['canonical_name'] = data['canonical_name'].upper()
+        importer_data.append(data)
     with open(importer_output, 'w') as f:
-        json.dump([item.model_dump() for item in clustered_importers], f, indent=2)
+        json.dump(importer_data, f, indent=2)
 
     print(f"\n{Colors.BRIGHT_GREEN}✓{Colors.RESET} Saved to: {Colors.BRIGHT_WHITE}{importer_output}{Colors.RESET}")
 
