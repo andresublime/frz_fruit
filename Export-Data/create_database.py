@@ -6,6 +6,14 @@ import sqlite3
 from pathlib import Path
 from translations import translate_country_to_english, COUNTRY_TRANSLATIONS
 
+# Import vt-normalize canonical name functions
+try:
+    from core.exporter_mapping import get_canonical_name
+    from core.importer_mapping import get_canonical_importer
+    VT_NORMALIZE_AVAILABLE = True
+except ImportError:
+    VT_NORMALIZE_AVAILABLE = False
+
 # Europe country list (English names)
 EUROPE_COUNTRIES_EN = {
     'Germany', 'Austria', 'Belgium', 'Bulgaria', 'Cyprus', 'Croatia',
@@ -48,6 +56,29 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     print(f"Creating database: {db_file}")
     conn = sqlite3.connect(db_file)
 
+    # Add canonical company names using vt-normalize
+    if VT_NORMALIZE_AVAILABLE:
+        print("Adding canonical company names (vt-normalize)...")
+        df['canonical_exporter'] = df['Exporter'].apply(
+            lambda x: get_canonical_name(x) if pd.notna(x) and x != '' else None
+        )
+        df['canonical_importer'] = df['Importer'].apply(
+            lambda x: get_canonical_importer(x) if pd.notna(x) and x != '' else None
+        )
+
+        # Get reduction statistics
+        raw_exporters = df['Exporter'].nunique()
+        canonical_exporters = df['canonical_exporter'].nunique()
+        raw_importers = df['Importer'].nunique()
+        canonical_importers = df['canonical_importer'].nunique()
+
+        print(f"  Exporters: {raw_exporters:,} → {canonical_exporters:,} canonical names")
+        print(f"  Importers: {raw_importers:,} → {canonical_importers:,} canonical names")
+    else:
+        print("Warning: vt-normalize not available, canonical columns will be empty")
+        df['canonical_exporter'] = None
+        df['canonical_importer'] = None
+
     # Load data into main table
     print("Loading data into exports table...")
     df.to_sql('exports', conn, if_exists='replace', index=False)
@@ -56,6 +87,8 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     print("Creating indexes...")
     indexes = [
         "CREATE INDEX IF NOT EXISTS idx_exporter ON exports(Exporter)",
+        "CREATE INDEX IF NOT EXISTS idx_canonical_exporter ON exports(canonical_exporter)",
+        "CREATE INDEX IF NOT EXISTS idx_canonical_importer ON exports(canonical_importer)",
         "CREATE INDEX IF NOT EXISTS idx_destination ON exports([Destination Country])",
         "CREATE INDEX IF NOT EXISTS idx_fruit ON exports(fruit_name)",
         "CREATE INDEX IF NOT EXISTS idx_format ON exports(format_type)",
