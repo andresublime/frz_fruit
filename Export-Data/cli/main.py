@@ -38,8 +38,8 @@ def cmd_summary(args):
     """Generate pricing summary by dimension."""
     dimension = args.dimension
 
-    if dimension not in ['fruit', 'exporter', 'importer', 'format']:
-        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, importer, or format")
+    if dimension not in ['fruit', 'exporter', 'importer']:
+        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, or importer")
         return 1
 
     print(f"\nCalculating {dimension} pricing summary...")
@@ -76,6 +76,11 @@ def cmd_drill(args):
     # Determine filter dimension
     filter_dimension = args.filter_dimension
 
+    if filter_dimension not in ['fruit', 'exporter', 'importer']:
+        print(f"Error: Invalid filter dimension '{filter_dimension}'. Must be: fruit, exporter, or importer")
+        print("Note: 'format' cannot be used as a filter (formats are fruit-specific)")
+        return 1
+
     print(f"\nCalculating {filter_dimension}={filter_value} by {by}...")
     df = calculate_pricing_drill_down(
         filter_dimension=filter_dimension,
@@ -107,8 +112,8 @@ def cmd_export(args):
     """Export full pricing summary to CSV."""
     dimension = args.dimension
 
-    if dimension not in ['fruit', 'exporter', 'importer', 'format']:
-        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, importer, or format")
+    if dimension not in ['fruit', 'exporter', 'importer']:
+        print(f"Error: Invalid dimension '{dimension}'. Must be: fruit, exporter, or importer")
         return 1
 
     print(f"\nGenerating {dimension} pricing summary...")
@@ -130,8 +135,8 @@ def main():
 
     # Summary command
     summary_parser = subparsers.add_parser('summary', help='Generate pricing summary')
-    summary_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer', 'format'],
-                                help='Dimension to summarize')
+    summary_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer'],
+                                help='Dimension to summarize (format not valid as standalone)')
     summary_parser.add_argument('--region', choices=['Europe', 'RoW'],
                                 help='Region filter (default: worldwide)')
     summary_parser.add_argument('--output', help='Output CSV file path')
@@ -142,10 +147,10 @@ def main():
     drill_parser = subparsers.add_parser('drill', help='Drill down pricing')
     drill_parser.add_argument('filter_value', help='Value to filter (e.g., mango, Viru, "Salud Foodgroup Europe")')
     drill_parser.add_argument('--by', required=True, choices=['fruit', 'exporter', 'importer', 'format'],
-                             help='Dimension to drill down by')
+                             help='Dimension to drill down by (format only valid when filtering by fruit)')
     drill_parser.add_argument('--filter-dimension', dest='filter_dimension',
-                             choices=['fruit', 'exporter', 'importer', 'format'], default='fruit',
-                             help='Filter dimension (default: fruit)')
+                             choices=['fruit', 'exporter', 'importer'], default='fruit',
+                             help='Filter dimension (default: fruit, format not allowed)')
     drill_parser.add_argument('--region', choices=['Europe', 'RoW'],
                              help='Region filter (default: worldwide)')
     drill_parser.add_argument('--output', help='Output CSV file path')
@@ -154,8 +159,8 @@ def main():
 
     # Export command
     export_parser = subparsers.add_parser('export', help='Export pricing to CSV')
-    export_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer', 'format'],
-                              help='Dimension to export')
+    export_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer'],
+                              help='Dimension to export (format not valid as standalone)')
     export_parser.add_argument('output', help='Output CSV file path')
     export_parser.add_argument('--region', choices=['Europe', 'RoW'],
                               help='Region filter (default: worldwide)')

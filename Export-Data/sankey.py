@@ -116,7 +116,8 @@ def format_mermaid_sankey(
     flows: List[Tuple[str, str, float]],
     show_values: bool = False,
     title: Optional[str] = None,
-    decimal_places: int = 0
+    decimal_places: int = 0,
+    font_size: int = 18
 ) -> str:
     """
     Format flows as Mermaid sankey diagram.
@@ -135,6 +136,9 @@ def format_mermaid_sankey(
     # Add header
     lines.append("---")
     lines.append("config:")
+    lines.append("  theme: base")
+    lines.append("  themeVariables:")
+    lines.append(f"    fontSize: {font_size}px")
     lines.append("  sankey:")
     lines.append(f"    showValues: {str(show_values).lower()}")
     lines.append("---")
@@ -181,7 +185,8 @@ def create_supply_chain_sankey(
     min_value: Optional[float] = None,
     top_n: Optional[int] = None,
     aggregate_others: bool = True,
-    others_percentage: float = 0.20
+    others_percentage: float = 0.20,
+    font_size: int = 18
 ) -> str:
     """
     Create sankey diagram. If only one fruit, creates Exporter → Importer → Country.
@@ -247,7 +252,8 @@ def create_supply_chain_sankey(
     return format_mermaid_sankey(
         all_flows,
         title=flow_title,
-        decimal_places=decimal_places
+        decimal_places=decimal_places,
+        font_size=font_size
     )
 
 
@@ -277,6 +283,8 @@ def main():
                         help='Target percentage for Others category (default: 0.20 = 20%%)')
     parser.add_argument('--show-values', action='store_true',
                         help='Show values in diagram')
+    parser.add_argument('--font-size', type=int, default=18,
+                        help='Font size in pixels (default: 18, good for PowerPoint)')
     parser.add_argument('--no-png', action='store_true',
                         help='Skip PNG generation (only generate .mmd file)')
     parser.add_argument('--stdout', action='store_true',
@@ -308,7 +316,8 @@ def main():
         min_value=args.min_value,
         top_n=args.top_n,
         aggregate_others=not args.no_aggregate,
-        others_percentage=args.others_pct
+        others_percentage=args.others_pct,
+        font_size=args.font_size
     )
 
     # Update show_values if needed

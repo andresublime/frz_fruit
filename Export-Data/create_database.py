@@ -255,4 +255,13 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
 
 
 if __name__ == "__main__":
-    create_database("peru_frozen_fruit_exports_enriched.csv.gz")
+    from config_loader import load_config, get_input_path, get_output_path
+
+    # Load configuration
+    config = load_config()
+
+    # Get paths from config
+    enriched_csv = str(get_input_path(config, 'enriched_csv'))
+    database_path = str(get_output_path(config, 'database'))
+
+    create_database(enriched_csv, database_path)

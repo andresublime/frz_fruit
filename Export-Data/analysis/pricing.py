@@ -26,7 +26,8 @@ from typing import Optional, Literal, Dict, List
 from core.database import execute_query
 
 
-DimensionType = Literal['fruit', 'exporter', 'importer', 'format']
+DimensionType = Literal['fruit', 'exporter', 'importer']
+BreakdownType = Literal['fruit', 'exporter', 'importer', 'format']
 
 
 def calculate_pricing_summary(
@@ -38,13 +39,15 @@ def calculate_pricing_summary(
     Calculate quartile pricing summary for a dimension.
 
     Args:
-        dimension: Dimension to aggregate by ('fruit', 'exporter', 'importer', or 'format')
+        dimension: Dimension to aggregate by ('fruit', 'exporter', or 'importer')
+                  Note: 'format' is not a valid standalone dimension as formats are
+                  fruit-specific (e.g., Mango-20x20 vs PassionFruit-20x20 are different products)
         region: Optional region filter ('Europe', 'RoW', or None for worldwide)
         use_clean_view: Use v_clean_exports view (YTD, filtered data)
 
     Returns:
         DataFrame with columns:
-        - [dimension]: Fruit/Exporter/Importer/Format name
+        - [dimension]: Fruit/Exporter/Importer name
         - Low$: Q1 price (25th percentile, USD/MT FOB)
         - Mid$: Median price (50th percentile)
         - Hi$: Q3 price (75th percentile)
@@ -131,7 +134,7 @@ def calculate_pricing_summary(
 def calculate_pricing_drill_down(
     filter_dimension: DimensionType,
     filter_value: str,
-    by: DimensionType,
+    by: BreakdownType,
     region: Optional[str] = None,
     use_clean_view: bool = True
 ) -> pd.DataFrame:
@@ -142,19 +145,21 @@ def calculate_pricing_drill_down(
         # Mango prices by exporter
         calculate_pricing_drill_down('fruit', 'mango', by='exporter')
 
+        # Mango prices by format (valid: format is tied to specific fruit)
+        calculate_pricing_drill_down('fruit', 'mango', by='format')
+
         # Viru prices by fruit
         calculate_pricing_drill_down('exporter', 'Viru', by='fruit')
 
         # Salud Foodgroup Europe prices by fruit
         calculate_pricing_drill_down('importer', 'Salud Foodgroup Europe', by='fruit')
 
-        # Chunks format by exporter
-        calculate_pricing_drill_down('format', 'chunks', by='exporter')
-
     Args:
-        filter_dimension: Dimension to filter on ('fruit', 'exporter', 'importer', 'format')
+        filter_dimension: Dimension to filter on ('fruit', 'exporter', or 'importer')
+                         Note: 'format' is NOT valid as a filter dimension
         filter_value: Value to filter for
-        by: Dimension to aggregate by
+        by: Dimension to aggregate by ('fruit', 'exporter', 'importer', or 'format')
+            Note: 'format' is only valid as a breakdown dimension when filtering by fruit
         region: Optional region filter
         use_clean_view: Use v_clean_exports view
 
@@ -281,11 +286,11 @@ if __name__ == '__main__':
     df_exporter = calculate_pricing_summary(dimension='exporter')
     print(df_exporter.head(10).to_string(index=False))
 
-    # Test 3: Format-level summary
-    print("\n3. Format-Level Pricing Summary (YTD, Worldwide)")
+    # Test 3: Format breakdown for mango (valid: format tied to specific fruit)
+    print("\n3. Mango Pricing by Format (fruit-specific formats)")
     print("=" * 80)
-    df_format = calculate_pricing_summary(dimension='format')
-    print(df_format.to_string(index=False))
+    df_mango_format = calculate_pricing_drill_down('fruit', 'mango', by='format')
+    print(df_mango_format.to_string(index=False))
 
     # Test 4: Drill-down - Mango by exporter
     print("\n4. Drill-Down: Mango Pricing by Exporter")

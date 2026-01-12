@@ -84,7 +84,11 @@ try:
     <script>
         mermaid.initialize({{
             startOnLoad: false,
-            theme: 'default',
+            theme: 'base',
+            themeVariables: {{
+                fontSize: '20px',
+                fontFamily: 'Arial, sans-serif'
+            }},
             sankey: {{
                 showValues: true,
                 width: 2400,
@@ -95,6 +99,13 @@ try:
         mermaid.render('mermaid-svg', `{output}`)
             .then(result => {{
                 document.getElementById('diagram').innerHTML = result.svg;
+
+                // Set consistent font size for all text elements
+                const allText = document.querySelectorAll('svg text');
+                allText.forEach(text => {{
+                    text.style.fontSize = '20px';
+                    text.style.fontWeight = '500';
+                }});
             }});
     </script>
 </body>
@@ -105,6 +116,9 @@ try:
         page = browser.new_page(viewport={'width': 2600, 'height': 1800})
         page.set_content(html_content)
         page.wait_for_selector("#diagram svg", timeout=30000)
+
+        # Wait a bit more for rendering to complete
+        page.wait_for_timeout(2000)
 
         # Take screenshot
         png_file = "sankey-germany-all-fruits.png"

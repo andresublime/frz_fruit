@@ -1,0 +1,26 @@
+{
+  "unknown_fruits": 7109,
+  "unknown_fruits_pct": 23.12,
+  "missing_prices": 275,
+  "missing_prices_pct": 0.89,
+  "zero_volumes": 171,
+  "zero_volumes_pct": 0.56,
+  "outlier_prices_high": 565,
+  "outlier_prices_high_pct": 1.84,
+  "outlier_prices_low": 1357,
+  "outlier_prices_low_pct": 4.41,
+  "unknown_formats": 14773,
+  "unknown_formats_pct": 48.05,
+  "certification_distribution": {
+    "unknown": 28146,
+    "organic": 2284,
+    "conventional": 314
+  },
+  "date_range": {
+    "min": "2024-01-01",
+    "max": "2025-11-28",
+    "span_days": 697
+  },
+  "total_records": 30744,
+  "validation_passed": false
+}

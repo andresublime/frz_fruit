@@ -1,0 +1,36 @@
+# Peru Frozen Fruit Export Analysis - Pipeline Configuration
+
+pipeline:
+  inputs:
+    # Raw XLSX files (source data)
+    frozen_xlsx: "../Veritrade_Frozen.xlsx"
+    aseptic_xlsx: "../Veritrade_Aseptic.xlsx"
+
+    # Preprocessed CSV (after XLSX conversion)
+    combined_csv: "data/veritrade_combined.csv.gz"
+
+    # Enriched data (after NLP parsing)
+    enriched_csv: "data/veritrade_combined_enriched.csv.gz"
+
+  outputs:
+    database: "data/exports.db"
+    export_summary: "data/export_summary.json"
+    data_validation: "data/data_validation.json"
+
+  processing:
+    xlsx_header_row: 5  # Row index where actual headers start
+    ytd_start_date: "2024-10-01"
+    ytd_end_date: "2025-10-31"
+    enable_quality_filters: true
+    iqr_multiplier: 1.5
+    min_shipment_mt: 0.1
+
+metadata:
+  frozen:
+    file: "Veritrade_Frozen.xlsx"
+    record_count: 14279
+    hts_code: "081190"
+  aseptic:
+    file: "Veritrade_Aseptic.xlsx"
+    record_count: 16465
+    hts_codes: ["2009", "2008", "2007"]

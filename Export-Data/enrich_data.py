@@ -169,8 +169,15 @@ def enrich_dataset(input_file: str, output_file: str = None) -> pd.DataFrame:
         enriched_row['size_mm'] = product.product_format.size_mm
         enriched_row['is_organic'] = product.classification.is_organic
         enriched_row['is_conventional'] = product.classification.is_conventional
-        enriched_row['is_iqf'] = product.classification.is_iqf
-        enriched_row['is_aseptic'] = product.classification.is_aseptic
+
+        # IMPORTANT: Preserve is_iqf and is_aseptic from input if they exist
+        # (these were set by filename-based categorization in convert_veritrade.py)
+        # Only use NLP-parsed values if not already set
+        if 'is_iqf' not in enriched_row or pd.isna(enriched_row.get('is_iqf')):
+            enriched_row['is_iqf'] = product.classification.is_iqf
+        if 'is_aseptic' not in enriched_row or pd.isna(enriched_row.get('is_aseptic')):
+            enriched_row['is_aseptic'] = product.classification.is_aseptic
+
         enriched_row['certification'] = product.classification.certification
 
         # Calculate metrics
@@ -282,11 +289,18 @@ def generate_summary(df: pd.DataFrame) -> ExportDataSummary:
 
 def main():
     """Main execution function."""
-    input_file = "peru_frozen_fruit_exports.csv.gz"
-    output_csv = "peru_frozen_fruit_exports_enriched.csv"
-    output_csv_gz = "peru_frozen_fruit_exports_enriched.csv.gz"
-    summary_json = "export_summary.json"
-    validation_json = "data_validation.json"
+    from config_loader import load_config, get_input_path, get_output_path
+
+    # Load configuration
+    config = load_config()
+
+    # Get paths from config
+    input_file = str(get_input_path(config, 'combined_csv'))
+    # enriched_csv is in inputs section (it's input to create_database.py)
+    output_csv_gz = str(get_input_path(config, 'enriched_csv'))
+    output_csv = output_csv_gz.replace('.gz', '')  # Temporary uncompressed file
+    summary_json = str(get_output_path(config, 'export_summary'))
+    validation_json = str(get_output_path(config, 'data_validation'))
 
     # Enrich the dataset
     enriched_df = enrich_dataset(input_file, output_csv_gz)

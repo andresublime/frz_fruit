@@ -36,7 +36,10 @@ def mermaid_to_png_playwright(mermaid_code, output_file, title="Sankey Diagram")
     <script>
         mermaid.initialize({{
             startOnLoad: false,
-            theme: 'default',
+            theme: 'base',
+            themeVariables: {{
+                fontSize: '18px'
+            }},
             sankey: {{
                 showValues: true,
                 width: 1400,
@@ -47,6 +50,15 @@ def mermaid_to_png_playwright(mermaid_code, output_file, title="Sankey Diagram")
         mermaid.render('mermaid-svg', `{mermaid_code}`)
             .then(result => {{
                 document.getElementById('diagram').innerHTML = result.svg;
+
+                // Force increase all text elements font size
+                const allText = document.querySelectorAll('svg text');
+                allText.forEach(text => {{
+                    const currentSize = window.getComputedStyle(text).fontSize;
+                    const newSize = parseFloat(currentSize) * 1.5;
+                    text.style.fontSize = newSize + 'px';
+                    text.style.fontWeight = '500';
+                }});
             }});
     </script>
 </body>
