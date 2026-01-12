@@ -3,8 +3,8 @@
 pipeline:
   inputs:
     # Raw XLSX files (source data)
-    frozen_xlsx: "../Veritrade_Frozen.xlsx"
-    aseptic_xlsx: "../Veritrade_Aseptic.xlsx"
+    frozen_xlsx: "../data_sources/Veritrade_Frozen.xlsx"
+    aseptic_xlsx: "../data_sources/Veritrade_Aseptic.xlsx"
 
     # Preprocessed CSV (after XLSX conversion)
     combined_csv: "data/veritrade_combined.csv.gz"
