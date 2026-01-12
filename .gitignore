@@ -1,3 +1,9 @@
+# macOS metadata
+._*
+.DS_Store
+.AppleDouble
+.LSOverride
+
 # Python
 __pycache__/
 *.py[cod]
@@ -21,7 +27,7 @@ env/
 *.swp
 *.swo
 *~
-.DS_Store
+.claude/
 
 # Database files (large binary files)
 *.db
@@ -32,9 +38,13 @@ env/
 Export-Data/*.csv
 Export-Data/*.xlsx
 Export-Data/*.xls
+Export-Data/*.jsonl
+Export-Data/*.jsonl.gz
 
 # But keep the database and small reference files if needed
 !Export-Data/exports.db
+!Export-Data/data/*.csv
+!output/**/*.csv
 
 # Temporary files
 *.tmp
@@ -58,3 +68,14 @@ Thumbs.db
 output/*_full.csv
 output/*_clean.csv
 output/by_fruit/
+output/**/temp_*
+output/**/*_draft*
+
+# Sankey diagrams (regenerable)
+Export-Data/sankey-*.png
+Export-Data/sankey-*.svg
+Export-Data/sankey-*.mmd
+Export-Data/sankey-*.html
+
+# Archive files
+Export-Data/*.zip

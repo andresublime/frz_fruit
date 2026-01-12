@@ -1,3 +1,7 @@
+# macOS metadata
+._*
+.DS_Store
+
 # Python-generated files
 __pycache__/
 *.py[oc]
@@ -8,3 +12,21 @@ wheels/
 
 # Virtual environments
 .venv
+venv/
+
+# Sankey diagrams (regenerable)
+sankey-*.png
+sankey-*.svg
+sankey-*.mmd
+sankey-*.html
+
+# Archive backups
+*.zip
+
+# Large data files (except DB)
+*.jsonl
+*.jsonl.gz
+
+# Temporary query results
+temp_*.csv
+*_temp.csv
