@@ -1,5 +1,8 @@
 """
-Interactive GUI wrapper for the Peru Frozen Fruit Export Analysis CLI.
+Interactive GUI wrapper for the Frozen Fruit Export Analysis CLI.
+Supports: Peru, Ecuador
+
+IMPORTANT: Peru and Ecuador data are always kept separate and never combined.
 
 Usage:
     python cli/gui.py
@@ -82,6 +85,17 @@ def run_summary():
         ['fruit', 'exporter', 'importer']
     )
 
+    # Get source country
+    source_country = get_choice(
+        "Filter by source country? (Peru and Ecuador are always shown separately)",
+        ['Peru', 'Ecuador', 'Both (show separately)'],
+        allow_empty=False
+    )
+    if source_country == 'Both (show separately)':
+        source_country = None
+    else:
+        source_country = source_country.lower()
+
     # Get region
     region = get_choice(
         "Filter by region?",
@@ -99,7 +113,11 @@ def run_summary():
 
     # Execute
     print(f"\nCalculating {dimension} pricing summary...")
-    df = calculate_pricing_summary(dimension=dimension, region=region)
+    df = calculate_pricing_summary(
+        dimension=dimension,
+        region=region,
+        source_country=source_country
+    )
 
     if len(df) == 0:
         print("No data found for the specified criteria.")
@@ -107,6 +125,8 @@ def run_summary():
 
     # Display
     title = f"{dimension.title()} Pricing Summary (YTD Oct 2024 - Oct 2025)"
+    if source_country:
+        title += f" - {source_country.title()}"
     if region:
         title += f" - {region}"
 
@@ -117,7 +137,7 @@ def run_summary():
         export_to_csv(df, output, include_records=True)
         print(f"\n✓ Exported to {output}")
 
-    print(f"Total: {len(df)} {dimension}s")
+    print(f"Total: {len(df)} rows")
 
 
 def run_drill():
@@ -141,6 +161,17 @@ def run_drill():
         ['fruit', 'exporter', 'importer', 'format']
     )
 
+    # Get source country
+    source_country = get_choice(
+        "Filter by source country? (Peru and Ecuador are always shown separately)",
+        ['Peru', 'Ecuador', 'Both (show separately)'],
+        allow_empty=False
+    )
+    if source_country == 'Both (show separately)':
+        source_country = None
+    else:
+        source_country = source_country.lower()
+
     # Get region
     region = get_choice(
         "Filter by region?",
@@ -163,6 +194,7 @@ def run_drill():
         filter_value=filter_value,
         by=by,
         region=region,
+        source_country=source_country
     )
 
     if len(df) == 0:
@@ -171,6 +203,8 @@ def run_drill():
 
     # Display
     title = f"{filter_value.title()} Pricing by {by.title()}"
+    if source_country:
+        title += f" - {source_country.title()}"
     if region:
         title += f" - {region}"
 
@@ -181,7 +215,7 @@ def run_drill():
         export_to_csv(df, output, include_records=True)
         print(f"\n✓ Exported to {output}")
 
-    print(f"Total: {len(df)} {by}s")
+    print(f"Total: {len(df)} rows")
 
 
 def run_export():
@@ -195,6 +229,17 @@ def run_export():
         "Select dimension to export:",
         ['fruit', 'exporter', 'importer']
     )
+
+    # Get source country
+    source_country = get_choice(
+        "Filter by source country? (Peru and Ecuador are always shown separately)",
+        ['Peru', 'Ecuador', 'Both (show separately)'],
+        allow_empty=False
+    )
+    if source_country == 'Both (show separately)':
+        source_country = None
+    else:
+        source_country = source_country.lower()
 
     # Get region
     region = get_choice(
@@ -210,7 +255,11 @@ def run_export():
 
     # Execute
     print(f"\nGenerating {dimension} pricing summary...")
-    df = calculate_pricing_summary(dimension=dimension, region=region)
+    df = calculate_pricing_summary(
+        dimension=dimension,
+        region=region,
+        source_country=source_country
+    )
 
     export_to_csv(df, output, include_records=False)
     print(f"✓ Exported {len(df)} records to {output}")
@@ -219,7 +268,7 @@ def run_export():
 def main():
     """Main interactive loop."""
     print("\n" + "=" * 80)
-    print("PERU FROZEN FRUIT EXPORT ANALYSIS")
+    print("FROZEN FRUIT EXPORT ANALYSIS (PERU & ECUADOR)")
     print("Interactive Shell")
     print("=" * 80)
 

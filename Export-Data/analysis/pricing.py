@@ -3,21 +3,25 @@ Quartile Pricing Analytics Engine
 
 Provides unified pricing analysis with Q1/Median/Q3 calculations.
 Supports multiple aggregation dimensions and drill-downs.
+Supports: Peru, Ecuador
 
-Output format: Low$ (Q1) | Mid$ (Median) | Hi$ (Q3) | YTD MT
+IMPORTANT: All results are separated by source country (Peru vs Ecuador).
+Prices and quantities from different countries are NEVER combined into totals.
+
+Output format: Source Country | Low$ (Q1) | Mid$ (Median) | Hi$ (Q3) | YTD MT
 
 Examples:
-    # Fruit-level summary
+    # Fruit-level summary (Peru and Ecuador shown separately)
     df = calculate_pricing_summary(dimension='fruit')
 
-    # Exporter-level summary
-    df = calculate_pricing_summary(dimension='exporter')
+    # Exporter-level summary (filtered by source country)
+    df = calculate_pricing_summary(dimension='exporter', source_country='peru')
 
-    # Drill down: Mango by exporter
+    # Drill down: Mango by exporter (with country separation)
     df = calculate_pricing_drill_down('fruit', 'mango', by='exporter')
 
-    # Drill down: Viru by fruit
-    df = calculate_pricing_drill_down('exporter', 'Viru', by='fruit')
+    # Drill down: Viru by fruit (Ecuador only)
+    df = calculate_pricing_drill_down('exporter', 'Viru', by='fruit', source_country='ecuador')
 """
 
 import pandas as pd
@@ -33,20 +37,27 @@ BreakdownType = Literal['fruit', 'exporter', 'importer', 'format']
 def calculate_pricing_summary(
     dimension: DimensionType = 'fruit',
     region: Optional[str] = None,
+    source_country: Optional[str] = None,
     use_clean_view: bool = True
 ) -> pd.DataFrame:
     """
     Calculate quartile pricing summary for a dimension.
+
+    IMPORTANT: Results are always grouped by source_country to keep Peru and Ecuador separate.
+    Peru and Ecuador data are NEVER combined into totals.
 
     Args:
         dimension: Dimension to aggregate by ('fruit', 'exporter', or 'importer')
                   Note: 'format' is not a valid standalone dimension as formats are
                   fruit-specific (e.g., Mango-20x20 vs PassionFruit-20x20 are different products)
         region: Optional region filter ('Europe', 'RoW', or None for worldwide)
+        source_country: Optional source country filter ('peru' or 'ecuador')
+                       If None, both countries are shown separately
         use_clean_view: Use v_clean_exports view (YTD, filtered data)
 
     Returns:
         DataFrame with columns:
+        - Source: Source country (peru or ecuador)
         - [dimension]: Fruit/Exporter/Importer name
         - Low$: Q1 price (25th percentile, USD/MT FOB)
         - Mid$: Median price (50th percentile)
@@ -65,16 +76,22 @@ def calculate_pricing_summary(
     dimension_col = dimension_col_map[dimension]
     source_table = 'v_clean_exports' if use_clean_view else 'exports'
 
-    # Build region filter
-    region_filter = ""
+    # Build filters
+    filters = []
     if region == 'Europe':
-        region_filter = "AND region = 'Europe'"
+        filters.append("region = 'Europe'")
     elif region == 'RoW':
-        region_filter = "AND region != 'Europe'"
+        filters.append("region != 'Europe'")
 
-    # Load data
+    if source_country:
+        filters.append(f"source_country = '{source_country.lower()}'")
+
+    region_filter = ("AND " + " AND ".join(filters)) if filters else ""
+
+    # Load data - ALWAYS include source_country to keep Peru/Ecuador separate
     query = f"""
         SELECT
+            source_country,
             {dimension_col} as dimension_value,
             fruit_name,
             usd_per_mt_fob,
@@ -88,8 +105,8 @@ def calculate_pricing_summary(
 
     df = execute_query(query)
 
-    # Calculate quartiles using pandas - simpler approach
-    result = df.groupby('dimension_value').agg(
+    # Calculate quartiles using pandas - ALWAYS group by source_country to keep Peru/Ecuador separate
+    result = df.groupby(['source_country', 'dimension_value']).agg(
         low_price=pd.NamedAgg(column='usd_per_mt_fob', aggfunc=lambda x: x.quantile(0.25)),
         mid_price=pd.NamedAgg(column='usd_per_mt_fob', aggfunc=lambda x: x.quantile(0.50)),
         hi_price=pd.NamedAgg(column='usd_per_mt_fob', aggfunc=lambda x: x.quantile(0.75)),
@@ -99,6 +116,7 @@ def calculate_pricing_summary(
 
     # Rename columns
     result = result.rename(columns={
+        'source_country': 'Source',
         'dimension_value': dimension.title(),
         'low_price': 'Low$',
         'mid_price': 'Mid$',
@@ -107,11 +125,15 @@ def calculate_pricing_summary(
         'records': 'Records',
     })
 
+    # Capitalize source country names
+    result['Source'] = result['Source'].str.title()
+
     # For exporter dimension, add fruit count
     if dimension == 'exporter':
-        fruit_counts = df.groupby('dimension_value')['fruit_name'].nunique().reset_index()
-        fruit_counts.columns = [dimension.title(), 'Fruits']
-        result = result.merge(fruit_counts, on=dimension.title())
+        fruit_counts = df.groupby(['source_country', 'dimension_value'])['fruit_name'].nunique().reset_index()
+        fruit_counts.columns = ['Source', dimension.title(), 'Fruits']
+        fruit_counts['Source'] = fruit_counts['Source'].str.title()
+        result = result.merge(fruit_counts, on=['Source', dimension.title()])
 
     # Round values
     result['Low$'] = result['Low$'].round(0).astype(int)
@@ -119,14 +141,14 @@ def calculate_pricing_summary(
     result['Hi$'] = result['Hi$'].round(0).astype(int)
     result['YTD MT'] = result['YTD MT'].round(0).astype(int)
 
-    # Reorder columns
+    # Reorder columns - Source country ALWAYS first
     if dimension == 'exporter':
-        result = result[[dimension.title(), 'Fruits', 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records']]
+        result = result[['Source', dimension.title(), 'Fruits', 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records']]
     else:
-        result = result[[dimension.title(), 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records']]
+        result = result[['Source', dimension.title(), 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records']]
 
-    # Sort by YTD MT descending
-    result = result.sort_values('YTD MT', ascending=False).reset_index(drop=True)
+    # Sort by Source (to group Peru/Ecuador), then by YTD MT descending
+    result = result.sort_values(['Source', 'YTD MT'], ascending=[True, False]).reset_index(drop=True)
 
     return result
 
@@ -136,23 +158,27 @@ def calculate_pricing_drill_down(
     filter_value: str,
     by: BreakdownType,
     region: Optional[str] = None,
+    source_country: Optional[str] = None,
     use_clean_view: bool = True
 ) -> pd.DataFrame:
     """
     Calculate pricing for a specific entity, broken down by another dimension.
 
+    IMPORTANT: Results are always grouped by source_country to keep Peru and Ecuador separate.
+    Peru and Ecuador data are NEVER combined into totals.
+
     Examples:
-        # Mango prices by exporter
+        # Mango prices by exporter (Peru and Ecuador shown separately)
         calculate_pricing_drill_down('fruit', 'mango', by='exporter')
 
-        # Mango prices by format (valid: format is tied to specific fruit)
-        calculate_pricing_drill_down('fruit', 'mango', by='format')
+        # Mango prices by format (Ecuador only)
+        calculate_pricing_drill_down('fruit', 'mango', by='format', source_country='ecuador')
 
-        # Viru prices by fruit
+        # Viru prices by fruit (with country separation)
         calculate_pricing_drill_down('exporter', 'Viru', by='fruit')
 
-        # Salud Foodgroup Europe prices by fruit
-        calculate_pricing_drill_down('importer', 'Salud Foodgroup Europe', by='fruit')
+        # Salud Foodgroup Europe prices by fruit (Peru only)
+        calculate_pricing_drill_down('importer', 'Salud Foodgroup Europe', by='fruit', source_country='peru')
 
     Args:
         filter_dimension: Dimension to filter on ('fruit', 'exporter', or 'importer')
@@ -161,10 +187,12 @@ def calculate_pricing_drill_down(
         by: Dimension to aggregate by ('fruit', 'exporter', 'importer', or 'format')
             Note: 'format' is only valid as a breakdown dimension when filtering by fruit
         region: Optional region filter
+        source_country: Optional source country filter ('peru' or 'ecuador')
+                       If None, both countries are shown separately
         use_clean_view: Use v_clean_exports view
 
     Returns:
-        DataFrame with pricing breakdown
+        DataFrame with pricing breakdown including source country column
     """
     # Map dimensions to column names
     dimension_col_map = {
@@ -178,16 +206,22 @@ def calculate_pricing_drill_down(
     by_col = dimension_col_map[by]
     source_table = 'v_clean_exports' if use_clean_view else 'exports'
 
-    # Build region filter
-    region_filter = ""
+    # Build filters
+    filters = []
     if region == 'Europe':
-        region_filter = "AND region = 'Europe'"
+        filters.append("region = 'Europe'")
     elif region == 'RoW':
-        region_filter = "AND region != 'Europe'"
+        filters.append("region != 'Europe'")
 
-    # Load data
+    if source_country:
+        filters.append(f"source_country = '{source_country.lower()}'")
+
+    region_filter = ("AND " + " AND ".join(filters)) if filters else ""
+
+    # Load data - ALWAYS include source_country to keep Peru/Ecuador separate
     query = f"""
         SELECT
+            source_country,
             {filter_col} as filter_value,
             {by_col} as by_value,
             usd_per_mt_fob,
@@ -205,11 +239,11 @@ def calculate_pricing_drill_down(
     if len(df) == 0:
         # Return empty DataFrame with correct columns
         return pd.DataFrame(columns=[
-            filter_dimension.title(), by.title(), 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records'
+            'Source', filter_dimension.title(), by.title(), 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records'
         ])
 
-    # Calculate quartiles using pandas - simpler approach
-    result = df.groupby('by_value').agg(
+    # Calculate quartiles using pandas - ALWAYS group by source_country to keep Peru/Ecuador separate
+    result = df.groupby(['source_country', 'by_value']).agg(
         low_price=pd.NamedAgg(column='usd_per_mt_fob', aggfunc=lambda x: x.quantile(0.25)),
         mid_price=pd.NamedAgg(column='usd_per_mt_fob', aggfunc=lambda x: x.quantile(0.50)),
         hi_price=pd.NamedAgg(column='usd_per_mt_fob', aggfunc=lambda x: x.quantile(0.75)),
@@ -219,6 +253,7 @@ def calculate_pricing_drill_down(
 
     # Rename columns
     result = result.rename(columns={
+        'source_country': 'Source',
         'by_value': by.title(),
         'low_price': 'Low$',
         'mid_price': 'Mid$',
@@ -227,8 +262,11 @@ def calculate_pricing_drill_down(
         'records': 'Records',
     })
 
+    # Capitalize source country names
+    result['Source'] = result['Source'].str.title()
+
     # Add filter column
-    result.insert(0, filter_dimension.title(), filter_value)
+    result.insert(1, filter_dimension.title(), filter_value)
 
     # Round values
     result['Low$'] = result['Low$'].round(0).astype(int)
@@ -236,11 +274,11 @@ def calculate_pricing_drill_down(
     result['Hi$'] = result['Hi$'].round(0).astype(int)
     result['YTD MT'] = result['YTD MT'].round(0).astype(int)
 
-    # Reorder columns
-    result = result[[filter_dimension.title(), by.title(), 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records']]
+    # Reorder columns - Source country ALWAYS first
+    result = result[['Source', filter_dimension.title(), by.title(), 'Low$', 'Mid$', 'Hi$', 'YTD MT', 'Records']]
 
-    # Sort by YTD MT descending
-    result = result.sort_values('YTD MT', ascending=False).reset_index(drop=True)
+    # Sort by Source (to group Peru/Ecuador), then by YTD MT descending
+    result = result.sort_values(['Source', 'YTD MT'], ascending=[True, False]).reset_index(drop=True)
 
     return result
 

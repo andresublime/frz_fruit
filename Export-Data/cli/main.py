@@ -1,14 +1,16 @@
 """
-Peru Frozen Fruit Export Analysis - Command Line Interface
+Frozen Fruit Export Analysis - Command Line Interface
+Supports: Peru, Ecuador
 
 Unified interface for all pricing analytics and reporting.
+IMPORTANT: Peru and Ecuador data are always kept separate and never combined.
 
 Usage:
     python cli/main.py summary fruit
-    python cli/main.py summary exporter
-    python cli/main.py summary importer
+    python cli/main.py summary exporter --source-country peru
+    python cli/main.py summary importer --region Europe
     python cli/main.py drill mango --by exporter
-    python cli/main.py drill Viru --by fruit
+    python cli/main.py drill Viru --by fruit --source-country ecuador
     python cli/main.py drill "Salud Foodgroup Europe" --filter-dimension importer --by fruit
 """
 
@@ -43,7 +45,11 @@ def cmd_summary(args):
         return 1
 
     print(f"\nCalculating {dimension} pricing summary...")
-    df = calculate_pricing_summary(dimension=dimension, region=args.region)
+    df = calculate_pricing_summary(
+        dimension=dimension,
+        region=args.region,
+        source_country=args.source_country
+    )
 
     if len(df) == 0:
         print("No data found for the specified criteria.")
@@ -51,6 +57,8 @@ def cmd_summary(args):
 
     # Display
     title = f"{dimension.title()} Pricing Summary (YTD Oct 2024 - Oct 2025)"
+    if args.source_country:
+        title += f" - {args.source_country.title()}"
     if args.region:
         title += f" - {args.region}"
 
@@ -60,7 +68,7 @@ def cmd_summary(args):
     if args.output:
         export_to_csv(df, args.output, include_records=True)
 
-    print(f"Total: {len(df)} {dimension}s")
+    print(f"Total: {len(df)} rows")
     return 0
 
 
@@ -87,6 +95,7 @@ def cmd_drill(args):
         filter_value=filter_value,
         by=by,
         region=args.region,
+        source_country=args.source_country
     )
 
     if len(df) == 0:
@@ -95,6 +104,8 @@ def cmd_drill(args):
 
     # Display
     title = f"{filter_value.title()} Pricing by {by.title()}"
+    if args.source_country:
+        title += f" - {args.source_country.title()}"
     if args.region:
         title += f" - {args.region}"
 
@@ -104,7 +115,7 @@ def cmd_drill(args):
     if args.output:
         export_to_csv(df, args.output, include_records=True)
 
-    print(f"Total: {len(df)} {by}s")
+    print(f"Total: {len(df)} rows")
     return 0
 
 
@@ -117,7 +128,11 @@ def cmd_export(args):
         return 1
 
     print(f"\nGenerating {dimension} pricing summary...")
-    df = calculate_pricing_summary(dimension=dimension, region=args.region)
+    df = calculate_pricing_summary(
+        dimension=dimension,
+        region=args.region,
+        source_country=args.source_country
+    )
 
     export_to_csv(df, args.output, include_records=False)
     print(f"✓ Exported {len(df)} records to {args.output}")
@@ -127,7 +142,7 @@ def cmd_export(args):
 def main():
     """Main CLI entry point."""
     parser = argparse.ArgumentParser(
-        description="Peru Frozen Fruit Export Analysis CLI",
+        description="Frozen Fruit Export Analysis CLI (Peru & Ecuador)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
 
@@ -137,6 +152,8 @@ def main():
     summary_parser = subparsers.add_parser('summary', help='Generate pricing summary')
     summary_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer'],
                                 help='Dimension to summarize (format not valid as standalone)')
+    summary_parser.add_argument('--source-country', dest='source_country', choices=['peru', 'ecuador'],
+                                help='Filter by source country (default: show both separately)')
     summary_parser.add_argument('--region', choices=['Europe', 'RoW'],
                                 help='Region filter (default: worldwide)')
     summary_parser.add_argument('--output', help='Output CSV file path')
@@ -151,6 +168,8 @@ def main():
     drill_parser.add_argument('--filter-dimension', dest='filter_dimension',
                              choices=['fruit', 'exporter', 'importer'], default='fruit',
                              help='Filter dimension (default: fruit, format not allowed)')
+    drill_parser.add_argument('--source-country', dest='source_country', choices=['peru', 'ecuador'],
+                             help='Filter by source country (default: show both separately)')
     drill_parser.add_argument('--region', choices=['Europe', 'RoW'],
                              help='Region filter (default: worldwide)')
     drill_parser.add_argument('--output', help='Output CSV file path')
@@ -162,6 +181,8 @@ def main():
     export_parser.add_argument('dimension', choices=['fruit', 'exporter', 'importer'],
                               help='Dimension to export (format not valid as standalone)')
     export_parser.add_argument('output', help='Output CSV file path')
+    export_parser.add_argument('--source-country', dest='source_country', choices=['peru', 'ecuador'],
+                              help='Filter by source country (default: show both separately)')
     export_parser.add_argument('--region', choices=['Europe', 'RoW'],
                               help='Region filter (default: worldwide)')
 
