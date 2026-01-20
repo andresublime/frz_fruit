@@ -1,5 +1,6 @@
 """
-Create SQLite database from enriched Peru frozen fruit export data.
+Create SQLite database from enriched frozen fruit export data.
+Supports: Peru, Ecuador
 """
 import pandas as pd
 import sqlite3
@@ -59,12 +60,21 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     # Add canonical company names using vt-normalize
     if VT_NORMALIZE_AVAILABLE:
         print("Adding canonical company names (vt-normalize)...")
-        df['canonical_exporter'] = df['Exporter'].apply(
-            lambda x: get_canonical_name(x) if pd.notna(x) and x != '' else None
-        )
-        df['canonical_importer'] = df['Importer'].apply(
-            lambda x: get_canonical_importer(x) if pd.notna(x) and x != '' else None
-        )
+
+        # Create mappings for unique names first (much faster than row-by-row)
+        unique_exporters = df['Exporter'].dropna().unique()
+        unique_importers = df['Importer'].dropna().unique()
+
+        print(f"  Building exporter mapping for {len(unique_exporters)} unique names...")
+        exporter_map = {name: get_canonical_name(name) for name in unique_exporters if name != ''}
+
+        print(f"  Building importer mapping for {len(unique_importers)} unique names...")
+        importer_map = {name: get_canonical_importer(name) for name in unique_importers if name != ''}
+
+        # Apply mappings
+        print("  Applying mappings...")
+        df['canonical_exporter'] = df['Exporter'].map(exporter_map)
+        df['canonical_importer'] = df['Importer'].map(importer_map)
 
         # Get reduction statistics
         raw_exporters = df['Exporter'].nunique()
@@ -96,6 +106,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
         "CREATE INDEX IF NOT EXISTS idx_certification ON exports(certification)",
         "CREATE INDEX IF NOT EXISTS idx_date ON exports(Date)",
         "CREATE INDEX IF NOT EXISTS idx_region ON exports(region)",
+        "CREATE INDEX IF NOT EXISTS idx_source_country ON exports(source_country)",
     ]
 
     for idx_sql in indexes:
@@ -127,6 +138,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     conn.execute("""
         CREATE VIEW exporter_products AS
         SELECT
+            source_country,
             Exporter as exporter,
             fruit_name,
             format_type,
@@ -141,7 +153,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
             SUM([U$ FOB Tot]) as total_fob_usd
         FROM exports
         WHERE net_weight_mt > 0 AND usd_per_mt_fob > 0
-        GROUP BY Exporter, fruit_name, format_type, size_mm, certification, region
+        GROUP BY source_country, Exporter, fruit_name, format_type, size_mm, certification, region
     """)
 
     # Destination products view
@@ -149,6 +161,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     conn.execute("""
         CREATE VIEW destination_products AS
         SELECT
+            source_country,
             [Destination Country] as country,
             region,
             fruit_name,
@@ -163,7 +176,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
             SUM([U$ FOB Tot]) as total_fob_usd
         FROM exports
         WHERE net_weight_mt > 0 AND usd_per_mt_fob > 0
-        GROUP BY [Destination Country], region, fruit_name, format_type, size_mm, certification
+        GROUP BY source_country, [Destination Country], region, fruit_name, format_type, size_mm, certification
     """)
 
     # Monthly exports view for seasonality
@@ -171,6 +184,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     conn.execute("""
         CREATE VIEW monthly_exports AS
         SELECT
+            source_country,
             fruit_name,
             strftime('%Y', Date) as year,
             strftime('%m', Date) as month,
@@ -180,8 +194,8 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
             AVG(usd_per_mt_fob) as avg_usd_per_mt
         FROM exports
         WHERE net_weight_mt > 0
-        GROUP BY fruit_name, year, month
-        ORDER BY fruit_name, year, month
+        GROUP BY source_country, fruit_name, year, month
+        ORDER BY source_country, fruit_name, year, month
     """)
 
     # Regional exports view
@@ -189,6 +203,7 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
     conn.execute("""
         CREATE VIEW regional_exports AS
         SELECT
+            source_country,
             region,
             [Destination Country] as country,
             fruit_name,
@@ -201,7 +216,26 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
             SUM([U$ FOB Tot]) as total_fob_usd
         FROM exports
         WHERE net_weight_mt > 0 AND usd_per_mt_fob > 0
-        GROUP BY region, [Destination Country], fruit_name, format_type, size_mm, certification
+        GROUP BY source_country, region, [Destination Country], fruit_name, format_type, size_mm, certification
+    """)
+
+    # Country comparison view
+    conn.execute("DROP VIEW IF EXISTS country_exports")
+    conn.execute("""
+        CREATE VIEW country_exports AS
+        SELECT
+            source_country,
+            fruit_name,
+            format_type,
+            strftime('%Y', Date) as year,
+            strftime('%m', Date) as month,
+            COUNT(*) as shipment_count,
+            SUM(net_weight_mt) as total_mt,
+            SUM([U$ FOB Tot]) as total_fob_usd,
+            AVG(usd_per_mt_fob) as avg_usd_per_mt
+        FROM exports
+        WHERE net_weight_mt > 0
+        GROUP BY source_country, fruit_name, format_type, year, month
     """)
 
     conn.commit()
@@ -240,9 +274,21 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
         GROUP BY region
     """)
 
-    print("\nExports by Region:")
+    print("\nExports by Destination Region:")
     for row in cursor.fetchall():
         print(f"  {row[0]}: {row[1]} countries, {row[2]:,.2f} MT")
+
+    # Source country statistics
+    cursor.execute("""
+        SELECT source_country, COUNT(*) as records, SUM(net_weight_mt) as total_mt
+        FROM exports
+        GROUP BY source_country
+    """)
+
+    print("\nExports by Source Country:")
+    for row in cursor.fetchall():
+        country = row[0] if row[0] else 'unknown'
+        print(f"  {country.upper()}: {row[1]:,} records, {row[2]:,.2f} MT")
 
     # Database size
     db_path = Path(db_file)

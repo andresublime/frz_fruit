@@ -1,6 +1,7 @@
 """
-Helper functions for Peru Frozen Fruit Export MCP Server.
+Helper functions for Frozen Fruit Export MCP Server.
 Shared utilities used across all MCP tools.
+Supports: Peru, Ecuador
 """
 import sqlite3
 from pathlib import Path
@@ -91,13 +92,18 @@ def calculate_growth_rate(old_value: float, new_value: float) -> Optional[float]
     return ((new_value - old_value) / old_value) * 100
 
 
-def fuzzy_match_exporter(search_term: str, threshold: float = 0.6) -> List[str]:
+def fuzzy_match_exporter(
+    search_term: str,
+    threshold: float = 0.6,
+    source_country: Optional[str] = None
+) -> List[str]:
     """
     Find exporter names using fuzzy matching.
 
     Args:
         search_term: Name to search for
         threshold: Similarity threshold (0.0 to 1.0)
+        source_country: Filter by source country ('peru' or 'ecuador')
 
     Returns:
         List of matching exporter names
@@ -105,7 +111,14 @@ def fuzzy_match_exporter(search_term: str, threshold: float = 0.6) -> List[str]:
     conn = get_db_connection()
     cursor = conn.cursor()
 
-    cursor.execute("SELECT DISTINCT Exporter FROM exports")
+    if source_country:
+        cursor.execute(
+            "SELECT DISTINCT Exporter FROM exports WHERE source_country = ?",
+            (source_country.lower(),)
+        )
+    else:
+        cursor.execute("SELECT DISTINCT Exporter FROM exports")
+
     all_exporters = [row[0] for row in cursor.fetchall()]
     conn.close()
 

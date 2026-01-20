@@ -1,5 +1,6 @@
 """
-Pydantic models for Peru Frozen Fruit Export Data validation and enrichment.
+Pydantic models for Frozen Fruit Export Data validation and enrichment.
+Supports: Peru, Ecuador
 """
 from datetime import datetime
 from typing import Optional, Literal
@@ -77,6 +78,12 @@ class FruitProduct(BaseModel):
 
 class ExportRecord(BaseModel):
     """Complete export record with all original and enriched data."""
+
+    # Source country tracking
+    source_country: Literal["peru", "ecuador"] = Field(
+        default="peru",
+        description="Source country of the export data"
+    )
 
     # Original fields
     hts_code: str = Field(alias="HTS Code")
@@ -186,6 +193,12 @@ class ExportDataSummary(BaseModel):
     total_mt: float = Field(description="Total metric tons exported")
     total_fob_usd: float = Field(description="Total FOB value in USD")
     avg_usd_per_mt: float = Field(description="Overall average USD per MT")
+
+    # Country breakdown
+    by_source_country: dict[str, float] = Field(
+        default_factory=dict,
+        description="Total MT by source country"
+    )
 
     # Hierarchical summaries: Fruit → Format → Size
     by_fruit: dict[str, float] = Field(description="Total MT by fruit type")

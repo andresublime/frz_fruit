@@ -1,49 +1,53 @@
 {
-  "total_records": 30744,
-  "date_range_start": "2024-01-01T00:00:00",
-  "date_range_end": "2025-11-28T00:00:00",
-  "total_mt": 409985.983,
-  "total_fob_usd": 960198615.08,
-  "avg_usd_per_mt": 2342.03,
+  "total_records": 46759,
+  "date_range_start": "2025-01-01T00:00:00",
+  "date_range_end": "2026-01-14T00:00:00",
+  "total_mt": 541194.551,
+  "total_fob_usd": 1139321836.96,
+  "avg_usd_per_mt": 2105.2,
+  "by_source_country": {
+    "ecuador": 225896.256,
+    "peru": 315298.295
+  },
   "by_fruit": {
-    "acai": 657.409,
-    "avocado": 57452.851,
-    "banana": 8933.738,
-    "blueberry": 30001.78,
-    "camu_camu": 98.663,
-    "cherimoya": 1115.241,
-    "cherry": 0.188,
-    "golden_berry": 40.891,
-    "grape": 8777.428,
-    "lucuma": 751.599,
-    "mango": 136050.849,
-    "mix": 1709.221,
-    "orange": 30327.757999999998,
-    "papaya": 560.281,
-    "passion_fruit": 28132.367000000002,
-    "peach": 911.042,
-    "pineapple": 24720.418,
-    "pitaya": 2.6479999999999997,
-    "pomegranate": 892.25,
-    "raspberry": 9.881,
-    "soursop": 48.786,
-    "strawberry": 5814.339,
-    "unknown": 72976.355
+    "acai": 408.433,
+    "avocado": 40018.853,
+    "banana": 132065.665,
+    "blueberry": 26024.156,
+    "camu_camu": 55.356,
+    "cherimoya": 822.497,
+    "cherry": 19.99,
+    "golden_berry": 12.814,
+    "grape": 4516.606,
+    "lucuma": 277.074,
+    "mango": 104129.008,
+    "mix": 1424.146,
+    "orange": 21326.759,
+    "papaya": 328.89,
+    "passion_fruit": 26876.439,
+    "peach": 656.534,
+    "pineapple": 19173.316,
+    "pitaya": 35.504,
+    "pomegranate": 615.596,
+    "raspberry": 14.613,
+    "soursop": 578.239,
+    "strawberry": 38613.026,
+    "unknown": 123201.037
   },
   "by_format": {
-    "broken_pieces": 426.858,
-    "chunks": 59959.309,
-    "concentrate": 17455.03,
-    "cubes": 10504.359,
-    "halves": 2454.685,
-    "iqf": 6095.808,
-    "juice": 95171.719,
-    "pulp": 25357.399,
-    "puree": 18464.58,
-    "slices": 2002.221,
-    "strips": 85.531,
-    "unknown": 170308.416,
-    "whole": 1700.068
+    "broken_pieces": 469.902,
+    "chunks": 56274.219,
+    "concentrate": 12834.564,
+    "cubes": 8445.593,
+    "halves": 3616.705,
+    "iqf": 16338.179,
+    "juice": 65706.845,
+    "pulp": 19778.258,
+    "puree": 114462.982,
+    "slices": 29353.137,
+    "strips": 2798.4,
+    "unknown": 202121.434,
+    "whole": 8994.333
   },
   "by_size": {
     "00001x32": 0.187,
@@ -55,175 +59,197 @@
     "028x1": 0.3,
     "04020304002x50": 0.021,
     "04020304005x90": 0.038,
-    "04x2": 24.0,
-    "06x05": 17.706,
-    "06x48": 126.48,
-    "08x12": 32.64,
-    "08x300": 0.002,
+    "06x48": 82.416,
+    "08x12": 16.32,
     "08x48": 15.232,
-    "09x820": 0.009,
-    "10x01": 10.01,
-    "10x1": 2918.196,
-    "10x10": 1184.9470000000001,
-    "10x1000": 3.0,
-    "10x130": 0.0,
-    "10x16": 371.82000000000005,
-    "10x250": 408.551,
-    "10x3": 9.622,
-    "10x400": 0.972,
-    "10x500": 63.24,
+    "100x10": 1.48,
+    "10x1": 2289.3250000000003,
+    "10x10": 1067.07,
+    "10x16": 318.163,
+    "10x2": 60.55,
+    "10x250": 243.66,
+    "10x3": 259.349,
+    "10x500": 155.625,
     "115x15": 0.667,
-    "115x8": 3.0789999999999997,
-    "12x0": 31.32,
-    "12x1": 143.121,
-    "12x10": 161.517,
-    "12x12": 44.818,
-    "12x14": 107.661,
+    "115x8": 1.883,
+    "12x0": 23.76,
+    "12x1": 604.519,
+    "12x10": 142.993,
+    "12x12": 56.393,
+    "12x14": 949.507,
     "12x150": 1.512,
-    "12x16": 97.296,
-    "12x2": 88.894,
-    "12x200": 18.374,
-    "12x230": 1.72,
+    "12x16": 107.60900000000001,
+    "12x18": 6.172,
+    "12x2": 143.944,
+    "12x200": 36.483999999999995,
+    "12x213": 0.284,
     "12x250": 0.68,
-    "12x290": 1.688,
-    "12x3": 1.62,
-    "12x300": 48.355,
-    "12x32": 2198.456,
-    "12x320": 3.4850000000000003,
-    "12x397": 34.084,
+    "12x28": 0.19,
+    "12x290": 1.5819999999999999,
+    "12x3": 1.08,
+    "12x32": 1229.866,
+    "12x320": 2.3000000000000003,
+    "12x397": 24.989,
     "12x4": 0.468,
-    "12x425": 0.255,
-    "12x473": 2.744,
-    "12x475": 18.112000000000002,
-    "12x48": 71.519,
+    "12x400": 9.876,
+    "12x410": 11.464,
+    "12x450": 72.576,
+    "12x473": 1.8410000000000002,
+    "12x48": 35.252,
     "12x480": 0.157,
-    "12x495": 0.428,
     "12x5": 0.185,
-    "12x50": 0.001,
-    "12x500": 498.426,
-    "12x600": 2.167,
-    "12x750": 41.625,
+    "12x500": 302.968,
+    "12x600": 58.918,
+    "12x70": 5.628,
+    "12x750": 34.146,
     "12x80": 0.5,
-    "12x820": 0.036,
-    "12x950": 388.48199999999997,
+    "12x800": 190.08,
+    "12x820": 0.096,
+    "12x900": 26.828,
+    "12x950": 213.471,
     "135x200": 27.0,
     "13x12": 0.296,
-    "142x30": 26.457,
-    "142x8": 18.363,
-    "14x1": 155.272,
+    "142x30": 17.915,
+    "142x8": 10.178,
+    "14x1": 85.27199999999999,
     "14x14": 0.002,
     "14x600": 22.0,
-    "15x1": 72.0,
-    "15x100": 0.43,
-    "15x15": 3011.129,
-    "15x28": 0.346,
-    "16x24": 205.731,
-    "16x450": 79.405,
-    "16x500": 70.16,
-    "16x90": 1.8010000000000002,
+    "15x100": 0.027,
+    "15x15": 2058.293,
+    "15x2": 8.727,
+    "16x141": 12.123,
+    "16x142": 17.545,
+    "16x16": 12.370000000000001,
+    "16x24": 259.959,
+    "16x3": 3.497,
+    "16x450": 37.094,
+    "16x90": 1.0150000000000001,
     "18x1": 1.634,
-    "18x15": 191.709,
-    "18x16": 4.896,
-    "18x18": 375.68,
-    "18x567": 0.009,
-    "18x70": 13.289,
-    "190x12": 47.973,
-    "1x06": 4.8,
-    "1x1": 0.001,
-    "1x10": 3012.815,
-    "1x13": 104.519,
-    "1x20": 0.063,
-    "1x24": 3.4859999999999998,
-    "1x30": 3395.603,
-    "1x5": 0.005,
-    "1x6": 9.6,
-    "20x0": 138.03,
-    "20x16": 6.471,
-    "20x20": 11101.214,
-    "20x28": 1.195,
-    "20x340": 0.027,
-    "20x500": 842.0,
-    "21x0": 11.397,
+    "18x15": 103.987,
+    "18x18": 391.24,
+    "18x70": 10.049,
+    "1x10": 3959.113,
+    "1x100": 2.584,
+    "1x12": 57.882,
+    "1x13": 559.548,
+    "1x15": 11.909,
+    "1x20": 72.541,
+    "1x22": 0.01,
+    "1x24": 28.66,
+    "1x25": 4.297000000000001,
+    "1x30": 6644.838,
+    "1x4": 1.171,
+    "1x5": 58.805,
+    "1x6": 1.629,
+    "1x80": 1.437,
+    "1x9": 0.192,
+    "20x0": 15.03,
+    "20x16": 1.7730000000000001,
+    "20x2": 3.278,
+    "20x20": 7776.882,
+    "20x500": 670.38,
+    "20x57": 0.456,
+    "20x80": 39.389,
+    "20x85": 3.434,
     "248x12": 2.048,
-    "24x1": 52.001,
-    "24x120": 1.218,
-    "24x16": 134.091,
-    "24x200": 26.163999999999998,
-    "24x250": 24.928,
-    "24x4": 0.506,
-    "24x50": 2.002,
-    "24x70": 0.366,
-    "25x200": 0.284,
-    "25x25": 3657.833,
-    "284x12": 1.22,
-    "28x1": 0.495,
-    "2x05": 28.8,
-    "2x1": 0.213,
-    "2x4": 1064.167,
-    "2x5": 1796.885,
+    "24x1": 39.905,
+    "24x12": 14.237,
+    "24x14": 193.536,
+    "24x145": 0.882,
+    "24x16": 112.291,
+    "24x2": 1.061,
+    "24x250": 16.713,
+    "24x3": 24.512,
+    "24x400": 590.88,
+    "24x50": 1.43,
+    "24x500": 129.48,
+    "24x65": 14.347,
+    "24x71": 20.518,
+    "25x25": 3248.282,
+    "284x12": 0.569,
+    "28x400": 11.2,
+    "2x1": 0.218,
+    "2x4": 614.26,
+    "2x5": 1661.2350000000001,
     "300x407": 14.969,
     "30x1": 10.896,
+    "30x12": 27.483,
     "30x250": 0.15,
-    "30x300": 18.612,
-    "30x500": 5.255,
-    "310170201x8": 13.598,
-    "31017x8": 2.717,
-    "310x8": 8.21,
-    "32x14": 0.646,
-    "340x12": 27.253,
-    "34x60": 37.699,
+    "30x500": 3.255,
+    "340x12": 13.738999999999999,
+    "34x60": 21.262,
     "36x0": 2.934,
+    "36x100": 3.168,
+    "3x1": 0.007,
     "3x4": 144.99,
-    "3x5": 12.615,
-    "3x8": 14.326,
-    "40x200": 0.531,
-    "40x24": 1.286,
-    "425x12": 20.38,
+    "3x5": 0.645,
+    "40x100": 24.2,
+    "40x24": 0.415,
+    "425x12": 21.237000000000002,
     "425x425": 1.071,
-    "425x6": 54.526,
-    "44x200": 0.308,
-    "46x14": 1.02,
-    "4x1": 11558.625,
-    "4x128": 24.048,
-    "4x2": 686.909,
-    "4x3": 629.086,
-    "4x5": 113.408,
-    "4x500": 129.806,
-    "4x6": 32.67,
-    "4x750": 43.998,
-    "50x100": 0.008,
-    "59x200": 0.016,
-    "5x1": 485.366,
-    "5x10": 358.389,
-    "5x16": 317.219,
-    "5x2": 16.387,
-    "6x01": 19.2,
-    "6x05": 15.275,
-    "6x1": 760.919,
-    "6x2": 409.94599999999997,
-    "6x48": 365.047,
-    "6x6": 0.003,
-    "6x950": 0.492,
-    "70x15": 5.686,
-    "75x15": 185.441,
-    "75x30": 11.777000000000001,
-    "78x200": 0.022,
-    "7x1": 130.716,
+    "425x6": 28.164,
+    "46x14": 0.747,
+    "48x21": 2.496,
+    "48x25": 1.3199999999999998,
+    "48x30": 3.7359999999999998,
+    "4x1": 6165.722,
+    "4x2": 481.022,
+    "4x3": 332.196,
+    "4x5": 124.83999999999999,
+    "4x500": 61.868,
+    "4x6": 38.111,
+    "50x100": 0.015,
+    "5x1": 435.666,
+    "5x10": 192.132,
+    "5x16": 340.191,
+    "5x2": 22.617,
+    "5x3": 22.515,
+    "5x5": 2.194,
+    "6x1": 988.707,
+    "6x12": 10.219000000000001,
+    "6x16": 7.484,
+    "6x17": 7.851,
+    "6x2": 582.54,
+    "6x22": 2.247,
+    "6x2680": 225.002,
+    "6x280": 0.008,
+    "6x3": 40.343999999999994,
+    "6x300": 0.481,
+    "6x325": 0.526,
+    "6x350": 96.679,
+    "6x4": 70.881,
+    "6x40": 27.211,
+    "6x470": 5.245,
+    "6x48": 183.311,
+    "6x5": 27.272000000000002,
+    "6x500": 0.333,
+    "6x64": 387.271,
+    "6x646": 24.579,
+    "6x8": 4.495,
+    "6x950": 0.427,
+    "70x15": 3.292,
+    "75x15": 128.749,
+    "75x30": 10.528,
+    "7x1": 198.22199999999998,
     "7x10": 0.039,
-    "85x200": 0.52,
-    "8x0": 814.708,
+    "7x100": 0.10500000000000001,
+    "7x48": 26.073,
+    "7x65": 0.136,
+    "7x90": 0.29000000000000004,
+    "8x0": 699.76,
     "8x05": 10.896,
-    "8x1": 588.184,
-    "8x12": 238.746,
-    "8x16": 61.336,
-    "8x2": 10.315,
-    "8x3": 23.647,
-    "8x48": 337.008,
-    "8x500": 261.972,
-    "90x200": 0.401,
+    "8x1": 412.108,
+    "8x12": 114.646,
+    "8x14": 11.303,
+    "8x16": 57.504,
+    "8x2": 55.675,
+    "8x3": 11.487,
+    "8x32": 3.76,
+    "8x48": 472.595,
+    "96x40": 5.583,
     "9x1": 0.001,
     "9x4": 90.532,
-    "9x500": 30.42
+    "9x500": 15.21
   },
   "product_summaries": [
     {
@@ -231,400 +257,360 @@
       "format_type": "juice",
       "size_mm": "4x1",
       "certification": "unknown",
-      "total_mt": 11516.39,
-      "avg_usd_per_mt": 809.23,
-      "record_count": 573,
-      "total_fob_usd": 9364924.27
+      "total_mt": 6116.005,
+      "avg_usd_per_mt": 788.65,
+      "record_count": 309,
+      "total_fob_usd": 4850779.59
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "20x20",
       "certification": "unknown",
-      "total_mt": 7436.101,
-      "avg_usd_per_mt": 1904.41,
-      "record_count": 398,
-      "total_fob_usd": 14593372.37
+      "total_mt": 5285.092,
+      "avg_usd_per_mt": 1761.45,
+      "record_count": 292,
+      "total_fob_usd": 9690467.1
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 3751.907,
+      "avg_usd_per_mt": 1857.14,
+      "record_count": 160,
+      "total_fob_usd": 6918197.42
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "20x20",
       "certification": "organic",
-      "total_mt": 2624.791,
-      "avg_usd_per_mt": 1945.95,
-      "record_count": 129,
-      "total_fob_usd": 5458799.5
+      "total_mt": 1971.21,
+      "avg_usd_per_mt": 1870.42,
+      "record_count": 96,
+      "total_fob_usd": 3899732.11
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "25x25",
+      "certification": "unknown",
+      "total_mt": 1818.042,
+      "avg_usd_per_mt": 1823.54,
+      "record_count": 94,
+      "total_fob_usd": 3486647.42
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 1258.057,
+      "avg_usd_per_mt": 1736.79,
+      "record_count": 59,
+      "total_fob_usd": 2156909.92
     },
     {
       "fruit_name": "unknown",
       "format_type": "juice",
       "size_mm": "12x32",
       "certification": "unknown",
-      "total_mt": 2198.456,
-      "avg_usd_per_mt": 790.6,
-      "record_count": 116,
-      "total_fob_usd": 1720125.62
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "25x25",
-      "certification": "unknown",
-      "total_mt": 1999.446,
-      "avg_usd_per_mt": 1852.92,
-      "record_count": 102,
-      "total_fob_usd": 3880524.04
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "1x30",
-      "certification": "unknown",
-      "total_mt": 1472.71,
-      "avg_usd_per_mt": 1854.79,
-      "record_count": 69,
-      "total_fob_usd": 2710528.01
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "15x15",
-      "certification": "unknown",
-      "total_mt": 1404.488,
-      "avg_usd_per_mt": 3166.1,
-      "record_count": 94,
-      "total_fob_usd": 4640204.12
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "1x10",
-      "certification": "unknown",
-      "total_mt": 1304.5,
-      "avg_usd_per_mt": 1813.03,
-      "record_count": 56,
-      "total_fob_usd": 2369796.19
+      "total_mt": 1209.694,
+      "avg_usd_per_mt": 789.0,
+      "record_count": 70,
+      "total_fob_usd": 942229.19
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "25x25",
       "certification": "organic",
-      "total_mt": 1267.398,
-      "avg_usd_per_mt": 2172.28,
-      "record_count": 59,
-      "total_fob_usd": 2734067.65
+      "total_mt": 1205.593,
+      "avg_usd_per_mt": 2148.51,
+      "record_count": 56,
+      "total_fob_usd": 2572721.85
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "10x10",
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "15x15",
       "certification": "unknown",
-      "total_mt": 1019.171,
-      "avg_usd_per_mt": 1994.5,
-      "record_count": 51,
-      "total_fob_usd": 2029729.35
-    },
-    {
-      "fruit_name": "blueberry",
-      "format_type": "iqf",
-      "size_mm": "1x30",
-      "certification": "unknown",
-      "total_mt": 940.548,
-      "avg_usd_per_mt": 2312.08,
-      "record_count": 21,
-      "total_fob_usd": 2071882.71
+      "total_mt": 1162.582,
+      "avg_usd_per_mt": 3172.82,
+      "record_count": 73,
+      "total_fob_usd": 3866926.84
     },
     {
       "fruit_name": "blueberry",
       "format_type": "chunks",
       "size_mm": "1x10",
       "certification": "unknown",
-      "total_mt": 824.0,
-      "avg_usd_per_mt": 2389.64,
-      "record_count": 36,
-      "total_fob_usd": 1957494.76
+      "total_mt": 1106.08,
+      "avg_usd_per_mt": 2486.84,
+      "record_count": 48,
+      "total_fob_usd": 2739545.12
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "1x10",
+      "certification": "unknown",
+      "total_mt": 1088.5,
+      "avg_usd_per_mt": 1779.02,
+      "record_count": 47,
+      "total_fob_usd": 1939820.18
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "1x10",
+      "certification": "unknown",
+      "total_mt": 709.0,
+      "avg_usd_per_mt": 2013.75,
+      "record_count": 35,
+      "total_fob_usd": 1458411.79
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "10x10",
+      "certification": "unknown",
+      "total_mt": 703.237,
+      "avg_usd_per_mt": 1885.87,
+      "record_count": 33,
+      "total_fob_usd": 1319933.61
     },
     {
       "fruit_name": "avocado",
       "format_type": "chunks",
-      "size_mm": "2x5",
+      "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 790.954,
-      "avg_usd_per_mt": 2679.49,
+      "total_mt": 676.71,
+      "avg_usd_per_mt": 2867.19,
       "record_count": 40,
-      "total_fob_usd": 2133380.51
+      "total_fob_usd": 1930098.19
     },
     {
       "fruit_name": "avocado",
       "format_type": "pulp",
       "size_mm": "8x0",
       "certification": "unknown",
-      "total_mt": 728.308,
-      "avg_usd_per_mt": 2478.85,
-      "record_count": 26,
-      "total_fob_usd": 1801944.2
+      "total_mt": 613.36,
+      "avg_usd_per_mt": 2461.36,
+      "record_count": 22,
+      "total_fob_usd": 1509752.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "2x5",
+      "certification": "unknown",
+      "total_mt": 523.284,
+      "avg_usd_per_mt": 2719.93,
+      "record_count": 27,
+      "total_fob_usd": 1444368.58
+    },
+    {
+      "fruit_name": "blueberry",
+      "format_type": "iqf",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 508.553,
+      "avg_usd_per_mt": 2360.26,
+      "record_count": 13,
+      "total_fob_usd": 1132711.98
     },
     {
       "fruit_name": "avocado",
       "format_type": "chunks",
       "size_mm": "2x4",
       "certification": "unknown",
-      "total_mt": 667.543,
-      "avg_usd_per_mt": 2717.47,
-      "record_count": 31,
-      "total_fob_usd": 1865727.2
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "15x15",
-      "certification": "unknown",
-      "total_mt": 663.591,
-      "avg_usd_per_mt": 2411.63,
-      "record_count": 63,
-      "total_fob_usd": 1988432.97
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 609.07,
-      "avg_usd_per_mt": 2844.15,
-      "record_count": 37,
-      "total_fob_usd": 1714646.18
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "4x3",
-      "certification": "unknown",
-      "total_mt": 568.474,
-      "avg_usd_per_mt": 2701.3,
-      "record_count": 26,
-      "total_fob_usd": 1540760.14
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "20x20",
-      "certification": "conventional",
-      "total_mt": 502.658,
-      "avg_usd_per_mt": 2070.73,
-      "record_count": 24,
-      "total_fob_usd": 1053019.43
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "pulp",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 496.8,
-      "avg_usd_per_mt": 1778.57,
-      "record_count": 14,
-      "total_fob_usd": 874800.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 493.27,
-      "avg_usd_per_mt": 2366.57,
-      "record_count": 36,
-      "total_fob_usd": 1134550.09
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 467.176,
-      "avg_usd_per_mt": 2083.53,
-      "record_count": 23,
-      "total_fob_usd": 976568.63
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "6x2",
-      "certification": "unknown",
-      "total_mt": 408.95,
-      "avg_usd_per_mt": 2235.72,
+      "total_mt": 452.74,
+      "avg_usd_per_mt": 2810.43,
       "record_count": 19,
-      "total_fob_usd": 908925.8
+      "total_fob_usd": 1270826.2
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "12x500",
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 399.582,
-      "avg_usd_per_mt": 2571.0,
-      "record_count": 45,
-      "total_fob_usd": 1051041.23
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "12x950",
-      "certification": "unknown",
-      "total_mt": 388.482,
-      "avg_usd_per_mt": 2533.13,
-      "record_count": 26,
-      "total_fob_usd": 987106.55
+      "total_mt": 402.68,
+      "avg_usd_per_mt": 2042.78,
+      "record_count": 19,
+      "total_fob_usd": 821335.2
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "18x18",
       "certification": "unknown",
-      "total_mt": 375.68,
-      "avg_usd_per_mt": 2150.22,
-      "record_count": 16,
-      "total_fob_usd": 806429.05
+      "total_mt": 391.24,
+      "avg_usd_per_mt": 2159.71,
+      "record_count": 17,
+      "total_fob_usd": 842397.45
     },
     {
-      "fruit_name": "blueberry",
-      "format_type": "chunks",
-      "size_mm": "10x16",
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "12x14",
       "certification": "unknown",
-      "total_mt": 371.82,
-      "avg_usd_per_mt": 2870.64,
-      "record_count": 20,
-      "total_fob_usd": 1067361.75
+      "total_mt": 391.006,
+      "avg_usd_per_mt": 2409.38,
+      "record_count": 143,
+      "total_fob_usd": 856776.96
     },
     {
       "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "4x2",
+      "format_type": "chunks",
+      "size_mm": "15x15",
       "certification": "unknown",
-      "total_mt": 356.687,
-      "avg_usd_per_mt": 2708.57,
-      "record_count": 15,
-      "total_fob_usd": 968956.48
+      "total_mt": 382.145,
+      "avg_usd_per_mt": 2738.71,
+      "record_count": 33,
+      "total_fob_usd": 1164047.52
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "12x1",
+      "certification": "unknown",
+      "total_mt": 363.564,
+      "avg_usd_per_mt": 1880.0,
+      "record_count": 22,
+      "total_fob_usd": 690969.0
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "pulp",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 356.45,
+      "avg_usd_per_mt": 1857.69,
+      "record_count": 13,
+      "total_fob_usd": 614137.5
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "24x400",
+      "certification": "unknown",
+      "total_mt": 348.96,
+      "avg_usd_per_mt": 1165.67,
+      "record_count": 21,
+      "total_fob_usd": 386750.0
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "6x2",
+      "certification": "unknown",
+      "total_mt": 346.808,
+      "avg_usd_per_mt": 1982.42,
+      "record_count": 16,
+      "total_fob_usd": 686045.32
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "5x16",
       "certification": "unknown",
-      "total_mt": 317.219,
-      "avg_usd_per_mt": 2609.8,
-      "record_count": 41,
-      "total_fob_usd": 820769.56
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "5x10",
-      "certification": "unknown",
-      "total_mt": 315.659,
-      "avg_usd_per_mt": 3280.92,
-      "record_count": 26,
-      "total_fob_usd": 1035818.64
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "8x1",
-      "certification": "unknown",
-      "total_mt": 315.168,
-      "avg_usd_per_mt": 2602.86,
-      "record_count": 14,
-      "total_fob_usd": 820337.28
+      "total_mt": 340.191,
+      "avg_usd_per_mt": 2632.25,
+      "record_count": 44,
+      "total_fob_usd": 888113.86
     },
     {
       "fruit_name": "blueberry",
       "format_type": "chunks",
       "size_mm": "1x30",
       "certification": "unknown",
-      "total_mt": 309.004,
-      "avg_usd_per_mt": 2075.72,
-      "record_count": 13,
-      "total_fob_usd": 691910.57
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "20x20",
-      "certification": "unknown",
-      "total_mt": 292.084,
-      "avg_usd_per_mt": 2673.44,
-      "record_count": 16,
-      "total_fob_usd": 876630.68
+      "total_mt": 332.998,
+      "avg_usd_per_mt": 2113.17,
+      "record_count": 14,
+      "total_fob_usd": 754296.09
     },
     {
       "fruit_name": "avocado",
       "format_type": "cubes",
-      "size_mm": "10x250",
+      "size_mm": "6x1",
       "certification": "unknown",
-      "total_mt": 284.071,
-      "avg_usd_per_mt": 3404.02,
-      "record_count": 20,
-      "total_fob_usd": 988932.61
+      "total_mt": 308.31,
+      "avg_usd_per_mt": 2804.8,
+      "record_count": 18,
+      "total_fob_usd": 863861.02
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "slices",
+      "size_mm": "6x64",
+      "certification": "unknown",
+      "total_mt": 294.948,
+      "avg_usd_per_mt": 2401.11,
+      "record_count": 12,
+      "total_fob_usd": 708205.3
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "4x3",
+      "certification": "unknown",
+      "total_mt": 291.456,
+      "avg_usd_per_mt": 2681.78,
+      "record_count": 12,
+      "total_fob_usd": 783205.4
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "2x5",
       "certification": "unknown",
-      "total_mt": 282.04,
-      "avg_usd_per_mt": 1954.05,
+      "total_mt": 280.694,
+      "avg_usd_per_mt": 1879.92,
       "record_count": 16,
-      "total_fob_usd": 564065.96
+      "total_fob_usd": 540403.46
     },
     {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "15x15",
       "certification": "unknown",
-      "total_mt": 279.667,
-      "avg_usd_per_mt": 1399.85,
-      "record_count": 20,
-      "total_fob_usd": 524743.91
+      "total_mt": 279.659,
+      "avg_usd_per_mt": 1623.23,
+      "record_count": 17,
+      "total_fob_usd": 524743.35
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "2x4",
+      "fruit_name": "blueberry",
+      "format_type": "whole",
+      "size_mm": "2x5",
       "certification": "unknown",
-      "total_mt": 277.68,
-      "avg_usd_per_mt": 2850.78,
+      "total_mt": 261.504,
+      "avg_usd_per_mt": 2040.62,
+      "record_count": 16,
+      "total_fob_usd": 533629.44
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "cubes",
+      "size_mm": "10x10",
+      "certification": "unknown",
+      "total_mt": 261.312,
+      "avg_usd_per_mt": 1950.0,
       "record_count": 12,
-      "total_fob_usd": 792356.0
+      "total_fob_usd": 509558.4
     },
     {
       "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "20x500",
+      "format_type": "halves",
+      "size_mm": "6x1",
       "certification": "unknown",
-      "total_mt": 276.84,
-      "avg_usd_per_mt": 2733.71,
-      "record_count": 15,
-      "total_fob_usd": 750227.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "8x500",
-      "certification": "unknown",
-      "total_mt": 261.972,
-      "avg_usd_per_mt": 2650.0,
-      "record_count": 5,
-      "total_fob_usd": 694225.8
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "iqf",
-      "size_mm": "15x15",
-      "certification": "unknown",
-      "total_mt": 258.902,
-      "avg_usd_per_mt": 2555.97,
-      "record_count": 23,
-      "total_fob_usd": 748115.76
+      "total_mt": 247.782,
+      "avg_usd_per_mt": 2710.49,
+      "record_count": 14,
+      "total_fob_usd": 672690.36
     },
     {
       "fruit_name": "mango",
@@ -637,24 +623,14 @@
       "total_fob_usd": 451547.53
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "1x30",
-      "certification": "organic",
-      "total_mt": 239.549,
-      "avg_usd_per_mt": 2015.67,
-      "record_count": 10,
-      "total_fob_usd": 482824.12
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "6x1",
+      "fruit_name": "unknown",
+      "format_type": "whole",
+      "size_mm": "24x400",
       "certification": "unknown",
-      "total_mt": 239.496,
-      "avg_usd_per_mt": 2611.32,
+      "total_mt": 241.92,
+      "avg_usd_per_mt": 2760.42,
       "record_count": 14,
-      "total_fob_usd": 625880.12
+      "total_fob_usd": 667800.0
     },
     {
       "fruit_name": "mango",
@@ -667,94 +643,144 @@
       "total_fob_usd": 453250.24
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "20x500",
-      "certification": "unknown",
-      "total_mt": 228.85,
-      "avg_usd_per_mt": 3227.83,
-      "record_count": 12,
-      "total_fob_usd": 736524.05
-    },
-    {
-      "fruit_name": "blueberry",
-      "format_type": "whole",
-      "size_mm": "2x5",
-      "certification": "unknown",
-      "total_mt": 228.816,
-      "avg_usd_per_mt": 2040.62,
-      "record_count": 14,
-      "total_fob_usd": 466925.76
-    },
-    {
-      "fruit_name": "blueberry",
+      "fruit_name": "mango",
       "format_type": "chunks",
-      "size_mm": "6x48",
+      "size_mm": "8x1",
       "certification": "unknown",
-      "total_mt": 213.858,
-      "avg_usd_per_mt": 2600.48,
-      "record_count": 9,
-      "total_fob_usd": 556133.76
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "4x2",
-      "certification": "unknown",
-      "total_mt": 211.722,
-      "avg_usd_per_mt": 2434.18,
-      "record_count": 9,
-      "total_fob_usd": 517654.71
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "6x1",
-      "certification": "unknown",
-      "total_mt": 210.822,
-      "avg_usd_per_mt": 2740.65,
-      "record_count": 13,
-      "total_fob_usd": 575199.17
+      "total_mt": 230.658,
+      "avg_usd_per_mt": 2214.97,
+      "record_count": 11,
+      "total_fob_usd": 510057.1
     },
     {
       "fruit_name": "blueberry",
       "format_type": "chunks",
       "size_mm": "8x48",
       "certification": "unknown",
-      "total_mt": 204.163,
-      "avg_usd_per_mt": 2863.83,
-      "record_count": 20,
-      "total_fob_usd": 573523.93
+      "total_mt": 229.296,
+      "avg_usd_per_mt": 2900.79,
+      "record_count": 22,
+      "total_fob_usd": 658064.11
     },
     {
       "fruit_name": "pineapple",
       "format_type": "chunks",
-      "size_mm": "25x25",
+      "size_mm": "6x2680",
       "certification": "unknown",
-      "total_mt": 194.632,
-      "avg_usd_per_mt": 2534.01,
+      "total_mt": 225.002,
+      "avg_usd_per_mt": 1684.63,
+      "record_count": 14,
+      "total_fob_usd": 385296.23
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "10x3",
+      "certification": "unknown",
+      "total_mt": 223.706,
+      "avg_usd_per_mt": 1439.11,
+      "record_count": 64,
+      "total_fob_usd": 316952.84
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "1x13",
+      "certification": "unknown",
+      "total_mt": 218.998,
+      "avg_usd_per_mt": 2031.52,
       "record_count": 10,
-      "total_fob_usd": 545802.47
+      "total_fob_usd": 450219.25
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "1x13",
+      "certification": "unknown",
+      "total_mt": 216.082,
+      "avg_usd_per_mt": 1462.92,
+      "record_count": 12,
+      "total_fob_usd": 404057.72
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "1x30",
+      "certification": "organic",
+      "total_mt": 215.541,
+      "avg_usd_per_mt": 2009.64,
+      "record_count": 9,
+      "total_fob_usd": 433127.48
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "12x950",
+      "certification": "unknown",
+      "total_mt": 213.471,
+      "avg_usd_per_mt": 2564.34,
+      "record_count": 14,
+      "total_fob_usd": 548757.85
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 212.592,
+      "avg_usd_per_mt": 4202.99,
+      "record_count": 61,
+      "total_fob_usd": 789113.26
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "16x24",
+      "certification": "unknown",
+      "total_mt": 207.768,
+      "avg_usd_per_mt": 2423.93,
+      "record_count": 11,
+      "total_fob_usd": 503614.21
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "12x500",
+      "certification": "unknown",
+      "total_mt": 206.584,
+      "avg_usd_per_mt": 2449.04,
+      "record_count": 25,
+      "total_fob_usd": 534282.26
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "slices",
+      "size_mm": "20x500",
+      "certification": "unknown",
+      "total_mt": 206.11,
+      "avg_usd_per_mt": 3119.91,
+      "record_count": 12,
+      "total_fob_usd": 637563.05
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "4x2",
+      "certification": "unknown",
+      "total_mt": 198.792,
+      "avg_usd_per_mt": 2791.41,
+      "record_count": 7,
+      "total_fob_usd": 556068.2
     },
     {
       "fruit_name": "passion_fruit",
       "format_type": "juice",
       "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 194.4,
+      "total_mt": 198.72,
       "avg_usd_per_mt": 2850.0,
-      "record_count": 8,
-      "total_fob_usd": 554040.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 193.99,
-      "avg_usd_per_mt": 2352.22,
       "record_count": 9,
-      "total_fob_usd": 450854.0
+      "total_fob_usd": 566352.0
     },
     {
       "fruit_name": "grape",
@@ -767,24 +793,94 @@
       "total_fob_usd": 336640.83
     },
     {
-      "fruit_name": "banana",
+      "fruit_name": "avocado",
       "format_type": "chunks",
-      "size_mm": "75x15",
+      "size_mm": "4x2",
       "certification": "unknown",
-      "total_mt": 179.882,
-      "avg_usd_per_mt": 5220.19,
-      "record_count": 128,
-      "total_fob_usd": 921037.6
+      "total_mt": 187.722,
+      "avg_usd_per_mt": 2403.46,
+      "record_count": 8,
+      "total_fob_usd": 453334.71
     },
     {
-      "fruit_name": "passion_fruit",
+      "fruit_name": "blueberry",
       "format_type": "chunks",
-      "size_mm": "1x30",
+      "size_mm": "10x16",
       "certification": "unknown",
-      "total_mt": 167.688,
-      "avg_usd_per_mt": 3583.0,
+      "total_mt": 185.91,
+      "avg_usd_per_mt": 2840.35,
       "record_count": 10,
-      "total_fob_usd": 600595.57
+      "total_fob_usd": 528050.25
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "20x20",
+      "certification": "conventional",
+      "total_mt": 172.208,
+      "avg_usd_per_mt": 1720.48,
+      "record_count": 9,
+      "total_fob_usd": 292457.43
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "5x10",
+      "certification": "unknown",
+      "total_mt": 170.17,
+      "avg_usd_per_mt": 3366.27,
+      "record_count": 14,
+      "total_fob_usd": 572839.38
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 169.99,
+      "avg_usd_per_mt": 2400.61,
+      "record_count": 11,
+      "total_fob_usd": 411221.5
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "puree",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 168.0,
+      "avg_usd_per_mt": 2310.0,
+      "record_count": 7,
+      "total_fob_usd": 388080.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "1x10",
+      "certification": "unknown",
+      "total_mt": 168.0,
+      "avg_usd_per_mt": 1993.85,
+      "record_count": 7,
+      "total_fob_usd": 334967.58
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "whole",
+      "size_mm": "24x14",
+      "certification": "unknown",
+      "total_mt": 162.586,
+      "avg_usd_per_mt": 3189.5,
+      "record_count": 11,
+      "total_fob_usd": 518567.36
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "2x4",
+      "certification": "unknown",
+      "total_mt": 161.52,
+      "avg_usd_per_mt": 2778.79,
+      "record_count": 7,
+      "total_fob_usd": 448728.0
     },
     {
       "fruit_name": "mango",
@@ -797,104 +893,104 @@
       "total_fob_usd": 411250.0
     },
     {
-      "fruit_name": "blueberry",
-      "format_type": "chunks",
-      "size_mm": "16x24",
+      "fruit_name": "strawberry",
+      "format_type": "halves",
+      "size_mm": "1x30",
       "certification": "unknown",
-      "total_mt": 153.54,
-      "avg_usd_per_mt": 2647.67,
+      "total_mt": 149.613,
+      "avg_usd_per_mt": 2561.56,
+      "record_count": 7,
+      "total_fob_usd": 383195.98
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "2x5",
+      "certification": "unknown",
+      "total_mt": 149.419,
+      "avg_usd_per_mt": 2108.52,
       "record_count": 9,
-      "total_fob_usd": 406522.77
+      "total_fob_usd": 322962.91
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "12x1",
+      "certification": "unknown",
+      "total_mt": 147.6,
+      "avg_usd_per_mt": 1830.56,
+      "record_count": 12,
+      "total_fob_usd": 263400.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 145.136,
+      "avg_usd_per_mt": 3645.03,
+      "record_count": 8,
+      "total_fob_usd": 529024.53
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 143.134,
+      "avg_usd_per_mt": 2166.89,
+      "record_count": 32,
+      "total_fob_usd": 277292.09
     },
     {
       "fruit_name": "avocado",
-      "format_type": "chunks",
+      "format_type": "cubes",
       "size_mm": "5x1",
       "certification": "unknown",
-      "total_mt": 147.635,
-      "avg_usd_per_mt": 3020.41,
-      "record_count": 12,
-      "total_fob_usd": 445173.87
+      "total_mt": 136.771,
+      "avg_usd_per_mt": 2710.48,
+      "record_count": 7,
+      "total_fob_usd": 371032.45
     },
     {
-      "fruit_name": "passion_fruit",
+      "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "8x12",
+      "size_mm": "10x16",
       "certification": "unknown",
-      "total_mt": 147.539,
-      "avg_usd_per_mt": 4166.45,
-      "record_count": 10,
-      "total_fob_usd": 613604.6
+      "total_mt": 132.253,
+      "avg_usd_per_mt": 2621.66,
+      "record_count": 14,
+      "total_fob_usd": 346733.36
     },
     {
       "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "8x1",
+      "format_type": "cubes",
+      "size_mm": "10x250",
       "certification": "unknown",
-      "total_mt": 143.712,
-      "avg_usd_per_mt": 2764.44,
-      "record_count": 7,
-      "total_fob_usd": 384339.32
+      "total_mt": 124.48,
+      "avg_usd_per_mt": 3443.36,
+      "record_count": 9,
+      "total_fob_usd": 432055.25
     },
     {
-      "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "18x15",
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "75x15",
       "certification": "unknown",
-      "total_mt": 143.636,
-      "avg_usd_per_mt": 3850.37,
-      "record_count": 48,
-      "total_fob_usd": 546100.38
+      "total_mt": 123.19,
+      "avg_usd_per_mt": 5144.71,
+      "record_count": 82,
+      "total_fob_usd": 623023.91
     },
     {
       "fruit_name": "unknown",
-      "format_type": "slices",
-      "size_mm": "15x15",
+      "format_type": "chunks",
+      "size_mm": "12x800",
       "certification": "unknown",
-      "total_mt": 142.33,
-      "avg_usd_per_mt": 3462.86,
-      "record_count": 8,
-      "total_fob_usd": 491454.87
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "2x5",
-      "certification": "unknown",
-      "total_mt": 140.81,
-      "avg_usd_per_mt": 2785.14,
-      "record_count": 8,
-      "total_fob_usd": 414955.73
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "4x500",
-      "certification": "unknown",
-      "total_mt": 129.806,
-      "avg_usd_per_mt": 2788.84,
-      "record_count": 12,
-      "total_fob_usd": 358979.88
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "20x20",
-      "certification": "unknown",
-      "total_mt": 123.7,
-      "avg_usd_per_mt": 3028.74,
-      "record_count": 6,
-      "total_fob_usd": 374456.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "20x0",
-      "certification": "unknown",
-      "total_mt": 123.0,
-      "avg_usd_per_mt": 3220.0,
-      "record_count": 5,
-      "total_fob_usd": 396900.0
+      "total_mt": 120.96,
+      "avg_usd_per_mt": 1093.75,
+      "record_count": 7,
+      "total_fob_usd": 132300.0
     },
     {
       "fruit_name": "avocado",
@@ -907,34 +1003,64 @@
       "total_fob_usd": 330000.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "6x1",
-      "certification": "unknown",
-      "total_mt": 118.453,
-      "avg_usd_per_mt": 2383.83,
-      "record_count": 10,
-      "total_fob_usd": 301459.4
+      "fruit_name": "mango",
+      "format_type": "cubes",
+      "size_mm": "20x20",
+      "certification": "organic",
+      "total_mt": 120.0,
+      "avg_usd_per_mt": 1606.67,
+      "record_count": 5,
+      "total_fob_usd": 192800.17
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "14x1",
+      "fruit_name": "soursop",
+      "format_type": "pulp",
+      "size_mm": "12x14",
       "certification": "unknown",
-      "total_mt": 112.0,
-      "avg_usd_per_mt": 4476.0,
-      "record_count": 8,
-      "total_fob_usd": 501312.0
+      "total_mt": 119.18,
+      "avg_usd_per_mt": 2972.27,
+      "record_count": 25,
+      "total_fob_usd": 368689.17
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "6x2",
+      "certification": "unknown",
+      "total_mt": 118.8,
+      "avg_usd_per_mt": 1480.0,
+      "record_count": 5,
+      "total_fob_usd": 175860.0
     },
     {
       "fruit_name": "avocado",
       "format_type": "broken_pieces",
       "size_mm": "2x5",
       "certification": "unknown",
-      "total_mt": 111.8,
-      "avg_usd_per_mt": 2310.66,
+      "total_mt": 115.7,
+      "avg_usd_per_mt": 2291.21,
       "record_count": 5,
-      "total_fob_usd": 257976.0
+      "total_fob_usd": 264916.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "2x5",
+      "certification": "unknown",
+      "total_mt": 113.62,
+      "avg_usd_per_mt": 2391.59,
+      "record_count": 6,
+      "total_fob_usd": 326112.65
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "6x48",
+      "certification": "unknown",
+      "total_mt": 112.025,
+      "avg_usd_per_mt": 2605.11,
+      "record_count": 21,
+      "total_fob_usd": 248869.88
     },
     {
       "fruit_name": "mango",
@@ -947,74 +1073,74 @@
       "total_fob_usd": 219110.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
       "size_mm": "6x1",
       "certification": "unknown",
-      "total_mt": 109.38,
-      "avg_usd_per_mt": 2804.98,
-      "record_count": 9,
-      "total_fob_usd": 307237.85
+      "total_mt": 106.52,
+      "avg_usd_per_mt": 2256.99,
+      "record_count": 18,
+      "total_fob_usd": 219005.08
     },
     {
-      "fruit_name": "mango",
-      "format_type": "cubes",
-      "size_mm": "10x250",
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "10x500",
       "certification": "unknown",
-      "total_mt": 108.92,
-      "avg_usd_per_mt": 2427.4,
+      "total_mt": 104.46,
+      "avg_usd_per_mt": 2425.0,
       "record_count": 8,
-      "total_fob_usd": 261671.54
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "juice",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 107.2,
-      "avg_usd_per_mt": 1662.5,
-      "record_count": 8,
-      "total_fob_usd": 178440.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "5x1",
-      "certification": "unknown",
-      "total_mt": 107.176,
-      "avg_usd_per_mt": 2826.94,
-      "record_count": 6,
-      "total_fob_usd": 299386.92
+      "total_fob_usd": 326720.5
     },
     {
       "fruit_name": "strawberry",
-      "format_type": "chunks",
-      "size_mm": "06x48",
+      "format_type": "whole",
+      "size_mm": "8x48",
       "certification": "unknown",
-      "total_mt": 104.448,
-      "avg_usd_per_mt": 3115.38,
-      "record_count": 5,
-      "total_fob_usd": 324393.68
+      "total_mt": 101.184,
+      "avg_usd_per_mt": 2210.73,
+      "record_count": 8,
+      "total_fob_usd": 224191.23
     },
     {
       "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 103.0,
-      "avg_usd_per_mt": 3292.48,
-      "record_count": 10,
-      "total_fob_usd": 332926.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
+      "format_type": "pulp",
       "size_mm": "20x500",
       "certification": "unknown",
-      "total_mt": 100.54,
-      "avg_usd_per_mt": 3740.91,
+      "total_mt": 99.84,
+      "avg_usd_per_mt": 2791.15,
+      "record_count": 5,
+      "total_fob_usd": 275022.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "8x12",
+      "certification": "unknown",
+      "total_mt": 98.204,
+      "avg_usd_per_mt": 4344.82,
       "record_count": 7,
-      "total_fob_usd": 362536.77
+      "total_fob_usd": 428587.33
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "strips",
+      "size_mm": "6x350",
+      "certification": "unknown",
+      "total_mt": 96.604,
+      "avg_usd_per_mt": 5682.55,
+      "record_count": 30,
+      "total_fob_usd": 549016.04
+    },
+    {
+      "fruit_name": "blueberry",
+      "format_type": "whole",
+      "size_mm": "1x10",
+      "certification": "unknown",
+      "total_mt": 96.0,
+      "avg_usd_per_mt": 2835.36,
+      "record_count": 4,
+      "total_fob_usd": 272194.0
     },
     {
       "fruit_name": "mango",
@@ -1028,23 +1154,43 @@
     },
     {
       "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "10x1",
+      "format_type": "chunks",
+      "size_mm": "8x1",
       "certification": "unknown",
-      "total_mt": 92.41,
-      "avg_usd_per_mt": 2678.57,
-      "record_count": 7,
-      "total_fob_usd": 244417.0
+      "total_mt": 94.654,
+      "avg_usd_per_mt": 2618.33,
+      "record_count": 6,
+      "total_fob_usd": 252420.34
     },
     {
       "fruit_name": "mango",
       "format_type": "cubes",
-      "size_mm": "1x30",
-      "certification": "organic",
-      "total_mt": 91.76,
-      "avg_usd_per_mt": 2366.97,
-      "record_count": 5,
-      "total_fob_usd": 221714.65
+      "size_mm": "10x250",
+      "certification": "unknown",
+      "total_mt": 93.36,
+      "avg_usd_per_mt": 2402.41,
+      "record_count": 7,
+      "total_fob_usd": 221179.84
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "6x64",
+      "certification": "unknown",
+      "total_mt": 92.323,
+      "avg_usd_per_mt": 2510.08,
+      "record_count": 8,
+      "total_fob_usd": 231738.43
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "20x500",
+      "certification": "unknown",
+      "total_mt": 92.0,
+      "avg_usd_per_mt": 2556.67,
+      "record_count": 6,
+      "total_fob_usd": 234560.0
     },
     {
       "fruit_name": "mango",
@@ -1057,24 +1203,24 @@
       "total_fob_usd": 184048.32
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "24x16",
-      "certification": "organic",
-      "total_mt": 89.369,
-      "avg_usd_per_mt": 2230.38,
-      "record_count": 4,
-      "total_fob_usd": 199296.86
-    },
-    {
       "fruit_name": "passion_fruit",
       "format_type": "pulp",
-      "size_mm": "12x14",
+      "size_mm": "18x15",
       "certification": "unknown",
-      "total_mt": 87.262,
-      "avg_usd_per_mt": 3279.57,
-      "record_count": 47,
-      "total_fob_usd": 280284.2
+      "total_mt": 89.919,
+      "avg_usd_per_mt": 3941.06,
+      "record_count": 26,
+      "total_fob_usd": 346672.98
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "2x5",
+      "certification": "unknown",
+      "total_mt": 88.666,
+      "avg_usd_per_mt": 2088.14,
+      "record_count": 5,
+      "total_fob_usd": 185146.32
     },
     {
       "fruit_name": "avocado",
@@ -1089,122 +1235,92 @@
     {
       "fruit_name": "mango",
       "format_type": "chunks",
-      "size_mm": "6x48",
-      "certification": "unknown",
-      "total_mt": 85.069,
-      "avg_usd_per_mt": 2544.47,
-      "record_count": 19,
-      "total_fob_usd": 190993.02
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "10x1",
-      "certification": "unknown",
-      "total_mt": 84.37,
-      "avg_usd_per_mt": 3222.87,
-      "record_count": 4,
-      "total_fob_usd": 270501.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "5x1",
-      "certification": "unknown",
-      "total_mt": 81.77,
-      "avg_usd_per_mt": 2803.7,
-      "record_count": 10,
-      "total_fob_usd": 230477.31
-    },
-    {
-      "fruit_name": "pineapple",
-      "format_type": "chunks",
-      "size_mm": "1x30",
-      "certification": "unknown",
-      "total_mt": 81.591,
-      "avg_usd_per_mt": 3600.34,
-      "record_count": 4,
-      "total_fob_usd": 293755.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "16x450",
-      "certification": "unknown",
-      "total_mt": 79.405,
-      "avg_usd_per_mt": 3851.58,
-      "record_count": 5,
-      "total_fob_usd": 302885.16
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "2x4",
-      "certification": "unknown",
-      "total_mt": 78.544,
-      "avg_usd_per_mt": 2733.39,
-      "record_count": 4,
-      "total_fob_usd": 218378.8
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "12x2",
-      "certification": "unknown",
-      "total_mt": 76.894,
-      "avg_usd_per_mt": 2989.93,
-      "record_count": 4,
-      "total_fob_usd": 229972.8
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "8x48",
-      "certification": "unknown",
-      "total_mt": 73.984,
-      "avg_usd_per_mt": 2712.39,
-      "record_count": 9,
-      "total_fob_usd": 201307.59
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "15x1",
-      "certification": "unknown",
-      "total_mt": 72.0,
-      "avg_usd_per_mt": 2400.0,
-      "record_count": 3,
-      "total_fob_usd": 172800.0
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "iqf",
-      "size_mm": "10x10",
-      "certification": "unknown",
-      "total_mt": 72.0,
-      "avg_usd_per_mt": 1800.0,
-      "record_count": 2,
-      "total_fob_usd": 129600.0
+      "size_mm": "12x10",
+      "certification": "organic",
+      "total_mt": 86.09,
+      "avg_usd_per_mt": 2258.6,
+      "record_count": 6,
+      "total_fob_usd": 195691.76
     },
     {
       "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "12x48",
+      "size_mm": "06x48",
       "certification": "unknown",
-      "total_mt": 71.519,
-      "avg_usd_per_mt": 2491.63,
-      "record_count": 6,
-      "total_fob_usd": 178022.88
+      "total_mt": 82.416,
+      "avg_usd_per_mt": 3168.88,
+      "record_count": 4,
+      "total_fob_usd": 260469.56
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 81.418,
+      "avg_usd_per_mt": 1845.41,
+      "record_count": 4,
+      "total_fob_usd": 150661.48
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "6x1",
+      "certification": "unknown",
+      "total_mt": 80.504,
+      "avg_usd_per_mt": 2865.05,
+      "record_count": 5,
+      "total_fob_usd": 195955.36
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 75.605,
+      "avg_usd_per_mt": 2080.0,
+      "record_count": 5,
+      "total_fob_usd": 189541.0
     },
     {
       "fruit_name": "avocado",
-      "format_type": "iqf",
-      "size_mm": "2x5",
+      "format_type": "pulp",
+      "size_mm": "6x1",
       "certification": "unknown",
-      "total_mt": 71.43,
-      "avg_usd_per_mt": 2604.38,
-      "record_count": 5,
-      "total_fob_usd": 186849.5
+      "total_mt": 74.563,
+      "avg_usd_per_mt": 2269.76,
+      "record_count": 7,
+      "total_fob_usd": 185150.9
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x450",
+      "certification": "unknown",
+      "total_mt": 72.576,
+      "avg_usd_per_mt": 5300.38,
+      "record_count": 26,
+      "total_fob_usd": 382457.92
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "8x48",
+      "certification": "unknown",
+      "total_mt": 71.917,
+      "avg_usd_per_mt": 2502.18,
+      "record_count": 10,
+      "total_fob_usd": 181392.46
+    },
+    {
+      "fruit_name": "blueberry",
+      "format_type": "chunks",
+      "size_mm": "6x48",
+      "certification": "unknown",
+      "total_mt": 71.286,
+      "avg_usd_per_mt": 2600.48,
+      "record_count": 3,
+      "total_fob_usd": 185377.92
     },
     {
       "fruit_name": "mango",
@@ -1215,6 +1331,26 @@
       "avg_usd_per_mt": 1913.45,
       "record_count": 3,
       "total_fob_usd": 134898.0
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "8x48",
+      "certification": "unknown",
+      "total_mt": 70.198,
+      "avg_usd_per_mt": 2710.91,
+      "record_count": 9,
+      "total_fob_usd": 191297.54
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "cubes",
+      "size_mm": "1x30",
+      "certification": "organic",
+      "total_mt": 70.079,
+      "avg_usd_per_mt": 2096.22,
+      "record_count": 4,
+      "total_fob_usd": 146916.13
     },
     {
       "fruit_name": "mango",
@@ -1237,6 +1373,46 @@
       "total_fob_usd": 198213.83
     },
     {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "5x1",
+      "certification": "unknown",
+      "total_mt": 69.76,
+      "avg_usd_per_mt": 2904.79,
+      "record_count": 6,
+      "total_fob_usd": 196244.8
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "iqf",
+      "size_mm": "20x20",
+      "certification": "organic",
+      "total_mt": 69.4,
+      "avg_usd_per_mt": 2109.65,
+      "record_count": 3,
+      "total_fob_usd": 146540.12
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "whole",
+      "size_mm": "12x800",
+      "certification": "unknown",
+      "total_mt": 69.12,
+      "avg_usd_per_mt": 2838.54,
+      "record_count": 4,
+      "total_fob_usd": 196200.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "1x20",
+      "certification": "unknown",
+      "total_mt": 69.077,
+      "avg_usd_per_mt": 1567.77,
+      "record_count": 4,
+      "total_fob_usd": 108296.47
+    },
+    {
       "fruit_name": "mango",
       "format_type": "cubes",
       "size_mm": "1x30",
@@ -1249,42 +1425,52 @@
     {
       "fruit_name": "mango",
       "format_type": "chunks",
-      "size_mm": "12x10",
+      "size_mm": "24x16",
       "certification": "organic",
-      "total_mt": 67.866,
-      "avg_usd_per_mt": 2315.93,
-      "record_count": 4,
-      "total_fob_usd": 156620.58
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "cubes",
-      "size_mm": "2x5",
-      "certification": "unknown",
-      "total_mt": 66.68,
-      "avg_usd_per_mt": 2206.44,
-      "record_count": 4,
-      "total_fob_usd": 148585.91
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "8x1",
-      "certification": "unknown",
-      "total_mt": 66.24,
-      "avg_usd_per_mt": 2830.0,
+      "total_mt": 67.569,
+      "avg_usd_per_mt": 2216.32,
       "record_count": 3,
-      "total_fob_usd": 187459.2
+      "total_fob_usd": 149755.52
     },
     {
-      "fruit_name": "mix",
+      "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "6x48",
+      "size_mm": "7x1",
       "certification": "unknown",
-      "total_mt": 66.12,
-      "avg_usd_per_mt": 2830.02,
+      "total_mt": 67.506,
+      "avg_usd_per_mt": 2093.28,
       "record_count": 3,
-      "total_fob_usd": 187120.96
+      "total_fob_usd": 141309.42
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "24x500",
+      "certification": "unknown",
+      "total_mt": 65.976,
+      "avg_usd_per_mt": 2276.57,
+      "record_count": 11,
+      "total_fob_usd": 142911.89
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "slices",
+      "size_mm": "1x13",
+      "certification": "unknown",
+      "total_mt": 65.927,
+      "avg_usd_per_mt": 1900.16,
+      "record_count": 3,
+      "total_fob_usd": 125425.16
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "juice",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 65.6,
+      "avg_usd_per_mt": 1680.0,
+      "record_count": 5,
+      "total_fob_usd": 110840.0
     },
     {
       "fruit_name": "mango",
@@ -1297,14 +1483,14 @@
       "total_fob_usd": 116137.2
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "8x16",
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "4x500",
       "certification": "unknown",
-      "total_mt": 61.336,
-      "avg_usd_per_mt": 2518.46,
-      "record_count": 4,
-      "total_fob_usd": 153345.2
+      "total_mt": 61.868,
+      "avg_usd_per_mt": 2718.02,
+      "record_count": 7,
+      "total_fob_usd": 169138.02
     },
     {
       "fruit_name": "mango",
@@ -1317,44 +1503,94 @@
       "total_fob_usd": 152334.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "4x3",
-      "certification": "unknown",
-      "total_mt": 60.612,
-      "avg_usd_per_mt": 2710.41,
-      "record_count": 3,
-      "total_fob_usd": 164523.61
-    },
-    {
       "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "8x48",
+      "size_mm": "12x600",
       "certification": "unknown",
-      "total_mt": 58.861,
-      "avg_usd_per_mt": 2430.5,
-      "record_count": 8,
-      "total_fob_usd": 143792.91
+      "total_mt": 58.918,
+      "avg_usd_per_mt": 2228.06,
+      "record_count": 7,
+      "total_fob_usd": 129896.23
     },
     {
       "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "20x500",
+      "format_type": "halves",
+      "size_mm": "5x1",
       "certification": "unknown",
-      "total_mt": 57.1,
-      "avg_usd_per_mt": 3234.21,
-      "record_count": 4,
-      "total_fob_usd": 186994.36
+      "total_mt": 57.37,
+      "avg_usd_per_mt": 2656.42,
+      "record_count": 6,
+      "total_fob_usd": 155560.22
     },
     {
       "fruit_name": "banana",
       "format_type": "chunks",
-      "size_mm": "425x6",
+      "size_mm": "6x4",
       "certification": "unknown",
-      "total_mt": 54.526,
-      "avg_usd_per_mt": 4987.11,
-      "record_count": 66,
-      "total_fob_usd": 270224.16
+      "total_mt": 57.274,
+      "avg_usd_per_mt": 1773.31,
+      "record_count": 13,
+      "total_fob_usd": 98806.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "5x1",
+      "certification": "unknown",
+      "total_mt": 56.9,
+      "avg_usd_per_mt": 1835.67,
+      "record_count": 6,
+      "total_fob_usd": 105130.93
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "6x1",
+      "certification": "unknown",
+      "total_mt": 56.608,
+      "avg_usd_per_mt": 2130.96,
+      "record_count": 8,
+      "total_fob_usd": 120239.32
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "20x500",
+      "certification": "unknown",
+      "total_mt": 55.66,
+      "avg_usd_per_mt": 3783.6,
+      "record_count": 4,
+      "total_fob_usd": 204420.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "6x1",
+      "certification": "unknown",
+      "total_mt": 54.438,
+      "avg_usd_per_mt": 2843.84,
+      "record_count": 3,
+      "total_fob_usd": 154813.04
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "12x2",
+      "certification": "unknown",
+      "total_mt": 54.432,
+      "avg_usd_per_mt": 2278.46,
+      "record_count": 4,
+      "total_fob_usd": 120171.15
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "8x1",
+      "certification": "unknown",
+      "total_mt": 54.0,
+      "avg_usd_per_mt": 3400.0,
+      "record_count": 3,
+      "total_fob_usd": 183600.0
     },
     {
       "fruit_name": "pineapple",
@@ -1367,6 +1603,26 @@
       "total_fob_usd": 157998.46
     },
     {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "20x20",
+      "certification": "unknown",
+      "total_mt": 53.124,
+      "avg_usd_per_mt": 1765.56,
+      "record_count": 5,
+      "total_fob_usd": 152694.72
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "chunks",
+      "size_mm": "25x25",
+      "certification": "unknown",
+      "total_mt": 52.29,
+      "avg_usd_per_mt": 1795.6,
+      "record_count": 5,
+      "total_fob_usd": 149658.41
+    },
+    {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "16x24",
@@ -1377,144 +1633,44 @@
       "total_fob_usd": 153787.41
     },
     {
-      "fruit_name": "blueberry",
-      "format_type": "whole",
-      "size_mm": "1x10",
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "10x2",
       "certification": "unknown",
-      "total_mt": 51.253,
-      "avg_usd_per_mt": 2487.45,
-      "record_count": 3,
-      "total_fob_usd": 135530.86
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "12x10",
-      "certification": "unknown",
-      "total_mt": 51.224,
-      "avg_usd_per_mt": 4562.74,
-      "record_count": 3,
-      "total_fob_usd": 233722.16
+      "total_mt": 49.689,
+      "avg_usd_per_mt": 3538.41,
+      "record_count": 23,
+      "total_fob_usd": 174116.55
     },
     {
       "fruit_name": "mango",
       "format_type": "cubes",
-      "size_mm": "10x10",
+      "size_mm": "2x5",
       "certification": "unknown",
-      "total_mt": 48.521,
-      "avg_usd_per_mt": 1422.39,
-      "record_count": 7,
-      "total_fob_usd": 123579.24
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "12x300",
-      "certification": "unknown",
-      "total_mt": 48.341,
-      "avg_usd_per_mt": 3071.17,
+      "total_mt": 48.99,
+      "avg_usd_per_mt": 1848.57,
       "record_count": 3,
-      "total_fob_usd": 153749.64
+      "total_fob_usd": 90561.4
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "12x16",
-      "certification": "unknown",
-      "total_mt": 48.201,
-      "avg_usd_per_mt": 1690.36,
-      "record_count": 45,
-      "total_fob_usd": 80630.94
-    },
-    {
-      "fruit_name": "blueberry",
-      "format_type": "whole",
-      "size_mm": "1x10",
-      "certification": "conventional",
-      "total_mt": 48.0,
-      "avg_usd_per_mt": 2093.34,
-      "record_count": 2,
-      "total_fob_usd": 100480.08
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "juice",
-      "size_mm": "190x12",
-      "certification": "unknown",
-      "total_mt": 47.973,
-      "avg_usd_per_mt": 774.36,
-      "record_count": 2,
-      "total_fob_usd": 36511.8
-    },
-    {
-      "fruit_name": "lucuma",
-      "format_type": "pulp",
-      "size_mm": "18x15",
-      "certification": "unknown",
-      "total_mt": 47.338,
-      "avg_usd_per_mt": 4773.34,
-      "record_count": 30,
-      "total_fob_usd": 223859.7
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "16x500",
-      "certification": "unknown",
-      "total_mt": 47.16,
-      "avg_usd_per_mt": 2924.14,
-      "record_count": 3,
-      "total_fob_usd": 138889.27
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "12x1",
-      "certification": "unknown",
-      "total_mt": 46.949,
-      "avg_usd_per_mt": 1684.31,
-      "record_count": 12,
-      "total_fob_usd": 74646.4
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "iqf",
+      "fruit_name": "pineapple",
+      "format_type": "cubes",
       "size_mm": "20x20",
       "certification": "unknown",
-      "total_mt": 46.25,
-      "avg_usd_per_mt": 1796.61,
-      "record_count": 4,
-      "total_fob_usd": 127954.14
-    },
-    {
-      "fruit_name": "blueberry",
-      "format_type": "chunks",
-      "size_mm": "1x13",
-      "certification": "unknown",
-      "total_mt": 45.978,
-      "avg_usd_per_mt": 1953.12,
-      "record_count": 2,
-      "total_fob_usd": 89399.57
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "6x1",
-      "certification": "unknown",
-      "total_mt": 45.894,
-      "avg_usd_per_mt": 2863.76,
+      "total_mt": 46.5,
+      "avg_usd_per_mt": 2928.5,
       "record_count": 3,
-      "total_fob_usd": 131119.52
+      "total_fob_usd": 126123.75
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "5x1",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "8x2",
       "certification": "unknown",
-      "total_mt": 45.445,
-      "avg_usd_per_mt": 3280.44,
-      "record_count": 5,
-      "total_fob_usd": 147334.86
+      "total_mt": 45.36,
+      "avg_usd_per_mt": 1899.25,
+      "record_count": 1,
+      "total_fob_usd": 86150.0
     },
     {
       "fruit_name": "mango",
@@ -1527,24 +1683,64 @@
       "total_fob_usd": 94101.74
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "4x750",
+      "fruit_name": "banana",
+      "format_type": "slices",
+      "size_mm": "6x2",
       "certification": "unknown",
-      "total_mt": 43.998,
-      "avg_usd_per_mt": 3515.63,
+      "total_mt": 44.4,
+      "avg_usd_per_mt": 1850.0,
       "record_count": 2,
-      "total_fob_usd": 154680.72
+      "total_fob_usd": 82380.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 44.0,
+      "avg_usd_per_mt": 2570.0,
+      "record_count": 2,
+      "total_fob_usd": 114000.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x2",
+      "certification": "unknown",
+      "total_mt": 43.544,
+      "avg_usd_per_mt": 3221.87,
+      "record_count": 3,
+      "total_fob_usd": 141130.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "6x2",
+      "certification": "unknown",
+      "total_mt": 43.54,
+      "avg_usd_per_mt": 2117.42,
+      "record_count": 3,
+      "total_fob_usd": 95263.98
     },
     {
       "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "4x5",
+      "format_type": "slices",
+      "size_mm": "6x1",
       "certification": "unknown",
-      "total_mt": 43.4,
-      "avg_usd_per_mt": 2488.53,
+      "total_mt": 42.696,
+      "avg_usd_per_mt": 2864.5,
+      "record_count": 5,
+      "total_fob_usd": 123997.13
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "1x12",
+      "certification": "unknown",
+      "total_mt": 42.512,
+      "avg_usd_per_mt": 2239.31,
       "record_count": 2,
-      "total_fob_usd": 108000.0
+      "total_fob_usd": 95196.02
     },
     {
       "fruit_name": "avocado",
@@ -1568,33 +1764,33 @@
     },
     {
       "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "12x750",
+      "format_type": "halves",
+      "size_mm": "14x1",
       "certification": "unknown",
-      "total_mt": 41.625,
-      "avg_usd_per_mt": 1975.0,
-      "record_count": 4,
-      "total_fob_usd": 79711.2
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "24x1",
-      "certification": "unknown",
-      "total_mt": 40.681,
-      "avg_usd_per_mt": 1532.75,
-      "record_count": 21,
-      "total_fob_usd": 59664.6
+      "total_mt": 42.0,
+      "avg_usd_per_mt": 4250.0,
+      "record_count": 3,
+      "total_fob_usd": 178500.0
     },
     {
       "fruit_name": "avocado",
       "format_type": "chunks",
-      "size_mm": "1x10",
+      "size_mm": "4x3",
       "certification": "unknown",
-      "total_mt": 40.002,
-      "avg_usd_per_mt": 2353.8,
+      "total_mt": 40.74,
+      "avg_usd_per_mt": 2706.65,
+      "record_count": 2,
+      "total_fob_usd": 110512.81
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "20x20",
+      "certification": "unknown",
+      "total_mt": 40.501,
+      "avg_usd_per_mt": 2582.91,
       "record_count": 3,
-      "total_fob_usd": 136555.61
+      "total_fob_usd": 116672.0
     },
     {
       "fruit_name": "avocado",
@@ -1607,34 +1803,54 @@
       "total_fob_usd": 102919.49
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "8x1",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "20x80",
       "certification": "unknown",
-      "total_mt": 39.064,
-      "avg_usd_per_mt": 2885.93,
-      "record_count": 2,
-      "total_fob_usd": 111637.5
+      "total_mt": 39.389,
+      "avg_usd_per_mt": 4403.74,
+      "record_count": 20,
+      "total_fob_usd": 173392.76
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x16",
+      "certification": "unknown",
+      "total_mt": 38.237,
+      "avg_usd_per_mt": 1835.76,
+      "record_count": 28,
+      "total_fob_usd": 75289.74
     },
     {
       "fruit_name": "avocado",
       "format_type": "slices",
       "size_mm": "15x15",
       "certification": "unknown",
-      "total_mt": 38.95,
-      "avg_usd_per_mt": 3497.77,
+      "total_mt": 37.72,
+      "avg_usd_per_mt": 3345.01,
       "record_count": 2,
-      "total_fob_usd": 136382.5
+      "total_fob_usd": 126174.0
     },
     {
-      "fruit_name": "banana",
-      "format_type": "chunks",
-      "size_mm": "34x60",
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "16x450",
       "certification": "unknown",
-      "total_mt": 36.954,
-      "avg_usd_per_mt": 5314.89,
-      "record_count": 46,
-      "total_fob_usd": 192268.95
+      "total_mt": 37.094,
+      "avg_usd_per_mt": 3704.95,
+      "record_count": 2,
+      "total_fob_usd": 137431.5
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "12x200",
+      "certification": "unknown",
+      "total_mt": 36.484,
+      "avg_usd_per_mt": 3624.72,
+      "record_count": 2,
+      "total_fob_usd": 132240.72
     },
     {
       "fruit_name": "passion_fruit",
@@ -1647,24 +1863,44 @@
       "total_fob_usd": 138168.0
     },
     {
+      "fruit_name": "pineapple",
+      "format_type": "chunks",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 36.284,
+      "avg_usd_per_mt": 3600.32,
+      "record_count": 2,
+      "total_fob_usd": 130634.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "20x500",
+      "certification": "unknown",
+      "total_mt": 36.1,
+      "avg_usd_per_mt": 3172.44,
+      "record_count": 3,
+      "total_fob_usd": 115184.36
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "10x3",
+      "certification": "unknown",
+      "total_mt": 35.643,
+      "avg_usd_per_mt": 1283.56,
+      "record_count": 12,
+      "total_fob_usd": 45745.0
+    },
+    {
       "fruit_name": "unknown",
       "format_type": "chunks",
       "size_mm": "1x10",
       "certification": "unknown",
-      "total_mt": 35.78,
-      "avg_usd_per_mt": 2092.58,
-      "record_count": 4,
-      "total_fob_usd": 56387.64
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "2x5",
-      "certification": "unknown",
-      "total_mt": 35.625,
-      "avg_usd_per_mt": 3127.65,
-      "record_count": 2,
-      "total_fob_usd": 111489.55
+      "total_mt": 35.46,
+      "avg_usd_per_mt": 1555.04,
+      "record_count": 3,
+      "total_fob_usd": 55201.98
     },
     {
       "fruit_name": "mango",
@@ -1677,124 +1913,164 @@
       "total_fob_usd": 77836.44
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "12x500",
-      "certification": "unknown",
-      "total_mt": 34.668,
-      "avg_usd_per_mt": 3297.47,
-      "record_count": 3,
-      "total_fob_usd": 113637.2
-    },
-    {
-      "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "12x397",
-      "certification": "unknown",
-      "total_mt": 34.084,
-      "avg_usd_per_mt": 3644.61,
-      "record_count": 27,
-      "total_fob_usd": 123823.99
-    },
-    {
-      "fruit_name": "mix",
+      "fruit_name": "mango",
       "format_type": "chunks",
-      "size_mm": "8x12",
-      "certification": "unknown",
-      "total_mt": 32.64,
-      "avg_usd_per_mt": 3080.0,
+      "size_mm": "2x5",
+      "certification": "organic",
+      "total_mt": 35.38,
+      "avg_usd_per_mt": 2125.01,
       "record_count": 2,
-      "total_fob_usd": 100531.2
+      "total_fob_usd": 75182.93
     },
     {
       "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "08x12",
+      "size_mm": "12x48",
       "certification": "unknown",
-      "total_mt": 32.64,
-      "avg_usd_per_mt": 3102.95,
-      "record_count": 2,
-      "total_fob_usd": 101280.16
+      "total_mt": 35.252,
+      "avg_usd_per_mt": 2650.06,
+      "record_count": 3,
+      "total_fob_usd": 93420.0
     },
     {
-      "fruit_name": "mix",
-      "format_type": "chunks",
-      "size_mm": "12x1",
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "12x10",
       "certification": "unknown",
-      "total_mt": 32.4,
-      "avg_usd_per_mt": 2300.0,
-      "record_count": 13,
-      "total_fob_usd": 75540.0
+      "total_mt": 34.904,
+      "avg_usd_per_mt": 4562.79,
+      "record_count": 2,
+      "total_fob_usd": 159259.64
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "8x16",
+      "certification": "unknown",
+      "total_mt": 34.58,
+      "avg_usd_per_mt": 2459.94,
+      "record_count": 2,
+      "total_fob_usd": 85025.09
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "cubes",
+      "size_mm": "10x10",
+      "certification": "unknown",
+      "total_mt": 34.52,
+      "avg_usd_per_mt": 1067.55,
+      "record_count": 5,
+      "total_fob_usd": 72912.24
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 34.327,
+      "avg_usd_per_mt": 1789.18,
+      "record_count": 17,
+      "total_fob_usd": 61386.91
     },
     {
       "fruit_name": "avocado",
       "format_type": "pulp",
-      "size_mm": "12x0",
+      "size_mm": "12x750",
       "certification": "unknown",
-      "total_mt": 31.32,
-      "avg_usd_per_mt": 2660.0,
-      "record_count": 5,
-      "total_fob_usd": 82944.0
+      "total_mt": 34.146,
+      "avg_usd_per_mt": 1733.33,
+      "record_count": 3,
+      "total_fob_usd": 59517.9
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "24x500",
+      "certification": "unknown",
+      "total_mt": 31.668,
+      "avg_usd_per_mt": 2500.0,
+      "record_count": 4,
+      "total_fob_usd": 79170.0
     },
     {
       "fruit_name": "avocado",
-      "format_type": "slices",
+      "format_type": "halves",
       "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 31.0,
-      "avg_usd_per_mt": 3236.18,
-      "record_count": 5,
-      "total_fob_usd": 95030.0
+      "total_mt": 31.5,
+      "avg_usd_per_mt": 3138.33,
+      "record_count": 3,
+      "total_fob_usd": 92255.0
     },
     {
-      "fruit_name": "mango",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "9x500",
+      "size_mm": "24x14",
       "certification": "unknown",
-      "total_mt": 30.42,
-      "avg_usd_per_mt": 2975.0,
-      "record_count": 2,
-      "total_fob_usd": 90499.5
+      "total_mt": 30.95,
+      "avg_usd_per_mt": 2454.81,
+      "record_count": 10,
+      "total_fob_usd": 75977.4
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "whole",
+      "size_mm": "24x500",
+      "certification": "unknown",
+      "total_mt": 30.684,
+      "avg_usd_per_mt": 2002.78,
+      "record_count": 9,
+      "total_fob_usd": 57494.5
     },
     {
       "fruit_name": "avocado",
       "format_type": "cubes",
       "size_mm": "12x500",
       "certification": "unknown",
-      "total_mt": 29.892,
-      "avg_usd_per_mt": 3402.38,
+      "total_mt": 29.694,
+      "avg_usd_per_mt": 3363.28,
       "record_count": 2,
-      "total_fob_usd": 98767.24
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "iqf",
-      "size_mm": "2x05",
-      "certification": "unknown",
-      "total_mt": 28.8,
-      "avg_usd_per_mt": 2530.48,
-      "record_count": 3,
-      "total_fob_usd": 78509.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "chunks",
-      "size_mm": "12x10",
-      "certification": "unknown",
-      "total_mt": 27.467,
-      "avg_usd_per_mt": 3933.46,
-      "record_count": 2,
-      "total_fob_usd": 85286.68
+      "total_fob_usd": 96630.68
     },
     {
       "fruit_name": "banana",
       "format_type": "chunks",
-      "size_mm": "340x12",
+      "size_mm": "425x6",
       "certification": "unknown",
-      "total_mt": 27.253,
-      "avg_usd_per_mt": 5282.43,
-      "record_count": 23,
-      "total_fob_usd": 141749.81
+      "total_mt": 28.164,
+      "avg_usd_per_mt": 5015.24,
+      "record_count": 36,
+      "total_fob_usd": 138862.71
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "6x2",
+      "certification": "unknown",
+      "total_mt": 27.996,
+      "avg_usd_per_mt": 1852.36,
+      "record_count": 2,
+      "total_fob_usd": 53580.54
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "6x5",
+      "certification": "unknown",
+      "total_mt": 27.272,
+      "avg_usd_per_mt": 1323.74,
+      "record_count": 4,
+      "total_fob_usd": 37452.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "halves",
+      "size_mm": "8x1",
+      "certification": "unknown",
+      "total_mt": 27.248,
+      "avg_usd_per_mt": 3148.2,
+      "record_count": 2,
+      "total_fob_usd": 85624.14
     },
     {
       "fruit_name": "mango",
@@ -1807,24 +2083,14 @@
       "total_fob_usd": 22353.0
     },
     {
-      "fruit_name": "banana",
-      "format_type": "chunks",
-      "size_mm": "142x30",
-      "certification": "unknown",
-      "total_mt": 26.457,
-      "avg_usd_per_mt": 4797.09,
-      "record_count": 32,
-      "total_fob_usd": 127398.91
-    },
-    {
       "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "24x200",
-      "certification": "organic",
-      "total_mt": 26.164,
-      "avg_usd_per_mt": 5220.34,
+      "format_type": "halves",
+      "size_mm": "12x900",
+      "certification": "unknown",
+      "total_mt": 26.828,
+      "avg_usd_per_mt": 2525.63,
       "record_count": 2,
-      "total_fob_usd": 133889.29
+      "total_fob_usd": 67757.52
     },
     {
       "fruit_name": "avocado",
@@ -1838,43 +2104,53 @@
     },
     {
       "fruit_name": "unknown",
-      "format_type": "juice",
-      "size_mm": "4x128",
+      "format_type": "chunks",
+      "size_mm": "7x48",
       "certification": "unknown",
-      "total_mt": 24.048,
-      "avg_usd_per_mt": 622.75,
-      "record_count": 1,
-      "total_fob_usd": 14976.0
+      "total_mt": 26.073,
+      "avg_usd_per_mt": 2456.17,
+      "record_count": 7,
+      "total_fob_usd": 64218.77
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "12x16",
+      "certification": "unknown",
+      "total_mt": 25.785,
+      "avg_usd_per_mt": 1738.6,
+      "record_count": 6,
+      "total_fob_usd": 67511.07
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "12x397",
+      "certification": "unknown",
+      "total_mt": 24.989,
+      "avg_usd_per_mt": 3786.52,
+      "record_count": 22,
+      "total_fob_usd": 94738.6
     },
     {
       "fruit_name": "strawberry",
-      "format_type": "chunks",
-      "size_mm": "1x30",
+      "format_type": "slices",
+      "size_mm": "6x646",
       "certification": "unknown",
-      "total_mt": 24.008,
-      "avg_usd_per_mt": 1905.05,
+      "total_mt": 24.579,
+      "avg_usd_per_mt": 2390.87,
       "record_count": 1,
-      "total_fob_usd": 45736.46
+      "total_fob_usd": 58765.3
     },
     {
-      "fruit_name": "avocado",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "2x4",
-      "certification": "organic",
-      "total_mt": 24.0,
-      "avg_usd_per_mt": 2962.5,
-      "record_count": 1,
-      "total_fob_usd": 71100.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "8x1",
+      "size_mm": "24x3",
       "certification": "unknown",
-      "total_mt": 24.0,
-      "avg_usd_per_mt": 2950.92,
-      "record_count": 1,
-      "total_fob_usd": 70822.0
+      "total_mt": 24.512,
+      "avg_usd_per_mt": 4528.83,
+      "record_count": 6,
+      "total_fob_usd": 110414.43
     },
     {
       "fruit_name": "avocado",
@@ -1885,26 +2161,6 @@
       "avg_usd_per_mt": 2750.0,
       "record_count": 1,
       "total_fob_usd": 66000.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "04x2",
-      "certification": "unknown",
-      "total_mt": 24.0,
-      "avg_usd_per_mt": 2680.0,
-      "record_count": 1,
-      "total_fob_usd": 64320.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "4x2",
-      "certification": "unknown",
-      "total_mt": 24.0,
-      "avg_usd_per_mt": 1990.0,
-      "record_count": 1,
-      "total_fob_usd": 47760.0
     },
     {
       "fruit_name": "mango",
@@ -1937,84 +2193,54 @@
       "total_fob_usd": 42000.0
     },
     {
-      "fruit_name": "mango",
-      "format_type": "iqf",
-      "size_mm": "20x20",
-      "certification": "organic",
-      "total_mt": 24.0,
-      "avg_usd_per_mt": 2210.0,
-      "record_count": 1,
-      "total_fob_usd": 53040.0
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "iqf",
-      "size_mm": "25x25",
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "10x1",
       "certification": "unknown",
       "total_mt": 24.0,
-      "avg_usd_per_mt": 3100.0,
-      "record_count": 1,
-      "total_fob_usd": 74400.0
-    },
-    {
-      "fruit_name": "pineapple",
-      "format_type": "cubes",
-      "size_mm": "20x20",
-      "certification": "unknown",
-      "total_mt": 24.0,
-      "avg_usd_per_mt": 3150.0,
+      "avg_usd_per_mt": 1725.0,
       "record_count": 2,
-      "total_fob_usd": 70200.0
+      "total_fob_usd": 41900.0
     },
     {
       "fruit_name": "strawberry",
-      "format_type": "chunks",
+      "format_type": "puree",
       "size_mm": "1x13",
       "certification": "unknown",
       "total_mt": 23.936,
-      "avg_usd_per_mt": 2304.21,
+      "avg_usd_per_mt": 2310.0,
       "record_count": 1,
-      "total_fob_usd": 55153.6
+      "total_fob_usd": 55292.16
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "8x3",
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "1x5",
       "certification": "unknown",
-      "total_mt": 23.647,
-      "avg_usd_per_mt": 3164.3,
-      "record_count": 2,
-      "total_fob_usd": 74462.43
+      "total_mt": 23.855,
+      "avg_usd_per_mt": 2385.0,
+      "record_count": 6,
+      "total_fob_usd": 60500.57
     },
     {
       "fruit_name": "passion_fruit",
       "format_type": "pulp",
-      "size_mm": "12x16",
+      "size_mm": "1x5",
       "certification": "unknown",
-      "total_mt": 23.512,
-      "avg_usd_per_mt": 2497.76,
-      "record_count": 6,
-      "total_fob_usd": 53812.0
+      "total_mt": 23.705,
+      "avg_usd_per_mt": 2720.0,
+      "record_count": 5,
+      "total_fob_usd": 63655.5
     },
     {
       "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "2x5",
+      "format_type": "slices",
+      "size_mm": "5x1",
       "certification": "unknown",
-      "total_mt": 23.0,
-      "avg_usd_per_mt": 3138.87,
-      "record_count": 1,
-      "total_fob_usd": 72194.03
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "16x500",
-      "certification": "unknown",
-      "total_mt": 23.0,
-      "avg_usd_per_mt": 2300.0,
-      "record_count": 1,
-      "total_fob_usd": 52900.01
+      "total_mt": 23.58,
+      "avg_usd_per_mt": 3275.0,
+      "record_count": 2,
+      "total_fob_usd": 75303.0
     },
     {
       "fruit_name": "mango",
@@ -2027,14 +2253,54 @@
       "total_fob_usd": 44850.0
     },
     {
-      "fruit_name": "unknown",
+      "fruit_name": "strawberry",
+      "format_type": "cubes",
+      "size_mm": "1x10",
+      "certification": "unknown",
+      "total_mt": 23.0,
+      "avg_usd_per_mt": 2154.38,
+      "record_count": 1,
+      "total_fob_usd": 49550.75
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 22.94,
+      "avg_usd_per_mt": 2814.73,
+      "record_count": 1,
+      "total_fob_usd": 64570.0
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "8x16",
+      "certification": "unknown",
+      "total_mt": 22.924,
+      "avg_usd_per_mt": 2467.86,
+      "record_count": 2,
+      "total_fob_usd": 54698.44
+    },
+    {
+      "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "12x1",
       "certification": "unknown",
-      "total_mt": 22.686,
-      "avg_usd_per_mt": 1414.43,
-      "record_count": 25,
-      "total_fob_usd": 29830.39
+      "total_mt": 22.8,
+      "avg_usd_per_mt": 1507.14,
+      "record_count": 7,
+      "total_fob_usd": 34380.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "5x3",
+      "certification": "unknown",
+      "total_mt": 22.515,
+      "avg_usd_per_mt": 2140.0,
+      "record_count": 1,
+      "total_fob_usd": 48182.1
     },
     {
       "fruit_name": "mango",
@@ -2048,43 +2314,13 @@
     },
     {
       "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "5x10",
+      "format_type": "pulp",
+      "size_mm": "40x100",
       "certification": "unknown",
-      "total_mt": 22.185,
-      "avg_usd_per_mt": 3560.0,
-      "record_count": 1,
-      "total_fob_usd": 78978.6
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "iqf",
-      "size_mm": "6x1",
-      "certification": "unknown",
-      "total_mt": 22.08,
-      "avg_usd_per_mt": 2700.84,
-      "record_count": 1,
-      "total_fob_usd": 59634.6
-    },
-    {
-      "fruit_name": "mix",
-      "format_type": "chunks",
-      "size_mm": "06x48",
-      "certification": "unknown",
-      "total_mt": 22.032,
-      "avg_usd_per_mt": 2900.0,
-      "record_count": 1,
-      "total_fob_usd": 63892.8
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "15x15",
-      "certification": "conventional",
-      "total_mt": 22.0,
-      "avg_usd_per_mt": 3055.0,
+      "total_mt": 22.44,
+      "avg_usd_per_mt": 3250.0,
       "record_count": 2,
-      "total_fob_usd": 68060.0
+      "total_fob_usd": 72930.0
     },
     {
       "fruit_name": "avocado",
@@ -2099,12 +2335,82 @@
     {
       "fruit_name": "avocado",
       "format_type": "chunks",
-      "size_mm": "10x500",
+      "size_mm": "12x10",
+      "certification": "unknown",
+      "total_mt": 21.999,
+      "avg_usd_per_mt": 2557.03,
+      "record_count": 1,
+      "total_fob_usd": 56252.21
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "5x10",
+      "certification": "unknown",
+      "total_mt": 21.962,
+      "avg_usd_per_mt": 5125.23,
+      "record_count": 8,
+      "total_fob_usd": 118406.99
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "iqf",
+      "size_mm": "2x5",
+      "certification": "unknown",
+      "total_mt": 21.83,
+      "avg_usd_per_mt": 2492.19,
+      "record_count": 2,
+      "total_fob_usd": 56043.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "4x5",
+      "certification": "unknown",
+      "total_mt": 21.8,
+      "avg_usd_per_mt": 2477.06,
+      "record_count": 1,
+      "total_fob_usd": 54000.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "10x10",
+      "certification": "unknown",
+      "total_mt": 21.776,
+      "avg_usd_per_mt": 1950.0,
+      "record_count": 1,
+      "total_fob_usd": 42463.2
+    },
+    {
+      "fruit_name": "papaya",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 21.604,
+      "avg_usd_per_mt": 2118.74,
+      "record_count": 18,
+      "total_fob_usd": 45393.84
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "425x12",
+      "certification": "unknown",
+      "total_mt": 21.237,
+      "avg_usd_per_mt": 4683.45,
+      "record_count": 10,
+      "total_fob_usd": 99779.79
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "iqf",
+      "size_mm": "1x10",
       "certification": "unknown",
       "total_mt": 21.0,
-      "avg_usd_per_mt": 2852.03,
+      "avg_usd_per_mt": 1023.81,
       "record_count": 1,
-      "total_fob_usd": 59892.55
+      "total_fob_usd": 21500.0
     },
     {
       "fruit_name": "passion_fruit",
@@ -2117,34 +2423,54 @@
       "total_fob_usd": 56686.5
     },
     {
-      "fruit_name": "avocado",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "5x10",
+      "size_mm": "24x71",
       "certification": "unknown",
-      "total_mt": 20.545,
-      "avg_usd_per_mt": 5193.62,
-      "record_count": 7,
-      "total_fob_usd": 111822.99
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "5x1",
-      "certification": "unknown",
-      "total_mt": 20.5,
-      "avg_usd_per_mt": 3075.0,
-      "record_count": 2,
-      "total_fob_usd": 62850.0
+      "total_mt": 20.518,
+      "avg_usd_per_mt": 4681.65,
+      "record_count": 18,
+      "total_fob_usd": 95948.77
     },
     {
       "fruit_name": "banana",
       "format_type": "chunks",
-      "size_mm": "425x12",
+      "size_mm": "34x60",
       "certification": "unknown",
-      "total_mt": 20.38,
-      "avg_usd_per_mt": 4687.75,
-      "record_count": 9,
-      "total_fob_usd": 95799.2
+      "total_mt": 20.517,
+      "avg_usd_per_mt": 5413.06,
+      "record_count": 24,
+      "total_fob_usd": 106841.48
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "slices",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 20.415,
+      "avg_usd_per_mt": 2050.0,
+      "record_count": 1,
+      "total_fob_usd": 41850.75
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "30x12",
+      "certification": "unknown",
+      "total_mt": 20.41,
+      "avg_usd_per_mt": 7379.22,
+      "record_count": 2,
+      "total_fob_usd": 150610.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "12x0",
+      "certification": "unknown",
+      "total_mt": 20.16,
+      "avg_usd_per_mt": 3200.0,
+      "record_count": 1,
+      "total_fob_usd": 64512.0
     },
     {
       "fruit_name": "avocado",
@@ -2177,84 +2503,74 @@
       "total_fob_usd": 61169.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "6x01",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "4x5",
       "certification": "unknown",
-      "total_mt": 19.2,
-      "avg_usd_per_mt": 2850.0,
-      "record_count": 2,
-      "total_fob_usd": 54720.0
+      "total_mt": 19.966,
+      "avg_usd_per_mt": 2611.22,
+      "record_count": 3,
+      "total_fob_usd": 41073.0
     },
     {
-      "fruit_name": "blueberry",
+      "fruit_name": "avocado",
+      "format_type": "slices",
+      "size_mm": "12x500",
+      "certification": "unknown",
+      "total_mt": 19.8,
+      "avg_usd_per_mt": 3128.13,
+      "record_count": 1,
+      "total_fob_usd": 61937.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "chunks",
+      "size_mm": "12x500",
+      "certification": "unknown",
+      "total_mt": 19.218,
+      "avg_usd_per_mt": 3337.23,
+      "record_count": 1,
+      "total_fob_usd": 64134.9
+    },
+    {
+      "fruit_name": "mix",
       "format_type": "chunks",
       "size_mm": "12x1",
       "certification": "unknown",
       "total_mt": 19.2,
-      "avg_usd_per_mt": 2250.0,
-      "record_count": 8,
-      "total_fob_usd": 43440.0
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "12x500",
-      "certification": "unknown",
-      "total_mt": 19.2,
-      "avg_usd_per_mt": 5715.0,
-      "record_count": 4,
-      "total_fob_usd": 108270.0
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "30x300",
-      "certification": "unknown",
-      "total_mt": 18.612,
-      "avg_usd_per_mt": 3550.0,
-      "record_count": 1,
-      "total_fob_usd": 66072.6
+      "avg_usd_per_mt": 2408.33,
+      "record_count": 6,
+      "total_fob_usd": 46440.0
     },
     {
       "fruit_name": "avocado",
       "format_type": "cubes",
-      "size_mm": "12x200",
+      "size_mm": "12x2",
       "certification": "unknown",
-      "total_mt": 18.374,
-      "avg_usd_per_mt": 3509.21,
+      "total_mt": 18.829,
+      "avg_usd_per_mt": 2865.83,
       "record_count": 1,
-      "total_fob_usd": 64478.28
+      "total_fob_usd": 53960.64
     },
     {
-      "fruit_name": "banana",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "142x8",
+      "size_mm": "24x1",
       "certification": "unknown",
-      "total_mt": 18.363,
-      "avg_usd_per_mt": 5299.26,
-      "record_count": 40,
-      "total_fob_usd": 99846.85
+      "total_mt": 18.52,
+      "avg_usd_per_mt": 1642.12,
+      "record_count": 11,
+      "total_fob_usd": 28317.6
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "12x12",
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "6x3",
       "certification": "unknown",
-      "total_mt": 18.356,
-      "avg_usd_per_mt": 3469.52,
-      "record_count": 2,
-      "total_fob_usd": 63497.68
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "2x5",
-      "certification": "unknown",
-      "total_mt": 18.3,
-      "avg_usd_per_mt": 2795.08,
+      "total_mt": 18.36,
+      "avg_usd_per_mt": 1650.19,
       "record_count": 1,
-      "total_fob_usd": 51150.0
+      "total_fob_usd": 30297.48
     },
     {
       "fruit_name": "unknown",
@@ -2267,44 +2583,54 @@
       "total_fob_usd": 69084.0
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "06x05",
-      "certification": "unknown",
-      "total_mt": 17.706,
-      "avg_usd_per_mt": 2547.72,
-      "record_count": 1,
-      "total_fob_usd": 45110.0
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "2x5",
-      "certification": "organic",
-      "total_mt": 17.69,
-      "avg_usd_per_mt": 1980.01,
-      "record_count": 1,
-      "total_fob_usd": 35026.4
-    },
-    {
       "fruit_name": "avocado",
-      "format_type": "iqf",
-      "size_mm": "5x1",
+      "format_type": "slices",
+      "size_mm": "2x5",
       "certification": "unknown",
-      "total_mt": 17.6,
-      "avg_usd_per_mt": 3123.58,
+      "total_mt": 18.14,
+      "avg_usd_per_mt": 3229.97,
       "record_count": 1,
-      "total_fob_usd": 54975.0
+      "total_fob_usd": 58591.69
     },
     {
-      "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "24x250",
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "12x500",
       "certification": "unknown",
-      "total_mt": 17.493,
-      "avg_usd_per_mt": 3161.57,
-      "record_count": 5,
-      "total_fob_usd": 54166.67
+      "total_mt": 18.0,
+      "avg_usd_per_mt": 5670.0,
+      "record_count": 3,
+      "total_fob_usd": 101250.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "142x30",
+      "certification": "unknown",
+      "total_mt": 17.915,
+      "avg_usd_per_mt": 4774.78,
+      "record_count": 22,
+      "total_fob_usd": 85965.41
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "16x142",
+      "certification": "unknown",
+      "total_mt": 17.545,
+      "avg_usd_per_mt": 4321.74,
+      "record_count": 43,
+      "total_fob_usd": 77825.4
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "6x1",
+      "certification": "unknown",
+      "total_mt": 16.644,
+      "avg_usd_per_mt": 2551.3,
+      "record_count": 2,
+      "total_fob_usd": 42830.06
     },
     {
       "fruit_name": "passion_fruit",
@@ -2317,24 +2643,24 @@
       "total_fob_usd": 74051.25
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "2x4",
-      "certification": "organic",
-      "total_mt": 16.4,
-      "avg_usd_per_mt": 3650.0,
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "08x12",
+      "certification": "unknown",
+      "total_mt": 16.32,
+      "avg_usd_per_mt": 3285.91,
       "record_count": 1,
-      "total_fob_usd": 59860.0
+      "total_fob_usd": 53626.0
     },
     {
-      "fruit_name": "pomegranate",
-      "format_type": "cubes",
-      "size_mm": "8x12",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x1",
       "certification": "unknown",
-      "total_mt": 16.013,
-      "avg_usd_per_mt": 4047.7,
-      "record_count": 1,
-      "total_fob_usd": 64815.87
+      "total_mt": 16.275,
+      "avg_usd_per_mt": 1443.39,
+      "record_count": 17,
+      "total_fob_usd": 22418.99
     },
     {
       "fruit_name": "avocado",
@@ -2349,12 +2675,12 @@
     {
       "fruit_name": "mango",
       "format_type": "chunks",
-      "size_mm": "6x05",
+      "size_mm": "9x500",
       "certification": "unknown",
-      "total_mt": 15.275,
-      "avg_usd_per_mt": 1898.79,
+      "total_mt": 15.21,
+      "avg_usd_per_mt": 2300.0,
       "record_count": 1,
-      "total_fob_usd": 29004.09
+      "total_fob_usd": 34983.0
     },
     {
       "fruit_name": "avocado",
@@ -2387,24 +2713,74 @@
       "total_fob_usd": 43239.72
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "cubes",
-      "size_mm": "12x10",
-      "certification": "organic",
-      "total_mt": 14.96,
-      "avg_usd_per_mt": 4562.65,
-      "record_count": 1,
-      "total_fob_usd": 68257.31
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x32",
+      "certification": "unknown",
+      "total_mt": 14.685,
+      "avg_usd_per_mt": 2436.87,
+      "record_count": 8,
+      "total_fob_usd": 36041.51
     },
     {
-      "fruit_name": "avocado",
+      "fruit_name": "blueberry",
       "format_type": "chunks",
-      "size_mm": "8x12",
+      "size_mm": "12x12",
       "certification": "unknown",
-      "total_mt": 14.144,
-      "avg_usd_per_mt": 4230.0,
+      "total_mt": 14.576,
+      "avg_usd_per_mt": 2599.55,
+      "record_count": 2,
+      "total_fob_usd": 36252.66
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "24x65",
+      "certification": "unknown",
+      "total_mt": 14.347,
+      "avg_usd_per_mt": 4896.12,
+      "record_count": 11,
+      "total_fob_usd": 70210.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "24x12",
+      "certification": "unknown",
+      "total_mt": 14.237,
+      "avg_usd_per_mt": 2994.41,
+      "record_count": 4,
+      "total_fob_usd": 42630.0
+    },
+    {
+      "fruit_name": "lucuma",
+      "format_type": "pulp",
+      "size_mm": "18x15",
+      "certification": "unknown",
+      "total_mt": 14.068,
+      "avg_usd_per_mt": 4652.42,
+      "record_count": 11,
+      "total_fob_usd": 64396.8
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "5x1",
+      "certification": "unknown",
+      "total_mt": 14.0,
+      "avg_usd_per_mt": 1749.1,
       "record_count": 1,
-      "total_fob_usd": 59829.12
+      "total_fob_usd": 24487.4
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "340x12",
+      "certification": "unknown",
+      "total_mt": 13.739,
+      "avg_usd_per_mt": 5392.94,
+      "record_count": 12,
+      "total_fob_usd": 72263.96
     },
     {
       "fruit_name": "mango",
@@ -2417,44 +2793,64 @@
       "total_fob_usd": 23817.5
     },
     {
-      "fruit_name": "grape",
-      "format_type": "juice",
-      "size_mm": "310170201x8",
-      "certification": "unknown",
-      "total_mt": 13.598,
-      "avg_usd_per_mt": 793.44,
-      "record_count": 1,
-      "total_fob_usd": 10789.2
-    },
-    {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "18x70",
+      "size_mm": "6x4",
       "certification": "unknown",
-      "total_mt": 13.289,
-      "avg_usd_per_mt": 3841.1,
-      "record_count": 15,
-      "total_fob_usd": 36021.49
+      "total_mt": 13.607,
+      "avg_usd_per_mt": 2572.21,
+      "record_count": 1,
+      "total_fob_usd": 35000.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "pulp",
-      "size_mm": "6x1",
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "12x12",
       "certification": "unknown",
-      "total_mt": 13.098,
-      "avg_usd_per_mt": 2650.0,
-      "record_count": 1,
-      "total_fob_usd": 34709.7
+      "total_mt": 13.488,
+      "avg_usd_per_mt": 3543.92,
+      "record_count": 3,
+      "total_fob_usd": 47695.55
     },
     {
       "fruit_name": "passion_fruit",
-      "format_type": "chunks",
+      "format_type": "pulp",
       "size_mm": "12x16",
       "certification": "unknown",
-      "total_mt": 12.821,
-      "avg_usd_per_mt": 1656.61,
-      "record_count": 12,
-      "total_fob_usd": 20145.36
+      "total_mt": 13.387,
+      "avg_usd_per_mt": 2726.56,
+      "record_count": 4,
+      "total_fob_usd": 33572.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "16x16",
+      "certification": "unknown",
+      "total_mt": 12.37,
+      "avg_usd_per_mt": 3614.01,
+      "record_count": 10,
+      "total_fob_usd": 42423.93
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "16x141",
+      "certification": "unknown",
+      "total_mt": 12.123,
+      "avg_usd_per_mt": 4288.9,
+      "record_count": 6,
+      "total_fob_usd": 52056.75
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "cubes",
+      "size_mm": "20x20",
+      "certification": "unknown",
+      "total_mt": 12.011,
+      "avg_usd_per_mt": 286641.36,
+      "record_count": 6,
+      "total_fob_usd": 26480.59
     },
     {
       "fruit_name": "avocado",
@@ -2467,34 +2863,44 @@
       "total_fob_usd": 50520.0
     },
     {
-      "fruit_name": "mango",
-      "format_type": "cubes",
-      "size_mm": "20x20",
+      "fruit_name": "unknown",
+      "format_type": "whole",
+      "size_mm": "4x5",
       "certification": "unknown",
-      "total_mt": 12.0,
-      "avg_usd_per_mt": 1781.48,
+      "total_mt": 11.975,
+      "avg_usd_per_mt": 1686.51,
       "record_count": 1,
-      "total_fob_usd": 21377.79
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "3x5",
-      "certification": "unknown",
-      "total_mt": 11.97,
-      "avg_usd_per_mt": 2500.0,
-      "record_count": 2,
-      "total_fob_usd": 29925.0
+      "total_fob_usd": 20196.0
     },
     {
       "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "8x12",
+      "format_type": "whole",
+      "size_mm": "4x6",
       "certification": "unknown",
-      "total_mt": 11.968,
-      "avg_usd_per_mt": 6117.65,
+      "total_mt": 11.975,
+      "avg_usd_per_mt": 1814.2,
+      "record_count": 1,
+      "total_fob_usd": 21725.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "halves",
+      "size_mm": "20x500",
+      "certification": "unknown",
+      "total_mt": 11.66,
+      "avg_usd_per_mt": 3348.66,
       "record_count": 2,
-      "total_fob_usd": 73216.0
+      "total_fob_usd": 38652.07
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "whole",
+      "size_mm": "12x410",
+      "certification": "unknown",
+      "total_mt": 11.464,
+      "avg_usd_per_mt": 3810.84,
+      "record_count": 1,
+      "total_fob_usd": 43687.5
     },
     {
       "fruit_name": "banana",
@@ -2502,39 +2908,69 @@
       "size_mm": "12x16",
       "certification": "unknown",
       "total_mt": 11.445,
-      "avg_usd_per_mt": 1920.97,
+      "avg_usd_per_mt": 1828.06,
       "record_count": 1,
-      "total_fob_usd": 21985.51
+      "total_fob_usd": 20922.16
     },
     {
-      "fruit_name": "mango",
-      "format_type": "pulp",
-      "size_mm": "21x0",
+      "fruit_name": "unknown",
+      "format_type": "whole",
+      "size_mm": "8x14",
       "certification": "unknown",
-      "total_mt": 11.397,
-      "avg_usd_per_mt": 1949.95,
-      "record_count": 1,
-      "total_fob_usd": 22223.57
+      "total_mt": 11.303,
+      "avg_usd_per_mt": 2753.55,
+      "record_count": 9,
+      "total_fob_usd": 32523.4
     },
     {
-      "fruit_name": "blueberry",
+      "fruit_name": "passion_fruit",
       "format_type": "chunks",
+      "size_mm": "1x5",
+      "certification": "unknown",
+      "total_mt": 11.24,
+      "avg_usd_per_mt": 2397.5,
+      "record_count": 4,
+      "total_fob_usd": 34816.43
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "28x400",
+      "certification": "unknown",
+      "total_mt": 11.2,
+      "avg_usd_per_mt": 2232.14,
+      "record_count": 2,
+      "total_fob_usd": 25000.0
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "cubes",
       "size_mm": "12x12",
       "certification": "unknown",
-      "total_mt": 11.312,
-      "avg_usd_per_mt": 2395.97,
+      "total_mt": 11.163,
+      "avg_usd_per_mt": 3421.97,
       "record_count": 1,
-      "total_fob_usd": 27103.24
+      "total_fob_usd": 38199.4
     },
     {
       "fruit_name": "banana",
       "format_type": "chunks",
-      "size_mm": "75x30",
+      "size_mm": "6x3",
       "certification": "unknown",
-      "total_mt": 10.968,
-      "avg_usd_per_mt": 5727.56,
-      "record_count": 20,
-      "total_fob_usd": 61575.54
+      "total_mt": 10.998,
+      "avg_usd_per_mt": 3033.48,
+      "record_count": 10,
+      "total_fob_usd": 30747.39
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "6x3",
+      "certification": "unknown",
+      "total_mt": 10.986,
+      "avg_usd_per_mt": 4548.78,
+      "record_count": 2,
+      "total_fob_usd": 26994.5
     },
     {
       "fruit_name": "mango",
@@ -2549,12 +2985,112 @@
     {
       "fruit_name": "mango",
       "format_type": "chunks",
+      "size_mm": "12x2",
+      "certification": "unknown",
+      "total_mt": 10.884,
+      "avg_usd_per_mt": 2221.22,
+      "record_count": 1,
+      "total_fob_usd": 24175.8
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "10x2",
+      "certification": "unknown",
+      "total_mt": 10.861,
+      "avg_usd_per_mt": 2738.14,
+      "record_count": 2,
+      "total_fob_usd": 24133.5
+    },
+    {
+      "fruit_name": "blueberry",
+      "format_type": "chunks",
+      "size_mm": "12x1",
+      "certification": "unknown",
+      "total_mt": 10.8,
+      "avg_usd_per_mt": 2600.0,
+      "record_count": 4,
+      "total_fob_usd": 27360.0
+    },
+    {
+      "fruit_name": "peach",
+      "format_type": "juice",
+      "size_mm": "1x24",
+      "certification": "unknown",
+      "total_mt": 10.681,
+      "avg_usd_per_mt": 175.27,
+      "record_count": 6,
+      "total_fob_usd": 1884.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x12",
+      "certification": "unknown",
+      "total_mt": 10.608,
+      "avg_usd_per_mt": 3905.86,
+      "record_count": 2,
+      "total_fob_usd": 41270.67
+    },
+    {
+      "fruit_name": "avocado",
+      "format_type": "halves",
+      "size_mm": "8x3",
+      "certification": "unknown",
+      "total_mt": 10.579,
+      "avg_usd_per_mt": 3310.41,
+      "record_count": 1,
+      "total_fob_usd": 35020.8
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
       "size_mm": "8x2",
       "certification": "organic",
       "total_mt": 10.315,
       "avg_usd_per_mt": 2229.97,
       "record_count": 1,
       "total_fob_usd": 23002.18
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "5x2",
+      "certification": "unknown",
+      "total_mt": 10.23,
+      "avg_usd_per_mt": 1960.0,
+      "record_count": 1,
+      "total_fob_usd": 20050.8
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "strips",
+      "size_mm": "6x12",
+      "certification": "unknown",
+      "total_mt": 10.205,
+      "avg_usd_per_mt": 9691.33,
+      "record_count": 2,
+      "total_fob_usd": 98900.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "142x8",
+      "certification": "unknown",
+      "total_mt": 10.178,
+      "avg_usd_per_mt": 5555.1,
+      "record_count": 13,
+      "total_fob_usd": 57961.9
+    },
+    {
+      "fruit_name": "orange",
+      "format_type": "juice",
+      "size_mm": "1x24",
+      "certification": "unknown",
+      "total_mt": 10.176,
+      "avg_usd_per_mt": 171.07,
+      "record_count": 6,
+      "total_fob_usd": 1680.0
     },
     {
       "fruit_name": "passion_fruit",
@@ -2567,44 +3103,54 @@
       "total_fob_usd": 87231.76
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "iqf",
-      "size_mm": "10x01",
-      "certification": "unknown",
-      "total_mt": 10.0,
-      "avg_usd_per_mt": 3091.45,
-      "record_count": 1,
-      "total_fob_usd": 30914.5
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "20x500",
-      "certification": "unknown",
-      "total_mt": 9.66,
-      "avg_usd_per_mt": 3297.32,
-      "record_count": 1,
-      "total_fob_usd": 31852.07
-    },
-    {
-      "fruit_name": "blueberry",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "10x3",
-      "certification": "organic",
-      "total_mt": 9.622,
-      "avg_usd_per_mt": 2849.64,
-      "record_count": 2,
-      "total_fob_usd": 27419.43
+      "size_mm": "18x70",
+      "certification": "unknown",
+      "total_mt": 10.049,
+      "avg_usd_per_mt": 3251.11,
+      "record_count": 9,
+      "total_fob_usd": 25050.38
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "1x6",
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "24x250",
       "certification": "unknown",
-      "total_mt": 9.6,
-      "avg_usd_per_mt": 2850.0,
-      "record_count": 2,
-      "total_fob_usd": 27360.0
+      "total_mt": 9.942,
+      "avg_usd_per_mt": 3400.54,
+      "record_count": 3,
+      "total_fob_usd": 34061.73
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "juice",
+      "size_mm": "1x12",
+      "certification": "unknown",
+      "total_mt": 9.883,
+      "avg_usd_per_mt": 194.16,
+      "record_count": 13,
+      "total_fob_usd": 2041.0
+    },
+    {
+      "fruit_name": "mix",
+      "format_type": "iqf",
+      "size_mm": "12x400",
+      "certification": "unknown",
+      "total_mt": 9.876,
+      "avg_usd_per_mt": 4081.02,
+      "record_count": 1,
+      "total_fob_usd": 40304.12
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "75x30",
+      "certification": "unknown",
+      "total_mt": 9.719,
+      "avg_usd_per_mt": 5798.03,
+      "record_count": 17,
+      "total_fob_usd": 54768.09
     },
     {
       "fruit_name": "passion_fruit",
@@ -2627,24 +3173,54 @@
       "total_fob_usd": 23800.5
     },
     {
-      "fruit_name": "passion_fruit",
-      "format_type": "chunks",
-      "size_mm": "12x475",
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "5x1",
       "certification": "unknown",
-      "total_mt": 9.17,
-      "avg_usd_per_mt": 2402.78,
-      "record_count": 2,
-      "total_fob_usd": 6557.95
+      "total_mt": 9.0,
+      "avg_usd_per_mt": 3150.0,
+      "record_count": 1,
+      "total_fob_usd": 28350.0
     },
     {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "12x475",
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "10x500",
       "certification": "unknown",
-      "total_mt": 8.942,
-      "avg_usd_per_mt": 626.84,
+      "total_mt": 8.92,
+      "avg_usd_per_mt": 3201.43,
+      "record_count": 3,
+      "total_fob_usd": 38464.2
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "12x16",
+      "certification": "unknown",
+      "total_mt": 8.84,
+      "avg_usd_per_mt": 2515.61,
       "record_count": 1,
-      "total_fob_usd": 5605.2
+      "total_fob_usd": 22237.98
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 8.791,
+      "avg_usd_per_mt": 2999.23,
+      "record_count": 6,
+      "total_fob_usd": 25921.09
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "15x2",
+      "certification": "unknown",
+      "total_mt": 8.727,
+      "avg_usd_per_mt": 2352.61,
+      "record_count": 1,
+      "total_fob_usd": 20531.19
     },
     {
       "fruit_name": "blueberry",
@@ -2657,44 +3233,34 @@
       "total_fob_usd": 30370.52
     },
     {
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "10x250",
+      "certification": "unknown",
+      "total_mt": 8.55,
+      "avg_usd_per_mt": 2126.67,
+      "record_count": 3,
+      "total_fob_usd": 20759.4
+    },
+    {
+      "fruit_name": "blueberry",
+      "format_type": "chunks",
+      "size_mm": "6x40",
+      "certification": "unknown",
+      "total_mt": 8.165,
+      "avg_usd_per_mt": 2802.74,
+      "record_count": 1,
+      "total_fob_usd": 22884.39
+    },
+    {
       "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "12x12",
+      "size_mm": "6x40",
       "certification": "unknown",
-      "total_mt": 8.592,
-      "avg_usd_per_mt": 3559.13,
-      "record_count": 1,
-      "total_fob_usd": 30580.03
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "310x8",
-      "certification": "unknown",
-      "total_mt": 8.21,
-      "avg_usd_per_mt": 974.42,
-      "record_count": 1,
-      "total_fob_usd": 8000.0
-    },
-    {
-      "fruit_name": "lucuma",
-      "format_type": "pulp",
-      "size_mm": "12x14",
-      "certification": "unknown",
-      "total_mt": 8.106,
-      "avg_usd_per_mt": 3815.13,
-      "record_count": 16,
-      "total_fob_usd": 30224.0
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "halves",
-      "size_mm": "20x20",
-      "certification": "unknown",
-      "total_mt": 8.0,
-      "avg_usd_per_mt": 1850.0,
-      "record_count": 1,
-      "total_fob_usd": 14800.0
+      "total_mt": 8.16,
+      "avg_usd_per_mt": 3429.77,
+      "record_count": 2,
+      "total_fob_usd": 27993.68
     },
     {
       "fruit_name": "passion_fruit",
@@ -2707,34 +3273,64 @@
       "total_fob_usd": 27367.0
     },
     {
-      "fruit_name": "blueberry",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "3x8",
+      "size_mm": "6x17",
       "certification": "unknown",
-      "total_mt": 7.974,
-      "avg_usd_per_mt": 974.42,
-      "record_count": 1,
-      "total_fob_usd": 7770.0
+      "total_mt": 7.851,
+      "avg_usd_per_mt": 6277.75,
+      "record_count": 3,
+      "total_fob_usd": 46551.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "12x500",
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "12x14",
       "certification": "unknown",
-      "total_mt": 7.5,
-      "avg_usd_per_mt": 2680.0,
-      "record_count": 1,
-      "total_fob_usd": 20100.0
+      "total_mt": 7.729,
+      "avg_usd_per_mt": 3385.23,
+      "record_count": 2,
+      "total_fob_usd": 25835.34
     },
     {
-      "fruit_name": "avocado",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "2x5",
-      "certification": "organic",
-      "total_mt": 7.33,
-      "avg_usd_per_mt": 3818.01,
+      "size_mm": "6x16",
+      "certification": "unknown",
+      "total_mt": 7.484,
+      "avg_usd_per_mt": 3367.18,
       "record_count": 1,
-      "total_fob_usd": 27986.0
+      "total_fob_usd": 25200.0
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "pulp",
+      "size_mm": "4x1",
+      "certification": "unknown",
+      "total_mt": 7.48,
+      "avg_usd_per_mt": 3225.0,
+      "record_count": 2,
+      "total_fob_usd": 24123.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "24x1",
+      "certification": "unknown",
+      "total_mt": 7.387,
+      "avg_usd_per_mt": 1579.01,
+      "record_count": 2,
+      "total_fob_usd": 11340.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "strips",
+      "size_mm": "30x12",
+      "certification": "unknown",
+      "total_mt": 7.073,
+      "avg_usd_per_mt": 3664.66,
+      "record_count": 3,
+      "total_fob_usd": 25920.0
     },
     {
       "fruit_name": "banana",
@@ -2747,14 +3343,14 @@
       "total_fob_usd": 33630.72
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "4x6",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x14",
       "certification": "unknown",
-      "total_mt": 6.534,
-      "avg_usd_per_mt": 2578.84,
-      "record_count": 1,
-      "total_fob_usd": 16850.17
+      "total_mt": 6.807,
+      "avg_usd_per_mt": 2482.7,
+      "record_count": 4,
+      "total_fob_usd": 17312.4
     },
     {
       "fruit_name": "mango",
@@ -2777,26 +3373,6 @@
       "total_fob_usd": 19438.64
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "20x16",
-      "certification": "unknown",
-      "total_mt": 6.471,
-      "avg_usd_per_mt": 6625.94,
-      "record_count": 19,
-      "total_fob_usd": 26774.0
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "juice",
-      "size_mm": "3x8",
-      "certification": "unknown",
-      "total_mt": 6.352,
-      "avg_usd_per_mt": 793.45,
-      "record_count": 1,
-      "total_fob_usd": 5040.0
-    },
-    {
       "fruit_name": "mango",
       "format_type": "pulp",
       "size_mm": "20x20",
@@ -2807,24 +3383,44 @@
       "total_fob_usd": 10800.0
     },
     {
-      "fruit_name": "banana",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "70x15",
+      "size_mm": "12x18",
       "certification": "unknown",
-      "total_mt": 5.686,
-      "avg_usd_per_mt": 6758.25,
-      "record_count": 18,
-      "total_fob_usd": 32860.31
+      "total_mt": 6.172,
+      "avg_usd_per_mt": 3885.91,
+      "record_count": 7,
+      "total_fob_usd": 23983.02
     },
     {
-      "fruit_name": "strawberry",
-      "format_type": "pulp",
-      "size_mm": "12x14",
+      "fruit_name": "avocado",
+      "format_type": "slices",
+      "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 5.575,
-      "avg_usd_per_mt": 2724.72,
-      "record_count": 13,
-      "total_fob_usd": 14747.9
+      "total_mt": 6.0,
+      "avg_usd_per_mt": 3320.0,
+      "record_count": 3,
+      "total_fob_usd": 19920.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x70",
+      "certification": "unknown",
+      "total_mt": 5.628,
+      "avg_usd_per_mt": 5747.72,
+      "record_count": 5,
+      "total_fob_usd": 32272.98
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "96x40",
+      "certification": "unknown",
+      "total_mt": 5.583,
+      "avg_usd_per_mt": 5364.93,
+      "record_count": 1,
+      "total_fob_usd": 29952.4
     },
     {
       "fruit_name": "unknown",
@@ -2837,24 +3433,74 @@
       "total_fob_usd": 21678.45
     },
     {
-      "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "5x2",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "8x1",
       "certification": "unknown",
-      "total_mt": 5.4,
-      "avg_usd_per_mt": 3035.0,
-      "record_count": 2,
-      "total_fob_usd": 14250.0
+      "total_mt": 5.548,
+      "avg_usd_per_mt": 2027.03,
+      "record_count": 1,
+      "total_fob_usd": 11245.98
     },
     {
-      "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "30x500",
+      "fruit_name": "unknown",
+      "format_type": "juice",
+      "size_mm": "1x15",
       "certification": "unknown",
-      "total_mt": 5.255,
-      "avg_usd_per_mt": 2122.4,
-      "record_count": 4,
-      "total_fob_usd": 12584.4
+      "total_mt": 5.486,
+      "avg_usd_per_mt": 187.89,
+      "record_count": 10,
+      "total_fob_usd": 1053.5
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "chunks",
+      "size_mm": "12x16",
+      "certification": "unknown",
+      "total_mt": 5.448,
+      "avg_usd_per_mt": 2842.42,
+      "record_count": 2,
+      "total_fob_usd": 15353.52
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "24x1",
+      "certification": "unknown",
+      "total_mt": 5.448,
+      "avg_usd_per_mt": 1650.0,
+      "record_count": 1,
+      "total_fob_usd": 8989.2
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "chunks",
+      "size_mm": "6x40",
+      "certification": "unknown",
+      "total_mt": 5.443,
+      "avg_usd_per_mt": 2795.76,
+      "record_count": 1,
+      "total_fob_usd": 15217.33
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "slices",
+      "size_mm": "6x40",
+      "certification": "unknown",
+      "total_mt": 5.443,
+      "avg_usd_per_mt": 2332.9,
+      "record_count": 1,
+      "total_fob_usd": 12697.96
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "6x470",
+      "certification": "unknown",
+      "total_mt": 5.245,
+      "avg_usd_per_mt": 6191.82,
+      "record_count": 2,
+      "total_fob_usd": 32475.59
     },
     {
       "fruit_name": "unknown",
@@ -2867,44 +3513,74 @@
       "total_fob_usd": 13014.48
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "15x15",
-      "certification": "conventional",
-      "total_mt": 4.997,
-      "avg_usd_per_mt": 4309.83,
-      "record_count": 1,
-      "total_fob_usd": 21536.21
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "chunks",
-      "size_mm": "18x16",
-      "certification": "unknown",
-      "total_mt": 4.896,
-      "avg_usd_per_mt": 3210.0,
-      "record_count": 1,
-      "total_fob_usd": 15716.16
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "slices",
-      "size_mm": "1x06",
-      "certification": "unknown",
-      "total_mt": 4.8,
-      "avg_usd_per_mt": 2850.0,
-      "record_count": 1,
-      "total_fob_usd": 13680.0
-    },
-    {
-      "fruit_name": "lucuma",
+      "fruit_name": "passion_fruit",
       "format_type": "pulp",
-      "size_mm": "24x250",
+      "size_mm": "5x2",
       "certification": "unknown",
-      "total_mt": 4.555,
-      "avg_usd_per_mt": 3187.27,
+      "total_mt": 5.0,
+      "avg_usd_per_mt": 2570.0,
+      "record_count": 1,
+      "total_fob_usd": 12850.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "5x2",
+      "certification": "unknown",
+      "total_mt": 5.0,
+      "avg_usd_per_mt": 2300.0,
+      "record_count": 1,
+      "total_fob_usd": 11500.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "12x32",
+      "certification": "unknown",
+      "total_mt": 4.964,
+      "avg_usd_per_mt": 2642.79,
+      "record_count": 6,
+      "total_fob_usd": 13170.88
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "iqf",
+      "size_mm": "12x500",
+      "certification": "unknown",
+      "total_mt": 4.608,
+      "avg_usd_per_mt": 2977.78,
       "record_count": 3,
-      "total_fob_usd": 14030.0
+      "total_fob_usd": 15096.94
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "juice",
+      "size_mm": "1x24",
+      "certification": "unknown",
+      "total_mt": 4.53,
+      "avg_usd_per_mt": 197.86,
+      "record_count": 2,
+      "total_fob_usd": 1029.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "6x8",
+      "certification": "unknown",
+      "total_mt": 4.495,
+      "avg_usd_per_mt": 5306.42,
+      "record_count": 5,
+      "total_fob_usd": 23852.37
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "juice",
+      "size_mm": "1x15",
+      "certification": "unknown",
+      "total_mt": 4.367,
+      "avg_usd_per_mt": 216.4,
+      "record_count": 1,
+      "total_fob_usd": 945.0
     },
     {
       "fruit_name": "blueberry",
@@ -2917,6 +3593,16 @@
       "total_fob_usd": 12203.52
     },
     {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "12x2",
+      "certification": "unknown",
+      "total_mt": 4.255,
+      "avg_usd_per_mt": 2156.69,
+      "record_count": 1,
+      "total_fob_usd": 9176.7
+    },
+    {
       "fruit_name": "mango",
       "format_type": "chunks",
       "size_mm": "24x1",
@@ -2927,34 +3613,44 @@
       "total_fob_usd": 6199.2
     },
     {
-      "fruit_name": "mango",
+      "fruit_name": "blueberry",
       "format_type": "chunks",
-      "size_mm": "5x2",
+      "size_mm": "2x5",
       "certification": "unknown",
-      "total_mt": 4.0,
-      "avg_usd_per_mt": 1990.0,
-      "record_count": 1,
-      "total_fob_usd": 7960.0
+      "total_mt": 4.008,
+      "avg_usd_per_mt": 2403.07,
+      "record_count": 2,
+      "total_fob_usd": 9257.6
     },
     {
       "fruit_name": "strawberry",
-      "format_type": "chunks",
-      "size_mm": "5x2",
+      "format_type": "juice",
+      "size_mm": "1x12",
       "certification": "unknown",
-      "total_mt": 4.0,
-      "avg_usd_per_mt": 2250.0,
-      "record_count": 1,
-      "total_fob_usd": 9000.0
+      "total_mt": 3.928,
+      "avg_usd_per_mt": 196.6,
+      "record_count": 5,
+      "total_fob_usd": 815.79
     },
     {
-      "fruit_name": "mango",
-      "format_type": "pulp",
-      "size_mm": "12x14",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "8x32",
       "certification": "unknown",
-      "total_mt": 3.965,
-      "avg_usd_per_mt": 2910.15,
-      "record_count": 8,
-      "total_fob_usd": 11492.7
+      "total_mt": 3.76,
+      "avg_usd_per_mt": 2319.07,
+      "record_count": 3,
+      "total_fob_usd": 8745.5
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "48x30",
+      "certification": "unknown",
+      "total_mt": 3.736,
+      "avg_usd_per_mt": 4665.78,
+      "record_count": 22,
+      "total_fob_usd": 17431.66
     },
     {
       "fruit_name": "avocado",
@@ -2967,24 +3663,104 @@
       "total_fob_usd": 12960.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "1x24",
+      "fruit_name": "avocado",
+      "format_type": "pulp",
+      "size_mm": "12x0",
       "certification": "unknown",
-      "total_mt": 3.486,
-      "avg_usd_per_mt": 9166.72,
-      "record_count": 10,
-      "total_fob_usd": 32280.8
+      "total_mt": 3.6,
+      "avg_usd_per_mt": 2700.0,
+      "record_count": 1,
+      "total_fob_usd": 9720.0
     },
     {
       "fruit_name": "banana",
       "format_type": "chunks",
-      "size_mm": "115x8",
+      "size_mm": "16x3",
       "certification": "unknown",
-      "total_mt": 3.079,
-      "avg_usd_per_mt": 6167.92,
-      "record_count": 13,
-      "total_fob_usd": 20086.59
+      "total_mt": 3.497,
+      "avg_usd_per_mt": 218.47,
+      "record_count": 1,
+      "total_fob_usd": 764.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "strips",
+      "size_mm": "20x85",
+      "certification": "unknown",
+      "total_mt": 3.434,
+      "avg_usd_per_mt": 5058.72,
+      "record_count": 2,
+      "total_fob_usd": 17341.69
+    },
+    {
+      "fruit_name": "lucuma",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 3.386,
+      "avg_usd_per_mt": 4490.38,
+      "record_count": 8,
+      "total_fob_usd": 15088.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 3.384,
+      "avg_usd_per_mt": 219.26,
+      "record_count": 2,
+      "total_fob_usd": 740.0
+    },
+    {
+      "fruit_name": "lucuma",
+      "format_type": "pulp",
+      "size_mm": "24x250",
+      "certification": "unknown",
+      "total_mt": 3.355,
+      "avg_usd_per_mt": 2941.73,
+      "record_count": 2,
+      "total_fob_usd": 9616.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "70x15",
+      "certification": "unknown",
+      "total_mt": 3.292,
+      "avg_usd_per_mt": 7367.73,
+      "record_count": 12,
+      "total_fob_usd": 19596.03
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "strips",
+      "size_mm": "20x2",
+      "certification": "unknown",
+      "total_mt": 3.278,
+      "avg_usd_per_mt": 976.21,
+      "record_count": 2,
+      "total_fob_usd": 3200.0
+    },
+    {
+      "fruit_name": "cherry",
+      "format_type": "chunks",
+      "size_mm": "12x16",
+      "certification": "unknown",
+      "total_mt": 3.269,
+      "avg_usd_per_mt": 3927.25,
+      "record_count": 1,
+      "total_fob_usd": 12838.18
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "30x500",
+      "certification": "unknown",
+      "total_mt": 3.255,
+      "avg_usd_per_mt": 2900.0,
+      "record_count": 2,
+      "total_fob_usd": 9594.0
     },
     {
       "fruit_name": "passion_fruit",
@@ -2995,16 +3771,6 @@
       "avg_usd_per_mt": 3250.21,
       "record_count": 1,
       "total_fob_usd": 9880.65
-    },
-    {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "10x1000",
-      "certification": "unknown",
-      "total_mt": 3.0,
-      "avg_usd_per_mt": 3000.0,
-      "record_count": 1,
-      "total_fob_usd": 9000.0
     },
     {
       "fruit_name": "cherimoya",
@@ -3027,64 +3793,64 @@
       "total_fob_usd": 12176.1
     },
     {
-      "fruit_name": "passion_fruit",
-      "format_type": "chunks",
-      "size_mm": "24x1",
-      "certification": "unknown",
-      "total_mt": 2.77,
-      "avg_usd_per_mt": 1754.51,
-      "record_count": 1,
-      "total_fob_usd": 4860.0
-    },
-    {
-      "fruit_name": "cherimoya",
+      "fruit_name": "strawberry",
       "format_type": "pulp",
-      "size_mm": "12x14",
+      "size_mm": "1x10",
       "certification": "unknown",
-      "total_mt": 2.753,
-      "avg_usd_per_mt": 3624.03,
-      "record_count": 10,
-      "total_fob_usd": 9137.4
+      "total_mt": 2.783,
+      "avg_usd_per_mt": 219.23,
+      "record_count": 2,
+      "total_fob_usd": 612.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "1x30",
+      "certification": "unknown",
+      "total_mt": 2.708,
+      "avg_usd_per_mt": 1628.75,
+      "record_count": 3,
+      "total_fob_usd": 5158.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "slices",
+      "size_mm": "12x1",
+      "certification": "unknown",
+      "total_mt": 2.64,
+      "avg_usd_per_mt": 1850.0,
+      "record_count": 2,
+      "total_fob_usd": 4836.0
+    },
+    {
+      "fruit_name": "peach",
+      "format_type": "juice",
+      "size_mm": "1x20",
+      "certification": "unknown",
+      "total_mt": 2.554,
+      "avg_usd_per_mt": 199.38,
+      "record_count": 2,
+      "total_fob_usd": 546.0
     },
     {
       "fruit_name": "passion_fruit",
-      "format_type": "chunks",
-      "size_mm": "12x473",
+      "format_type": "pulp",
+      "size_mm": "5x1",
       "certification": "unknown",
-      "total_mt": 2.744,
-      "avg_usd_per_mt": 1584.19,
-      "record_count": 3,
-      "total_fob_usd": 4347.0
+      "total_mt": 2.51,
+      "avg_usd_per_mt": 2830.0,
+      "record_count": 4,
+      "total_fob_usd": 7017.59
     },
     {
-      "fruit_name": "grape",
-      "format_type": "juice",
-      "size_mm": "31017x8",
-      "certification": "unknown",
-      "total_mt": 2.717,
-      "avg_usd_per_mt": 910.93,
-      "record_count": 1,
-      "total_fob_usd": 2475.0
-    },
-    {
-      "fruit_name": "avocado",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "12x500",
+      "size_mm": "48x21",
       "certification": "unknown",
-      "total_mt": 2.52,
-      "avg_usd_per_mt": 3387.38,
-      "record_count": 1,
-      "total_fob_usd": 8536.2
-    },
-    {
-      "fruit_name": "blueberry",
-      "format_type": "chunks",
-      "size_mm": "2x5",
-      "certification": "unknown",
-      "total_mt": 2.41,
-      "avg_usd_per_mt": 1942.57,
-      "record_count": 1,
-      "total_fob_usd": 4681.6
+      "total_mt": 2.496,
+      "avg_usd_per_mt": 6146.15,
+      "record_count": 5,
+      "total_fob_usd": 15277.93
     },
     {
       "fruit_name": "mango",
@@ -3107,24 +3873,44 @@
       "total_fob_usd": 6176.29
     },
     {
-      "fruit_name": "strawberry",
-      "format_type": "chunks",
-      "size_mm": "12x600",
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "1x25",
       "certification": "unknown",
-      "total_mt": 2.167,
-      "avg_usd_per_mt": 2233.7,
-      "record_count": 1,
-      "total_fob_usd": 4840.42
+      "total_mt": 2.254,
+      "avg_usd_per_mt": 219.16,
+      "record_count": 2,
+      "total_fob_usd": 495.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "6x22",
+      "certification": "unknown",
+      "total_mt": 2.247,
+      "avg_usd_per_mt": 4672.9,
+      "record_count": 2,
+      "total_fob_usd": 10400.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "5x5",
+      "certification": "unknown",
+      "total_mt": 2.069,
+      "avg_usd_per_mt": 3582.58,
+      "record_count": 5,
+      "total_fob_usd": 6856.8
     },
     {
       "fruit_name": "strawberry",
-      "format_type": "chunks",
-      "size_mm": "12x320",
+      "format_type": "juice",
+      "size_mm": "1x15",
       "certification": "unknown",
-      "total_mt": 2.065,
-      "avg_usd_per_mt": 2389.07,
-      "record_count": 8,
-      "total_fob_usd": 4517.12
+      "total_mt": 2.056,
+      "avg_usd_per_mt": 194.09,
+      "record_count": 3,
+      "total_fob_usd": 397.0
     },
     {
       "fruit_name": "banana",
@@ -3137,24 +3923,14 @@
       "total_fob_usd": 11215.26
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "24x50",
-      "certification": "unknown",
-      "total_mt": 2.002,
-      "avg_usd_per_mt": 5404.84,
-      "record_count": 6,
-      "total_fob_usd": 9767.09
-    },
-    {
       "fruit_name": "blueberry",
-      "format_type": "whole",
+      "format_type": "chunks",
       "size_mm": "5x2",
       "certification": "unknown",
       "total_mt": 2.0,
-      "avg_usd_per_mt": 2340.0,
+      "avg_usd_per_mt": 2600.0,
       "record_count": 1,
-      "total_fob_usd": 4680.0
+      "total_fob_usd": 5200.0
     },
     {
       "fruit_name": "unknown",
@@ -3168,13 +3944,53 @@
     },
     {
       "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "16x90",
+      "format_type": "pulp",
+      "size_mm": "1x100",
       "certification": "unknown",
-      "total_mt": 1.801,
-      "avg_usd_per_mt": 3247.92,
-      "record_count": 5,
-      "total_fob_usd": 5768.0
+      "total_mt": 1.955,
+      "avg_usd_per_mt": 189.26,
+      "record_count": 1,
+      "total_fob_usd": 370.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "115x8",
+      "certification": "unknown",
+      "total_mt": 1.883,
+      "avg_usd_per_mt": 6378.75,
+      "record_count": 8,
+      "total_fob_usd": 13114.37
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "12x473",
+      "certification": "unknown",
+      "total_mt": 1.841,
+      "avg_usd_per_mt": 1583.93,
+      "record_count": 2,
+      "total_fob_usd": 2916.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "20x16",
+      "certification": "unknown",
+      "total_mt": 1.773,
+      "avg_usd_per_mt": 7552.21,
+      "record_count": 4,
+      "total_fob_usd": 13716.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "10x250",
+      "certification": "unknown",
+      "total_mt": 1.71,
+      "avg_usd_per_mt": 3827.99,
+      "record_count": 1,
+      "total_fob_usd": 6545.87
     },
     {
       "fruit_name": "passion_fruit",
@@ -3187,24 +4003,64 @@
       "total_fob_usd": 4576.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "12x3",
+      "fruit_name": "peach",
+      "format_type": "juice",
+      "size_mm": "1x6",
       "certification": "unknown",
-      "total_mt": 1.62,
-      "avg_usd_per_mt": 8954.75,
-      "record_count": 3,
-      "total_fob_usd": 14506.7
+      "total_mt": 1.629,
+      "avg_usd_per_mt": 174.95,
+      "record_count": 1,
+      "total_fob_usd": 285.0
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "pulp",
+      "size_mm": "36x100",
+      "certification": "unknown",
+      "total_mt": 1.584,
+      "avg_usd_per_mt": 3694.44,
+      "record_count": 1,
+      "total_fob_usd": 5852.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "36x100",
+      "certification": "unknown",
+      "total_mt": 1.584,
+      "avg_usd_per_mt": 6305.56,
+      "record_count": 1,
+      "total_fob_usd": 9988.0
     },
     {
       "fruit_name": "strawberry",
       "format_type": "chunks",
       "size_mm": "12x290",
       "certification": "unknown",
-      "total_mt": 1.602,
-      "avg_usd_per_mt": 2219.3,
-      "record_count": 8,
-      "total_fob_usd": 3600.73
+      "total_mt": 1.582,
+      "avg_usd_per_mt": 2323.25,
+      "record_count": 5,
+      "total_fob_usd": 3485.74
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "1x24",
+      "certification": "unknown",
+      "total_mt": 1.581,
+      "avg_usd_per_mt": 9050.59,
+      "record_count": 5,
+      "total_fob_usd": 14551.7
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "12x320",
+      "certification": "unknown",
+      "total_mt": 1.55,
+      "avg_usd_per_mt": 2403.0,
+      "record_count": 5,
+      "total_fob_usd": 3353.08
     },
     {
       "fruit_name": "unknown",
@@ -3217,14 +4073,34 @@
       "total_fob_usd": 3121.8
     },
     {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 1.5,
+      "avg_usd_per_mt": 2750.0,
+      "record_count": 1,
+      "total_fob_usd": 4125.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "pulp",
+      "size_mm": "1x80",
+      "certification": "unknown",
+      "total_mt": 1.437,
+      "avg_usd_per_mt": 189.28,
+      "record_count": 1,
+      "total_fob_usd": 272.0
+    },
+    {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "12x320",
+      "size_mm": "24x50",
       "certification": "unknown",
-      "total_mt": 1.42,
-      "avg_usd_per_mt": 3679.93,
-      "record_count": 8,
-      "total_fob_usd": 5365.45
+      "total_mt": 1.43,
+      "avg_usd_per_mt": 4579.52,
+      "record_count": 4,
+      "total_fob_usd": 5715.93
     },
     {
       "fruit_name": "lucuma",
@@ -3237,24 +4113,24 @@
       "total_fob_usd": 5789.0
     },
     {
-      "fruit_name": "lucuma",
-      "format_type": "cubes",
-      "size_mm": "20x20",
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "1x12",
       "certification": "unknown",
-      "total_mt": 1.35,
-      "avg_usd_per_mt": 4400.0,
-      "record_count": 1,
-      "total_fob_usd": 5940.0
+      "total_mt": 1.325,
+      "avg_usd_per_mt": 138.55,
+      "record_count": 2,
+      "total_fob_usd": 182.0
     },
     {
-      "fruit_name": "banana",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "40x24",
+      "size_mm": "48x25",
       "certification": "unknown",
-      "total_mt": 1.286,
-      "avg_usd_per_mt": 8200.64,
-      "record_count": 10,
-      "total_fob_usd": 10543.06
+      "total_mt": 1.32,
+      "avg_usd_per_mt": 5822.22,
+      "record_count": 3,
+      "total_fob_usd": 7648.0
     },
     {
       "fruit_name": "unknown",
@@ -3265,16 +4141,6 @@
       "avg_usd_per_mt": 2599.06,
       "record_count": 2,
       "total_fob_usd": 3306.0
-    },
-    {
-      "fruit_name": "banana",
-      "format_type": "chunks",
-      "size_mm": "284x12",
-      "certification": "unknown",
-      "total_mt": 1.22,
-      "avg_usd_per_mt": 6034.82,
-      "record_count": 2,
-      "total_fob_usd": 7315.83
     },
     {
       "fruit_name": "lucuma",
@@ -3288,23 +4154,63 @@
     },
     {
       "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "20x28",
+      "format_type": "juice",
+      "size_mm": "1x4",
       "certification": "unknown",
-      "total_mt": 1.195,
-      "avg_usd_per_mt": 2651.05,
-      "record_count": 1,
-      "total_fob_usd": 3168.0
+      "total_mt": 1.171,
+      "avg_usd_per_mt": 199.48,
+      "record_count": 2,
+      "total_fob_usd": 230.4
     },
     {
-      "fruit_name": "strawberry",
+      "fruit_name": "passion_fruit",
       "format_type": "chunks",
-      "size_mm": "24x120",
+      "size_mm": "24x500",
+      "certification": "unknown",
+      "total_mt": 1.152,
+      "avg_usd_per_mt": 2500.0,
+      "record_count": 1,
+      "total_fob_usd": 2880.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "100x10",
+      "certification": "unknown",
+      "total_mt": 1.12,
+      "avg_usd_per_mt": 2400.0,
+      "record_count": 3,
+      "total_fob_usd": 2704.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "juice",
+      "size_mm": "1x25",
+      "certification": "unknown",
+      "total_mt": 1.109,
+      "avg_usd_per_mt": 162.8,
+      "record_count": 2,
+      "total_fob_usd": 180.5
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "whole",
+      "size_mm": "4x5",
+      "certification": "unknown",
+      "total_mt": 1.091,
+      "avg_usd_per_mt": 2089.83,
+      "record_count": 1,
+      "total_fob_usd": 2280.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x3",
       "certification": "unknown",
       "total_mt": 1.08,
-      "avg_usd_per_mt": 5000.0,
-      "record_count": 1,
-      "total_fob_usd": 5400.0
+      "avg_usd_per_mt": 8974.08,
+      "record_count": 2,
+      "total_fob_usd": 9692.0
     },
     {
       "fruit_name": "banana",
@@ -3318,33 +4224,23 @@
     },
     {
       "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "6x1",
+      "format_type": "strips",
+      "size_mm": "24x2",
       "certification": "unknown",
-      "total_mt": 1.057,
-      "avg_usd_per_mt": 3334.74,
-      "record_count": 3,
-      "total_fob_usd": 3372.61
-    },
-    {
-      "fruit_name": "passion_fruit",
-      "format_type": "pulp",
-      "size_mm": "46x14",
-      "certification": "unknown",
-      "total_mt": 1.02,
-      "avg_usd_per_mt": 4357.66,
-      "record_count": 2,
-      "total_fob_usd": 4353.9
-    },
-    {
-      "fruit_name": "strawberry",
-      "format_type": "chunks",
-      "size_mm": "12x230",
-      "certification": "unknown",
-      "total_mt": 1.016,
-      "avg_usd_per_mt": 4781.1,
+      "total_mt": 1.061,
+      "avg_usd_per_mt": 1508.01,
       "record_count": 1,
-      "total_fob_usd": 4857.6
+      "total_fob_usd": 1600.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "16x90",
+      "certification": "unknown",
+      "total_mt": 1.015,
+      "avg_usd_per_mt": 6405.52,
+      "record_count": 3,
+      "total_fob_usd": 5329.6
     },
     {
       "fruit_name": "blueberry",
@@ -3357,14 +4253,94 @@
       "total_fob_usd": 2330.64
     },
     {
+      "fruit_name": "pineapple",
+      "format_type": "cubes",
+      "size_mm": "10x10",
+      "certification": "unknown",
+      "total_mt": 0.96,
+      "avg_usd_per_mt": 1900.0,
+      "record_count": 1,
+      "total_fob_usd": 1824.0
+    },
+    {
+      "fruit_name": "cherimoya",
+      "format_type": "pulp",
+      "size_mm": "12x14",
+      "certification": "unknown",
+      "total_mt": 0.951,
+      "avg_usd_per_mt": 3769.28,
+      "record_count": 4,
+      "total_fob_usd": 3552.5
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "juice",
+      "size_mm": "1x25",
+      "certification": "unknown",
+      "total_mt": 0.934,
+      "avg_usd_per_mt": 162.74,
+      "record_count": 1,
+      "total_fob_usd": 152.0
+    },
+    {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "10x400",
+      "size_mm": "8x3",
       "certification": "unknown",
-      "total_mt": 0.972,
-      "avg_usd_per_mt": 5476.15,
+      "total_mt": 0.908,
+      "avg_usd_per_mt": 14319.38,
       "record_count": 1,
-      "total_fob_usd": 5322.82
+      "total_fob_usd": 13002.0
+    },
+    {
+      "fruit_name": "papaya",
+      "format_type": "pulp",
+      "size_mm": "40x100",
+      "certification": "unknown",
+      "total_mt": 0.88,
+      "avg_usd_per_mt": 2985.0,
+      "record_count": 1,
+      "total_fob_usd": 2626.8
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "40x100",
+      "certification": "unknown",
+      "total_mt": 0.88,
+      "avg_usd_per_mt": 4375.0,
+      "record_count": 2,
+      "total_fob_usd": 3850.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "juice",
+      "size_mm": "1x24",
+      "certification": "unknown",
+      "total_mt": 0.846,
+      "avg_usd_per_mt": 179.67,
+      "record_count": 1,
+      "total_fob_usd": 152.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "juice",
+      "size_mm": "1x24",
+      "certification": "unknown",
+      "total_mt": 0.846,
+      "avg_usd_per_mt": 179.67,
+      "record_count": 1,
+      "total_fob_usd": 152.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "pulp",
+      "size_mm": "1x20",
+      "certification": "unknown",
+      "total_mt": 0.83,
+      "avg_usd_per_mt": 162.65,
+      "record_count": 1,
+      "total_fob_usd": 135.0
     },
     {
       "fruit_name": "unknown",
@@ -3377,6 +4353,36 @@
       "total_fob_usd": 6842.57
     },
     {
+      "fruit_name": "peach",
+      "format_type": "juice",
+      "size_mm": "24x145",
+      "certification": "unknown",
+      "total_mt": 0.76,
+      "avg_usd_per_mt": 3684.21,
+      "record_count": 2,
+      "total_fob_usd": 2800.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x320",
+      "certification": "unknown",
+      "total_mt": 0.75,
+      "avg_usd_per_mt": 4187.69,
+      "record_count": 3,
+      "total_fob_usd": 3120.0
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "pulp",
+      "size_mm": "46x14",
+      "certification": "unknown",
+      "total_mt": 0.747,
+      "avg_usd_per_mt": 4165.86,
+      "record_count": 1,
+      "total_fob_usd": 3111.9
+    },
+    {
       "fruit_name": "unknown",
       "format_type": "chunks",
       "size_mm": "34x60",
@@ -3387,16 +4393,6 @@
       "total_fob_usd": 3066.0
     },
     {
-      "fruit_name": "cherimoya",
-      "format_type": "pulp",
-      "size_mm": "18x15",
-      "certification": "unknown",
-      "total_mt": 0.735,
-      "avg_usd_per_mt": 4701.92,
-      "record_count": 2,
-      "total_fob_usd": 3456.0
-    },
-    {
       "fruit_name": "passion_fruit",
       "format_type": "pulp",
       "size_mm": "10x10",
@@ -3405,16 +4401,6 @@
       "avg_usd_per_mt": 3600.0,
       "record_count": 2,
       "total_fob_usd": 2538.0
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "12x230",
-      "certification": "unknown",
-      "total_mt": 0.704,
-      "avg_usd_per_mt": 4998.58,
-      "record_count": 1,
-      "total_fob_usd": 3519.0
     },
     {
       "fruit_name": "unknown",
@@ -3437,14 +4423,14 @@
       "total_fob_usd": 3585.16
     },
     {
-      "fruit_name": "lucuma",
-      "format_type": "pulp",
-      "size_mm": "32x14",
+      "fruit_name": "peach",
+      "format_type": "juice",
+      "size_mm": "24x250",
       "certification": "unknown",
-      "total_mt": 0.646,
-      "avg_usd_per_mt": 3616.1,
-      "record_count": 1,
-      "total_fob_usd": 2336.0
+      "total_mt": 0.656,
+      "avg_usd_per_mt": 6402.44,
+      "record_count": 2,
+      "total_fob_usd": 4200.0
     },
     {
       "fruit_name": "unknown",
@@ -3457,44 +4443,74 @@
       "total_fob_usd": 2340.45
     },
     {
-      "fruit_name": "strawberry",
-      "format_type": "chunks",
+      "fruit_name": "peach",
+      "format_type": "juice",
       "size_mm": "6x1",
       "certification": "unknown",
-      "total_mt": 0.639,
-      "avg_usd_per_mt": 4025.04,
-      "record_count": 4,
-      "total_fob_usd": 2565.0
+      "total_mt": 0.642,
+      "avg_usd_per_mt": 5919.0,
+      "record_count": 2,
+      "total_fob_usd": 3800.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "juice",
+      "size_mm": "1x100",
+      "certification": "unknown",
+      "total_mt": 0.629,
+      "avg_usd_per_mt": 162.8,
+      "record_count": 1,
+      "total_fob_usd": 102.4
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "284x12",
+      "certification": "unknown",
+      "total_mt": 0.569,
+      "avg_usd_per_mt": 6603.69,
+      "record_count": 1,
+      "total_fob_usd": 3757.5
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "iqf",
+      "size_mm": "20x20",
+      "certification": "unknown",
+      "total_mt": 0.562,
+      "avg_usd_per_mt": 700.01,
+      "record_count": 3,
+      "total_fob_usd": 671.41
+    },
+    {
+      "fruit_name": "passion_fruit",
+      "format_type": "chunks",
+      "size_mm": "5x1",
+      "certification": "unknown",
+      "total_mt": 0.535,
+      "avg_usd_per_mt": 3077.98,
+      "record_count": 1,
+      "total_fob_usd": 1646.72
     },
     {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "40x200",
+      "size_mm": "6x325",
       "certification": "unknown",
-      "total_mt": 0.531,
-      "avg_usd_per_mt": 3949.53,
+      "total_mt": 0.526,
+      "avg_usd_per_mt": 8469.58,
       "record_count": 1,
-      "total_fob_usd": 2097.2
+      "total_fob_usd": 4455.0
     },
     {
       "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "85x200",
+      "format_type": "halves",
+      "size_mm": "12x32",
       "certification": "unknown",
-      "total_mt": 0.52,
-      "avg_usd_per_mt": 3947.6,
+      "total_mt": 0.523,
+      "avg_usd_per_mt": 2422.93,
       "record_count": 1,
-      "total_fob_usd": 2052.75
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "24x4",
-      "certification": "unknown",
-      "total_mt": 0.506,
-      "avg_usd_per_mt": 2940.71,
-      "record_count": 1,
-      "total_fob_usd": 1488.0
+      "total_fob_usd": 1267.19
     },
     {
       "fruit_name": "unknown",
@@ -3507,24 +4523,14 @@
       "total_fob_usd": 6500.0
     },
     {
-      "fruit_name": "papaya",
-      "format_type": "cubes",
-      "size_mm": "28x1",
-      "certification": "unknown",
-      "total_mt": 0.495,
-      "avg_usd_per_mt": 2715.15,
-      "record_count": 1,
-      "total_fob_usd": 1344.0
-    },
-    {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "24x250",
+      "size_mm": "6x300",
       "certification": "unknown",
-      "total_mt": 0.48,
-      "avg_usd_per_mt": 9886.67,
-      "record_count": 3,
-      "total_fob_usd": 4758.0
+      "total_mt": 0.477,
+      "avg_usd_per_mt": 4362.83,
+      "record_count": 2,
+      "total_fob_usd": 3908.19
     },
     {
       "fruit_name": "unknown",
@@ -3537,6 +4543,16 @@
       "total_fob_usd": 3870.0
     },
     {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "20x57",
+      "certification": "unknown",
+      "total_mt": 0.456,
+      "avg_usd_per_mt": 5131.58,
+      "record_count": 5,
+      "total_fob_usd": 2340.0
+    },
+    {
       "fruit_name": "avocado",
       "format_type": "chunks",
       "size_mm": "3x4",
@@ -3547,94 +4563,64 @@
       "total_fob_usd": 1282.5
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "15x100",
-      "certification": "unknown",
-      "total_mt": 0.43,
-      "avg_usd_per_mt": 3606.21,
-      "record_count": 3,
-      "total_fob_usd": 1550.7
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "12x495",
-      "certification": "unknown",
-      "total_mt": 0.428,
-      "avg_usd_per_mt": 4385.09,
-      "record_count": 1,
-      "total_fob_usd": 1876.82
-    },
-    {
       "fruit_name": "strawberry",
       "format_type": "chunks",
       "size_mm": "6x950",
       "certification": "unknown",
-      "total_mt": 0.409,
-      "avg_usd_per_mt": 3749.88,
+      "total_mt": 0.427,
+      "avg_usd_per_mt": 3560.4,
       "record_count": 2,
-      "total_fob_usd": 1460.0
+      "total_fob_usd": 1475.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "40x24",
+      "certification": "unknown",
+      "total_mt": 0.415,
+      "avg_usd_per_mt": 8200.84,
+      "record_count": 5,
+      "total_fob_usd": 3403.78
+    },
+    {
+      "fruit_name": "soursop",
+      "format_type": "chunks",
+      "size_mm": "100x10",
+      "certification": "unknown",
+      "total_mt": 0.36,
+      "avg_usd_per_mt": 3000.0,
+      "record_count": 1,
+      "total_fob_usd": 1080.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "24x250",
+      "certification": "unknown",
+      "total_mt": 0.36,
+      "avg_usd_per_mt": 9990.0,
+      "record_count": 2,
+      "total_fob_usd": 3596.4
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "6x500",
+      "certification": "unknown",
+      "total_mt": 0.333,
+      "avg_usd_per_mt": 3644.5,
+      "record_count": 11,
+      "total_fob_usd": 1843.2
     },
     {
       "fruit_name": "lucuma",
       "format_type": "pulp",
       "size_mm": "5x2",
       "certification": "unknown",
-      "total_mt": 0.407,
-      "avg_usd_per_mt": 4299.26,
-      "record_count": 2,
-      "total_fob_usd": 1760.0
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "90x200",
-      "certification": "unknown",
-      "total_mt": 0.401,
-      "avg_usd_per_mt": 3950.12,
+      "total_mt": 0.307,
+      "avg_usd_per_mt": 4348.53,
       "record_count": 1,
-      "total_fob_usd": 1584.0
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "24x70",
-      "certification": "unknown",
-      "total_mt": 0.366,
-      "avg_usd_per_mt": 5158.14,
-      "record_count": 1,
-      "total_fob_usd": 1887.88
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "15x28",
-      "certification": "unknown",
-      "total_mt": 0.346,
-      "avg_usd_per_mt": 2653.18,
-      "record_count": 1,
-      "total_fob_usd": 918.0
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "44x200",
-      "certification": "unknown",
-      "total_mt": 0.308,
-      "avg_usd_per_mt": 5350.0,
-      "record_count": 1,
-      "total_fob_usd": 1647.8
-    },
-    {
-      "fruit_name": "strawberry",
-      "format_type": "pulp",
-      "size_mm": "5x2",
-      "certification": "unknown",
-      "total_mt": 0.3,
-      "avg_usd_per_mt": 3600.0,
-      "record_count": 1,
-      "total_fob_usd": 1080.0
+      "total_fob_usd": 1335.0
     },
     {
       "fruit_name": "unknown",
@@ -3667,24 +4653,34 @@
       "total_fob_usd": 1780.6
     },
     {
-      "fruit_name": "unknown",
+      "fruit_name": "mix",
       "format_type": "chunks",
-      "size_mm": "25x200",
+      "size_mm": "7x90",
       "certification": "unknown",
-      "total_mt": 0.284,
-      "avg_usd_per_mt": 3955.99,
-      "record_count": 1,
-      "total_fob_usd": 1123.5
+      "total_mt": 0.29,
+      "avg_usd_per_mt": 7534.05,
+      "record_count": 4,
+      "total_fob_usd": 2180.39
     },
     {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "12x425",
+      "size_mm": "12x213",
       "certification": "unknown",
-      "total_mt": 0.255,
-      "avg_usd_per_mt": 4429.69,
+      "total_mt": 0.284,
+      "avg_usd_per_mt": 4885.56,
       "record_count": 1,
-      "total_fob_usd": 1129.57
+      "total_fob_usd": 1387.5
+    },
+    {
+      "fruit_name": "pineapple",
+      "format_type": "juice",
+      "size_mm": "1x12",
+      "certification": "unknown",
+      "total_mt": 0.234,
+      "avg_usd_per_mt": 222.22,
+      "record_count": 1,
+      "total_fob_usd": 52.0
     },
     {
       "fruit_name": "banana",
@@ -3695,6 +4691,26 @@
       "avg_usd_per_mt": 15297.46,
       "record_count": 1,
       "total_fob_usd": 3258.36
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "1x9",
+      "certification": "unknown",
+      "total_mt": 0.192,
+      "avg_usd_per_mt": 208.33,
+      "record_count": 1,
+      "total_fob_usd": 40.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "12x28",
+      "certification": "unknown",
+      "total_mt": 0.19,
+      "avg_usd_per_mt": 2991.0,
+      "record_count": 2,
+      "total_fob_usd": 568.29
     },
     {
       "fruit_name": "unknown",
@@ -3727,44 +4743,44 @@
       "total_fob_usd": 1500.0
     },
     {
-      "fruit_name": "pineapple",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "24x120",
+      "size_mm": "7x65",
       "certification": "unknown",
-      "total_mt": 0.138,
-      "avg_usd_per_mt": 5426.09,
-      "record_count": 1,
-      "total_fob_usd": 748.8
+      "total_mt": 0.136,
+      "avg_usd_per_mt": 8572.46,
+      "record_count": 4,
+      "total_fob_usd": 1170.0
     },
     {
-      "fruit_name": "cherimoya",
+      "fruit_name": "unknown",
       "format_type": "pulp",
-      "size_mm": "12x16",
+      "size_mm": "5x5",
       "certification": "unknown",
-      "total_mt": 0.119,
-      "avg_usd_per_mt": 5177.07,
+      "total_mt": 0.125,
+      "avg_usd_per_mt": 2279.12,
+      "record_count": 1,
+      "total_fob_usd": 284.89
+    },
+    {
+      "fruit_name": "peach",
+      "format_type": "chunks",
+      "size_mm": "24x145",
+      "certification": "unknown",
+      "total_mt": 0.122,
+      "avg_usd_per_mt": 13254.1,
+      "record_count": 1,
+      "total_fob_usd": 1617.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "7x100",
+      "certification": "unknown",
+      "total_mt": 0.105,
+      "avg_usd_per_mt": 4957.14,
       "record_count": 2,
-      "total_fob_usd": 594.0
-    },
-    {
-      "fruit_name": "cherimoya",
-      "format_type": "pulp",
-      "size_mm": "5x2",
-      "certification": "unknown",
-      "total_mt": 0.1,
-      "avg_usd_per_mt": 4250.0,
-      "record_count": 1,
-      "total_fob_usd": 425.0
-    },
-    {
-      "fruit_name": "soursop",
-      "format_type": "pulp",
-      "size_mm": "5x2",
-      "certification": "unknown",
-      "total_mt": 0.1,
-      "avg_usd_per_mt": 4000.0,
-      "record_count": 1,
-      "total_fob_usd": 400.0
+      "total_fob_usd": 520.5
     },
     {
       "fruit_name": "mix",
@@ -3787,14 +4803,14 @@
       "total_fob_usd": 742.4
     },
     {
-      "fruit_name": "passion_fruit",
+      "fruit_name": "peach",
       "format_type": "chunks",
-      "size_mm": "12x1",
+      "size_mm": "12x820",
       "certification": "unknown",
       "total_mt": 0.096,
-      "avg_usd_per_mt": 1984.9,
+      "avg_usd_per_mt": 9770.83,
       "record_count": 1,
-      "total_fob_usd": 190.55
+      "total_fob_usd": 938.0
     },
     {
       "fruit_name": "banana",
@@ -3807,26 +4823,6 @@
       "total_fob_usd": 864.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "12x290",
-      "certification": "unknown",
-      "total_mt": 0.086,
-      "avg_usd_per_mt": 4069.77,
-      "record_count": 1,
-      "total_fob_usd": 350.0
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "6x950",
-      "certification": "unknown",
-      "total_mt": 0.083,
-      "avg_usd_per_mt": 4060.24,
-      "record_count": 1,
-      "total_fob_usd": 337.0
-    },
-    {
       "fruit_name": "avocado",
       "format_type": "broken_pieces",
       "size_mm": "5x2",
@@ -3837,34 +4833,44 @@
       "total_fob_usd": 96.0
     },
     {
-      "fruit_name": "orange",
+      "fruit_name": "mix",
       "format_type": "chunks",
-      "size_mm": "12x1",
+      "size_mm": "6x350",
       "certification": "unknown",
       "total_mt": 0.075,
-      "avg_usd_per_mt": 2842.67,
-      "record_count": 1,
-      "total_fob_usd": 213.2
+      "avg_usd_per_mt": 4397.26,
+      "record_count": 2,
+      "total_fob_usd": 606.5
     },
     {
-      "fruit_name": "peach",
-      "format_type": "chunks",
-      "size_mm": "12x1",
+      "fruit_name": "lucuma",
+      "format_type": "pulp",
+      "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 0.075,
-      "avg_usd_per_mt": 2842.67,
+      "total_mt": 0.06,
+      "avg_usd_per_mt": 4950.0,
       "record_count": 1,
-      "total_fob_usd": 213.2
+      "total_fob_usd": 297.0
+    },
+    {
+      "fruit_name": "unknown",
+      "format_type": "chunks",
+      "size_mm": "10x1",
+      "certification": "unknown",
+      "total_mt": 0.05,
+      "avg_usd_per_mt": 2650.0,
+      "record_count": 1,
+      "total_fob_usd": 132.5
     },
     {
       "fruit_name": "unknown",
       "format_type": "chunks",
       "size_mm": "1x20",
       "certification": "unknown",
-      "total_mt": 0.063,
-      "avg_usd_per_mt": 2747.55,
-      "record_count": 2,
-      "total_fob_usd": 173.0
+      "total_mt": 0.045,
+      "avg_usd_per_mt": 606.14,
+      "record_count": 3,
+      "total_fob_usd": 21.68
     },
     {
       "fruit_name": "unknown",
@@ -3898,6 +4904,16 @@
     },
     {
       "fruit_name": "mango",
+      "format_type": "pulp",
+      "size_mm": "1x20",
+      "certification": "unknown",
+      "total_mt": 0.029,
+      "avg_usd_per_mt": 920.95,
+      "record_count": 3,
+      "total_fob_usd": 18.58
+    },
+    {
+      "fruit_name": "mango",
       "format_type": "broken_pieces",
       "size_mm": "1x30",
       "certification": "unknown",
@@ -3907,24 +4923,14 @@
       "total_fob_usd": 50.0
     },
     {
-      "fruit_name": "lucuma",
-      "format_type": "pulp",
-      "size_mm": "20x340",
-      "certification": "unknown",
-      "total_mt": 0.027,
-      "avg_usd_per_mt": 4494.81,
-      "record_count": 1,
-      "total_fob_usd": 121.36
-    },
-    {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "78x200",
+      "size_mm": "15x100",
       "certification": "unknown",
-      "total_mt": 0.022,
-      "avg_usd_per_mt": 3900.0,
+      "total_mt": 0.027,
+      "avg_usd_per_mt": 18300.0,
       "record_count": 1,
-      "total_fob_usd": 85.8
+      "total_fob_usd": 494.1
     },
     {
       "fruit_name": "unknown",
@@ -3949,62 +4955,42 @@
     {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "12x820",
-      "certification": "unknown",
-      "total_mt": 0.018,
-      "avg_usd_per_mt": 4585.56,
-      "record_count": 1,
-      "total_fob_usd": 82.54
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "halves",
-      "size_mm": "12x820",
-      "certification": "unknown",
-      "total_mt": 0.018,
-      "avg_usd_per_mt": 3664.44,
-      "record_count": 1,
-      "total_fob_usd": 65.96
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "59x200",
-      "certification": "unknown",
-      "total_mt": 0.016,
-      "avg_usd_per_mt": 3871.88,
-      "record_count": 1,
-      "total_fob_usd": 61.95
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "12x300",
+      "size_mm": "6x12",
       "certification": "unknown",
       "total_mt": 0.014,
-      "avg_usd_per_mt": 4080.0,
+      "avg_usd_per_mt": 6188.57,
       "record_count": 1,
-      "total_fob_usd": 57.12
+      "total_fob_usd": 86.64
     },
     {
-      "fruit_name": "acai",
+      "fruit_name": "banana",
       "format_type": "chunks",
-      "size_mm": "15x15",
+      "size_mm": "1x10",
       "certification": "unknown",
       "total_mt": 0.01,
-      "avg_usd_per_mt": 150.0,
+      "avg_usd_per_mt": 100.0,
       "record_count": 1,
-      "total_fob_usd": 1.5
+      "total_fob_usd": 1.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "halves",
-      "size_mm": "10x01",
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "1x22",
       "certification": "unknown",
       "total_mt": 0.01,
-      "avg_usd_per_mt": 1000000.0,
+      "avg_usd_per_mt": 3100.0,
       "record_count": 1,
-      "total_fob_usd": 10000.0
+      "total_fob_usd": 31.0
+    },
+    {
+      "fruit_name": "banana",
+      "format_type": "chunks",
+      "size_mm": "50x100",
+      "certification": "unknown",
+      "total_mt": 0.01,
+      "avg_usd_per_mt": 200.0,
+      "record_count": 2,
+      "total_fob_usd": 2.0
     },
     {
       "fruit_name": "grape",
@@ -4017,44 +5003,64 @@
       "total_fob_usd": 9.5
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "halves",
-      "size_mm": "09x820",
+      "fruit_name": "strawberry",
+      "format_type": "slices",
+      "size_mm": "10x1",
       "certification": "unknown",
-      "total_mt": 0.009,
-      "avg_usd_per_mt": 44.44,
+      "total_mt": 0.01,
+      "avg_usd_per_mt": 1800.0,
       "record_count": 1,
-      "total_fob_usd": 0.4
+      "total_fob_usd": 18.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "slices",
-      "size_mm": "18x567",
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "10x10",
       "certification": "unknown",
-      "total_mt": 0.009,
-      "avg_usd_per_mt": 44.44,
+      "total_mt": 0.01,
+      "avg_usd_per_mt": 9.0,
       "record_count": 1,
-      "total_fob_usd": 0.4
+      "total_fob_usd": 0.09
     },
     {
       "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "50x100",
+      "size_mm": "4x2",
       "certification": "unknown",
       "total_mt": 0.008,
-      "avg_usd_per_mt": 3000.0,
+      "avg_usd_per_mt": 3848.75,
       "record_count": 1,
-      "total_fob_usd": 24.0
+      "total_fob_usd": 30.79
     },
     {
-      "fruit_name": "avocado",
+      "fruit_name": "unknown",
       "format_type": "chunks",
-      "size_mm": "20x20",
-      "certification": "conventional",
+      "size_mm": "6x280",
+      "certification": "unknown",
+      "total_mt": 0.008,
+      "avg_usd_per_mt": 611.11,
+      "record_count": 3,
+      "total_fob_usd": 5.0
+    },
+    {
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "3x1",
+      "certification": "unknown",
+      "total_mt": 0.007,
+      "avg_usd_per_mt": 216.11,
+      "record_count": 3,
+      "total_fob_usd": 1.55
+    },
+    {
+      "fruit_name": "mango",
+      "format_type": "chunks",
+      "size_mm": "1x20",
+      "certification": "unknown",
       "total_mt": 0.006,
-      "avg_usd_per_mt": 166.67,
-      "record_count": 2,
-      "total_fob_usd": 1.0
+      "avg_usd_per_mt": 1031.67,
+      "record_count": 1,
+      "total_fob_usd": 6.19
     },
     {
       "fruit_name": "avocado",
@@ -4067,24 +5073,34 @@
       "total_fob_usd": 0.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "pulp",
-      "size_mm": "15x15",
-      "certification": "organic",
-      "total_mt": 0.004,
-      "avg_usd_per_mt": 0.0,
+      "fruit_name": "banana",
+      "format_type": "slices",
+      "size_mm": "50x100",
+      "certification": "unknown",
+      "total_mt": 0.005,
+      "avg_usd_per_mt": 200.0,
       "record_count": 1,
-      "total_fob_usd": 0.0
+      "total_fob_usd": 1.0
     },
     {
-      "fruit_name": "avocado",
-      "format_type": "puree",
-      "size_mm": "15x15",
+      "fruit_name": "strawberry",
+      "format_type": "chunks",
+      "size_mm": "10x500",
+      "certification": "unknown",
+      "total_mt": 0.005,
+      "avg_usd_per_mt": 2.0,
+      "record_count": 1,
+      "total_fob_usd": 0.01
+    },
+    {
+      "fruit_name": "mix",
+      "format_type": "chunks",
+      "size_mm": "6x300",
       "certification": "unknown",
       "total_mt": 0.004,
-      "avg_usd_per_mt": 0.0,
+      "avg_usd_per_mt": 500.0,
       "record_count": 1,
-      "total_fob_usd": 0.0
+      "total_fob_usd": 2.0
     },
     {
       "fruit_name": "passion_fruit",
@@ -4097,14 +5113,14 @@
       "total_fob_usd": 0.4
     },
     {
-      "fruit_name": "unknown",
+      "fruit_name": "strawberry",
       "format_type": "chunks",
-      "size_mm": "6x6",
+      "size_mm": "2x1",
       "certification": "unknown",
-      "total_mt": 0.003,
-      "avg_usd_per_mt": 166.67,
-      "record_count": 1,
-      "total_fob_usd": 0.5
+      "total_mt": 0.004,
+      "avg_usd_per_mt": 190.0,
+      "record_count": 2,
+      "total_fob_usd": 0.76
     },
     {
       "fruit_name": "avocado",
@@ -4117,39 +5133,29 @@
       "total_fob_usd": 0.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "08x300",
+      "fruit_name": "avocado",
+      "format_type": "iqf",
+      "size_mm": "15x15",
       "certification": "unknown",
       "total_mt": 0.002,
-      "avg_usd_per_mt": 4000.0,
-      "record_count": 1,
-      "total_fob_usd": 8.0
+      "avg_usd_per_mt": 200.0,
+      "record_count": 2,
+      "total_fob_usd": 0.4
     },
     {
-      "fruit_name": "acai",
+      "fruit_name": "pitaya",
       "format_type": "pulp",
-      "size_mm": "15x15",
+      "size_mm": "4x1",
       "certification": "unknown",
-      "total_mt": 0.001,
-      "avg_usd_per_mt": 4280.0,
-      "record_count": 1,
-      "total_fob_usd": 4.28
-    },
-    {
-      "fruit_name": "mango",
-      "format_type": "cubes",
-      "size_mm": "15x15",
-      "certification": "unknown",
-      "total_mt": 0.001,
-      "avg_usd_per_mt": 1000.0,
+      "total_mt": 0.002,
+      "avg_usd_per_mt": 500.0,
       "record_count": 1,
       "total_fob_usd": 1.0
     },
     {
       "fruit_name": "mango",
       "format_type": "cubes",
-      "size_mm": "1x1",
+      "size_mm": "15x15",
       "certification": "unknown",
       "total_mt": 0.001,
       "avg_usd_per_mt": 1000.0,
@@ -4167,38 +5173,28 @@
       "total_fob_usd": 1.0
     },
     {
-      "fruit_name": "unknown",
-      "format_type": "strips",
-      "size_mm": "12x50",
+      "fruit_name": "strawberry",
+      "format_type": "whole",
+      "size_mm": "2x1",
       "certification": "unknown",
       "total_mt": 0.001,
-      "avg_usd_per_mt": 6870.0,
+      "avg_usd_per_mt": 280.0,
       "record_count": 1,
-      "total_fob_usd": 6.87
-    },
-    {
-      "fruit_name": "unknown",
-      "format_type": "chunks",
-      "size_mm": "10x130",
-      "certification": "unknown",
-      "total_mt": 0.0,
-      "avg_usd_per_mt": 0.0,
-      "record_count": 1,
-      "total_fob_usd": 0.34
+      "total_fob_usd": 0.28
     }
   ],
-  "unique_exporters": 338,
-  "unique_destination_countries": 79,
+  "unique_exporters": 465,
+  "unique_destination_countries": 94,
   "top_destinations": {
-    "ESTADOS UNIDOS": 175968.929,
-    "PA\u00cdSES BAJOS": 48117.641,
-    "CHILE": 25833.582,
-    "B\u00c9LGICA": 23059.945,
-    "CANAD\u00c1": 20988.423,
-    "REINO UNIDO": 14016.515,
-    "FRANCIA": 14005.714,
-    "COREA DEL SUR": 11852.766,
-    "JAP\u00d3N": 10414.119,
-    "ESPA\u00d1A": 9961.366
+    "ESTADOS UNIDOS": 222896.363,
+    "PA\u00cdSES BAJOS": 58630.663,
+    "CHILE": 28047.043,
+    "CANAD\u00c1": 25502.177,
+    "ESPA\u00d1A": 23541.079,
+    "B\u00c9LGICA": 19784.748,
+    "FRANCIA": 17242.819,
+    "REINO UNIDO": 13841.835,
+    "JAP\u00d3N": 13208.304,
+    "ALEMANIA": 11723.449
   }
 }

@@ -1,8 +1,9 @@
 """
-Query tools for Peru Frozen Fruit Export MCP Server.
+Query tools for Frozen Fruit Export MCP Server.
 Basic querying and filtering functionality.
+Supports: Peru, Ecuador
 """
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 from mcp_helpers import (
     get_db_connection,
     fuzzy_match_exporter,
@@ -11,12 +12,13 @@ from mcp_helpers import (
 from translations import normalize_country_name
 import fastmcp
 
-mcp = fastmcp.FastMCP("Peru Frozen Fruit Exports - Query Tools")
+mcp = fastmcp.FastMCP("Frozen Fruit Exports - Query Tools")
 
 
 @mcp.tool()
 def query_by_exporter(
     exporter_name: str,
+    source_country: Optional[str] = None,
     destination_region: Optional[str] = None,
     destination_country: Optional[str] = None,
     fruit: Optional[str] = None,
@@ -27,6 +29,7 @@ def query_by_exporter(
 
     Args:
         exporter_name: Company name (supports partial/fuzzy matching)
+        source_country: Filter by source country ('peru' or 'ecuador')
         destination_region: Filter by 'Europe' or 'Rest of World'
         destination_country: Specific destination country
         fruit: Filter by fruit type
@@ -36,7 +39,7 @@ def query_by_exporter(
         Export records with specs and prices
     """
     # Find matching exporters
-    matching_exporters = fuzzy_match_exporter(exporter_name)
+    matching_exporters = fuzzy_match_exporter(exporter_name, source_country=source_country)
 
     if not matching_exporters:
         return {
@@ -50,6 +53,7 @@ def query_by_exporter(
     # Build query
     query = """
         SELECT
+            source_country,
             Exporter,
             fruit_name,
             variety,
@@ -69,6 +73,10 @@ def query_by_exporter(
     """.format(','.join('?' * len(matching_exporters)))
 
     params = list(matching_exporters)
+
+    if source_country:
+        query += " AND source_country = ?"
+        params.append(source_country.lower())
 
     if destination_region:
         query += " AND region = ?"
@@ -93,21 +101,22 @@ def query_by_exporter(
 
     for row in rows:
         results.append({
-            "exporter": row[0],
-            "fruit": row[1],
-            "variety": row[2],
-            "format": row[3],
-            "size": row[4],
-            "certification": row[5],
-            "destination": row[6],
-            "region": row[7],
-            "date": row[8],
-            "mt": round(row[9], 2),
-            "usd_per_mt": round(row[10], 2),
-            "total_fob_usd": round(row[11], 2)
+            "source_country": row[0],
+            "exporter": row[1],
+            "fruit": row[2],
+            "variety": row[3],
+            "format": row[4],
+            "size": row[5],
+            "certification": row[6],
+            "destination": row[7],
+            "region": row[8],
+            "date": row[9],
+            "mt": round(row[10], 2),
+            "usd_per_mt": round(row[11], 2),
+            "total_fob_usd": round(row[12], 2)
         })
-        total_mt += row[9]
-        total_fob += row[11]
+        total_mt += row[10]
+        total_fob += row[12]
 
     conn.close()
 
@@ -115,6 +124,7 @@ def query_by_exporter(
         "query": f"Exports by {exporter_name}",
         "matched_exporters": matching_exporters,
         "filters_applied": {
+            "source_country": source_country,
             "destination_region": destination_region,
             "destination_country": destination_country,
             "fruit": fruit
@@ -130,6 +140,7 @@ def query_by_exporter(
 @mcp.tool()
 def query_by_destination(
     country: str,
+    source_country: Optional[str] = None,
     fruit: Optional[str] = None,
     certification: Optional[str] = None,
     limit: int = 100
@@ -141,6 +152,7 @@ def query_by_destination(
 
     Args:
         country: Destination country name in English (e.g., "Poland", "Germany", "United States")
+        source_country: Filter by source country ('peru' or 'ecuador')
         fruit: Filter by fruit type
         certification: Filter by 'organic', 'conventional', or 'unknown'
         limit: Maximum results to return (default 100)
@@ -153,6 +165,7 @@ def query_by_destination(
 
     query = """
         SELECT
+            source_country,
             fruit_name,
             format_type,
             size_mm,
@@ -171,6 +184,10 @@ def query_by_destination(
 
     # Support both English and Spanish input
     params = [f"%{country}%"]
+
+    if source_country:
+        query += " AND source_country = ?"
+        params.append(source_country.lower())
 
     if fruit:
         query += " AND fruit_name LIKE ?"
@@ -191,25 +208,27 @@ def query_by_destination(
 
     for row in rows:
         results.append({
-            "fruit": row[0],
-            "format": row[1],
-            "size": row[2],
-            "certification": row[3],
-            "exporter": row[4],
-            "date": row[5],
-            "mt": round(row[6], 2),
-            "usd_per_mt": round(row[7], 2),
-            "total_fob_usd": round(row[8], 2),
-            "destination": row[9]  # English country name
+            "source_country": row[0],
+            "fruit": row[1],
+            "format": row[2],
+            "size": row[3],
+            "certification": row[4],
+            "exporter": row[5],
+            "date": row[6],
+            "mt": round(row[7], 2),
+            "usd_per_mt": round(row[8], 2),
+            "total_fob_usd": round(row[9], 2),
+            "destination": row[10]  # English country name
         })
-        total_mt += row[6]
-        total_fob += row[8]
+        total_mt += row[7]
+        total_fob += row[9]
 
     conn.close()
 
     return {
         "query": f"Exports to {country}",
         "filters_applied": {
+            "source_country": source_country,
             "fruit": fruit,
             "certification": certification
         },
@@ -224,6 +243,7 @@ def query_by_destination(
 @mcp.tool()
 def query_by_product(
     fruit: str,
+    source_country: Optional[str] = None,
     format_type: Optional[str] = None,
     size: Optional[str] = None,
     certification: Optional[str] = None,
@@ -234,6 +254,7 @@ def query_by_product(
 
     Args:
         fruit: Fruit name (required)
+        source_country: Filter by source country ('peru' or 'ecuador')
         format_type: Format like 'chunks', 'slices', 'puree', etc.
         size: Size specification like '20x20', '25x25'
         certification: 'organic', 'conventional', or 'unknown'
@@ -247,6 +268,7 @@ def query_by_product(
 
     query = """
         SELECT
+            source_country,
             Exporter,
             [Destination Country],
             region,
@@ -266,6 +288,10 @@ def query_by_product(
     """
 
     params = [f"%{fruit}%"]
+
+    if source_country:
+        query += " AND source_country = ?"
+        params.append(source_country.lower())
 
     if format_type:
         query += " AND format_type LIKE ?"
@@ -290,27 +316,29 @@ def query_by_product(
 
     for row in rows:
         results.append({
-            "exporter": row[0],
-            "destination": row[1],
-            "region": row[2],
-            "fruit": row[3],
-            "variety": row[4],
-            "format": row[5],
-            "size": row[6],
-            "certification": row[7],
-            "date": row[8],
-            "mt": round(row[9], 2),
-            "usd_per_mt": round(row[10], 2),
-            "total_fob_usd": round(row[11], 2)
+            "source_country": row[0],
+            "exporter": row[1],
+            "destination": row[2],
+            "region": row[3],
+            "fruit": row[4],
+            "variety": row[5],
+            "format": row[6],
+            "size": row[7],
+            "certification": row[8],
+            "date": row[9],
+            "mt": round(row[10], 2),
+            "usd_per_mt": round(row[11], 2),
+            "total_fob_usd": round(row[12], 2)
         })
-        total_mt += row[9]
-        total_fob += row[11]
+        total_mt += row[10]
+        total_fob += row[12]
 
     conn.close()
 
     return {
         "query": f"Exports of {fruit}",
         "filters_applied": {
+            "source_country": source_country,
             "format_type": format_type,
             "size": size,
             "certification": certification
@@ -383,6 +411,7 @@ def search_exporters(search_term: str, limit: int = 20) -> Dict[str, Any]:
 def query_with_date_range(
     start_date: Optional[str] = None,
     end_date: Optional[str] = None,
+    source_country: Optional[str] = None,
     exporter: Optional[str] = None,
     fruit: Optional[str] = None,
     destination: Optional[str] = None,
@@ -399,6 +428,7 @@ def query_with_date_range(
     Args:
         start_date: Start date (ISO format or 'last_30_days', 'ytd', 'q1_2024', etc.)
         end_date: End date (ISO format or relative date)
+        source_country: Filter by source country ('peru' or 'ecuador')
         exporter: Filter by exporter name (fuzzy match supported)
         fruit: Filter by fruit type
         destination: Filter by destination country (English or Spanish)
@@ -431,6 +461,11 @@ def query_with_date_range(
         if parsed_end:
             where_clauses.append("Date <= ?")
             params.append(parsed_end.strftime('%Y-%m-%d'))
+
+    # Source country
+    if source_country:
+        where_clauses.append("source_country = ?")
+        params.append(source_country.lower())
 
     # Exporter (fuzzy match)
     if exporter:
@@ -482,6 +517,7 @@ def query_with_date_range(
 
     query = f"""
         SELECT
+            source_country,
             Date,
             Exporter,
             destination_country_en,
@@ -504,16 +540,17 @@ def query_with_date_range(
     records = []
     for row in cursor.fetchall():
         records.append({
-            "date": row[0],
-            "exporter": row[1],
-            "destination": row[2],
-            "fruit": row[3],
-            "format": row[4],
-            "size": row[5],
-            "certification": row[6],
-            "volume_mt": round(row[7], 2),
-            "usd_per_mt": round(row[8], 2) if row[8] else None,
-            "total_fob_usd": round(row[9], 2) if row[9] else None
+            "source_country": row[0],
+            "date": row[1],
+            "exporter": row[2],
+            "destination": row[3],
+            "fruit": row[4],
+            "format": row[5],
+            "size": row[6],
+            "certification": row[7],
+            "volume_mt": round(row[8], 2),
+            "usd_per_mt": round(row[9], 2) if row[9] else None,
+            "total_fob_usd": round(row[10], 2) if row[10] else None
         })
 
     # Summary statistics
@@ -538,6 +575,7 @@ def query_with_date_range(
         "filters": {
             "start_date": start_date,
             "end_date": end_date,
+            "source_country": source_country,
             "exporter": exporter,
             "fruit": fruit,
             "destination": destination,
@@ -561,13 +599,15 @@ def query_with_date_range(
 
 @mcp.tool()
 def get_available_values(
-    field: str
+    field: str,
+    source_country: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Get unique values for a specific field.
 
     Args:
-        field: Field name - 'fruits', 'formats', 'sizes', 'exporters', 'destinations', 'certifications'
+        field: Field name - 'fruits', 'formats', 'sizes', 'exporters', 'destinations', 'certifications', 'source_countries'
+        source_country: Filter by source country ('peru' or 'ecuador')
 
     Returns:
         List of unique values with counts
@@ -581,7 +621,8 @@ def get_available_values(
         'sizes': ('size_mm', 'Size'),
         'exporters': ('Exporter', 'Exporter'),
         'destinations': ('[Destination Country]', 'Country'),
-        'certifications': ('certification', 'Certification')
+        'certifications': ('certification', 'Certification'),
+        'source_countries': ('source_country', 'Source Country')
     }
 
     if field not in field_mapping:
@@ -592,18 +633,29 @@ def get_available_values(
 
     db_field, display_name = field_mapping[field]
 
+    where_clauses = [
+        f"{db_field} IS NOT NULL",
+        f"{db_field} != ''",
+        "net_weight_mt > 0"
+    ]
+    params = []
+
+    if source_country:
+        where_clauses.append("source_country = ?")
+        params.append(source_country.lower())
+
+    where_sql = " AND ".join(where_clauses)
+
     cursor.execute(f"""
         SELECT
             {db_field} as value,
             COUNT(*) as count,
             SUM(net_weight_mt) as total_mt
         FROM exports
-        WHERE {db_field} IS NOT NULL
-          AND {db_field} != ''
-          AND net_weight_mt > 0
+        WHERE {where_sql}
         GROUP BY {db_field}
         ORDER BY total_mt DESC
-    """)
+    """, params)
 
     results = []
     for row in cursor.fetchall():
@@ -617,6 +669,93 @@ def get_available_values(
 
     return {
         "field": field,
+        "source_country_filter": source_country,
         "unique_count": len(results),
         "values": results
+    }
+
+
+@mcp.tool()
+def compare_countries(
+    fruit: Optional[str] = None,
+    format_type: Optional[str] = None,
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None
+) -> Dict[str, Any]:
+    """
+    Compare export statistics between Peru and Ecuador.
+
+    Args:
+        fruit: Filter by fruit type (optional)
+        format_type: Filter by format (optional)
+        start_date: Start date (ISO format or relative)
+        end_date: End date (ISO format or relative)
+
+    Returns:
+        Side-by-side comparison of Peru vs Ecuador exports
+    """
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    where_clauses = ["net_weight_mt > 0"]
+    params = []
+
+    if fruit:
+        where_clauses.append("fruit_name LIKE ?")
+        params.append(f"%{fruit}%")
+
+    if format_type:
+        where_clauses.append("format_type LIKE ?")
+        params.append(f"%{format_type}%")
+
+    if start_date:
+        parsed = parse_relative_date(start_date)
+        if parsed:
+            where_clauses.append("Date >= ?")
+            params.append(parsed.strftime('%Y-%m-%d'))
+
+    if end_date:
+        parsed = parse_relative_date(end_date)
+        if parsed:
+            where_clauses.append("Date <= ?")
+            params.append(parsed.strftime('%Y-%m-%d'))
+
+    where_sql = " AND ".join(where_clauses)
+
+    cursor.execute(f"""
+        SELECT
+            source_country,
+            COUNT(*) as shipment_count,
+            SUM(net_weight_mt) as total_mt,
+            SUM([U$ FOB Tot]) as total_fob,
+            AVG(usd_per_mt_fob) as avg_price,
+            COUNT(DISTINCT Exporter) as unique_exporters,
+            COUNT(DISTINCT [Destination Country]) as unique_destinations
+        FROM exports
+        WHERE {where_sql}
+        GROUP BY source_country
+    """, params)
+
+    results = {}
+    for row in cursor.fetchall():
+        country = row[0] if row[0] else 'unknown'
+        results[country] = {
+            "shipment_count": row[1],
+            "total_mt": round(row[2], 2) if row[2] else 0,
+            "total_fob_usd": round(row[3], 2) if row[3] else 0,
+            "avg_price_usd_per_mt": round(row[4], 2) if row[4] else 0,
+            "unique_exporters": row[5],
+            "unique_destinations": row[6]
+        }
+
+    conn.close()
+
+    return {
+        "filters": {
+            "fruit": fruit,
+            "format_type": format_type,
+            "start_date": start_date,
+            "end_date": end_date
+        },
+        "comparison": results
     }

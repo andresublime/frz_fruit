@@ -1,26 +1,26 @@
 {
-  "unknown_fruits": 7109,
-  "unknown_fruits_pct": 23.12,
-  "missing_prices": 275,
-  "missing_prices_pct": 0.89,
-  "zero_volumes": 171,
-  "zero_volumes_pct": 0.56,
-  "outlier_prices_high": 565,
-  "outlier_prices_high_pct": 1.84,
-  "outlier_prices_low": 1357,
-  "outlier_prices_low_pct": 4.41,
-  "unknown_formats": 14773,
-  "unknown_formats_pct": 48.05,
+  "unknown_fruits": 21602,
+  "unknown_fruits_pct": 46.2,
+  "missing_prices": 599,
+  "missing_prices_pct": 1.28,
+  "zero_volumes": 115,
+  "zero_volumes_pct": 0.25,
+  "outlier_prices_high": 1969,
+  "outlier_prices_high_pct": 4.21,
+  "outlier_prices_low": 2788,
+  "outlier_prices_low_pct": 5.96,
+  "unknown_formats": 26160,
+  "unknown_formats_pct": 55.95,
   "certification_distribution": {
-    "unknown": 28146,
-    "organic": 2284,
-    "conventional": 314
+    "unknown": 42571,
+    "organic": 4018,
+    "conventional": 170
   },
   "date_range": {
-    "min": "2024-01-01",
-    "max": "2025-11-28",
-    "span_days": 697
+    "min": "2025-01-01",
+    "max": "2026-01-14",
+    "span_days": 378
   },
-  "total_records": 30744,
+  "total_records": 46759,
   "validation_passed": false
 }

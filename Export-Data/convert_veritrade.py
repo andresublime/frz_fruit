@@ -1,239 +1,358 @@
-"""Convert Veritrade XLSX files to CSV.gz format with product categorization.
+"""Convert Veritrade XLSX files to CSV.gz format with multi-country support.
 
 This script:
-1. Reads Veritrade_Frozen.xlsx and Veritrade_Aseptic.xlsx
-2. Categorizes products based on filename (frozen vs aseptic)
-3. Validates categorization against HTS codes
+1. Reads country-specific Veritrade XLSX files (Peru and Ecuador)
+2. Normalizes column names to a unified schema
+3. Adds source_country field for tracking
 4. Merges datasets into a single CSV.gz file
 
+Supports:
+- Peru: 33 columns
+- Ecuador: 51 columns
+
 Product Categorization Strategy:
-- Primary: Filename determines product type
-  * Veritrade_Frozen.xlsx → is_iqf=1, is_aseptic=0
-  * Veritrade_Aseptic.xlsx → is_aseptic=1, is_iqf=0
-- Validation: HTS codes verify correctness
-  * Frozen: HTS 8119xxxx (Chapter 08: Fruits & Nuts)
-  * Aseptic: HTS 200x/2009x (Chapter 20: Preparations)
+- HTS codes determine product type:
+  * 8119xxxx → is_iqf=1, is_aseptic=0 (Frozen)
+  * 200x/2008/2009 → is_aseptic=1, is_iqf=0 (Aseptic)
 """
 
 import pandas as pd
 from pathlib import Path
-from config_loader import load_config, get_input_path, get_output_path, get_processing_param
+from typing import Dict, List, Optional, Tuple
+from config_loader import load_config, get_input_path, get_processing_param
 
 
-def read_veritrade_xlsx(xlsx_path: str, header_row: int = 5) -> pd.DataFrame:
-    """Read Veritrade XLSX file with proper header detection.
+# Column mapping: Peru -> Canonical names
+PERU_COLUMN_MAP = {
+    'Qty 1': 'Qty',
+    'Unit 1': 'Unit',
+    'Tax ID': 'Tax_ID',
+    'Destination Port': 'Destination_Port',
+    'U$ FOB Unit 1': 'U$ FOB Unit',
+}
+
+# Column mapping: Ecuador -> Canonical names
+ECUADOR_COLUMN_MAP = {
+    'Tax Id': 'Tax_ID',
+    'Unloading Port': 'Destination_Port',
+}
+
+# Core columns that must be present in both datasets (using canonical names after mapping)
+REQUIRED_COLUMNS = [
+    'Date', 'Exporter', 'Net kg', 'U$ FOB Tot',
+    'Commercial Description', 'HTS Code'
+]
+
+
+def detect_country_from_columns(df: pd.DataFrame) -> str:
+    """Detect source country based on column patterns.
+
+    Args:
+        df: DataFrame with Veritrade data
+
+    Returns:
+        'peru' or 'ecuador'
+
+    Raises:
+        ValueError: If country cannot be determined
+    """
+    columns = set(df.columns)
+
+    # Peru-specific columns
+    if 'Qty 1' in columns and 'Tax ID' in columns:
+        return 'peru'
+    # Ecuador-specific columns
+    elif 'Tax Id' in columns and 'Unloading Port' in columns:
+        return 'ecuador'
+    else:
+        raise ValueError(
+            f"Unable to detect country from columns. "
+            f"Sample columns: {list(columns)[:10]}..."
+        )
+
+
+def normalize_columns(df: pd.DataFrame, source_country: str) -> pd.DataFrame:
+    """Normalize column names to canonical schema.
+
+    Args:
+        df: DataFrame with country-specific column names
+        source_country: 'peru' or 'ecuador'
+
+    Returns:
+        DataFrame with normalized column names
+    """
+    df = df.copy()
+
+    if source_country == 'peru':
+        df = df.rename(columns=PERU_COLUMN_MAP)
+    elif source_country == 'ecuador':
+        df = df.rename(columns=ECUADOR_COLUMN_MAP)
+
+    return df
+
+
+def read_veritrade_xlsx(
+    xlsx_path: str,
+    header_row: int = 5,
+    expected_columns: Optional[int] = None
+) -> Tuple[pd.DataFrame, str]:
+    """Read Veritrade XLSX file and detect country.
 
     Args:
         xlsx_path: Path to XLSX file
         header_row: Row index where actual column headers start (default: 5)
+        expected_columns: Expected number of columns (optional validation)
 
     Returns:
-        DataFrame with validated schema
+        Tuple of (DataFrame, detected_country)
 
     Raises:
-        ValueError: If schema validation fails
+        FileNotFoundError: If file doesn't exist
+        ValueError: If country cannot be detected
     """
-    print(f"Reading {Path(xlsx_path).name}...")
+    path = Path(xlsx_path)
+    print(f"Reading {path.name}...")
+
     df = pd.read_excel(xlsx_path, header=header_row)
 
-    # Validate schema
-    expected_cols = 33
-    if len(df.columns) != expected_cols:
-        raise ValueError(
-            f"Expected {expected_cols} columns, got {len(df.columns)}. "
-            f"Columns: {list(df.columns)}"
-        )
+    # Detect country from columns
+    source_country = detect_country_from_columns(df)
+    print(f"  Detected country: {source_country.upper()}")
+    print(f"  Columns: {len(df.columns)}")
+
+    # Optional validation
+    if expected_columns and len(df.columns) != expected_columns:
+        print(f"  WARNING: Expected {expected_columns} columns, got {len(df.columns)}")
 
     print(f"  Loaded {len(df):,} records")
-    return df
+    return df, source_country
 
 
 def validate_dataframe(df: pd.DataFrame, source: str) -> None:
-    """Validate DataFrame schema and data quality.
+    """Validate DataFrame has required columns.
 
     Args:
-        df: DataFrame to validate
+        df: DataFrame to validate (with normalized column names)
         source: Source name for error messages
 
     Raises:
         ValueError: If validation fails
     """
-    required_cols = ['Date', 'Exporter', 'Net kg', 'U$ FOB Tot', 'Commercial Description', 'HTS Code']
+    missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
 
-    for col in required_cols:
-        if col not in df.columns:
-            raise ValueError(f"{source}: Missing required column '{col}'")
+    if missing:
+        raise ValueError(f"{source}: Missing required columns: {missing}")
 
-    print(f"  Schema validation: ✓ PASS")
+    print(f"  Schema validation: PASS")
 
 
-def categorize_and_validate(df: pd.DataFrame, source: str) -> pd.DataFrame:
-    """Categorize products and validate against HTS codes.
+def process_country_data(df: pd.DataFrame, source_country: str) -> pd.DataFrame:
+    """Process and normalize country-specific data.
 
     Args:
-        df: DataFrame with Veritrade export data
-        source: 'frozen' or 'aseptic' (from filename)
+        df: DataFrame with Veritrade data
+        source_country: 'peru' or 'ecuador'
 
     Returns:
-        DataFrame with is_iqf and is_aseptic flags set
+        Normalized DataFrame with source_country field
     """
-    print(f"\nCategorizing {source} products...")
+    print(f"\nProcessing {source_country.upper()} data...")
 
-    # Make a copy to avoid modifying original
-    df = df.copy()
+    # Normalize column names
+    df = normalize_columns(df, source_country)
 
-    # Set flags based on filename
-    if source == 'frozen':
-        df['is_iqf'] = 1
-        df['is_aseptic'] = 0
-        expected_pattern = '8119'
-    else:  # aseptic
-        df['is_iqf'] = 0
-        df['is_aseptic'] = 1
-        expected_pattern = ('200', '2009')
+    # Add source_country field
+    df['source_country'] = source_country
 
-    # Validate against HTS codes
-    df['HTS Code'] = df['HTS Code'].astype(str).str.strip()
+    # Validate required columns
+    validate_dataframe(df, source_country.upper())
 
-    mismatches = []
-    for idx, row in df.iterrows():
-        hts = row['HTS Code']
-
-        # Check if HTS matches expected pattern
-        if source == 'frozen':
-            if not hts.startswith(expected_pattern):
-                mismatches.append(f"Row {idx}: HTS {hts}")
-        else:  # aseptic
-            if not (hts.startswith('200') or hts.startswith('2009')):
-                mismatches.append(f"Row {idx}: HTS {hts}")
-
-    # Report validation results
-    if len(mismatches) == 0:
-        print(f"  ✓ Validation: ALL {len(df):,} records match expected HTS pattern")
-    else:
-        print(f"  ⚠️  Validation: {len(mismatches)} records have unexpected HTS codes")
-        if len(mismatches) <= 10:
-            for mismatch in mismatches:
-                print(f"    - {mismatch}")
-        else:
-            print(f"    - Showing first 10 of {len(mismatches)} mismatches:")
-            for mismatch in mismatches[:10]:
-                print(f"      {mismatch}")
-
-    # Add source tracking
-    df['data_source'] = source
+    print(f"  Records: {len(df):,}")
 
     return df
 
 
-def merge_datasets(frozen_df: pd.DataFrame, aseptic_df: pd.DataFrame) -> pd.DataFrame:
-    """Merge frozen and aseptic datasets after categorization.
-
-    Strategy:
-    1. Categorize and validate each dataset
-    2. Concatenate vertically
-    3. Sort by Date
-    4. Reset index
+def get_common_columns(dfs: List[pd.DataFrame]) -> List[str]:
+    """Get columns common to all DataFrames.
 
     Args:
-        frozen_df: DataFrame with frozen products
-        aseptic_df: DataFrame with aseptic products
+        dfs: List of DataFrames
 
     Returns:
-        Merged DataFrame
+        List of common column names
+    """
+    if not dfs:
+        return []
+
+    common = set(dfs[0].columns)
+    for df in dfs[1:]:
+        common &= set(df.columns)
+
+    return list(common)
+
+
+def merge_country_datasets(*dfs: pd.DataFrame) -> pd.DataFrame:
+    """Merge multiple country datasets with common columns.
+
+    Args:
+        *dfs: Variable number of DataFrames to merge
+
+    Returns:
+        Combined DataFrame with common columns only
     """
     print("\n" + "=" * 60)
-    print("Categorizing and Validating Products")
+    print("Merging Country Datasets")
     print("=" * 60)
 
-    # Categorize with validation
-    frozen_df = categorize_and_validate(frozen_df, 'frozen')
-    aseptic_df = categorize_and_validate(aseptic_df, 'aseptic')
+    if not dfs:
+        raise ValueError("No DataFrames provided to merge")
 
-    # Merge
-    print("\nMerging datasets...")
-    combined_df = pd.concat([frozen_df, aseptic_df], ignore_index=True)
+    # Get common columns
+    common_columns = get_common_columns(list(dfs))
+
+    # Ensure source_country is included
+    if 'source_country' not in common_columns:
+        common_columns.append('source_country')
+
+    print(f"Common columns: {len(common_columns)}")
+
+    # Select only common columns and concatenate
+    normalized_dfs = []
+    for df in dfs:
+        # Only keep columns that exist in this df
+        cols_to_keep = [c for c in common_columns if c in df.columns]
+        normalized_dfs.append(df[cols_to_keep])
+
+    combined = pd.concat(normalized_dfs, ignore_index=True)
 
     # Sort by date (newest first)
-    combined_df = combined_df.sort_values('Date', ascending=False)
-    combined_df = combined_df.reset_index(drop=True)
+    if 'Date' in combined.columns:
+        combined = combined.sort_values('Date', ascending=False)
+        combined = combined.reset_index(drop=True)
 
-    print(f"  Frozen: {len(frozen_df):,} records (is_iqf=1)")
-    print(f"  Aseptic: {len(aseptic_df):,} records (is_aseptic=1)")
-    print(f"  Combined: {len(combined_df):,} records")
+    # Summary by country
+    for country in combined['source_country'].unique():
+        count = len(combined[combined['source_country'] == country])
+        print(f"  {country.upper()}: {count:,} records")
 
-    return combined_df
+    print(f"  Combined: {len(combined):,} records")
+
+    return combined
+
+
+def categorize_by_hts(df: pd.DataFrame) -> pd.DataFrame:
+    """Categorize products by HTS code (frozen vs aseptic).
+
+    Args:
+        df: DataFrame with HTS Code column
+
+    Returns:
+        DataFrame with is_iqf and is_aseptic flags
+    """
+    print("\n" + "=" * 60)
+    print("Categorizing Products by HTS Code")
+    print("=" * 60)
+
+    df = df.copy()
+
+    # Ensure HTS Code is string
+    df['HTS Code'] = df['HTS Code'].astype(str).str.strip()
+
+    # Frozen: HTS 8119xxxx (Chapter 08: Fruits & Nuts)
+    df['is_iqf'] = df['HTS Code'].str.startswith('8119').astype(int)
+
+    # Aseptic: HTS 200x, 2008, 2009 (Chapter 20: Preparations)
+    df['is_aseptic'] = (
+        df['HTS Code'].str.startswith('200') |
+        df['HTS Code'].str.startswith('2008') |
+        df['HTS Code'].str.startswith('2009')
+    ).astype(int)
+
+    # Add data_source tracking
+    df['data_source'] = 'veritrade_combined'
+
+    # Summary
+    frozen_count = df['is_iqf'].sum()
+    aseptic_count = df['is_aseptic'].sum()
+    print(f"  Frozen (is_iqf=1): {frozen_count:,}")
+    print(f"  Aseptic (is_aseptic=1): {aseptic_count:,}")
+
+    return df
 
 
 def main():
-    """Main execution: XLSX → CSV.gz conversion."""
+    """Main execution: Multi-country XLSX to CSV.gz conversion."""
     print("\n" + "=" * 60)
-    print("VERITRADE XLSX TO CSV.GZ CONVERTER")
+    print("VERITRADE MULTI-COUNTRY XLSX TO CSV.GZ CONVERTER")
     print("=" * 60)
 
     # Load config
     config = load_config()
-
-    # Get file paths
-    frozen_xlsx = get_input_path(config, 'frozen_xlsx')
-    aseptic_xlsx = get_input_path(config, 'aseptic_xlsx')
-    # combined_csv is in inputs section (it's input to enrich_data.py)
-    output_csv = get_input_path(config, 'combined_csv')
     header_row = get_processing_param(config, 'xlsx_header_row', 5)
 
-    # Check input files exist
-    if not frozen_xlsx.exists():
-        raise FileNotFoundError(f"Frozen XLSX file not found: {frozen_xlsx}")
-    if not aseptic_xlsx.exists():
-        raise FileNotFoundError(f"Aseptic XLSX file not found: {aseptic_xlsx}")
+    # Define input files
+    base_path = Path(__file__).parent.parent
+    peru_file = base_path / "Veritrade_New_Peru.xlsx"
+    ecuador_file = base_path / "Veritrade_New_Ecuador.xlsx"
 
-    # Read frozen data
-    print("\n" + "=" * 60)
-    print("STEP 1: Loading Veritrade_Frozen.xlsx")
-    print("=" * 60)
-    frozen_df = read_veritrade_xlsx(str(frozen_xlsx), header_row)
-    validate_dataframe(frozen_df, "Veritrade_Frozen")
+    # Output path
+    output_csv = get_input_path(config, 'combined_csv')
 
-    # Read aseptic data
-    print("\n" + "=" * 60)
-    print("STEP 2: Loading Veritrade_Aseptic.xlsx")
-    print("=" * 60)
-    aseptic_df = read_veritrade_xlsx(str(aseptic_xlsx), header_row)
-    validate_dataframe(aseptic_df, "Veritrade_Aseptic")
+    datasets = []
+
+    # Read Peru data
+    if peru_file.exists():
+        print("\n" + "=" * 60)
+        print("STEP 1: Loading Peru Data")
+        print("=" * 60)
+        peru_df, _ = read_veritrade_xlsx(str(peru_file), header_row, expected_columns=33)
+        peru_df = process_country_data(peru_df, 'peru')
+        datasets.append(peru_df)
+    else:
+        print(f"\nWARNING: Peru file not found: {peru_file}")
+
+    # Read Ecuador data
+    if ecuador_file.exists():
+        print("\n" + "=" * 60)
+        print("STEP 2: Loading Ecuador Data")
+        print("=" * 60)
+        ecuador_df, _ = read_veritrade_xlsx(str(ecuador_file), header_row, expected_columns=51)
+        ecuador_df = process_country_data(ecuador_df, 'ecuador')
+        datasets.append(ecuador_df)
+    else:
+        print(f"\nWARNING: Ecuador file not found: {ecuador_file}")
+
+    if not datasets:
+        raise FileNotFoundError("No data files found!")
 
     # Merge datasets
-    print("\n" + "=" * 60)
-    print("STEP 3: Merging Datasets")
-    print("=" * 60)
-    combined_df = merge_datasets(frozen_df, aseptic_df)
+    combined_df = merge_country_datasets(*datasets)
+
+    # Categorize by HTS code
+    combined_df = categorize_by_hts(combined_df)
 
     # Save to CSV.gz
     print("\n" + "=" * 60)
-    print("STEP 4: Saving to CSV.gz")
+    print("STEP 3: Saving to CSV.gz")
     print("=" * 60)
-    print(f"Output: {output_csv}")
 
-    # Create output directory if needed
     output_csv.parent.mkdir(parents=True, exist_ok=True)
-
-    # Save with gzip compression
     combined_df.to_csv(output_csv, compression='gzip', index=False)
 
-    # Report file size
     file_size_mb = output_csv.stat().st_size / (1024 * 1024)
-    print(f"  File size: {file_size_mb:.1f} MB")
+    print(f"Output: {output_csv}")
+    print(f"File size: {file_size_mb:.1f} MB")
 
-    # Summary statistics
+    # Summary
     print("\n" + "=" * 60)
     print("SUMMARY")
     print("=" * 60)
     print(f"Total records: {len(combined_df):,}")
-    print(f"  Frozen (is_iqf=1): {(combined_df['is_iqf'] == 1).sum():,}")
-    print(f"  Aseptic (is_aseptic=1): {(combined_df['is_aseptic'] == 1).sum():,}")
+    for country in combined_df['source_country'].unique():
+        count = len(combined_df[combined_df['source_country'] == country])
+        print(f"  {country.upper()}: {count:,}")
     print(f"\nColumns: {len(combined_df.columns)}")
-    print(f"  Original: 33")
-    print(f"  Added: 3 (is_iqf, is_aseptic, data_source)")
-    print(f"\n✓ Conversion complete!")
+    print(f"\nConversion complete!")
 
 
 if __name__ == "__main__":

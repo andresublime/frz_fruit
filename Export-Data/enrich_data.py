@@ -1,5 +1,6 @@
 """
-Enrich the Peru frozen fruit export dataset with structured product information.
+Enrich the frozen fruit export dataset with structured product information.
+Supports: Peru, Ecuador
 """
 import pandas as pd
 import json
@@ -180,6 +181,9 @@ def enrich_dataset(input_file: str, output_file: str = None) -> pd.DataFrame:
 
         enriched_row['certification'] = product.classification.certification
 
+        # Preserve source_country from input
+        enriched_row['source_country'] = row.get('source_country', 'peru')
+
         # Calculate metrics
         net_kg = row.get('Net kg', 0) or 0
         fob_total = row.get('U$ FOB Tot', 0) or 0
@@ -243,6 +247,11 @@ def generate_summary(df: pd.DataFrame) -> ExportDataSummary:
     # Group by size
     by_size = df.groupby('size_mm')['net_weight_mt'].sum().to_dict()
 
+    # Group by source country
+    by_source_country = {}
+    if 'source_country' in df.columns:
+        by_source_country = df.groupby('source_country')['net_weight_mt'].sum().to_dict()
+
     # Unique counts
     unique_exporters = df['Exporter'].nunique()
     unique_destinations = df['Destination Country'].nunique()
@@ -277,6 +286,7 @@ def generate_summary(df: pd.DataFrame) -> ExportDataSummary:
         total_mt=round(total_mt, 3),
         total_fob_usd=round(total_fob_usd, 2),
         avg_usd_per_mt=round(avg_usd_per_mt, 2),
+        by_source_country=by_source_country,
         by_fruit=by_fruit,
         by_format=by_format,
         by_size=by_size,
@@ -339,6 +349,13 @@ def main():
     print(f"Average Price: ${summary.avg_usd_per_mt:,.2f} USD/MT")
     print(f"Unique Exporters: {summary.unique_exporters}")
     print(f"Unique Destinations: {summary.unique_destination_countries}")
+
+    if summary.by_source_country:
+        print("\n" + "-"*80)
+        print("BY SOURCE COUNTRY")
+        print("-"*80)
+        for country, mt in sorted(summary.by_source_country.items(), key=lambda x: x[1], reverse=True):
+            print(f"{country.upper():<20} {mt:>12,.2f} MT")
 
     print("\n" + "-"*80)
     print("TOP 10 PRODUCTS (by MT)")
