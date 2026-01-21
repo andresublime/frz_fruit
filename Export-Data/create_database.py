@@ -238,6 +238,16 @@ def create_database(csv_file: str, db_file: str = "exports.db"):
         GROUP BY source_country, fruit_name, format_type, year, month
     """)
 
+    # Clean exports view for CLI/analysis (quality checks only, no date filter)
+    conn.execute("DROP VIEW IF EXISTS v_clean_exports")
+    conn.execute("""
+        CREATE VIEW v_clean_exports AS
+        SELECT *
+        FROM exports
+        WHERE net_weight_mt > 0
+          AND usd_per_mt_fob > 0
+    """)
+
     conn.commit()
 
     # Print statistics

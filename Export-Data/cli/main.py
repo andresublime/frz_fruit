@@ -56,7 +56,7 @@ def cmd_summary(args):
         return 0
 
     # Display
-    title = f"{dimension.title()} Pricing Summary (YTD Oct 2024 - Oct 2025)"
+    title = f"{dimension.title()} Pricing Summary"
     if args.source_country:
         title += f" - {args.source_country.title()}"
     if args.region:

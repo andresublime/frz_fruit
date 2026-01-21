@@ -1,5 +1,6 @@
 """
-Database Utilities for Peru Frozen Fruit Export Analysis
+Database Utilities for Frozen Fruit Export Analysis
+Supports: Peru, Ecuador
 
 Provides centralized database connection and query utilities.
 All analysis modules should use these functions for consistency.
@@ -13,8 +14,8 @@ from datetime import datetime, timedelta
 from contextlib import contextmanager
 
 
-# Default database path
-DEFAULT_DB_PATH = Path(__file__).parent.parent / 'exports.db'
+# Default database path - use data/exports.db as per config
+DEFAULT_DB_PATH = Path(__file__).parent.parent / 'data' / 'exports.db'
 
 
 @contextmanager

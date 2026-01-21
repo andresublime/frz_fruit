@@ -124,7 +124,7 @@ def run_summary():
         return
 
     # Display
-    title = f"{dimension.title()} Pricing Summary (YTD Oct 2024 - Oct 2025)"
+    title = f"{dimension.title()} Pricing Summary"
     if source_country:
         title += f" - {source_country.title()}"
     if region:
