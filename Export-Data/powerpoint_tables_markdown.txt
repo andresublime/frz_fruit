@@ -1,0 +1,519 @@
+Available columns: ['HTS Code Description', 'Qty', 'Destination_Port', 'Unit 2', 'U$ FOB Tot', 'Customs Agent', 'Importer', 'source_country', 'Tax_ID', 'Unit', 'Date', 'HTS Code', 'Qty 2', 'Via', 'Gross kg', 'Destination Country', 'U$ FOB Unit', 'Net kg', 'Exporter', 'Commercial Description', 'U$ FOB Unit 2', 'is_iqf', 'is_aseptic', 'data_source', 'fruit_name', 'variety', 'format_type', 'size_mm', 'is_organic', 'is_conventional', 'certification', 'net_weight_mt', 'usd_per_mt_fob', 'destination_country_en', 'region', 'canonical_exporter', 'canonical_importer']
+
+Distinct source_country values: ['ecuador', 'peru']
+
+Total records: 46759
+Countries: ['peru' 'ecuador']
+Format types: ['unknown' 'chunks' 'pulp' 'puree' 'juice' 'iqf' 'strips' 'slices' 'whole'
+ 'concentrate' 'cubes' 'halves' 'broken_pieces']
+Fruits: ['Acai', 'Avocado', 'Banana', 'Blueberry', 'Camu_Camu', 'Cherimoya', 'Cherry', 'Golden_Berry', 'Grape', 'Lucuma', 'Mango', 'Mix', 'Orange', 'Papaya', 'Passion_Fruit', 'Peach', 'Pineapple', 'Pitaya', 'Pomegranate', 'Raspberry', 'Soursop', 'Strawberry', 'Unknown']
+
+# TABLE 1: FRUIT + FORMAT BY TOTAL METRIC TONS
+
+
+## PERU - FROZEN
+
+| Fruit + Format          | Total Metric Tons   | Avg FOB USD/MT   |
+|:------------------------|:--------------------|:-----------------|
+| Mango - Chunks          | 37,654.73           | 1,916.88         |
+| Strawberry - Slices     | 6,648.89            | 1,803.66         |
+| Strawberry - Chunks     | 6,096.85            | 1,987.19         |
+| Strawberry - Whole      | 6,057.37            | 1,839.63         |
+| Avocado - Cubes         | 4,503.42            | 3,097.93         |
+| Avocado - Chunks        | 3,477.70            | 2,878.38         |
+| Mango - Cubes           | 2,425.95            | 1,946.83         |
+| Pineapple - Chunks      | 2,159.97            | 2,485.88         |
+| Blueberry - Chunks      | 1,978.18            | 2,532.05         |
+| Strawberry - Halves     | 1,939.10            | 2,419.05         |
+| Blueberry - Iqf         | 1,541.93            | 2,487.90         |
+| Avocado - Slices        | 1,211.91            | 3,112.61         |
+| Avocado - Halves        | 1,173.80            | 3,014.76         |
+| Mango - Iqf             | 997.50              | 1,791.29         |
+| Blueberry - Whole       | 708.89              | 2,333.75         |
+| Strawberry - Cubes      | 627.67              | 2,023.93         |
+| Avocado - Iqf           | 540.20              | 2,929.53         |
+| Pomegranate - Cubes     | 468.95              | 3,942.93         |
+| Passion_Fruit - Chunks  | 337.50              | 3,812.61         |
+| Mango - Broken_Pieces   | 334.58              | 1,679.17         |
+| Mango - Halves          | 318.58              | 2,089.16         |
+| Banana - Chunks         | 262.37              | 5,102.70         |
+| Grape - Chunks          | 192.03              | 1,753.21         |
+| Unknown - Chunks        | 174.87              | 2,609.52         |
+| Grape - Whole           | 167.71              | 1,904.25         |
+| Unknown - Whole         | 160.18              | 3,267.51         |
+| Others - Mixed          | 142.41              | 3,269.71         |
+| Avocado - Broken_Pieces | 135.32              | 2,342.96         |
+| Pineapple - Iqf         | 133.75              | 3,084.82         |
+| Passion_Fruit - Cubes   | 130.81              | 4,471.41         |
+| Mix - Iqf               | 120.00              | 2,674.00         |
+| Pineapple - Cubes       | 106.78              | 2,535.98         |
+| Papaya - Halves         | 103.66              | 2,857.43         |
+| Papaya - Cubes          | 98.09               | 3,481.20         |
+| Banana - Whole          | 59.32               | 8,558.68         |
+| Unknown - Cubes         | 48.61               | 3,534.03         |
+| Mango - Slices          | 48.00               | 2,493.25         |
+| Strawberry - Iqf        | 41.97               | 1,840.55         |
+| Banana - Slices         | 26.90               | 2,479.40         |
+| Unknown - Iqf           | 25.02               | 2,670.19         |
+
+
+## PERU - ASEPTIC
+
+| Fruit + Format              | Total Metric Tons   | Avg FOB USD/MT   |
+|:----------------------------|:--------------------|:-----------------|
+| Unknown - Juice             | 29,345.73           | 1,362.75         |
+| Orange - Juice              | 17,744.76           | 1,765.77         |
+| Mango - Puree               | 10,219.22           | 1,083.75         |
+| Passion_Fruit - Juice       | 9,533.29            | 3,113.34         |
+| Avocado - Pulp              | 4,933.90            | 2,689.62         |
+| Mango - Pulp                | 3,939.28            | 1,276.61         |
+| Unknown - Concentrate       | 3,391.55            | 3,772.38         |
+| Passion_Fruit - Pulp        | 3,020.25            | 2,993.27         |
+| Mango - Concentrate         | 2,821.80            | 1,078.93         |
+| Orange - Concentrate        | 2,505.79            | 5,069.73         |
+| Passion_Fruit - Concentrate | 1,674.40            | 9,699.42         |
+| Unknown - Pulp              | 1,247.10            | 2,303.72         |
+| Cherimoya - Pulp            | 816.88              | 3,167.59         |
+| Unknown - Puree             | 802.21              | 1,867.81         |
+| Avocado - Puree             | 781.48              | 2,557.91         |
+| Banana - Puree              | 511.75              | 1,369.83         |
+| Pineapple - Juice           | 479.86              | 1,669.40         |
+| Pineapple - Pulp            | 362.90              | 2,280.42         |
+| Acai - Pulp                 | 351.15              | 3,293.03         |
+| Peach - Puree               | 329.95              | 1,174.34         |
+| Lucuma - Pulp               | 265.59              | 3,766.26         |
+| Pineapple - Puree           | 250.95              | 2,434.30         |
+| Peach - Pulp                | 207.07              | 1,222.80         |
+| Grape - Juice               | 148.98              | 1,154.75         |
+| Blueberry - Juice           | 121.40              | 1,041.74         |
+| Orange - Pulp               | 59.49               | 2,869.10         |
+| Acai - Puree                | 50.42               | 3,498.21         |
+| Others - Mixed              | 49.66               | 3,870.35         |
+| Camu_Camu - Pulp            | 45.07               | 3,868.75         |
+| Passion_Fruit - Puree       | 40.96               | 4,580.39         |
+| Blueberry - Puree           | 37.79               | 2,047.89         |
+| Strawberry - Puree          | 29.03               | 2,489.02         |
+| Avocado - Juice             | 24.00               | 2,749.85         |
+| Soursop - Pulp              | 23.85               | 3,481.49         |
+
+
+## ECUADOR - FROZEN
+
+| Fruit + Format         | Total Metric Tons   | Avg FOB USD/MT   |
+|:-----------------------|:--------------------|:-----------------|
+| Banana - Slices        | 20,589.07           | 1,118.80         |
+| Unknown - Iqf          | 12,893.92           | 1,558.00         |
+| Unknown - Strips       | 2,739.57            | 4,386.59         |
+| Unknown - Chunks       | 1,756.83            | 1,947.86         |
+| Unknown - Whole        | 1,234.30            | 2,579.40         |
+| Unknown - Slices       | 820.36              | 1,439.31         |
+| Banana - Chunks        | 733.36              | 2,002.37         |
+| Pineapple - Chunks     | 676.53              | 2,569.98         |
+| Banana - Whole         | 598.59              | 1,172.50         |
+| Mango - Chunks         | 379.42              | 2,809.38         |
+| Passion_Fruit - Chunks | 302.99              | 2,768.96         |
+| Banana - Strips        | 56.74               | 4,625.63         |
+| Others - Mixed         | 54.29               | 4,402.27         |
+| Banana - Halves        | 44.12               | 1,330.44         |
+| Papaya - Chunks        | 28.90               | 3,342.44         |
+
+
+## ECUADOR - ASEPTIC
+
+| Fruit + Format              | Total Metric Tons   | Avg FOB USD/MT   |
+|:----------------------------|:--------------------|:-----------------|
+| Banana - Puree              | 100,366.75          | 612.28           |
+| Passion_Fruit - Juice       | 8,124.58            | 2,986.99         |
+| Unknown - Pulp              | 2,705.43            | 2,616.24         |
+| Passion_Fruit - Concentrate | 1,940.34            | 10,676.78        |
+| Passion_Fruit - Pulp        | 891.21              | 3,148.48         |
+| Mango - Puree               | 744.62              | 974.97           |
+| Soursop - Pulp              | 388.30              | 2,996.46         |
+| Mango - Concentrate         | 308.57              | 3,078.27         |
+| Mango - Pulp                | 282.00              | 2,118.82         |
+| Unknown - Puree             | 215.99              | 1,317.78         |
+| Unknown - Concentrate       | 179.43              | 2,040.95         |
+| Pineapple - Pulp            | 137.59              | 1,810.63         |
+| Unknown - Juice             | 102.56              | 1,571.44         |
+| Passion_Fruit - Puree       | 75.24               | 3,257.58         |
+| Others - Mixed              | 58.27               | 1,724.03         |
+| Strawberry - Pulp           | 33.36               | 1,736.13         |
+| Peach - Juice               | 33.27               | 820.90           |
+| Papaya - Pulp               | 27.67               | 2,187.41         |
+
+
+# TABLE 2: EXPORTER BY FRUIT + FORMAT (TOTAL METRIC TONS)
+
+
+## PERU - MANGO FROZEN (Top 15 Exporters)
+
+| Exporter + Format                              | Total Metric Tons   | Avg FOB USD/MT   |
+|:-----------------------------------------------|:--------------------|:-----------------|
+| VIRU - Chunks                                  | 6,890.39            | 1,993.17         |
+| GANADERA CHAVIN DE HUANTAR - Chunks            | 6,534.68            | 1,847.51         |
+| FRUTICOLA OLMUE PERU - Chunks                  | 5,809.73            | 1,946.28         |
+| DEL ANDE ALIMENTOS - Chunks                    | 2,647.00            | 1,673.04         |
+| AGROMAR INDUSTRIAL - Chunks                    | 1,912.21            | 1,841.35         |
+| PROCESADORA - Chunks                           | 1,799.53            | 1,884.86         |
+| ARA FOODS INDUSTRY - Chunks                    | 1,450.11            | 1,767.84         |
+| MEBOL GF - Chunks                              | 1,357.64            | 2,110.25         |
+| LOS MEDANOS - Chunks                           | 1,288.34            | 2,645.71         |
+| MEBOL - Chunks                                 | 1,155.91            | 2,117.45         |
+| GANADERA CHAVIN DE HUANTAR - Cubes             | 953.21              | 1,963.93         |
+| PROCESADORA LARAN - Chunks                     | 901.86              | 1,678.75         |
+| AGROINDUSTRIAS AIB - Chunks                    | 869.43              | 1,765.78         |
+| PULPAS Y PROCESADOS DEL AGRO PULPAGRO - Chunks | 648.03              | 2,007.16         |
+| FROST - Chunks                                 | 619.63              | 1,841.37         |
+
+
+## PERU - STRAWBERRY FROZEN (Top 15 Exporters)
+
+| Exporter + Format                   | Total Metric Tons   | Avg FOB USD/MT   |
+|:------------------------------------|:--------------------|:-----------------|
+| DEL ANDE ALIMENTOS - Slices         | 3,047.25            | 1,720.82         |
+| MEBOL GF - Chunks                   | 2,882.77            | 1,920.91         |
+| MEBOL - Chunks                      | 2,468.11            | 1,981.56         |
+| GANADERA CHAVIN DE HUANTAR - Slices | 2,355.26            | 1,793.97         |
+| VIRU - Halves                       | 1,939.10            | 2,419.05         |
+| DEL ANDE ALIMENTOS - Whole          | 1,916.56            | 1,713.01         |
+| GANADERA CHAVIN DE HUANTAR - Whole  | 1,906.56            | 1,867.19         |
+| VIRU - Slices                       | 763.76              | 2,171.71         |
+| VIRU - Whole                        | 748.66              | 2,241.52         |
+| VIRU - Chunks                       | 548.52              | 2,378.24         |
+| BODEGA GRAN CRUZ - Whole            | 528.40              | 1,832.84         |
+| GANADERA CHAVIN DE HUANTAR - Cubes  | 395.89              | 1,950.60         |
+| PROCESADORA LARAN - Whole           | 286.83              | 1,611.00         |
+| FROST - Whole                       | 271.06              | 1,857.20         |
+| PROCESADORA LARAN - Slices          | 231.80              | 1,767.27         |
+
+
+## PERU - AVOCADO FROZEN (Top 15 Exporters)
+
+| Exporter + Format                   | Total Metric Tons   | Avg FOB USD/MT   |
+|:------------------------------------|:--------------------|:-----------------|
+| VIRU - Cubes                        | 2,381.09            | 3,276.90         |
+| GANADERA CHAVIN DE HUANTAR - Cubes  | 1,630.74            | 2,853.28         |
+| AGROEMPAQUES - Chunks               | 810.02              | 2,872.55         |
+| GANADERA CHAVIN DE HUANTAR - Slices | 809.96              | 3,062.81         |
+| VIRU - Chunks                       | 718.96              | 2,801.62         |
+| AGROINDUSTRIAS AIB - Chunks         | 654.37              | 2,746.51         |
+| VIRU - Halves                       | 483.67              | 2,959.24         |
+| ARA FOODS INDUSTRY - Chunks         | 311.39              | 3,021.25         |
+| FRUTOS TONGORRAPE - Iqf             | 235.95              | 3,105.25         |
+| WESTFALIA FRUIT PERU - Iqf          | 228.48              | 2,868.07         |
+| VIRU - Slices                       | 215.76              | 3,334.25         |
+| WESTFALIA FRUIT PERU - Cubes        | 201.30              | 2,880.53         |
+| AGROINDUSTRIAS AIB - Halves         | 195.33              | 3,567.35         |
+| GANADERA CHAVIN DE HUANTAR - Chunks | 193.00              | 2,528.63         |
+| GANADERA CHAVIN DE HUANTAR - Halves | 150.81              | 2,632.40         |
+
+
+## PERU - UNKNOWN ASEPTIC (Top 15 Exporters)
+
+| Exporter + Format                                                                       | Total Metric Tons   | Avg FOB USD/MT   |
+|:----------------------------------------------------------------------------------------|:--------------------|:-----------------|
+| MULTIFOODS C - Juice                                                                    | 19,819.04           | 742.73           |
+| QUICORNAC - Juice                                                                       | 4,064.21            | 2,724.80         |
+| AGROINDUSTRIAS AIB - Juice                                                              | 1,387.72            | 1,135.60         |
+| AGROINDUSTRIAS JAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD AGROINDUSTRIA JAS E IR - Juice | 1,378.58            | 2,808.39         |
+| ASEPTIC PERUVIAN FRUIT - Juice                                                          | 1,282.36            | 3,521.28         |
+| LIMONES PIURANOS CERRAD - Concentrate                                                   | 1,207.33            | 1,900.53         |
+| AGROMAR INDUSTRIAL - Concentrate                                                        | 918.75              | 1,481.37         |
+| QUICORNAC - Concentrate                                                                 | 823.51              | 9,742.24         |
+| LA CAMPINA PERU C - Juice                                                               | 795.30              | 3,295.51         |
+| ASEPTIC PERUVIAN FRUIT - Puree                                                          | 741.46              | 1,758.37         |
+| GLOBAL CITRUS INTERNATIONAL - Concentrate                                               | 377.16              | 1,706.71         |
+| QUICORNAC - Pulp                                                                        | 268.08              | 3,073.37         |
+| JUICING EXPERTS C - Juice                                                               | 252.13              | 2,928.37         |
+| AGROMAR INDUSTRIAL - Pulp                                                               | 239.50              | 1,534.37         |
+| SELVA INDUSTRIAL - Pulp                                                                 | 225.20              | 2,222.51         |
+
+
+## PERU - ORANGE ASEPTIC (Top 15 Exporters)
+
+| Exporter + Format                                                                       | Total Metric Tons   | Avg FOB USD/MT   |
+|:----------------------------------------------------------------------------------------|:--------------------|:-----------------|
+| PROCESADORA LARAN - Juice                                                               | 8,342.80            | 2,314.66         |
+| AGROINDUSTRIAS JAS EMPRESA INDIVIDUAL DE RESPONSABILIDAD AGROINDUSTRIA JAS E IR - Juice | 6,227.47            | 1,213.23         |
+| AGROMAR INDUSTRIAL - Juice                                                              | 2,919.40            | 1,410.49         |
+| SELVA INDUSTRIAL - Concentrate                                                          | 1,725.68            | 5,341.08         |
+| AGROMAR INDUSTRIAL - Concentrate                                                        | 778.31              | 4,468.26         |
+| SELVA INDUSTRIAL - Juice                                                                | 145.40              | 1,264.89         |
+| MULTIFOODS C - Juice                                                                    | 61.37               | 1,624.84         |
+| DELICIAS Y SABORES DEL PERU - Pulp                                                      | 58.88               | 2,851.09         |
+| AGROFRUTOS TRADING - Juice                                                              | 19.81               | 1,444.75         |
+| FOOD PACK C - Juice                                                                     | 16.51               | 1,229.09         |
+| BC SOLUTIONS - Juice                                                                    | 10.70               | 1,213.53         |
+| AGROFRUTOS TRADING - Concentrate                                                        | 1.80                | 5,000.00         |
+| AGRARIA CAFETALERA CHANCHAMAYO - Juice                                                  | 0.86                | 3,255.81         |
+| EXPORTACIONES MIRSA EMPRESA INDIVIDUAL - Pulp                                           | 0.60                | 4,673.33         |
+| EXPORTACIONES MIRSA EMPRESA INDIVIDUAL - Juice                                          | 0.44                | 2,200.00         |
+
+
+## PERU - MANGO ASEPTIC (Top 15 Exporters)
+
+| Exporter + Format                             | Total Metric Tons   | Avg FOB USD/MT   |
+|:----------------------------------------------|:--------------------|:-----------------|
+| QUICORNAC - Puree                             | 4,644.69            | 891.34           |
+| AGROMAR INDUSTRIAL - Puree                    | 3,195.52            | 1,174.90         |
+| QUICORNAC - Concentrate                       | 2,718.38            | 1,060.62         |
+| AGROINDUSTRIAS AIB - Pulp                     | 1,466.56            | 1,243.71         |
+| SELVA INDUSTRIAL - Pulp                       | 1,132.19            | 1,145.13         |
+| ASEPTIC PERUVIAN FRUIT - Puree                | 1,074.38            | 1,563.33         |
+| QUICORNAC - Pulp                              | 555.54              | 1,506.10         |
+| FRUTOS TONGORRAPE - Puree                     | 474.01              | 1,073.60         |
+| PULPAS Y PROCESADOS DEL AGRO PULPAGRO - Puree | 323.69              | 1,243.09         |
+| AMARA FOODS - Pulp                            | 303.27              | 840.34           |
+| AGROFRUTOS TRADING - Puree                    | 286.00              | 1,084.62         |
+| SOLIMAR INDUSTRIA E IR - Puree                | 199.32              | 1,209.27         |
+| UNION DE NEGOCIOS CORPORATIVOS - Pulp         | 141.69              | 1,855.12         |
+| FRUTOS TONGORRAPE - Pulp                      | 104.02              | 1,249.83         |
+| PULPAS Y PROCESADOS DEL AGRO PULPAGRO - Pulp  | 74.40               | 1,152.42         |
+
+
+## ECUADOR - BANANA FROZEN (Top 15 Exporters)
+
+| Exporter + Format                                     | Total Metric Tons   | Avg FOB USD/MT   |
+|:------------------------------------------------------|:--------------------|:-----------------|
+| SEMVRA VECONSA - Slices                               | 19,982.73           | 1,101.62         |
+| PRODUCTOS MAN ZHI ALIMENTOS INDUSTRIALIZADOS - Chunks | 662.92              | 1,947.04         |
+| SEMVRA VECONSA - Whole                                | 566.73              | 1,132.67         |
+| CORPORACION CABRERA ZAMBRANO CA ZA - Slices           | 284.63              | 1,875.38         |
+| LIVANKA - Slices                                      | 273.14              | 1,461.34         |
+| ZHINDON GARCIA MANUEL AUGUSTO - Chunks                | 58.40               | 2,238.06         |
+| PRODUCTOS MAN ZHI ALIMENTOS INDUSTRIALIZADOS - Slices | 47.05               | 1,853.91         |
+| SEMVRA VECONSA - Halves                               | 44.12               | 1,330.44         |
+| APEXEC S - Strips                                     | 42.00               | 3,809.52         |
+| ZHINDON GARCIA MANUEL AUGUSTO - Whole                 | 16.94               | 2,143.06         |
+| PRODUCTOS MAN ZHI ALIMENTOS INDUSTRIALIZADOS - Whole  | 14.83               | 1,581.99         |
+| MARPENSA - Strips                                     | 14.74               | 6,950.86         |
+| MGM SNACKS COMPANY S - Chunks                         | 5.58                | 5,364.93         |
+| VASQUEZ LOPEZ VERONICA LUCIA - Chunks                 | 3.50                | 218.47           |
+| ISLAND FRUIT EXPORT ISLAFRUTA - Iqf                   | 2.69                | 2,340.76         |
+
+
+## ECUADOR - UNKNOWN FROZEN (Top 15 Exporters)
+
+| Exporter + Format                                                    | Total Metric Tons   | Avg FOB USD/MT   |
+|:---------------------------------------------------------------------|:--------------------|:-----------------|
+| SEMVRA VECONSA - Iqf                                                 | 12,799.83           | 1,552.55         |
+| LIFE FOOD PRODUCT ECUADOR LIFPRODEC - Strips                         | 1,691.63            | 3,401.43         |
+| MERCAGRO - Strips                                                    | 528.59              | 7,012.09         |
+| INDUSTRIALIZADORA Y COMERCIALIZADORA DE PALMITO INCOPALMITO - Chunks | 483.84              | 1,093.75         |
+| LIFE FOOD PRODUCT ECUADOR LIFPRODEC - Slices                         | 406.28              | 1,355.13         |
+| MEGATRAX - Chunks                                                    | 343.78              | 690.56           |
+| INDUSTRIALIZADORA Y COMERCIALIZADORA DE PALMITO INCOPALMITO - Whole  | 322.50              | 2,814.50         |
+| PROCESADORA CONTINENTAL DE ALIMENTOS - Whole                         | 280.80              | 3,027.06         |
+| MEGATRAX - Slices                                                    | 271.51              | 1,350.94         |
+| PRODUCTOS MAN ZHI ALIMENTOS INDUSTRIALIZADOS - Chunks                | 270.04              | 1,577.17         |
+| GREENSNACKS - Strips                                                 | 234.68              | 5,251.53         |
+| SEMVRA VECONSA - Whole                                               | 215.60              | 1,519.95         |
+| LIFE FOOD PRODUCT ECUADOR LIFPRODEC - Whole                          | 189.64              | 2,089.33         |
+| MARPENSA - Strips                                                    | 181.00              | 5,293.13         |
+| LIFE FOOD PRODUCT ECUADOR LIFPRODEC - Chunks                         | 170.14              | 3,048.83         |
+
+
+## ECUADOR - PINEAPPLE FROZEN (Top 15 Exporters)
+
+| Exporter + Format                                              |   Total Metric Tons | Avg FOB USD/MT   |
+|:---------------------------------------------------------------|--------------------:|:-----------------|
+| INDUSTRIA ALIMENTICIA PA REZ VACA INALPEV CIA - Chunks         |              279.4  | 2,989.34         |
+| SERVICIO INTEGRAL PARA LA INDUSTRIA ALIMENTICIA SIPIA - Chunks |              242.82 | 1,697.67         |
+| CONGELADOS ECUATORIANOS ECUACONGELA - Chunks                   |              107.32 | 3,734.12         |
+| FROZENTROPIC CIA - Chunks                                      |               43.45 | 1,939.62         |
+| PROCESADORA CONTINENTAL DE ALIMENTOS - Iqf                     |               12.97 | 1,857.45         |
+| FRESHLIFE S - Iqf                                              |                5.76 | 2,761.31         |
+| PROCESADORA CONTINENTAL DE ALIMENTOS - Chunks                  |                3.54 | 1,750.00         |
+| PROCESADORA CONTINENTAL DE ALIMENTOS - Cubes                   |                0.96 | 1,900.00         |
+
+
+## ECUADOR - BANANA ASEPTIC (Top 15 Exporters)
+
+| Exporter + Format                | Total Metric Tons   | Avg FOB USD/MT   |
+|:---------------------------------|:--------------------|:-----------------|
+| BANANA LIGHT BANALIGHT C - Puree | 62,690.76           | 461.18           |
+| INDUSTRIAS BORJA INBORJA - Puree | 24,570.88           | 743.23           |
+| FUTURCORP - Puree                | 11,615.26           | 1,102.53         |
+| DIANA FOOD ECUADOR - Puree       | 859.11              | 960.82           |
+| LATITUD PROVISIONS SB IC - Puree | 485.18              | 671.04           |
+| AUSTROFOOD S - Puree             | 67.36               | 3,444.47         |
+| PROCESAFRU - Puree               | 54.85               | 1,188.22         |
+| WEDO EXPORTS S - Puree           | 18.40               | 828.70           |
+| FUPORDI - Puree                  | 4.94                | 1,790.62         |
+
+
+## ECUADOR - PASSION_FRUIT ASEPTIC (Top 15 Exporters)
+
+| Exporter + Format                                    | Total Metric Tons   | Avg FOB USD/MT   |
+|:-----------------------------------------------------|:--------------------|:-----------------|
+| QUICORNAC - Juice                                    | 4,635.49            | 3,021.55         |
+| FRUTRADE S - Juice                                   | 3,232.05            | 2,928.55         |
+| QUICORNAC - Concentrate                              | 1,461.57            | 10,725.90        |
+| FRUTRADE S - Concentrate                             | 478.77              | 10,526.81        |
+| FROZENTROPIC CIA - Pulp                              | 277.22              | 2,738.01         |
+| FRUTADELAPASION S - Juice                            | 257.04              | 3,098.56         |
+| HEALTHY FOOD MARCALMAN ECUADOR S - Pulp              | 194.13              | 3,899.02         |
+| INDUSTRIA ALIMENTICIA PA REZ VACA INALPEV CIA - Pulp | 101.76              | 4,174.03         |
+| PRODUCTOS MAN ZHI ALIMENTOS INDUSTRIALIZADOS - Pulp  | 82.50               | 2,798.53         |
+| QUICORNAC - Puree                                    | 75.24               | 3,257.58         |
+| QUICORNAC - Pulp                                     | 75.02               | 3,110.73         |
+| ZHINDON GARCIA MANUEL AUGUSTO - Pulp                 | 40.31               | 2,910.38         |
+| ALMA ENEBRAL INTERNACIONAL - Pulp                    | 30.00               | 666.67           |
+| GOMEZ JARAMILLO PATRICIA DEL CARMEN - Pulp           | 17.85               | 1,092.76         |
+| FRUTADELAPASION S - Pulp                             | 15.12               | 3,703.57         |
+
+
+## ECUADOR - UNKNOWN ASEPTIC (Top 15 Exporters)
+
+| Exporter + Format                                    | Total Metric Tons   | Avg FOB USD/MT   |
+|:-----------------------------------------------------|:--------------------|:-----------------|
+| PROCESADORA DE FRUTAS NATURALES PROFRUTAS CIA - Pulp | 1,840.89            | 2,788.31         |
+| HEALTHY FOOD MARCALMAN ECUADOR S - Pulp              | 452.78              | 2,251.02         |
+| BARRY CALLEBAUT ECUADOR - Concentrate                | 163.22              | 1,949.69         |
+| INDUSTRIAS BORJA INBORJA - Puree                     | 101.37              | 592.89           |
+| PRODUCTOS MAN ZHI ALIMENTOS INDUSTRIALIZADOS - Pulp  | 95.71               | 2,564.78         |
+| FRUTRADE S - Puree                                   | 71.10               | 1,800.00         |
+| ALMA ENEBRAL INTERNACIONAL - Pulp                    | 60.00               | 666.67           |
+| NALUEC S - Pulp                                      | 51.25               | 2,630.83         |
+| VASQUEZ LOPEZ VERONICA LUCIA - Juice                 | 34.65               | 188.09           |
+| CORPORACION FAVORITA C - Juice                       | 30.13               | 813.81           |
+| GOMEZ JARAMILLO PATRICIA DEL CARMEN - Pulp           | 28.82               | 1,241.75         |
+| NUNAFRUT - Puree                                     | 25.52               | 3,360.00         |
+| QUICORNAC - Juice                                    | 18.98               | 3,406.47         |
+| FAMILY FOOD ECUADOR FAMODECSA - Pulp                 | 18.71               | 4,914.86         |
+| BANANA LIGHT BANALIGHT C - Puree                     | 18.00               | 600.00           |
+
+
+## SUMMARY STATISTICS (>= 20 MT)
+
+| Country   | Fruit         | Format        | Total MT   | Avg FOB USD/MT   |
+|:----------|:--------------|:--------------|:-----------|:-----------------|
+| ecuador   | Banana        | puree         | 100,366.75 | 612.28           |
+| ecuador   | Unknown       | unknown       | 59,364.51  | 3,452.29         |
+| ecuador   | Banana        | slices        | 20,589.07  | 1,118.80         |
+| ecuador   | Unknown       | iqf           | 12,893.92  | 1,558.00         |
+| ecuador   | Passion_Fruit | juice         | 8,124.58   | 2,986.99         |
+| ecuador   | Banana        | unknown       | 4,946.15   | 5,892.73         |
+| ecuador   | Unknown       | strips        | 2,739.57   | 4,386.59         |
+| ecuador   | Unknown       | pulp          | 2,705.43   | 2,616.24         |
+| ecuador   | Passion_Fruit | concentrate   | 1,940.34   | 10,676.78        |
+| ecuador   | Unknown       | chunks        | 1,756.83   | 1,947.86         |
+| ecuador   | Unknown       | whole         | 1,234.30   | 2,579.40         |
+| ecuador   | Passion_Fruit | pulp          | 891.21     | 3,148.48         |
+| ecuador   | Unknown       | slices        | 820.36     | 1,439.31         |
+| ecuador   | Mango         | puree         | 744.62     | 974.97           |
+| ecuador   | Banana        | chunks        | 733.36     | 2,002.37         |
+| ecuador   | Pineapple     | chunks        | 676.53     | 2,569.98         |
+| ecuador   | Banana        | whole         | 598.59     | 1,172.50         |
+| ecuador   | Pineapple     | unknown       | 590.30     | 1,829.79         |
+| ecuador   | Passion_Fruit | unknown       | 504.21     | 2,970.94         |
+| ecuador   | Mango         | unknown       | 412.40     | 2,763.42         |
+| ecuador   | Soursop       | pulp          | 388.30     | 2,996.46         |
+| ecuador   | Mango         | chunks        | 379.42     | 2,809.38         |
+| ecuador   | Mango         | concentrate   | 308.57     | 3,078.27         |
+| ecuador   | Passion_Fruit | chunks        | 302.99     | 2,768.96         |
+| ecuador   | Mango         | pulp          | 282.00     | 2,118.82         |
+| ecuador   | Unknown       | puree         | 215.99     | 1,317.78         |
+| ecuador   | Strawberry    | unknown       | 212.21     | 2,636.22         |
+| ecuador   | Unknown       | concentrate   | 179.43     | 2,040.95         |
+| ecuador   | Mix           | unknown       | 161.49     | 5,056.58         |
+| ecuador   | Soursop       | unknown       | 158.31     | 3,263.67         |
+| ecuador   | Pineapple     | pulp          | 137.59     | 1,810.63         |
+| ecuador   | Unknown       | juice         | 102.56     | 1,571.44         |
+| ecuador   | Passion_Fruit | puree         | 75.24      | 3,257.58         |
+| ecuador   | Banana        | strips        | 56.74      | 4,625.63         |
+| ecuador   | Banana        | halves        | 44.12      | 1,330.44         |
+| ecuador   | Strawberry    | pulp          | 33.36      | 1,736.13         |
+| ecuador   | Peach         | juice         | 33.27      | 820.90           |
+| ecuador   | Papaya        | chunks        | 28.90      | 3,342.44         |
+| ecuador   | Papaya        | pulp          | 27.67      | 2,187.41         |
+| peru      | Mango         | unknown       | 43,231.12  | 1,888.52         |
+| peru      | Mango         | chunks        | 37,654.73  | 1,916.88         |
+| peru      | Unknown       | juice         | 29,345.73  | 1,362.75         |
+| peru      | Avocado       | unknown       | 23,235.23  | 3,094.87         |
+| peru      | Blueberry     | unknown       | 21,623.57  | 2,346.51         |
+| peru      | Orange        | juice         | 17,744.76  | 1,765.77         |
+| peru      | Strawberry    | unknown       | 16,897.69  | 1,857.96         |
+| peru      | Pineapple     | unknown       | 14,233.67  | 2,296.94         |
+| peru      | Mango         | puree         | 10,219.22  | 1,083.75         |
+| peru      | Passion_Fruit | juice         | 9,533.29   | 3,113.34         |
+| peru      | Strawberry    | slices        | 6,648.89   | 1,803.66         |
+| peru      | Strawberry    | chunks        | 6,096.85   | 1,987.19         |
+| peru      | Strawberry    | whole         | 6,057.37   | 1,839.63         |
+| peru      | Unknown       | unknown       | 5,971.41   | 3,387.30         |
+| peru      | Avocado       | pulp          | 4,933.90   | 2,689.62         |
+| peru      | Avocado       | cubes         | 4,503.42   | 3,097.93         |
+| peru      | Grape         | unknown       | 4,007.73   | 1,217.59         |
+| peru      | Mango         | pulp          | 3,939.28   | 1,276.61         |
+| peru      | Banana        | unknown       | 3,859.75   | 5,549.08         |
+| peru      | Avocado       | chunks        | 3,477.70   | 2,878.38         |
+| peru      | Unknown       | concentrate   | 3,391.55   | 3,772.38         |
+| peru      | Passion_Fruit | pulp          | 3,020.25   | 2,993.27         |
+| peru      | Mango         | concentrate   | 2,821.80   | 1,078.93         |
+| peru      | Orange        | concentrate   | 2,505.79   | 5,069.73         |
+| peru      | Mango         | cubes         | 2,425.95   | 1,946.83         |
+| peru      | Pineapple     | chunks        | 2,159.97   | 2,485.88         |
+| peru      | Blueberry     | chunks        | 1,978.18   | 2,532.05         |
+| peru      | Strawberry    | halves        | 1,939.10   | 2,419.05         |
+| peru      | Passion_Fruit | concentrate   | 1,674.40   | 9,699.42         |
+| peru      | Blueberry     | iqf           | 1,541.93   | 2,487.90         |
+| peru      | Unknown       | pulp          | 1,247.10   | 2,303.72         |
+| peru      | Avocado       | slices        | 1,211.91   | 3,112.61         |
+| peru      | Avocado       | halves        | 1,173.80   | 3,014.76         |
+| peru      | Mix           | unknown       | 1,099.42   | 8,363.69         |
+| peru      | Mango         | iqf           | 997.50     | 1,791.29         |
+| peru      | Orange        | unknown       | 991.53     | 1,826.37         |
+| peru      | Cherimoya     | pulp          | 816.88     | 3,167.59         |
+| peru      | Unknown       | puree         | 802.21     | 1,867.81         |
+| peru      | Avocado       | puree         | 781.48     | 2,557.91         |
+| peru      | Blueberry     | whole         | 708.89     | 2,333.75         |
+| peru      | Strawberry    | cubes         | 627.67     | 2,023.93         |
+| peru      | Avocado       | iqf           | 540.20     | 2,929.53         |
+| peru      | Banana        | puree         | 511.75     | 1,369.83         |
+| peru      | Pineapple     | juice         | 479.86     | 1,669.40         |
+| peru      | Pomegranate   | cubes         | 468.95     | 3,942.93         |
+| peru      | Pineapple     | pulp          | 362.90     | 2,280.42         |
+| peru      | Acai          | pulp          | 351.15     | 3,293.03         |
+| peru      | Passion_Fruit | chunks        | 337.50     | 3,812.61         |
+| peru      | Mango         | broken_pieces | 334.58     | 1,679.17         |
+| peru      | Peach         | puree         | 329.95     | 1,174.34         |
+| peru      | Mango         | halves        | 318.58     | 2,089.16         |
+| peru      | Passion_Fruit | unknown       | 278.19     | 3,153.22         |
+| peru      | Lucuma        | pulp          | 265.59     | 3,766.26         |
+| peru      | Banana        | chunks        | 262.37     | 5,102.70         |
+| peru      | Pineapple     | puree         | 250.95     | 2,434.30         |
+| peru      | Peach         | pulp          | 207.07     | 1,222.80         |
+| peru      | Grape         | chunks        | 192.03     | 1,753.21         |
+| peru      | Unknown       | chunks        | 174.87     | 2,609.52         |
+| peru      | Grape         | whole         | 167.71     | 1,904.25         |
+| peru      | Unknown       | whole         | 160.18     | 3,267.51         |
+| peru      | Grape         | juice         | 148.98     | 1,154.75         |
+| peru      | Pomegranate   | unknown       | 143.71     | 3,475.74         |
+| peru      | Avocado       | broken_pieces | 135.32     | 2,342.96         |
+| peru      | Pineapple     | iqf           | 133.75     | 3,084.82         |
+| peru      | Passion_Fruit | cubes         | 130.81     | 4,471.41         |
+| peru      | Blueberry     | juice         | 121.40     | 1,041.74         |
+| peru      | Mix           | iqf           | 120.00     | 2,674.00         |
+| peru      | Pineapple     | cubes         | 106.78     | 2,535.98         |
+| peru      | Papaya        | halves        | 103.66     | 2,857.43         |
+| peru      | Papaya        | cubes         | 98.09      | 3,481.20         |
+| peru      | Peach         | unknown       | 79.79      | 1,844.76         |
+| peru      | Orange        | pulp          | 59.49      | 2,869.10         |
+| peru      | Banana        | whole         | 59.32      | 8,558.68         |
+| peru      | Acai          | puree         | 50.42      | 3,498.21         |
+| peru      | Unknown       | cubes         | 48.61      | 3,534.03         |
+| peru      | Mango         | slices        | 48.00      | 2,493.25         |
+| peru      | Camu_Camu     | pulp          | 45.07      | 3,868.75         |
+| peru      | Papaya        | unknown       | 42.92      | 2,768.15         |
+| peru      | Strawberry    | iqf           | 41.97      | 1,840.55         |
+| peru      | Passion_Fruit | puree         | 40.96      | 4,580.39         |
+| peru      | Blueberry     | puree         | 37.79      | 2,047.89         |
+| peru      | Strawberry    | puree         | 29.03      | 2,489.02         |
+| peru      | Banana        | slices        | 26.90      | 2,479.40         |
+| peru      | Unknown       | iqf           | 25.02      | 2,670.19         |
+| peru      | Avocado       | juice         | 24.00      | 2,749.85         |
+| peru      | Soursop       | pulp          | 23.85      | 3,481.49         |
+
+
+**Note:** 94 combinations under 20 MT were filtered out, totaling 380.75 MT
+

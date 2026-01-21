@@ -21,9 +21,16 @@ def read_export_data(
 
     if path.suffix == '.db':
         conn = sqlite3.connect(file_path)
-        # Read from database, selecting relevant columns
-        query = """
-        SELECT
+
+        # Check if analysis_valid column exists
+        cursor = conn.cursor()
+        cursor.execute("PRAGMA table_info(exports)")
+        columns = [row[1] for row in cursor.fetchall()]
+        has_analysis_valid = 'analysis_valid' in columns
+        has_source_country = 'source_country' in columns
+
+        # Build query with optional analysis_valid filter
+        select_cols = """
             Exporter,
             canonical_exporter,
             Importer,
@@ -37,9 +44,21 @@ def read_export_data(
             [U$ FOB Tot] as FOB_Value,
             net_weight_mt,
             Date
-        FROM exports
-        WHERE analysis_valid = 1
         """
+
+        # Add source_country if it exists
+        if has_source_country:
+            select_cols += ",\n            source_country"
+
+        where_clause = "WHERE analysis_valid = 1" if has_analysis_valid else ""
+
+        query = f"""
+        SELECT
+            {select_cols}
+        FROM exports
+        {where_clause}
+        """
+
         df = pd.read_sql_query(query, conn)
         conn.close()
 
