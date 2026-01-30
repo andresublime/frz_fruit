@@ -61,6 +61,7 @@ FRUIT_PRICE_FLOORS: Dict[str, float] = {
     'pomegranate': 1500,
     'grape': 1000,
     'banana': 500,
+    'ginger': 2000,
     'default': 500,  # General minimum for unlisted fruits
 }
 

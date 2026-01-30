@@ -33,6 +33,7 @@ class DescriptionParser:
         'peach': r'\b(peach|peaches|durazno[s]?|melocoton|melocotón)\b',
         'grape': r'\b(grape[s]?|uva[s]?)\b',
         'orange': r'\b(orange[s]?|naranja[s]?)\b',
+        'ginger': r'\b(ginger|kion|jengibre)\b',
         'mix': r'\b(mix|mixtura|mezcla|berry mix|tropical mix)\b',
     }
 

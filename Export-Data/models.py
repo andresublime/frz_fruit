@@ -64,7 +64,7 @@ class FruitProduct(BaseModel):
         "mango", "pineapple", "strawberry", "blueberry", "papaya", "avocado",
         "pomegranate", "lucuma", "passion_fruit", "golden_berry", "camu_camu",
         "soursop", "cherimoya", "pitaya", "acai", "banana", "raspberry",
-        "cherry", "peach", "grape", "orange", "mix", "other", "unknown"
+        "cherry", "peach", "grape", "orange", "ginger", "mix", "other", "unknown"
     ] = Field(description="Type of fruit")
 
     variety: Optional[str] = Field(None, description="Fruit variety (e.g., Kent, Edward, Haden)")

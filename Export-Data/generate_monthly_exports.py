@@ -42,7 +42,7 @@ monthly_data = df.groupby(['source_country', 'format', 'fruit_name', 'Month'])['
 
 # Pivot to get months as columns
 pivot_df = monthly_data.pivot_table(
-    index=['source_country', 'format', 'fruit_name'],
+    index=['source_country', 'fruit_name', 'format'],
     columns='Month',
     values='net_weight_mt',
     fill_value=0
@@ -56,10 +56,10 @@ month_order = ['January', 'February', 'March', 'April', 'May', 'June',
 existing_months = [month for month in month_order if month in pivot_df.columns]
 pivot_df = pivot_df[existing_months]
 
-# Filter out rows where total across all months is less than 10 MT
+# Filter out rows where total across all months is less than 48 MT
 pivot_df['Total'] = pivot_df.sum(axis=1)
-pivot_df = pivot_df[pivot_df['Total'] >= 10]
-pivot_df = pivot_df.drop('Total', axis=1)
+pivot_df = pivot_df[pivot_df['Total'] >= 48]
+# pivot_df = pivot_df.drop('Total', axis=1)
 
 # Round all values to 0 decimal places
 pivot_df = pivot_df.round(0).astype(int)
@@ -70,4 +70,5 @@ pivot_df.to_csv('monthly_exports.csv')
 print(f"Created monthly_exports.csv with {len(pivot_df)} rows")
 print(f"\nMonths included: {', '.join(existing_months)}")
 print(f"\nPreview:")
-print(pivot_df.head(10))
+print(pivot_df)
+

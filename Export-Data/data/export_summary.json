@@ -17,11 +17,12 @@
     "camu_camu": 55.356,
     "cherimoya": 822.497,
     "cherry": 19.99,
+    "ginger": 3995.973,
     "golden_berry": 12.814,
     "grape": 4516.606,
     "lucuma": 277.074,
     "mango": 104129.008,
-    "mix": 1424.146,
+    "mix": 1424.145,
     "orange": 21326.759,
     "papaya": 328.89,
     "passion_fruit": 26876.439,
@@ -32,7 +33,7 @@
     "raspberry": 14.613,
     "soursop": 578.239,
     "strawberry": 38613.026,
-    "unknown": 123201.037
+    "unknown": 119205.065
   },
   "by_format": {
     "broken_pieces": 469.902,
